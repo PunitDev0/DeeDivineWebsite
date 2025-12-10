@@ -11,7 +11,7 @@ function Contact() {
       <div className="px-1 py-5">
         <div
         className="relative w-full h-[200px] sm:h-[250px] rounded-xl flex items-center justify-center overflow-hidden bg-no-repeat bg-center bg-cover"
-          style={{ backgroundImage: "url('/assets/contact-banner.jpg')" }} // replace with your image
+          style={{ backgroundImage: "url('/assets/contact-banner.webp')" }} // replace with your image
         >
           <div className="absolute bottom-4 left-4 bg-black bg-opacity-60 backdrop-blur-sm text-white p-3 rounded-xl hover:bg-opacity-70 transition-all duration-300">
             <Link href="/contact" className="flex items-center gap-2 hover:underline">
@@ -42,7 +42,7 @@ function Contact() {
             <MapPin className="mx-auto mb-4 text-[#8b1fa9]" size={32} />
             <h3 className="font-semibold text-gray-900 mb-2 text-lg">Office Address</h3>
             <p className="text-sm text-gray-700">
-              2nd Floor, Bestech Business Tower, Sector 66,  
+              6th Floor, 609-610, Spaze Itech Park, Sector 49,  
               Gurugram, Haryana – 122018
             </p>
           </div>
@@ -144,7 +144,7 @@ function Contact() {
       {/* MAP SECTION */}
       <section className="w-full">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3505.0812511164235!2d77.06467587493124!3d28.53728577572461!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d19b27b4e3ef3%3A0xe0dd3a7e597df24!2sBestech%20Business%20Tower!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3509.217745284304!2d77.0412748114687!3d28.412685875684485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d2323bd5b493b%3A0x556ba537cfc6d921!2sDee%20Divine%20PropInfra%20Pvt.%20Ltd.!5e0!3m2!1sen!2sin!4v1763623084043!5m2!1sen!2sin"
           width="100%"
           height="400"
           style={{ border: 0 }}

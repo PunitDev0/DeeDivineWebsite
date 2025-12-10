@@ -4,35 +4,39 @@ import Link from 'next/link';
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import { Badge } from '../ui/badge';
+import DeeDivineSection from './dee-divine-team';
 
 function AboutUs() {
   const leaders = [
     {
       id: "01",
-      name: "MR. DIWAKAR DIXIT – DIRECTOR & FOUNDER",
+      name: "MR. DIWAKAR DIXIT – DIRECTOR",
       description:
-        "A visionary leader who laid the foundation of Dee Divine Propinfra, guiding the company with strategic expertise, futuristic thinking, and unmatched real estate knowledge.",
+        "A visionary leader who laid the foundation of Dee Divine Propinfra with strategic expertise and unmatched real estate knowledge.",
+      image: "/assets/diwakar-dixit.webp",
     },
     {
       id: "02",
-      name: "MRS. KAVITA DIXIT – CO-DIRECTOR",
+      name: "MRS. KAVITA DIXIT – CHAIRMAN",
       description:
-        "The strength behind smooth operations and project execution. With a keen eye for detail and a deep commitment to customer satisfaction, she ensures that every project reflects excellence and value.",
+        "The driving force behind smooth operations and excellence, committed to delivering customer satisfaction and quality.",
+      image: "/leaders/kavita.jpg",
     },
     {
       id: "03",
-      name: "MR. DHANANJAY ARYA – CHIEF EXECUTIVE OFFICER (CEO)",
+      name: "MR. DHANANJAY ARYA – MD (MANAGING DIRECTOR)",
       description:
-        "An innovative leader driving the company’s growth, modern practices, and customer-centric solutions, ensuring Dee Divine Propinfra remains ahead in the competitive property market.",
-      learnMore: true,
+        "An innovative leader ensuring growth and modern business practices, keeping the company ahead of the market.",
+      image: "/leaders/dhananjay.jpg",
     },
+    
   ];
   return (
     <main className=" font-playfair">
       <div className='px-1 py-5'>
         <div
           className="relative w-full h-[200px] sm:h-[250px] rounded-xl flex items-center justify-center overflow-hidden bg-no-repeat bg-center bg-cover"
-          style={{ backgroundImage: "url('/assets/aboutImage.jpg')" }}
+          style={{ backgroundImage: "url('/assets/aboutImage.webp')" }}
         >
           <div className="absolute bottom-4 left-4 bg-black bg-opacity-60 backdrop-blur-sm text-white p-3 rounded-xl hover:bg-opacity-70 transition-all duration-300">
             <Link href="/listings" className="flex items-center gap-2 hover:underline">
@@ -52,7 +56,8 @@ function AboutUs() {
 
             <div className="relative border-2 border-gray-200 shadow-md rounded-sm w-9/12 mx-auto ">
               <Image
-                src="/assets/aboutImage2.jpeg" // replace with your image path
+                unoptimized
+                src="/assets/aboutImage2.webp" // replace with your image path
                 alt="About Dee Divine Propinfra"
                 width={600}
                 height={700}
@@ -130,75 +135,70 @@ function AboutUs() {
         </div>
 
         {/* OUR PILLARS OF LEADERSHIP */}
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl  font-serif font-bold text-gray-900 mb-3 tracking-wide uppercase">
+        <div
+          className="max-w-7xl mx-auto bg-cover bg-center bg-no-repeat py-16 px-4 relative"
+          style={{ backgroundImage: "url('/leadership-bg.jpg')" }}
+        >
+          {/* Title */}
+          <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-4 tracking-wide uppercase text-center">
             Our Pillars of Leadership
           </h2>
-          <p className="text-gray-700 mb-12 text-sm">
-            Behind every milestone achieved by Dee Divine Propinfra is a leadership
-            team that brings expertise, vision, and relentless dedication:
+
+          {/* About Text */}
+          <p className="text-gray-700 mb-14 text-sm text-center max-w-3xl mx-auto">
+            Dee Divine Propinfra’s growth is powered by a leadership team that blends
+            vision, expertise, and a commitment to excellence—shaping the future of
+            the company with integrity and innovation.
           </p>
 
-          <div className="grid md:grid-cols-3 gap-0">
-            {/* 01 */}
-            <div className="relative bg-white border-t-[6px] border-[#7e2590] px-8 py-10 flex flex-col justify-between text-left shadow-[0_0_15px_rgba(0,0,0,0.1)] rounded-none">
-              <span className="absolute text-[100px] font-bold text-gray-200 top-0 left-6 -translate-y-7 select-none">
-                01
-              </span>
-              <div className='mt-10'>
-                <h3 className="text-base font-semibold text-gray-900 mb-3 uppercase">
-                  Mr. Diwakar Dixit – Director & Founder
-                </h3>
-                <p className="text-gray-700 text-sm leading-relaxed">
-                  A visionary leader who laid the foundation of Dee Divine Propinfra,
-                  guiding the company with strategic expertise, futuristic thinking,
-                  and unmatched real estate knowledge.
-                </p>
-              </div>
-            </div>
+          {/* Grid */}
+          <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-0 relative">
+            {leaders.map((leader, index) => (
+              <div
+                key={index}
+                className="relative bg-white/90 backdrop-blur-md border-t-[6px] border-[#7e2590] px-8 py-10 text-left shadow-[0_0_15px_rgba(0,0,0,0.1)] overflow-hidden"
+              >
+                
 
-            {/* 02 */}
-            <div className="relative bg-white border-t-[6px] border-[#7e2590] px-8 py-10 flex flex-col justify-between text-left shadow-[0_0_15px_rgba(0,0,0,0.1)] rounded-none">
-              <span className="absolute text-[100px] font-bold text-gray-200 top-0 left-6 -translate-y-7 select-none">
-                02
-              </span>
-              <div className='mt-10'>
-                <h3 className="text-base font-semibold text-gray-900 mb-3 uppercase">
-                  Mrs. Kavita Dixit – Co-Director
-                </h3>
-                <p className="text-gray-700 text-sm leading-relaxed">
-                  The strength behind smooth operations and project execution. With a
-                  keen eye for detail and a deep commitment to customer satisfaction,
-                  she ensures that every project reflects excellence and value.
-                </p>
-              </div>
-            </div>
+                {/* <Image
+                src={`${leader.image}`}
+                fill
+                /> */}
 
-            {/* 03 */}
-            <div className="relative bg-white border-t-[6px] border-[#7e2590] px-8 py-10 flex flex-col justify-between text-left shadow-[0_0_15px_rgba(0,0,0,0.1)] rounded-none">
-              <span className="absolute text-[100px] font-bold text-gray-200 top-0 left-6 -translate-y-7 select-none">
-                03
-              </span>
-              <div className='mt-10'>
-                <h3 className="text-base font-semibold text-gray-900 mb-3 uppercase">
-                  Mr. Dhananjay Arya – Chief Executive Officer (CEO)
-                </h3>
-                <p className="text-gray-700 text-sm leading-relaxed mb-4">
-                  An innovative leader driving the company’s growth, modern
-                  practices, and customer-centric solutions, ensuring Dee Divine
-                  Propinfra remains ahead in the competitive property market.
-                </p>
-                <a
-                  href="#"
-                  className="text-[#7e2590] font-semibold text-sm hover:underline"
-                >
-                  Learn More
-                </a>
+                {/* Overlay to ensure text is readable */}
+                <div className="absolute inset-0 bg-white/70 backdrop-blur-x"></div>
+
+                <div className=" z-10">
+                  {/* Number */}
+                  <span className="absolute text-[95px] font-bold text-gray-200 top-0 left-6 -translate-y-7 select-none z-0">
+                    {leader.id}
+                  </span>
+
+                  {/* Content */}
+                  <div className="mt-10 relative z-10">
+                    <h3 className="text-base font-semibold text-gray-900 mb-3 uppercase leading-tight">
+                      {leader.name}
+                    </h3>
+
+                    <p className="text-gray-700 text-sm leading-relaxed mb-4">
+                      {leader.description}
+                    </p>
+
+                    {leader.learnMore && (
+                      <a
+                        href="#"
+                        className="text-[#7e2590] font-semibold text-sm hover:underline"
+                      >
+                        Learn More
+                      </a>
+                    )}
+                  </div>
+                </div>
               </div>
-            </div>
+            ))}
           </div>
-
         </div>
+
 
         {/* Bottom Purple Bars */}
         <div className="flex w-full">
@@ -210,7 +210,7 @@ function AboutUs() {
 
       <section className="font-poppins bg-white text-gray-800 px-6 md:px-16 py-20">
         {/* WHAT MAKES US DIFFERENT */}
-        <div className="max-w-6xl mx-auto mb-20">
+        <div className=" mx-auto mb-20">
           <h2 className="text-3xl md:text-4xl uppercase text-[#4B0082] mb-8 tracking-wide font-[Poppins]">
             What Makes Us Different?
           </h2>
@@ -261,7 +261,7 @@ function AboutUs() {
         </div>
 
         {/* CORE VALUES & EXPERTISE */}
-        <div className="max-w-6xl mx-auto">
+        <div className=" mx-auto">
           <div className="flex flex-col md:flex-row bg-[#8b1fa9]">
             <div className="hidden md:flex w-1/2 bg-[#8b1fa9] h-6 relative">
               <span className="absolute right-0 top-0 bg-white h-6 w-[6px]"></span>
@@ -354,7 +354,7 @@ function AboutUs() {
         </div>
 
         {/* COMMITMENT & MISSION/VISION */}
-        <div className="max-w-6xl mx-auto mt-16 grid md:grid-cols-2 gap-8">
+        <div className=" mx-auto mt-16 grid md:grid-cols-2 gap-8">
           {/* OUR COMMITMENT */}
           <div className="p-6 md:p-10 bg-white shadow-md text-sm">
             <h3 className="text-center text-lg font-semibold uppercase text-gray-900 mb-6 tracking-wide">
@@ -409,78 +409,80 @@ function AboutUs() {
         </div>
       </section>
       <section className="font-poppins bg-white text-gray-800 px-6 md:px-20 py-16">
-      <div className="max-w-6xl mx-auto grid md:grid-cols-[300px_1fr] gap-10 items-start">
-        {/* Left Image */}
-        <div className="flex justify-center md:justify-start">
-          <Image
-            src="/assets/diwakar-dixit.jpeg" // 👉 replace with your actual image path
-            alt="Mr. Diwakar Dixit"
-            width={300}
-            height={380}
-            className="rounded-none shadow-md object-cover"
-          />
+        <div className=" mx-auto grid md:grid-cols-[300px_1fr] gap-10 items-start">
+          {/* Left Image */}
+          <div className="flex justify-center md:justify-start">
+            <Image
+              src="/assets/diwakar-dixit.webp" // 👉 replace with your actual image path
+              alt="Mr. Diwakar Dixit"
+              unoptimized
+              width={300}
+              height={380}
+              className="rounded-none shadow-md object-cover"
+            />
+          </div>
+
+          {/* Right Content */}
+          <div>
+            <h2 className="text-2xl md:text-3xl font-semibold text-gray-900 mb-1">
+              Mr. Diwakar Dixit
+            </h2>
+            <p className="uppercase text-xs font-semibold text-gray-600 mb-6">
+              Founder & Director, Dee Divine Propinfra Pvt. Ltd.
+            </p>
+
+            <p className="text-gray-700 text-sm mb-4 leading-relaxed">
+              With over 18 years of extensive experience in the real estate industry,
+              Mr. Diwakar Dixit is a seasoned strategist and respected leader in real
+              estate consulting, project execution, and land solutions. As the Founder
+              & Director of Dee Divine Propinfra Pvt. Ltd., he has positioned the
+              company as a key player across North India, particularly in Delhi NCR,
+              Gurgaon, and the wider Haryana and Uttar Pradesh regions.
+            </p>
+
+            <p className="text-gray-700 text-sm mb-4 leading-relaxed">
+              Mr. Diwakar has successfully collaborated with some of the most reputed
+              developers in the country, including DLF, M3M, Elan, BPTP, AIPL,
+              Silverglades, Puri, Smart World, Shapoorji Pallonji, Whiteland,
+              Signature Global, Central Park, Trehan, CLS, Spaze, Breeze, Ashiana,
+              Ganga Realty, Yashvi Homes, YP Infratech, and many others. These
+              partnerships have been built on trust, transparency, and a shared
+              commitment to delivering excellence in real estate.
+            </p>
+
+            <p className="text-gray-700 text-sm mb-4 leading-relaxed">
+              A major strength of Mr. Diwakar’s leadership lies in his hands-on
+              experience with land liaisoning—facilitating clearances, compliance, and
+              smooth coordination between developers, landowners, and government
+              authorities. His proficiency in navigating land acquisition processes
+              and securing necessary regulatory approvals has been crucial in
+              launching and executing several successful projects.
+            </p>
+          </div>
         </div>
+        <p className="text-gray-700 text-sm mb-4 leading-relaxed">
+          In addition, he brings specialized knowledge in government-supported
+          housing policies, particularly within affordable housing and commercial
+          asset development. His approach ensures that every project is aligned
+          with market trends, policy frameworks, and the evolving needs of buyers
+          and investors.
+        </p>
 
-        {/* Right Content */}
-        <div>
-          <h2 className="text-2xl md:text-3xl font-semibold text-gray-900 mb-1">
-            Mr. Diwakar Dixit
-          </h2>
-          <p className="uppercase text-xs font-semibold text-gray-600 mb-6">
-            Founder & Director, Dee Divine Propinfra Pvt. Ltd.
-          </p>
+        <p className="text-gray-700 text-sm mb-4 leading-relaxed">
+          Operating actively across Delhi, Gurgaon, Noida, Ghaziabad, Vaishali,
+          Vasundhara, and the broader regions of Haryana and UP, Mr. Diwakar’s
+          unwavering focus on ethical practices, personalized service, and
+          strategic project management has earned Dee Divine Propinfra a
+          distinguished reputation in the real estate ecosystem.
+        </p>
 
-          <p className="text-gray-700 text-sm mb-4 leading-relaxed">
-            With over 18 years of extensive experience in the real estate industry,
-            Mr. Diwakar Dixit is a seasoned strategist and respected leader in real
-            estate consulting, project execution, and land solutions. As the Founder
-            & Director of Dee Divine Propinfra Pvt. Ltd., he has positioned the
-            company as a key player across North India, particularly in Delhi NCR,
-            Gurgaon, and the wider Haryana and Uttar Pradesh regions.
-          </p>
-
-          <p className="text-gray-700 text-sm mb-4 leading-relaxed">
-            Mr. Diwakar has successfully collaborated with some of the most reputed
-            developers in the country, including DLF, M3M, Elan, BPTP, AIPL,
-            Silverglades, Puri, Smart World, Shapoorji Pallonji, Whiteland,
-            Signature Global, Central Park, Trehan, CLS, Spaze, Breeze, Ashiana,
-            Ganga Realty, Yashvi Homes, YP Infratech, and many others. These
-            partnerships have been built on trust, transparency, and a shared
-            commitment to delivering excellence in real estate.
-          </p>
-
-          <p className="text-gray-700 text-sm mb-4 leading-relaxed">
-            A major strength of Mr. Diwakar’s leadership lies in his hands-on
-            experience with land liaisoning—facilitating clearances, compliance, and
-            smooth coordination between developers, landowners, and government
-            authorities. His proficiency in navigating land acquisition processes
-            and securing necessary regulatory approvals has been crucial in
-            launching and executing several successful projects.
-          </p>
-        </div>
-      </div>
-      <p className="text-gray-700 text-sm mb-4 leading-relaxed">
-            In addition, he brings specialized knowledge in government-supported
-            housing policies, particularly within affordable housing and commercial
-            asset development. His approach ensures that every project is aligned
-            with market trends, policy frameworks, and the evolving needs of buyers
-            and investors.
-          </p>
-
-          <p className="text-gray-700 text-sm mb-4 leading-relaxed">
-            Operating actively across Delhi, Gurgaon, Noida, Ghaziabad, Vaishali,
-            Vasundhara, and the broader regions of Haryana and UP, Mr. Diwakar’s
-            unwavering focus on ethical practices, personalized service, and
-            strategic project management has earned Dee Divine Propinfra a
-            distinguished reputation in the real estate ecosystem.
-          </p>
-
-          <p className="text-gray-700 text-sm leading-relaxed">
-            Under his visionary leadership, the company continues to grow as a
-            trusted real estate entity known for end-to-end solutions, strategic
-            tie-ups, and long-term client relationships.
-          </p>
-    </section>
+        <p className="text-gray-700 text-sm leading-relaxed">
+          Under his visionary leadership, the company continues to grow as a
+          trusted real estate entity known for end-to-end solutions, strategic
+          tie-ups, and long-term client relationships.
+        </p>
+      </section>
+      <DeeDivineSection />
     </main>
   );
 }

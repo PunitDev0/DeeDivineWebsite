@@ -87,7 +87,8 @@ export default function FeatureSections() {
           {/* Image Card */}
           <Card className="overflow-hidden rounded-3xl shadow-xl border-none p-0">
             <Image
-              src="/assets/featureSection1.jpg"
+              unoptimized
+              src="/assets/featureSection1.webp"
               alt="Luxury Modern House"
               width={700}
               height={450}

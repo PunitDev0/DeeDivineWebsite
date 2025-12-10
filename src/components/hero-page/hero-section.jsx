@@ -12,35 +12,35 @@ export default function HeroSection() {
   const properties = [
     {
       id: 1,
-      title: "Elan Presidential 106",
-      type: "Residential",
+      title: "Aaranya Greens",
+      type: "Plots",
       price: "₹ 7.25 Cr*",
-      location: "Sector 106 Gurgaon",
-      image: "/assets/heroslide1.jpg",
+      location: "Sector 35 Gurgaon",
+      image: "/assets/aaranya.jpeg",
     },
     {
       id: 2,
-      title: "DLF The Arbour",
+      title: "Elite Home + 02 Homes",
       type: "Residential",
       price: "₹ 5.8 Cr*",
-      location: "Sector 63 Gurgaon",
-      image: "/assets/heroslide2.jpg",
+      location: "Sector 24 Gurgaon",
+      image: "/assets/elite.jpg",
     },
     {
       id: 3,
-      title: "M3M Crown",
+      title: "Solitaire - 70",
       type: "Residential",
       price: "₹ 2.9 Cr*",
-      location: "Sector 111 Gurgaon",
-      image: "/assets/heroslide5.jpg",
+      location: "Sector 72   Gurgaon",
+      image: "/assets/solitaire.jpg",
     },
     {
       id: 4,
-      title: "Godrej Air",
+      title: "Aura Avenue",
       type: "Residential",
       price: "₹ 1.75 Cr*",
-      location: "Sector 85 Gurgaon",
-      image: "/assets/heroslide4.jpeg",
+      location: "Sector 79 Gurgaon",
+      image: "/assets/AuraAvenue.jpg",
     },
   ];
 
@@ -50,8 +50,9 @@ export default function HeroSection() {
       <section className="relative w-full sm:h-[70vh] h-[40vh] flex items-center overflow-hidden rounded-2xl sm:mt-5 mt-2">
         {/* Background Image */}
         <Image
-          src="/assets/heroslide2.jpg"
+          src="/assets/heroslide2.webp"
           alt="Background"
+          unoptimized
           fill
           className="object-cover absolute inset-0"
           priority
@@ -106,6 +107,7 @@ export default function HeroSection() {
                     {/* Property Image */}
                     <div className="relative sm:h-[150px] h-[100px] w-full overflow-hidden">
                       <Image
+                        unoptimized
                         src={property.image}
                         alt={property.title}
                         width={1000}

@@ -19,19 +19,19 @@ export default function Footer() {
         {/* Logo + Map */}
         <div className="flex flex-col items-center md:items-start">
           <div className="flex flex-col items-center md:items-start mb-3">
-            <Image
-              src="/assets/deedivine-logo.png"
-              alt="Dee Divine PropInfra Pvt Ltd"
-              width={130}
-              height={130}
-              className="rounded-xl"
-            />
-            <h2 className="font-extrabold text-xl tracking-wide text-[#A13EA1] uppercase mt-2">
-              Dee Divine
-            </h2>
-            <p className="text-sm text-gray-700 font-medium mb-4">
-              PropInfra Pvt Ltd
-            </p>
+            <div className="flex items-center gap-2">
+              <Link href="/" className="flex items-center" aria-label="Home">
+                <Image
+                  unoptimized
+                  src="/assets/logo.webp"
+                  width={500}
+                  height={500}
+                  alt="DEE DIVINE Logo"
+                  className="object-contain w-52 "
+                  priority
+                />
+              </Link>
+            </div>
           </div>
 
           <iframe

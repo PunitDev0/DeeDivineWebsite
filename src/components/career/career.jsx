@@ -38,7 +38,7 @@ function Career() {
       <div className="px-1 py-5">
         <div
          className="relative w-full h-[200px] sm:h-[250px] rounded-xl flex items-center justify-center overflow-hidden bg-no-repeat bg-center bg-cover"
-          style={{ backgroundImage: "url('/assets/careerImage.jpg')" }} // change path
+          style={{ backgroundImage: "url('/assets/careerImage.webp')" }} // change path
         >
           <div className="absolute bottom-4 left-4 bg-black bg-opacity-60 backdrop-blur-sm text-white p-3 rounded-xl hover:bg-opacity-70 transition-all duration-300">
             <Link href="/career" className="flex items-center gap-2 hover:underline">
@@ -84,7 +84,8 @@ function Career() {
 
             <div className="relative border-2 border-gray-200 shadow-md rounded-sm w-9/12 mx-auto">
               <Image
-                src="/assets/career-team.jpg" // replace with your image
+                unoptimized
+                src="/assets/career-team.webp" // replace with your image
                 alt="Career at Dee Divine Propinfra"
                 width={600}
                 height={700}

@@ -45,12 +45,18 @@ export default function PropertyCarousel() {
             <CarouselItem key={property.type} className="pl-2 md:pl-4  basis-1/2 md:basis-1/3">
               <div className="bg-white rounded-lg overflow-hidden">
                 <div className="relative aspect-[4/3] bg-gray-100">
-                  <Image src={property.image || "/placeholder.svg"} alt={property.type} fill className="object-cover" />
+                  <Image 
+                  src={property.image || "/placeholder.svg"} 
+                  alt={property.type} 
+                  fill 
+                  className="object-cover"
+                  unoptimized
+                   />
                   <div className="absolute bottom-0 left-0 w-full bg-black bg-opacity-50 text-white text-sm p-2 text-center">
                     {property.type}
                   </div>
                 </div>
-               
+
               </div>
             </CarouselItem>
           ))}

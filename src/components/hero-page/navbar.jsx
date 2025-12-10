@@ -39,17 +39,18 @@ export default function Navbar() {
         <div className="flex items-center gap-2">
           <Link href="/" className="flex items-center" aria-label="Home">
             <Image
-              src="/assets/deedivine-logo.png"
-              width={40}
-              height={40}
+              unoptimized
+              src="/assets/logo.webp"
+              width={500}
+              height={500}
               alt="DEE DIVINE Logo"
-              className="object-contain w-10 h-10"
+              className="object-contain w-52 "
               priority
             />
           </Link>
-          <p className="text-sm sm:text-base w-[100px] sm:w-fit font-semibold text-gray-800">
+          {/* <p className="text-sm sm:text-base w-[100px] sm:w-fit font-semibold text-gray-800">
             DEE DIVINE PROPINFRA
-          </p>
+          </p> */}
         </div>
 
         {/* Desktop Navigation */}
@@ -60,9 +61,9 @@ export default function Navbar() {
           <Link href="/about" className="hover:text-[#A13EA1] transition-colors">
             About
           </Link>
-          <Link href="/projects" className="hover:text-[#A13EA1] transition-colors">
+          {/* <Link href="/projects" className="hover:text-[#A13EA1] transition-colors">
             Projects
-          </Link>
+          </Link> */}
           <Link href="/career" className="hover:text-[#A13EA1] transition-colors">
             Career
           </Link>

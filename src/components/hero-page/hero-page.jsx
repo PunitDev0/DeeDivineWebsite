@@ -20,7 +20,7 @@ function HeroPage() {
         <StatsSection/>
         <FeaturedProperty/>
         <FeatureSections/>
-        <OngoingProject/>
+        {/* <OngoingProject/> */}
         <PrimeLocations/>
         <OurServices/>  
         <AnimatedWave/>

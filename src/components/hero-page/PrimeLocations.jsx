@@ -41,6 +41,7 @@ export default function PrimeLocations() {
             <div className="sm:w-40 sm:h-40 w-16 h-16 rounded-full overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
               <Image
                 src={loc.image}
+                unoptimized
                 alt={loc.name}
                 width={200}
                 height={200}

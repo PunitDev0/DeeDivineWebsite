@@ -19,7 +19,7 @@ const staticProperties = [
       location: "South Delhi",
     },
     pricing: { price: "3.5 Cr", propertyStatus: "forSale" },
-    media: "/assets/heroslide4.jpeg",
+    media: "/assets/heroslide4.webp",
     isVerified: true,
   },
   {
@@ -31,7 +31,7 @@ const staticProperties = [
       location: "Dwarka",
     },
     pricing: { price: "45,000/mo", propertyStatus: "forRent" },
-    media: "/assets/heroslide3.jpg",
+    media: "/assets/heroslide3.webp",
     isVerified: true,
   },
   {
@@ -43,7 +43,7 @@ const staticProperties = [
       location: "Noida Sector 18",
     },
     pricing: { price: "25,000/mo", propertyStatus: "forRent" },
-    media: "/assets/heroslide1.jpg",
+    media: "/assets/heroslide1.webp",
     isVerified: false,
   },
   {
@@ -55,7 +55,7 @@ const staticProperties = [
       location: "Gurgaon",
     },
     pricing: { price: "1.2 Cr", propertyStatus: "forSale" },
-    media: "/assets/heroslide2.jpg",
+    media: "/assets/heroslide2.webp",
     isVerified: true,
   },
 ];
@@ -93,6 +93,7 @@ const FeaturedProperties = () => {
               {/* Image Section */}
               <div className="relative aspect-4/3 overflow-hidden ">
                 <Image
+                  unoptimized
                   src={property.media || "/placeholder-image.png"}
                   alt={property.basicInfo?.title || "Property Image"}
                   fill
