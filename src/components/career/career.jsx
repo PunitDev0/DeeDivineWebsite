@@ -1,10 +1,11 @@
+// app/career/page.jsx
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { ArrowRight } from "lucide-react";
-import { Badge } from "../ui/badge";
+import { Badge } from "@/components/ui/badge";
 
-function Career() {
+export default function Career() {
   const openings = [
     {
       id: 1,
@@ -28,172 +29,124 @@ function Career() {
       location: "Delhi NCR",
       type: "Full-time",
       description:
-        "Build and maintain client relationships, ensure seamless communication, and enhance the customer experience throughout the buying journey.",
+        "Build and maintain client relationships, ensure seamless communication and enhance customer experience throughout the buying journey.",
     },
   ];
 
   return (
     <main className="font-poppins">
-      {/* HERO SECTION */}
-      <div className="px-1 py-5">
+      {/* HERO */}
+      <div className="px-4 py-8 md:px-20">
         <div
-         className="relative w-full h-[200px] sm:h-[250px] rounded-xl flex items-center justify-center overflow-hidden bg-no-repeat bg-center bg-cover"
-          style={{ backgroundImage: "url('/assets/careerImage.webp')" }} // change path
+          className="relative w-full h-[250px] md:h-[350px] rounded-2xl flex items-end pb-8 pl-8 overflow-hidden bg-cover bg-center"
+          style={{ backgroundImage: "url('/assets/careerImage.webp')" }}
         >
-          <div className="absolute bottom-4 left-4 bg-black bg-opacity-60 backdrop-blur-sm text-white p-3 rounded-xl hover:bg-opacity-70 transition-all duration-300">
-            <Link href="/career" className="flex items-center gap-2 hover:underline">
-              Careers <ArrowRight size={16} />
+          <div className="bg-black/60 backdrop-blur-sm text-white px-5 py-3 rounded-xl">
+            <Link href="/career" className="flex items-center gap-2 font-medium">
+              Careers <ArrowRight size={18} />
             </Link>
           </div>
         </div>
       </div>
 
-      {/* INTRODUCTION SECTION */}
+      {/* INTRODUCTION */}
       <section className="py-16 px-6 md:px-20 bg-white">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center relative">
-          {/* Left Text Section */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
           <div>
-            <Badge className="bg-[#9b1b8f] text-white px-4 py-1 rounded-none mb-4">
-              JOIN OUR TEAM
-            </Badge>
-
-            <h2 className="text-2xl md:text-3xl tracking-wide text-gray-900 mb-4 leading-snug">
+            <Badge className="bg-[#9b1b8f] text-white px-4 py-1 mb-6">JOIN OUR TEAM</Badge>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
               Build Your Career with{" "}
-              <span className="text-[#9b1b8f] ">
-                Dee Divine Propinfra Pvt. Ltd.
-              </span>
+              <span className="text-[#9b1b8f]">Dee Divine Propinfra Pvt. Ltd.</span>
             </h2>
-
-            <p className="text-gray-600 leading-relaxed mb-4 text-sm">
-              At Dee Divine Propinfra, we believe that our success is powered by
-              people. We’re always looking for passionate individuals who want to
-              build a meaningful career in the ever-evolving world of real estate.
+            <p className="text-gray-600 mb-4">
+              At Dee Divine Propinfra, we believe that our success is powered by people. We’re always looking for passionate individuals who want to build a meaningful career in real estate.
             </p>
-
-            <p className="text-gray-600 leading-relaxed text-sm">
-              Whether you’re an experienced professional or just starting your
-              journey, we provide an inspiring environment where innovation, growth,
-              and excellence are encouraged at every step.
+            <p className="text-gray-600">
+              Whether you’re experienced or just starting, we offer growth, innovation, and a supportive environment.
             </p>
           </div>
-
-          {/* Right Image Section */}
           <div className="relative">
-            <div className="absolute -top-5 -left-5 w-24 h-24 border-dotted border-[3px] border-pink-200 rounded-full opacity-60 hidden md:block"></div>
-            <div className="absolute -bottom-8 -right-6 w-20 h-20 border-dotted border-[3px] border-pink-200 rounded-full opacity-60 hidden md:block"></div>
-
-            <div className="relative border-2 border-gray-200 shadow-md rounded-sm w-9/12 mx-auto">
-              <Image
-                unoptimized
-                src="/assets/career-team.webp" // replace with your image
-                alt="Career at Dee Divine Propinfra"
-                width={600}
-                height={700}
-                className="object-cover"
-              />
-            </div>
+            <div className="absolute -top-6 -left-6 w-32 h-32 border-4 border-dotted border-pink-300 rounded-full opacity-40 hidden md:block"></div>
+            <div className="absolute -bottom-10 -right-8 w-24 h-24 border-4 border-dotted border-pink-300 rounded-full opacity-40 hidden md:block"></div>
+            <Image
+              src="/assets/career-team.webp"
+              alt="Team at Dee Divine"
+              width={600}
+              height={700}
+              className="rounded-lg shadow-2xl border-4 border-white"
+            />
           </div>
         </div>
       </section>
 
       {/* COMPANY CULTURE */}
-      <section className="bg-[#faf5fb] px-6 md:px-20 py-20 text-gray-800">
-        <div className="max-w-6xl mx-auto text-center mb-16">
-          <h2 className="text-3xl md:text-4xl   mb-4 uppercase">
-            Life at Dee Divine Propinfra
-          </h2>
-          <p className="text-gray-700 text-sm md:text-base max-w-3xl mx-auto">
-            We take pride in fostering a workplace that celebrates collaboration,
-            learning, and innovation. Our team thrives in an open, supportive
-            environment that empowers every individual to grow personally and
-            professionally.
+      <section className="bg-[#faf5fb] py-20 px-6 md:px-20">
+        <div className="text-center max-w-4xl mx-auto mb-16">
+          <h2 className="text-4xl font-bold uppercase mb-4">Life at Dee Divine Propinfra</h2>
+          <p className="text-gray-700">
+            Collaboration • Learning • Innovation • Work-Life Balance
           </p>
         </div>
-
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          <div className="bg-white p-6 shadow-md border-t-[6px] border-[#8b1fa9]">
-            <h3 className="text-lg font-semibold mb-3 text-gray-900">
-              Growth & Learning
-            </h3>
-            <p className="text-gray-600 text-sm leading-relaxed">
-              We provide mentorship, continuous training, and opportunities to
-              enhance your skills and leadership potential.
-            </p>
-          </div>
-          <div className="bg-white p-6 shadow-md border-t-[6px] border-[#8b1fa9]">
-            <h3 className="text-lg font-semibold mb-3 text-gray-900">
-              Inclusive Environment
-            </h3>
-            <p className="text-gray-600 text-sm leading-relaxed">
-              We value diversity and inclusivity — everyone’s voice matters, and
-              every idea is respected.
-            </p>
-          </div>
-          <div className="bg-white p-6 shadow-md border-t-[6px] border-[#8b1fa9]">
-            <h3 className="text-lg font-semibold mb-3 text-gray-900">
-              Work-Life Balance
-            </h3>
-            <p className="text-gray-600 text-sm leading-relaxed">
-              We ensure a healthy balance between work and personal life through
-              flexible policies and a positive team culture.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* CURRENT OPENINGS */}
-      <section className="bg-white px-6 md:px-20 py-20">
-        <div className="max-w-6xl mx-auto text-center mb-12">
-          <h2 className="text-3xl md:text-4xl uppercase mb-4">
-            Current Openings
-          </h2>
-          <p className="text-gray-700 text-sm md:text-base">
-            Explore our latest opportunities and find a role that matches your skills
-            and ambitions.
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {openings.map((job) => (
-            <div
-              key={job.id}
-              className="bg-white shadow-md border-t-[6px] border-[#8b1fa9] p-6 flex flex-col justify-between"
-            >
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  {job.title}
-                </h3>
-                <p className="text-gray-600 text-sm mb-2">
-                  📍 {job.location} | {job.type}
-                </p>
-                <p className="text-gray-700 text-sm leading-relaxed mb-4">
-                  {job.description}
-                </p>
-              </div>
-
-              <Link
-                href="mailto:careers@deedivinepropinfra.com"
-                className="text-[#8b1fa9] font-semibold text-sm hover:underline"
-              >
-                Apply Now →
-              </Link>
+          {["Growth & Learning", "Inclusive Environment", "Work-Life Balance"].map((title, i) => (
+            <div key={i} className="bg-white p-8 rounded-lg shadow-lg border-t-8 border-[#8b1fa9]">
+              <h3 className="text-xl font-bold mb-4">{title}</h3>
+              <p className="text-gray-600 text-sm">
+                {i === 0 && "Mentorship, training, and leadership opportunities."}
+                {i === 1 && "Diversity and respect for every voice and idea."}
+                {i === 2 && "Flexible policies and a positive, supportive culture."}
+              </p>
             </div>
           ))}
         </div>
       </section>
 
-      {/* CALL TO ACTION */}
-      <section className="bg-[#8b1fa9] py-16 px-6 md:px-20 text-center text-white">
-        <h2 className="text-2xl md:text-3xl font-semibold mb-4">
-          Ready to Build Your Future with Us?
+      {/* CURRENT OPENINGS */}
+      <section className="py-20 px-6 md:px-20 bg-white">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold uppercase mb-4">Current Openings</h2>
+          <p className="text-gray-600">Find your next role with us</p>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-10 max-w-7xl mx-auto">
+          {openings.map((job) => (
+            <div
+              key={job.id}
+              className="bg-white rounded-xl shadow-xl overflow-hidden border-t-8 border-[#8b1fa9]"
+            >
+              <div className="p-8">
+                <h3 className="text-2xl font-bold text-gray-900 mb-3">{job.title}</h3>
+                <p className="text-gray-600 mb-6">
+                  {job.location} • {job.type}
+                </p>
+                <p className="text-gray-700 text-sm leading-relaxed mb-8">
+                  {job.description}
+                </p>
+              </div>
+              <div className="bg-gray-50 px-8 py-6 border-t">
+                <Link
+                  href={`/upload-resume?job=${encodeURIComponent(job.title)}`}
+                  className="text-[#8b1fa9] font-bold text-lg hover:underline flex items-center gap-2"
+                >
+                  Apply Now <ArrowRight className="w-5 h-5" />
+                </Link>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="bg-[#8b1fa9] py-20 text-center text-white">
+        <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          Ready to Join Us?
         </h2>
-        <p className="max-w-3xl mx-auto mb-8 text-sm md:text-base">
-          Join Dee Divine Propinfra and be part of a passionate team that’s shaping
-          the future of real estate through innovation, trust, and excellence.
+        <p className="max-w-2xl mx-auto mb-10 text-lg">
+          Be part of a team that’s shaping the future of real estate.
         </p>
         <Link
-          href="mailto:careers@deedivinepropinfra.com"
-          className="bg-white text-[#8b1fa9] font-semibold px-6 py-3 rounded-md hover:bg-gray-100 transition-all duration-300"
+          href="/upload-resume"
+          className="inline-block bg-white text-[#8b1fa9] font-bold px-10 py-4 rounded-lg text-lg hover:bg-gray-100 transition"
         >
           Send Your Resume
         </Link>
@@ -201,5 +154,3 @@ function Career() {
     </main>
   );
 }
-
-export default Career;

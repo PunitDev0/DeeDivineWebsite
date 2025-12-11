@@ -47,7 +47,7 @@ export default function HeroSection() {
   return (
     <>
       {/* 🏠 Hero Section */}
-      <section className="relative w-full sm:h-[70vh] h-[40vh] flex items-center overflow-hidden rounded-2xl sm:mt-5 mt-2">
+      <section className="relative w-full md:h-[70vh] sm:h-[40vh] h-[25vh]  flex items-center overflow-hidden rounded-2xl sm:mt-5 mt-2">
         {/* Background Image */}
         <Image
           src="/assets/heroslide2.webp"

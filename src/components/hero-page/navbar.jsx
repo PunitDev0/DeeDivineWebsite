@@ -44,7 +44,7 @@ export default function Navbar() {
               width={500}
               height={500}
               alt="DEE DIVINE Logo"
-              className="object-contain w-52 "
+              className="object-contain sm:w-52 w-32 "
               priority
             />
           </Link>

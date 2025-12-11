@@ -1,0 +1,1140 @@
+
+{
+    "sections": [
+      {
+        "name": "SECTION 1 — PROPERTY OWNERSHIP (1–15)",
+        "questions": [
+          {
+            "id": 1,
+            "question": "Which right is included in the “bundle of rights”?",
+            "options": {
+              "A": "Right to police power",
+              "B": "Right of exclusion",
+              "C": "Right of taxation",
+              "D": "Eminent domain"
+            },
+            "correct": "B"
+          },
+          {
+            "id": 2,
+            "question": "Which estate offers the maximum ownership rights?",
+            "options": {
+              "A": "Fee simple absolute",
+              "B": "Fee simple determinable",
+              "C": "Life estate",
+              "D": "Leasehold"
+            },
+            "correct": "A"
+          },
+          {
+            "id": 3,
+            "question": "Which is a characteristic of real property?",
+            "options": {
+              "A": "Mobility",
+              "B": "Depreciates naturally",
+              "C": "Immobility",
+              "D": "Can be hidden"
+            },
+            "correct": "C"
+          },
+          {
+            "id": 4,
+            "question": "Trade fixtures belong to the:",
+            "options": {
+              "A": "Landlord",
+              "B": "Tenant",
+              "C": "Lender",
+              "D": "City"
+            },
+            "correct": "B"
+          },
+          {
+            "id": 5,
+            "question": "A property held by two owners who have the right of survivorship is:",
+            "options": {
+              "A": "Tenancy in common",
+              "B": "Joint tenancy",
+              "C": "Tenancy by entirety",
+              "D": "Life estate"
+            },
+            "correct": "B"
+          },
+          {
+            "id": 6,
+            "question": "A remainder estate becomes possessory:",
+            "options": {
+              "A": "At the end of the measuring life",
+              "B": "At closing",
+              "C": "When recorded",
+              "D": "Never"
+            },
+            "correct": "A"
+          },
+          {
+            "id": 7,
+            "question": "A property boundary description with distances and directions is:",
+            "options": {
+              "A": "Lot & block",
+              "B": "Metes and bounds",
+              "C": "Rectangular survey",
+              "D": "Tax parcel description"
+            },
+            "correct": "B"
+          },
+          {
+            "id": 8,
+            "question": "A fixture is determined by:",
+            "options": {
+              "A": "Price",
+              "B": "Agreement",
+              "C": "Listing agent",
+              "D": "Buyer's opinion"
+            },
+            "correct": "B"
+          },
+          {
+            "id": 9,
+            "question": "The legal concept that water rights belong to the landowner is:",
+            "options": {
+              "A": "Avulsion",
+              "B": "Riparian rights",
+              "C": "Subrogation",
+              "D": "Escheat"
+            },
+            "correct": "B"
+          },
+          {
+            "id": 10,
+            "question": "A planned unit development usually includes:",
+            "options": {
+              "A": "Only commercial property",
+              "B": "Only single-family homes",
+              "C": "Mixed-use zoning",
+              "D": "Agricultural uses"
+            },
+            "correct": "C"
+          },
+          {
+            "id": 11,
+            "question": "A property escheats when:",
+            "options": {
+              "A": "The mortgage is unpaid",
+              "B": "Owner dies with no heirs",
+              "C": "Taxes are delinquent",
+              "D": "A lien is placed"
+            },
+            "correct": "B"
+          },
+          {
+            "id": 12,
+            "question": "Littoral rights refer to:",
+            "options": {
+              "A": "Rivers",
+              "B": "Streams",
+              "C": "Lakes and oceans",
+              "D": "Wells"
+            },
+            "correct": "C"
+          },
+          {
+            "id": 13,
+            "question": "A leasehold estate is:",
+            "options": {
+              "A": "Freehold",
+              "B": "Ownership",
+              "C": "Right of possession only",
+              "D": "Right of survivorship"
+            },
+            "correct": "C"
+          },
+          {
+            "id": 14,
+            "question": "What determines if an item is real or personal property?",
+            "options": {
+              "A": "Size",
+              "B": "Cost",
+              "C": "Attachment and intent",
+              "D": "Exterior appearance"
+            },
+            "correct": "C"
+          },
+          {
+            "id": 15,
+            "question": "A life tenant cannot:",
+            "options": {
+              "A": "Sell their interest",
+              "B": "Lease the property",
+              "C": "Commit waste",
+              "D": "Transfer title"
+            },
+            "correct": "C"
+          }
+        ]
+      },
+      {
+        "name": "SECTION 2 — LAND USE / GOVERNMENT CONTROL (16–30)",
+        "questions": [
+          {
+            "id": 16,
+            "question": "Zoning authority comes from:",
+            "options": {
+              "A": "State enabling acts",
+              "B": "Federal statutes",
+              "C": "Private organizations",
+              "D": "Real estate commissions"
+            },
+            "correct": "A"
+          },
+          {
+            "id": 17,
+            "question": "A nonconforming use is:",
+            "options": {
+              "A": "Illegal",
+              "B": "Grandfathered",
+              "C": "A variance",
+              "D": "Conditional"
+            },
+            "correct": "B"
+          },
+          {
+            "id": 18,
+            "question": "Police power includes:",
+            "options": {
+              "A": "Condemnation",
+              "B": "Zoning",
+              "C": "Taxation",
+              "D": "Escheat"
+            },
+            "correct": "B"
+          },
+          {
+            "id": 19,
+            "question": "A variance allows:",
+            "options": {
+              "A": "A change in zoning law",
+              "B": "Violation of subdivision rules",
+              "C": "An exception to zoning requirements",
+              "D": "Avoidance of taxes"
+            },
+            "correct": "C"
+          },
+          {
+            "id": 20,
+            "question": "Eminent domain requires:",
+            "options": {
+              "A": "Voluntary sale",
+              "B": "Fair compensation",
+              "C": "State approval only",
+              "D": "Court action only"
+            },
+            "correct": "B"
+          },
+          {
+            "id": 21,
+            "question": "Downzoning usually results in:",
+            "options": {
+              "A": "Higher values",
+              "B": "Lower density",
+              "C": "More commercial areas",
+              "D": "Easier development"
+            },
+            "correct": "B"
+          },
+          {
+            "id": 22,
+            "question": "A special use permit allows:",
+            "options": {
+              "A": "Landlords to evict",
+              "B": "Churches or schools in residential areas",
+              "C": "Tax-free development",
+              "D": "Industrial expansion"
+            },
+            "correct": "B"
+          },
+          {
+            "id": 23,
+            "question": "Building codes regulate:",
+            "options": {
+              "A": "Financing",
+              "B": "Structural integrity and safety",
+              "C": "Land use",
+              "D": "Commission rates"
+            },
+            "correct": "B"
+          },
+          {
+            "id": 24,
+            "question": "A buffer zone separates:",
+            "options": {
+              "A": "Residential lots",
+              "B": "Incompatible land uses",
+              "C": "Parcels with the same zoning",
+              "D": "Survey boundaries"
+            },
+            "correct": "B"
+          },
+          {
+            "id": 25,
+            "question": "A developer wanting smaller lot sizes must apply for:",
+            "options": {
+              "A": "Nonconforming use",
+              "B": "Rezoning",
+              "C": "Mortgage refinancing",
+              "D": "Federal approval"
+            },
+            "correct": "B"
+          },
+          {
+            "id": 26,
+            "question": "Private land-use controls are created by:",
+            "options": {
+              "A": "HOA and deed restrictions",
+              "B": "City council",
+              "C": "State legislature",
+              "D": "Lenders"
+            },
+            "correct": "A"
+          },
+          {
+            "id": 27,
+            "question": "A property with deed restrictions must follow:",
+            "options": {
+              "A": "Federal law only",
+              "B": "Deed restrictions and zoning—the stricter rule prevails",
+              "C": "Zoning only",
+              "D": "The least restrictive rule"
+            },
+            "correct": "B"
+          },
+          {
+            "id": 28,
+            "question": "A plat map is used for:",
+            "options": {
+              "A": "Mortgage underwriting",
+              "B": "Subdivision development",
+              "C": "Tax assessment",
+              "D": "Encumbrance removal"
+            },
+            "correct": "B"
+          },
+          {
+            "id": 29,
+            "question": "The right of the government to take private land is:",
+            "options": {
+              "A": "Police power",
+              "B": "Escheat",
+              "C": "Eminent domain",
+              "D": "Condemnation"
+            },
+            "correct": "C"
+          },
+          {
+            "id": 30,
+            "question": "A special assessment is charged for:",
+            "options": {
+              "A": "General public services",
+              "B": "City revenue",
+              "C": "Improvements benefiting specific properties",
+              "D": "Commercial zoning"
+            },
+            "correct": "C"
+          }
+        ]
+      },
+      {
+        "name": "SECTION 3 — AGENCY & ETHICS (31–50)",
+        "questions": [
+          {
+            "id": 31,
+            "question": "A fiduciary duty owed only to clients is:",
+            "options": {
+              "A": "Honesty",
+              "B": "Disclosure of material facts",
+              "C": "Loyalty",
+              "D": "Fair dealing"
+            },
+            "correct": "C"
+          },
+          {
+            "id": 32,
+            "question": "Dual agency requires:",
+            "options": {
+              "A": "Mandatory price disclosure",
+              "B": "Written consent of both parties",
+              "C": "Two brokers",
+              "D": "A special license"
+            },
+            "correct": "B"
+          },
+          {
+            "id": 33,
+            "question": "A subagent represents:",
+            "options": {
+              "A": "The buyer",
+              "B": "The seller",
+              "C": "The lender",
+              "D": "Both equally"
+            },
+            "correct": "B"
+          },
+          {
+            "id": 34,
+            "question": "A “customer” is owed:",
+            "options": {
+              "A": "Loyalty",
+              "B": "Obedience",
+              "C": "Honesty and fairness",
+              "D": "Confidentiality"
+            },
+            "correct": "C"
+          },
+          {
+            "id": 35,
+            "question": "Which can terminate an agency?",
+            "options": {
+              "A": "Seller changing their mind",
+              "B": "Broker death",
+              "C": "Customer request",
+              "D": "Property inspection"
+            },
+            "correct": "B"
+          },
+          {
+            "id": 36,
+            "question": "Commingling means:",
+            "options": {
+              "A": "Mixing clients' funds with broker funds",
+              "B": "Illegal price fixing",
+              "C": "Hiding defects",
+              "D": "Changing loan terms"
+            },
+            "correct": "A"
+          },
+          {
+            "id": 37,
+            "question": "Conversion is:",
+            "options": {
+              "A": "Failure to disclose",
+              "B": "Trust account theft",
+              "C": "Predicting market value",
+              "D": "Steering buyers"
+            },
+            "correct": "B"
+          },
+          {
+            "id": 38,
+            "question": "Puffing is:",
+            "options": {
+              "A": "Misrepresentation",
+              "B": "Fraud",
+              "C": "Legal exaggeration",
+              "D": "Concealing facts"
+            },
+            "correct": "C"
+          },
+          {
+            "id": 39,
+            "question": "A latent defect is:",
+            "options": {
+              "A": "Obvious",
+              "B": "Hidden",
+              "C": "Cosmetic",
+              "D": "Not important"
+            },
+            "correct": "B"
+          },
+          {
+            "id": 40,
+            "question": "A stigmatized property is one that:",
+            "options": {
+              "A": "Needs repairs",
+              "B": "Has a material defect",
+              "C": "Has non-physical issues (crime, death)",
+              "D": "Has zoning violations"
+            },
+            "correct": "C"
+          },
+          {
+            "id": 41,
+            "question": "A broker owes which duty to customers?",
+            "options": {
+              "A": "Confidentiality",
+              "B": "Loyalty",
+              "C": "Accounting",
+              "D": "Honesty"
+            },
+            "correct": "D"
+          },
+          {
+            "id": 42,
+            "question": "A designated agent represents:",
+            "options": {
+              "A": "Both parties equally",
+              "B": "Only one party within the brokerage",
+              "C": "The lender",
+              "D": "No one"
+            },
+            "correct": "B"
+          },
+          {
+            "id": 43,
+            "question": "A transaction broker provides:",
+            "options": {
+              "A": "Full fiduciary duties",
+              "B": "No fiduciary duties",
+              "C": "Loyalty to seller only",
+              "D": "Loyalty to buyer only"
+            },
+            "correct": "B"
+          },
+          {
+            "id": 44,
+            "question": "A net listing is:",
+            "options": {
+              "A": "Always legal",
+              "B": "Illegal in many states",
+              "C": "Exclusive right to sell",
+              "D": "Open listing"
+            },
+            "correct": "B"
+          },
+          {
+            "id": 45,
+            "question": "An agent must disclose agency status:",
+            "options": {
+              "A": "At closing",
+              "B": "Before providing any services",
+              "C": "After showing a house",
+              "D": "Only on request"
+            },
+            "correct": "B"
+          },
+          {
+            "id": 46,
+            "question": "When a broker hires another broker this is:",
+            "options": {
+              "A": "Assignment",
+              "B": "Disclosure",
+              "C": "Subagency",
+              "D": "Delegation"
+            },
+            "correct": "C"
+          },
+          {
+            "id": 47,
+            "question": "Fraud requires:",
+            "options": {
+              "A": "Innocent error",
+              "B": "Misrepresentation with intent",
+              "C": "Negligence",
+              "D": "Puffery"
+            },
+            "correct": "B"
+          },
+          {
+            "id": 48,
+            "question": "A property manager's first duty is to:",
+            "options": {
+              "A": "Tenants",
+              "B": "Owner",
+              "C": "Lender",
+              "D": "City"
+            },
+            "correct": "B"
+          },
+          {
+            "id": 49,
+            "question": "A universal agent can:",
+            "options": {
+              "A": "Represent in one transaction",
+              "B": "Represent only buyers",
+              "C": "Act in all matters",
+              "D": "Only handle rentals"
+            },
+            "correct": "C"
+          },
+          {
+            "id": 50,
+            "question": "A special agent can:",
+            "options": {
+              "A": "Perform one specific act or transaction",
+              "B": "Manage property",
+              "C": "Handle all business",
+              "D": "Create zoning laws"
+            },
+            "correct": "A"
+          }
+        ]
+      },
+      {
+        "name": "SECTION 4 — CONTRACTS (51–70)",
+        "questions": [
+          {
+            "id": 51,
+            "question": "A bilateral contract requires:",
+            "options": {
+              "A": "Only one promise",
+              "B": "Two promises",
+              "C": "No consideration",
+              "D": "Verbal agreement only"
+            },
+            "correct": "B"
+          },
+          {
+            "id": 52,
+            "question": "A voidable contract is valid until:",
+            "options": {
+              "A": "A court rejects it",
+              "B": "One party rescinds",
+              "C": "It is signed",
+              "D": "It expires"
+            },
+            "correct": "B"
+          },
+          {
+            "id": 53,
+            "question": "Consideration means:",
+            "options": {
+              "A": "Legal description",
+              "B": "Price only",
+              "C": "Something of value exchanged",
+              "D": "Signatures"
+            },
+            "correct": "C"
+          },
+          {
+            "id": 54,
+            "question": "A counteroffer:",
+            "options": {
+              "A": "Rejects the original offer",
+              "B": "Accepts the original offer",
+              "C": "Modifies price only",
+              "D": "Is not binding"
+            },
+            "correct": "A"
+          },
+          {
+            "id": 55,
+            "question": "A contract signed under duress is:",
+            "options": {
+              "A": "Void",
+              "B": "Voidable",
+              "C": "Executed",
+              "D": "Unenforceable only"
+            },
+            "correct": "B"
+          },
+          {
+            "id": 56,
+            "question": "Earnest money is:",
+            "options": {
+              "A": "Required always",
+              "B": "A good-faith deposit",
+              "C": "Down payment",
+              "D": "Refundable always"
+            },
+            "correct": "B"
+          },
+          {
+            "id": 57,
+            "question": "A contract is executed when:",
+            "options": {
+              "A": "Signed",
+              "B": "All obligations completed",
+              "C": "Recorded",
+              "D": "Delivered"
+            },
+            "correct": "B"
+          },
+          {
+            "id": 58,
+            "question": "Specific performance orders a party to:",
+            "options": {
+              "A": "Pay damages",
+              "B": "Perform the contract",
+              "C": "Cancel the contract",
+              "D": "Pay penalties"
+            },
+            "correct": "B"
+          },
+          {
+            "id": 59,
+            "question": "Novation means:",
+            "options": {
+              "A": "Assignment",
+              "B": "Replacing a contract with a new one",
+              "C": "Voiding a contract",
+              "D": "Closing a sale"
+            },
+            "correct": "B"
+          },
+          {
+            "id": 60,
+            "question": "Contingencies allow a buyer to:",
+            "options": {
+              "A": "Cancel under certain conditions",
+              "B": "Change price",
+              "C": "Avoid taxes",
+              "D": "Avoid inspections"
+            },
+            "correct": "A"
+          },
+          {
+            "id": 61,
+            "question": "A lease is both:",
+            "options": {
+              "A": "A contract and conveyance",
+              "B": "A deed",
+              "C": "A lien",
+              "D": "A license"
+            },
+            "correct": "A"
+          },
+          {
+            "id": 62,
+            "question": "A valid contract does NOT require:",
+            "options": {
+              "A": "Offer",
+              "B": "Acceptance",
+              "C": "Consideration",
+              "D": "Witnesses"
+            },
+            "correct": "D"
+          },
+          {
+            "id": 63,
+            "question": "Time is of the essence means:",
+            "options": {
+              "A": "Flexible deadlines",
+              "B": "Deadlines are material",
+              "C": "Closing is optional",
+              "D": "Only lender deadlines matter"
+            },
+            "correct": "B"
+          },
+          {
+            "id": 64,
+            "question": "A liquidated damages clause specifies:",
+            "options": {
+              "A": "Actual damages",
+              "B": "Pre-agreed damages",
+              "C": "Criminal penalties",
+              "D": "Appraisal value"
+            },
+            "correct": "B"
+          },
+          {
+            "id": 65,
+            "question": "A contract with an illegal purpose is:",
+            "options": {
+              "A": "Valid",
+              "B": "Void",
+              "C": "Voidable",
+              "D": "Enforceable"
+            },
+            "correct": "B"
+          },
+          {
+            "id": 66,
+            "question": "Parol evidence rule:",
+            "options": {
+              "A": "Allows verbal changes",
+              "B": "Prevents oral evidence from altering written contracts",
+              "C": "Requires witnesses",
+              "D": "Only applies to deeds"
+            },
+            "correct": "B"
+          },
+          {
+            "id": 67,
+            "question": "Assignment transfers:",
+            "options": {
+              "A": "Rights",
+              "B": "Title",
+              "C": "Possession",
+              "D": "Commissions"
+            },
+            "correct": "A"
+          },
+          {
+            "id": 68,
+            "question": "A lease that automatically renews is a:",
+            "options": {
+              "A": "Estate at sufferance",
+              "B": "Estate at will",
+              "C": "Periodic tenancy",
+              "D": "Tenancy for years"
+            },
+            "correct": "C"
+          },
+          {
+            "id": 69,
+            "question": "A purchase contract becomes binding when:",
+            "options": {
+              "A": "Buyer signs",
+              "B": "Seller signs",
+              "C": "Acceptance is communicated",
+              "D": "Home inspection is done"
+            },
+            "correct": "C"
+          },
+          {
+            "id": 70,
+            "question": "The statute of frauds requires contracts for real estate to be:",
+            "options": {
+              "A": "Verbal",
+              "B": "In writing",
+              "C": "Notarized",
+              "D": "Recorded"
+            },
+            "correct": "B"
+          }
+        ]
+      },
+      {
+        "name": "SECTION 5 — FINANCE (71–85)",
+        "questions": [
+          {
+            "id": 71,
+            "question": "A mortgage is:",
+            "options": {
+              "A": "The debt itself",
+              "B": "A pledge of real estate as security",
+              "C": "A promissory note",
+              "D": "A lease"
+            },
+            "correct": "B"
+          },
+          {
+            "id": 72,
+            "question": "The promissory note is:",
+            "options": {
+              "A": "The lien",
+              "B": "Evidence of the debt",
+              "C": "The appraisal",
+              "D": "The deed"
+            },
+            "correct": "B"
+          },
+          {
+            "id": 73,
+            "question": "The secondary mortgage market includes:",
+            "options": {
+              "A": "FHA and VA",
+              "B": "Fannie Mae and Freddie Mac",
+              "C": "Local banks",
+              "D": "Credit unions only"
+            },
+            "correct": "B"
+          },
+          {
+            "id": 74,
+            "question": "PMI is required on conventional loans with LTV above:",
+            "options": {
+              "A": "50%",
+              "B": "60%",
+              "C": "70%",
+              "D": "80%"
+            },
+            "correct": "D"
+          },
+          {
+            "id": 75,
+            "question": "Amortization means:",
+            "options": {
+              "A": "Balloon payment",
+              "B": "Gradual repayment of principal & interest",
+              "C": "Interest only",
+              "D": "Negative equity"
+            },
+            "correct": "B"
+          },
+          {
+            "id": 76,
+            "question": "RESPA prohibits:",
+            "options": {
+              "A": "Interest rate changes",
+              "B": "Kickbacks and unearned fees",
+              "C": "Appraisal fees",
+              "D": "Lender underwriting"
+            },
+            "correct": "B"
+          },
+          {
+            "id": 77,
+            "question": "Truth in Lending (TILA) requires disclosure of:",
+            "options": {
+              "A": "APR",
+              "B": "Closing date",
+              "C": "Market value",
+              "D": "Loan term only"
+            },
+            "correct": "A"
+          },
+          {
+            "id": 78,
+            "question": "The lender's maximum acceptable LTV is 75%. If the home appraises for $400,000, the max loan amount is:",
+            "options": {
+              "A": "$300,000",
+              "B": "$350,000",
+              "C": "$275,000",
+              "D": "$325,000"
+            },
+            "correct": "A"
+          },
+          {
+            "id": 79,
+            "question": "A reverse mortgage is for:",
+            "options": {
+              "A": "Investors only",
+              "B": "Senior homeowners",
+              "C": "First-time buyers",
+              "D": "Commercial property owners"
+            },
+            "correct": "B"
+          },
+          {
+            "id": 80,
+            "question": "A deficiency judgment occurs when:",
+            "options": {
+              "A": "Seller cancels",
+              "B": "Foreclosure sale is insufficient to pay loan",
+              "C": "Buyer breaches contract",
+              "D": "Taxes unpaid"
+            },
+            "correct": "B"
+          },
+          {
+            "id": 81,
+            "question": "A wraparound mortgage:",
+            "options": {
+              "A": "Refinances the old loan",
+              "B": "Combines existing and new loan",
+              "C": "Eliminates old loan",
+              "D": "Is government insured"
+            },
+            "correct": "B"
+          },
+          {
+            "id": 82,
+            "question": "A VA loan requires:",
+            "options": {
+              "A": "PMI",
+              "B": "No down payment (in many cases)",
+              "C": "High credit score",
+              "D": "Mortgage insurance"
+            },
+            "correct": "B"
+          },
+          {
+            "id": 83,
+            "question": "Discount points:",
+            "options": {
+              "A": "Increase the interest rate",
+              "B": "Are prepaid interest to reduce rate",
+              "C": "Are lender fees",
+              "D": "Are taxes"
+            },
+            "correct": "B"
+          },
+          {
+            "id": 84,
+            "question": "A balloon payment means:",
+            "options": {
+              "A": "Lower principal",
+              "B": "Final payment larger than previous payments",
+              "C": "No interest",
+              "D": "Negative amortization"
+            },
+            "correct": "B"
+          },
+          {
+            "id": 85,
+            "question": "Usury laws regulate:",
+            "options": {
+              "A": "Maximum interest rates",
+              "B": "Loan terms",
+              "C": "Closing fees",
+              "D": "Appraisals"
+            },
+            "correct": "A"
+          }
+        ]
+      },
+      {
+        "name": "SECTION 6 — VALUATION & APPRAISAL (86–93)",
+        "questions": [
+          {
+            "id": 86,
+            "question": "The sales comparison approach uses:",
+            "options": {
+              "A": "Replacement cost",
+              "B": "Comparable properties",
+              "C": "Gross rent",
+              "D": "Depreciation"
+            },
+            "correct": "B"
+          },
+          {
+            "id": 87,
+            "question": "The cost approach is best for:",
+            "options": {
+              "A": "New construction",
+              "B": "Existing homes",
+              "C": "Vacant land",
+              "D": "Condos"
+            },
+            "correct": "A"
+          },
+          {
+            "id": 88,
+            "question": "Economic obsolescence is:",
+            "options": {
+              "A": "Internal",
+              "B": "External",
+              "C": "Curable",
+              "D": "Wear and tear"
+            },
+            "correct": "B"
+          },
+          {
+            "id": 89,
+            "question": "GRM uses:",
+            "options": {
+              "A": "Net income",
+              "B": "Operating expenses",
+              "C": "Gross rent",
+              "D": "Cap rate"
+            },
+            "correct": "C"
+          },
+          {
+            "id": 90,
+            "question": "If NOI is $72,000 and cap rate is 6%, value is:",
+            "options": {
+              "A": "$1,200,000",
+              "B": "$600,000",
+              "C": "$432,000",
+              "D": "$720,000"
+            },
+            "correct": "A"
+          },
+          {
+            "id": 91,
+            "question": "Highest and best use means:",
+            "options": {
+              "A": "Most profitable legal use",
+              "B": "Lowest cost",
+              "C": "Easier to finance",
+              "D": "Most common use"
+            },
+            "correct": "A"
+          },
+          {
+            "id": 92,
+            "question": "Regression means:",
+            "options": {
+              "A": "Lower-quality homes drag down value of better homes",
+              "B": "Values always rise",
+              "C": "Land values stay stable",
+              "D": "Substitution applies"
+            },
+            "correct": "A"
+          },
+          {
+            "id": 93,
+            "question": "Assemblage refers to:",
+            "options": {
+              "A": "Plottage increase",
+              "B": "Combining parcels into one",
+              "C": "Eminent domain",
+              "D": "Subdivision"
+            },
+            "correct": "B"
+          }
+        ]
+      },
+      {
+        "name": "SECTION 7 — TRANSFER OF TITLE (94–100)",
+        "questions": [
+          {
+            "id": 94,
+            "question": "A general warranty deed provides:",
+            "options": {
+              "A": "No warranties",
+              "B": "Limited warranties",
+              "C": "Full protection to buyer",
+              "D": "Only in foreclosure"
+            },
+            "correct": "C"
+          },
+          {
+            "id": 95,
+            "question": "Title insurance protects against:",
+            "options": {
+              "A": "Future zoning changes",
+              "B": "Past defects & liens",
+              "C": "Physical damages",
+              "D": "Rent loss"
+            },
+            "correct": "B"
+          },
+          {
+            "id": 96,
+            "question": "A deed is valid when:",
+            "options": {
+              "A": "Recorded",
+              "B": "Signed only",
+              "C": "Delivered and accepted",
+              "D": "Witnessed"
+            },
+            "correct": "C"
+          },
+          {
+            "id": 97,
+            "question": "A quitclaim deed conveys:",
+            "options": {
+              "A": "Clear title",
+              "B": "Lien-free title",
+              "C": "Whatever interest the grantor has",
+              "D": "Title with warranties"
+            },
+            "correct": "C"
+          },
+          {
+            "id": 98,
+            "question": "Intestate succession occurs when:",
+            "options": {
+              "A": "Will exists",
+              "B": "No will exists",
+              "C": "Mortgage is unpaid",
+              "D": "Lender forecloses"
+            },
+            "correct": "B"
+          },
+          {
+            "id": 99,
+            "question": "A closing disclosure must be given to the borrower at least:",
+            "options": {
+              "A": "1 day before closing",
+              "B": "3 days before closing",
+              "C": "5 days before closing",
+              "D": "10 days before closing"
+            },
+            "correct": "B"
+          },
+          {
+            "id": 100,
+            "question": "A cloud on title is removed by:",
+            "options": {
+              "A": "Recording a lien",
+              "B": "Quiet title action",
+              "C": "Refinancing",
+              "D": "Changing escrow"
+            },
+            "correct": "B"
+          }
+        ]
+      }
+    ]
+  }

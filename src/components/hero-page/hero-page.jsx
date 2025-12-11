@@ -16,7 +16,9 @@ import AnimatedWave2 from './animated-wave-bottom'
 function HeroPage() {
   return (
     <div className=''>
-        <HeroSection/>
+       <div className='sm:px-5 px-2'>
+       <HeroSection/>
+       </div>
         <StatsSection/>
         <FeaturedProperty/>
         <FeatureSections/>
