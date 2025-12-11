@@ -1,5 +1,5 @@
 import TestPage from '@/components/hero-page/test-page'
-import React from 'react'
+import React, { Suspense } from 'react'
 
 function page() {
   return (
