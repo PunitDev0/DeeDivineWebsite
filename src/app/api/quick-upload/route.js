@@ -1,10 +1,14 @@
-// app/api/quick-upload/route.js
 import { NextResponse } from "next/server";
 import Candidate from "@/models/Candidate";
-import { writeFile, mkdir } from "fs/promises";
-import path from "path";
+import { connectDB } from "@/lib/mongodb";
+import { v2 as cloudinary } from "cloudinary";
 
-  import { connectDB } from "@/lib/mongodb";
+// Cloudinary Config
+cloudinary.config({
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+  api_key: process.env.CLOUDINARY_API_KEY,
+  api_secret: process.env.CLOUDINARY_API_SECRET,
+});
 
 export async function POST(request) {
   try {
@@ -18,18 +22,23 @@ export async function POST(request) {
     const jobTitle = data.get("jobTitle");
 
     if (!file || !name || !email || !phone || !jobTitle) {
-      return NextResponse.json({ error: "All fields are required" }, { status: 400 });
+      return NextResponse.json(
+        { error: "All fields are required" },
+        { status: 400 }
+      );
     }
 
-    // Save file
+    // Convert file to Base64 for Cloudinary
     const bytes = await file.arrayBuffer();
     const buffer = Buffer.from(bytes);
-    const filename = `${Date.now()}_${name.replace(/\s/g, "_")}_${file.name}`;
-    const uploadDir = path.join(process.cwd(), "uploads/resumes");
+    const base64 = `data:${file.type};base64,${buffer.toString("base64")}`;
 
-    await mkdir(uploadDir, { recursive: true });
-    const filePath = path.join(uploadDir, filename);
-    await writeFile(filePath, buffer);
+    // Upload to Cloudinary
+    const upload = await cloudinary.uploader.upload(base64, {
+      folder: "resumes",
+      resource_type: "auto",
+      public_id: `${Date.now()}_${name.replace(/\s/g, "_")}`,
+    });
 
     // Save to MongoDB
     const newCandidate = await Candidate.create({
@@ -40,7 +49,8 @@ export async function POST(request) {
       appliedFor: data.get("appliedFor") || jobTitle,
       resume: {
         fileName: file.name,
-        filePath: `/uploads/resumes/${filename}`,
+        fileUrl: upload.secure_url,
+        cloudinaryId: upload.public_id,
         fileSize: file.size,
         fileType: file.type,
       },
@@ -50,11 +60,9 @@ export async function POST(request) {
       success: true,
       message: "Resume uploaded successfully!",
       candidateId: newCandidate._id,
+      resumeUrl: upload.secure_url,
     });
   } catch (error) {
-    if (error.code === 11000) {
-      return NextResponse.json({error: error}, { status: 409 });
-    }
     console.error("Upload error:", error);
     return NextResponse.json({ error: "Something went wrong" }, { status: 500 });
   }

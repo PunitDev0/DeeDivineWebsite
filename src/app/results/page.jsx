@@ -11,7 +11,8 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
-import { CheckCircle2, XCircle, Eye, User, Mail, Calendar } from "lucide-react";
+import { CheckCircle2, XCircle, Eye, User, Mail, Calendar, File } from "lucide-react";
+import Link from "next/link";
 
 export default function AdminResultsPage() {
   const [results, setResults] = useState([]);
@@ -25,7 +26,7 @@ export default function AdminResultsPage() {
       .then((res) => {
         if (res.data.success) setResults(res.data.results);
       })
-      .catch(() => {})
+      .catch(() => { })
       .finally(() => setLoading(false));
   }, []);
 
@@ -33,6 +34,9 @@ export default function AdminResultsPage() {
     setSelectedResult(result);
     setIsDialogOpen(true);
   };
+
+  console.log(results);
+
 
   if (loading) {
     return (
@@ -74,10 +78,9 @@ export default function AdminResultsPage() {
                     <h3 className="font-bold text-lg text-gray-800 line-clamp-1">
                       {r.candidate.name}
                     </h3>
-                    <div className={`text-3xl font-black ${
-                      r.score >= 80 ? "text-green-600" :
-                      r.score >= 60 ? "text-amber-600" : "text-red-600"
-                    }`}>
+                    <div className={`text-3xl font-black ${r.score >= 80 ? "text-green-600" :
+                        r.score >= 60 ? "text-amber-600" : "text-red-600"
+                      }`}>
                       {r.score}%
                     </div>
                   </div>
@@ -103,6 +106,19 @@ export default function AdminResultsPage() {
                   </p>
 
                   {/* View Answers Button */}
+                  <Link
+                   href={`${r.candidate.resume}`}
+                  >
+                    <Button
+
+                      size="sm"
+                      variant="outline"
+                      className="w-full mt-2"
+                    >
+                      <File className="w-4 h-4 mr-2" />
+                      Resume
+                    </Button>
+                  </Link>
                   <Button
                     onClick={() => openAnswers(r)}
                     size="sm"
@@ -144,9 +160,8 @@ export default function AdminResultsPage() {
                 {selectedResult.answers.map((ans, i) => (
                   <div
                     key={i}
-                    className={`p-4 rounded-lg border-2 ${
-                      ans.isCorrect ? "border-green-500 bg-green-50" : "border-red-500 bg-red-50"
-                    }`}
+                    className={`p-4 rounded-lg border-2 ${ans.isCorrect ? "border-green-500 bg-green-50" : "border-red-500 bg-red-50"
+                      }`}
                   >
                     <p className="font-medium">
                       Q{ans.questionId}: {ans.question}
@@ -154,9 +169,8 @@ export default function AdminResultsPage() {
                     <div className="mt-3 flex flex-wrap gap-3 items-center">
                       <span>
                         <strong>Your Answer:</strong>{" "}
-                        <span className={`px-3 py-1 rounded font-bold ${
-                          ans.isCorrect ? "bg-green-200 text-green-800" : "bg-red-200 text-red-800"
-                        }`}>
+                        <span className={`px-3 py-1 rounded font-bold ${ans.isCorrect ? "bg-green-200 text-green-800" : "bg-red-200 text-red-800"
+                          }`}>
                           {ans.selectedAnswer}
                         </span>
                       </span>

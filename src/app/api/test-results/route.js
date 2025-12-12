@@ -4,6 +4,8 @@ import { NextResponse } from "next/server";
 import TestResult from "@/models/TestResult";
 import questionsData from "@/lib/questions.json"; // Import JSON for scoring
 import { connectDB } from "@/lib/mongodb";
+import Candidate from "@/models/Candidate";
+
 
 export async function POST(request) {
   try {
@@ -57,7 +59,7 @@ export async function GET() {
     await connectDB();
 
     const results = await TestResult.find({})
-      .populate("candidateId", "name email phone jobTitle")
+    .populate("candidateId", "name email phone jobTitle resume.fileUrl")
       .sort({ completedAt: -1 })
       .lean();
 
@@ -99,6 +101,7 @@ export async function GET() {
           email: candidate.email || "N/A",
           phone: candidate.phone || "N/A",
           jobTitle: candidate.jobTitle || "N/A",
+          resume: candidate?.resume?.fileUrl || "N/A",
         },
         score: percentage,
         correct: correctCount,

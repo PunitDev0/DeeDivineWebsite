@@ -100,7 +100,7 @@ export default function UploadResumePage() {
       });
 
       const data = await res.json();
-      console.log(data.candidateId);
+      console.log(data);
       
 
       if (data.success == true) {
