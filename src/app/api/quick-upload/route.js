@@ -62,8 +62,18 @@ export async function POST(request) {
       candidateId: newCandidate._id,
       resumeUrl: upload.secure_url,
     });
+
   } catch (error) {
-    console.error("Upload error:", error);
-    return NextResponse.json({ error: "Something went wrong" }, { status: 500 });
+    console.error("🔴 SERVER ERROR:", error);
+
+    return NextResponse.json(
+      {
+        success: false,
+        message: error.message || "Unknown server error",
+        stack: error.stack || null,
+        cloudinaryError: error.error || null,
+      },
+      { status: 500 }
+    );
   }
 }
