@@ -11,33 +11,89 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
-import { CheckCircle2, XCircle, Eye, User, Mail, Calendar, File } from "lucide-react";
+import { CheckCircle2, XCircle, Eye, Mail, Calendar, File } from "lucide-react";
 import Link from "next/link";
 
 export default function AdminResultsPage() {
+  // ---------------- LOGIN STATE ----------------
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [loginEmail, setLoginEmail] = useState("");
+  const [loginPassword, setLoginPassword] = useState("");
+  const [loginError, setLoginError] = useState("");
+
+  // ---------------- RESULTS STATE ----------------
   const [results, setResults] = useState([]);
   const [loading, setLoading] = useState(true);
   const [selectedResult, setSelectedResult] = useState(null);
   const [isDialogOpen, setIsDialogOpen] = useState(false);
 
+  // ---------------- HARD-CODED LOGIN ----------------
+  const ADMIN_EMAIL = "admin@company.com";
+  const ADMIN_PASSWORD = "admin123";
+
+  const handleLogin = () => {
+    if (loginEmail === ADMIN_EMAIL && loginPassword === ADMIN_PASSWORD) {
+      setIsLoggedIn(true);
+      setLoginError("");
+    } else {
+      setLoginError("Invalid email or password!");
+    }
+  };
+
+  // ---------------- FETCH RESULTS AFTER LOGIN ----------------
   useEffect(() => {
+    if (!isLoggedIn) return;
+
     axios
       .get("/api/test-results")
       .then((res) => {
         if (res.data.success) setResults(res.data.results);
       })
-      .catch(() => { })
+      .catch(() => {})
       .finally(() => setLoading(false));
-  }, []);
+  }, [isLoggedIn]);
 
   const openAnswers = (result) => {
     setSelectedResult(result);
     setIsDialogOpen(true);
   };
 
-  console.log(results);
+  // ===================== LOGIN UI =====================
+  if (!isLoggedIn) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gray-100 p-4">
+        <Card className="p-10 w-full max-w-md shadow-lg">
+          <h2 className="text-2xl font-bold text-center mb-6">Admin Login</h2>
 
+          <input
+            type="email"
+            placeholder="Email"
+            value={loginEmail}
+            onChange={(e) => setLoginEmail(e.target.value)}
+            className="w-full p-3 border rounded mb-4"
+          />
 
+          <input
+            type="password"
+            placeholder="Password"
+            value={loginPassword}
+            onChange={(e) => setLoginPassword(e.target.value)}
+            className="w-full p-3 border rounded mb-4"
+          />
+
+          {loginError && (
+            <p className="text-red-500 mb-3 text-sm">{loginError}</p>
+          )}
+
+          <Button className="w-full" onClick={handleLogin}>
+            Login
+          </Button>
+        </Card>
+      </div>
+    );
+  }
+
+  // ===================== AFTER LOGIN LOAD RESULTS =====================
   if (loading) {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
@@ -57,6 +113,7 @@ export default function AdminResultsPage() {
     );
   }
 
+  // ===================== RESULTS PAGE =====================
   return (
     <>
       <div className="min-h-screen bg-gray-50 py-10 px-4">
@@ -65,68 +122,64 @@ export default function AdminResultsPage() {
             Test Results ({results.length})
           </h1>
 
-          {/* Compact Grid */}
+          {/* Results Grid */}
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             {results.map((r) => (
-              <Card
-                key={r.id}
-                className="p-5 hover:shadow-lg transition-shadow border"
-              >
+              <Card key={r.id} className="p-5 hover:shadow-lg transition-shadow border">
                 <div className="space-y-3">
-                  {/* Name & Score */}
                   <div className="flex justify-between items-start">
                     <h3 className="font-bold text-lg text-gray-800 line-clamp-1">
                       {r.candidate.name}
                     </h3>
-                    <div className={`text-3xl font-black ${r.score >= 80 ? "text-green-600" :
-                        r.score >= 60 ? "text-amber-600" : "text-red-600"
-                      }`}>
+                    <div
+                      className={`text-3xl font-black ${
+                        r.score >= 80
+                          ? "text-green-600"
+                          : r.score >= 60
+                          ? "text-amber-600"
+                          : "text-red-600"
+                      }`}
+                    >
                       {r.score}%
                     </div>
                   </div>
 
-                  {/* Email */}
                   <p className="text-sm text-gray-600 flex items-center gap-1">
                     <Mail className="w-4 h-4" /> {r.candidate.email}
                   </p>
 
-                  {/* Score Details */}
                   <div className="flex justify-between text-sm">
                     <span className="text-gray-600">
                       {r.correct}/{r.total} correct
                     </span>
-                    <Badge variant={r.score >= 70 ? "default" : "destructive"}>
-                      {r.score >= 80 ? "Excellent" : r.score >= 70 ? "Pass" : "Fail"}
+                    <Badge
+                      variant={r.score >= 70 ? "default" : "destructive"}
+                    >
+                      {r.score >= 80
+                        ? "Excellent"
+                        : r.score >= 70
+                        ? "Pass"
+                        : "Fail"}
                     </Badge>
                   </div>
 
-                  {/* Date */}
                   <p className="text-xs text-gray-500 flex items-center gap-1">
                     <Calendar className="w-3 h-3" /> {r.date}
                   </p>
 
-                  {/* View Answers Button */}
-                  <Link
-                   href={`${r.candidate.resume}`}
-                  >
-                    <Button
-
-                      size="sm"
-                      variant="outline"
-                      className="w-full mt-2"
-                    >
-                      <File className="w-4 h-4 mr-2" />
-                      Resume
+                  <Link href={`${r.candidate.resume}`}>
+                    <Button size="sm" variant="outline" className="w-full mt-2">
+                      <File className="w-4 h-4 mr-2" /> Resume
                     </Button>
                   </Link>
+
                   <Button
                     onClick={() => openAnswers(r)}
                     size="sm"
                     variant="outline"
                     className="w-full mt-2"
                   >
-                    <Eye className="w-4 h-4 mr-2" />
-                    View Answers
+                    <Eye className="w-4 h-4 mr-2" /> View Answers
                   </Button>
                 </div>
               </Card>
@@ -135,7 +188,7 @@ export default function AdminResultsPage() {
         </div>
       </div>
 
-      {/* Dialog for Detailed Answers */}
+      {/* Dialog for Answers */}
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
         <DialogContent className="max-w-4xl max-h-[85vh] overflow-y-auto">
           <DialogHeader>
@@ -147,33 +200,55 @@ export default function AdminResultsPage() {
           {selectedResult && (
             <div className="mt-6 space-y-4">
               <div className="grid grid-cols-2 gap-4 text-sm">
-                <p><strong>Email:</strong> {selectedResult.candidate.email}</p>
-                <p><strong>Score:</strong> {selectedResult.score}% ({selectedResult.correct}/{selectedResult.total})</p>
-                <p><strong>Job Title:</strong> {selectedResult.candidate.jobTitle}</p>
-                <p><strong>Date:</strong> {selectedResult.date}</p>
+                <p>
+                  <strong>Email:</strong> {selectedResult.candidate.email}
+                </p>
+                <p>
+                  <strong>Score:</strong> {selectedResult.score}% (
+                  {selectedResult.correct}/{selectedResult.total})
+                </p>
+                <p>
+                  <strong>Job Title:</strong>{" "}
+                  {selectedResult.candidate.jobTitle}
+                </p>
+                <p>
+                  <strong>Date:</strong> {selectedResult.date}
+                </p>
               </div>
 
               <hr />
 
-              <h3 className="text-xl font-semibold mt-6 mb-4">All Answers:</h3>
+              <h3 className="text-xl font-semibold mt-6 mb-4">
+                All Answers:
+              </h3>
               <div className="space-y-4">
                 {selectedResult.answers.map((ans, i) => (
                   <div
                     key={i}
-                    className={`p-4 rounded-lg border-2 ${ans.isCorrect ? "border-green-500 bg-green-50" : "border-red-500 bg-red-50"
-                      }`}
+                    className={`p-4 rounded-lg border-2 ${
+                      ans.isCorrect
+                        ? "border-green-500 bg-green-50"
+                        : "border-red-500 bg-red-50"
+                    }`}
                   >
                     <p className="font-medium">
                       Q{ans.questionId}: {ans.question}
                     </p>
+
                     <div className="mt-3 flex flex-wrap gap-3 items-center">
                       <span>
                         <strong>Your Answer:</strong>{" "}
-                        <span className={`px-3 py-1 rounded font-bold ${ans.isCorrect ? "bg-green-200 text-green-800" : "bg-red-200 text-red-800"
-                          }`}>
+                        <span
+                          className={`px-3 py-1 rounded font-bold ${
+                            ans.isCorrect
+                              ? "bg-green-200 text-green-800"
+                              : "bg-red-200 text-red-800"
+                          }`}
+                        >
                           {ans.selectedAnswer}
                         </span>
                       </span>
+
                       {!ans.isCorrect && (
                         <span>
                           <strong>Correct:</strong>{" "}
@@ -182,6 +257,7 @@ export default function AdminResultsPage() {
                           </span>
                         </span>
                       )}
+
                       {ans.isCorrect ? (
                         <CheckCircle2 className="w-8 h-8 text-green-600 ml-auto" />
                       ) : (
