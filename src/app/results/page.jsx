@@ -156,7 +156,10 @@ export default function AdminResultsPage() {
               <Card key={r.id} className="p-5 border shadow hover:shadow-lg">
                 <div className="space-y-3">
                   <div className="flex justify-between">
-                    <h3 className="font-bold text-lg">{r.candidate.name}</h3>
+                    <div>
+                      <h3 className="font-bold text-lg">Name: {r.candidate.name}</h3>
+                      <h3 className="font-bold text-lg">Father: {r.candidate.fathersName}</h3>
+                    </div>
 
                     <div
                       className={`text-3xl font-extrabold ${
@@ -223,6 +226,8 @@ export default function AdminResultsPage() {
             <p><strong>Email:</strong> {selectedResult?.candidate.email}</p>
             <p><strong>Phone:</strong> {selectedResult?.candidate.phone}</p>
             <p><strong>Job Title:</strong> {selectedResult?.candidate.jobTitle}</p>
+            <p><strong>Father Name:</strong> {selectedResult?.candidate.fathersName}</p>
+            <p><strong>Qualification:</strong> {selectedResult?.candidate.highestQualification}</p>
 
             {/* Resume Preview */}
             {selectedResult?.candidate.resume && (
@@ -252,7 +257,7 @@ export default function AdminResultsPage() {
             {selectedResult?.answers.map((ans, i) => (
               <div key={i} className="border p-4 rounded bg-gray-50">
                 <p className="font-bold mb-2">
-                  Q{ans.questionId}: {ans.question}
+                  Q{i+1}: {ans.question}
                 </p>
 
                 {Object.entries(ans.options).map(([key, value]) => {
@@ -295,7 +300,7 @@ export default function AdminResultsPage() {
             {selectedResult.answers.map((ans, idx) => (
               <div key={idx} className="q-box border p-2 rounded mb-3">
                 <p className="font-bold mb-1">
-                  Q{ans.questionId}: {ans.question}
+                  Q{idx+1}: {ans.question}
                 </p>
 
                 {Object.entries(ans.options).map(([key, val]) => {

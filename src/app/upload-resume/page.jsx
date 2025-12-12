@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import {
@@ -9,13 +8,11 @@ import {
   FileText,
   X,
 } from "lucide-react";
-
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
 import { Card } from "@/components/ui/card";
-
 import {
   Dialog,
   DialogContent,
@@ -23,10 +20,9 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
+import { toast } from "sonner"; // Using sonner
 
 export default function UploadResumePage() {
-
-
   const [file, setFile] = useState(null);
   const [isUploading, setIsUploading] = useState(false);
   const [showSuccessDialog, setShowSuccessDialog] = useState(false);
@@ -34,8 +30,10 @@ export default function UploadResumePage() {
 
   const [form, setForm] = useState({
     name: "",
+    fathersName: "",
     email: "",
     phone: "",
+    highestQualification: "",
     jobTitle: "",
     makePublic: true,
   });
@@ -45,23 +43,13 @@ export default function UploadResumePage() {
     if (!selected) return;
 
     if (selected.type !== "application/pdf") {
-      toast.toast({
-        title: "Invalid file",
-        description: "Only PDF files are allowed.",
-        variant: "destructive",
-      });
+      toast.error("Only PDF files are allowed.");
       return;
     }
-
     if (selected.size > 1024 * 1024) {
-      toast.toast({
-        title: "File too large",
-        description: "Resume must be under 1MB.",
-        variant: "destructive",
-      });
+      toast.error("Resume must be under 1MB.");
       return;
     }
-
     setFile(selected);
   };
 
@@ -75,23 +63,29 @@ export default function UploadResumePage() {
   };
 
   const handleSubmit = async () => {
-    if (!file) {
-      toast.toast({ title: "Missing file", description: "Please upload your resume.", variant: "destructive" });
-      return;
+    // Validate all required fields
+    const required = ["name", "fathersName", "email", "phone", "highestQualification", "jobTitle"];
+    for (const field of required) {
+      if (!form[field].trim()) {
+        toast.error(`Please fill in ${field.replace(/([A-Z])/g, ' $1').toLowerCase()}`);
+        return;
+      }
     }
-    if (!form.name || !form.email || !form.phone || !form.jobTitle) {
-      toast.toast({ title: "Missing info", description: "All fields are required.", variant: "destructive" });
+    if (!file) {
+      toast.error("Please upload your resume (PDF)");
       return;
     }
 
     setIsUploading(true);
-
     const formData = new FormData();
     formData.append("file", file);
     formData.append("name", form.name);
+    formData.append("fathersName", form.fathersName);
     formData.append("email", form.email);
     formData.append("phone", form.phone);
+    formData.append("highestQualification", form.highestQualification);
     formData.append("jobTitle", form.jobTitle);
+    formData.append("makePublic", form.makePublic);
 
     try {
       const res = await fetch("/api/quick-upload", {
@@ -100,30 +94,22 @@ export default function UploadResumePage() {
       });
 
       const data = await res.json();
-      console.log(data);
-      
 
-      if (data.success == true) {
-        // Store candidate ID and show dialog
+      if (data.success) {
         setCandidateId(data.candidateId);
         setShowSuccessDialog(true);
-
+        toast.success("Resume uploaded successfully!");
         // Reset form
         setFile(null);
-        setForm({ name: "", email: "", phone: "", jobTitle: "", makePublic: true });
-      } else {
-        toast.toast({
-          title: "Upload failed",
-          description: data.error || "Try again.",
-          variant: "destructive",
+        setForm({
+          name: "", fathersName: "", email: "", phone: "",
+          highestQualification: "", jobTitle: "", makePublic: true
         });
+      } else {
+        toast.error(data.error || "Upload failed. Please try again.");
       }
     } catch (err) {
-      toast.toast({
-        title: "Error",
-        description: "Network error. Try again.",
-        variant: "destructive",
-      });
+      toast.error("Network error. Please check your connection.");
     } finally {
       setIsUploading(false);
     }
@@ -150,13 +136,13 @@ export default function UploadResumePage() {
                 Upload Your Resume
               </h1>
               <p className="text-gray-600 mb-8">
-                Fill in your details and upload your resume (PDF only).
+                Fill in your details and upload your resume (PDF only, max 1MB).
               </p>
 
               <div className="space-y-6">
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="space-y-2">
-                    <Label>Full Name</Label>
+                    <Label>Full Name <span className="text-red-500">*</span></Label>
                     <Input
                       placeholder="John Doe"
                       value={form.name}
@@ -164,38 +150,57 @@ export default function UploadResumePage() {
                     />
                   </div>
                   <div className="space-y-2">
-                    <Label>Phone</Label>
+                    <Label>Father's Name <span className="text-red-500">*</span></Label>
                     <Input
-                      placeholder="+1 (555) 123-4567"
+                      placeholder="Robert Doe"
+                      value={form.fathersName}
+                      onChange={(e) => setForm({ ...form, fathersName: e.target.value })}
+                    />
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="space-y-2">
+                    <Label>Email <span className="text-red-500">*</span></Label>
+                    <Input
+                      type="email"
+                      placeholder="john@example.com"
+                      value={form.email}
+                      onChange={(e) => setForm({ ...form, email: e.target.value })}
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <Label>Phone <span className="text-red-500">*</span></Label>
+                    <Input
+                      placeholder="+91 9876543210"
                       value={form.phone}
                       onChange={(e) => setForm({ ...form, phone: e.target.value })}
                     />
                   </div>
                 </div>
 
-                <div className="space-y-2">
-                  <Label>Email</Label>
-                  <Input
-                    type="email"
-                    placeholder="john@example.com"
-                    value={form.email}
-                    onChange={(e) => setForm({ ...form, email: e.target.value })}
-                  />
-                </div>
-
-                <div className="space-y-2">
-                  <Label>Desired Job Title</Label>
-                  <Input
-                    placeholder="e.g. Frontend Developer"
-                    value={form.jobTitle}
-                    onChange={(e) => setForm({ ...form, jobTitle: e.target.value })}
-                  />
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="space-y-2">
+                    <Label>Highest Qualification <span className="text-red-500">*</span></Label>
+                    <Input
+                      placeholder="e.g. B.Tech Computer Science"
+                      value={form.highestQualification}
+                      onChange={(e) => setForm({ ...form, highestQualification: e.target.value })}
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <Label>Desired Job Title <span className="text-red-500">*</span></Label>
+                    <Input
+                      placeholder="e.g. Frontend Developer"
+                      value={form.jobTitle}
+                      onChange={(e) => setForm({ ...form, jobTitle: e.target.value })}
+                    />
+                  </div>
                 </div>
 
                 {/* File Upload */}
                 <div className="space-y-3">
-                  <Label>Resume (PDF, max 1MB)</Label>
-
+                  <Label>Resume (PDF only, max 1MB) <span className="text-red-500">*</span></Label>
                   {!file ? (
                     <div
                       onDragOver={(e) => e.preventDefault()}
@@ -227,7 +232,7 @@ export default function UploadResumePage() {
                           </p>
                         </div>
                       </div>
-                      <button onClick={() => setFile(null)} className="text-red-600">
+                      <button onClick={() => setFile(null)} className="text-red-600 hover:text-red-800">
                         <X className="w-5 h-5" />
                       </button>
                     </div>
@@ -282,55 +287,52 @@ export default function UploadResumePage() {
             </div>
           </div>
         </Card>
-      </div>
 
-      {/* Success Dialog */}
-      <Dialog open={showSuccessDialog} onOpenChange={setShowSuccessDialog}>
-        <DialogContent className="sm:max-w-md">
-          <DialogHeader>
-            <DialogTitle className="text-2xl font-bold text-center">
-              Congratulations!
-            </DialogTitle>
-            <DialogDescription className="text-center text-base mt-4">
-              Your resume has been uploaded successfully.
-              <br />
-              <span className="font-semibold text-green-600">
-                Now take a quick skill test to stand out!
-              </span>
-            </DialogDescription>
-          </DialogHeader>
-
-          <div className="flex flex-col items-center gap-6 py-6">
-            <motion.div
-              animate={{ scale: [1, 1.2, 1] }}
-              transition={{ duration: 0.6, repeat: Infinity, repeatDelay: 2 }}
-            >
-              <CheckCircle2 className="w-20 h-20 text-green-500" />
-            </motion.div>
-
-            <div className="space-y-3 w-full">
-              <Button
-                onClick={goToTest}
-                className="w-full h-12 text-lg bg-green-600 hover:bg-green-700"
+        {/* Success Dialog */}
+        <Dialog open={showSuccessDialog} onOpenChange={setShowSuccessDialog}>
+          <DialogContent className="sm:max-w-md">
+            <DialogHeader>
+              <DialogTitle className="text-2xl font-bold text-center">
+                Congratulations!
+              </DialogTitle>
+              <DialogDescription className="text-center text-base mt-4">
+                Your resume has been uploaded successfully.
+                <br />
+                <span className="font-semibold text-green-600">
+                  Now take a quick skill test to stand out!
+                </span>
+              </DialogDescription>
+            </DialogHeader>
+            <div className="flex flex-col items-center gap-6 py-6">
+              <motion.div
+                animate={{ scale: [1, 1.2, 1] }}
+                transition={{ duration: 0.6, repeat: Infinity, repeatDelay: 2 }}
               >
-                Start Skill Test Now
-              </Button>
-              <Button
-                variant="outline"
-                onClick={() => setShowSuccessDialog(false)}
-                className="w-full"
-              >
-                Maybe Later
-              </Button>
+                <CheckCircle2 className="w-20 h-20 text-green-500" />
+              </motion.div>
+              <div className="space-y-3 w-full">
+                <Button
+                  onClick={goToTest}
+                  className="w-full h-12 text-lg bg-green-600 hover:bg-green-700"
+                >
+                  Start Skill Test Now
+                </Button>
+                <Button
+                  variant="outline"
+                  onClick={() => setShowSuccessDialog(false)}
+                  className="w-full"
+                >
+                  Maybe Later
+                </Button>
+              </div>
             </div>
-          </div>
-        </DialogContent>
-      </Dialog>
+          </DialogContent>
+        </Dialog>
+      </div>
     </>
   );
 }
 
-// Animated Envelope
 function EnvelopeIllustration() {
   return (
     <svg width="180" height="180" viewBox="0 0 120 120">
@@ -338,7 +340,6 @@ function EnvelopeIllustration() {
       <path d="M15 48 L60 75 L105 48" fill="none" stroke="#93c5fd" strokeWidth="5" />
       <path d="M15 90 L60 63 L105 90" fill="white" />
       <path d="M15 90 L60 63 L105 90" fill="none" stroke="#93c5fd" strokeWidth="5" />
-
       <motion.rect
         x="35"
         y="15"

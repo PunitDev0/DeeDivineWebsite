@@ -3,7 +3,6 @@ import Candidate from "@/models/Candidate";
 import { connectDB } from "@/lib/mongodb";
 import { v2 as cloudinary } from "cloudinary";
 
-// Cloudinary Config
 cloudinary.config({
   cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
   api_key: process.env.CLOUDINARY_API_KEY,
@@ -13,40 +12,44 @@ cloudinary.config({
 export async function POST(request) {
   try {
     await connectDB();
-
     const data = await request.formData();
+
     const file = data.get("file");
     const name = data.get("name");
+    const fathersName = data.get("fathersName");
     const email = data.get("email");
     const phone = data.get("phone");
+    const highestQualification = data.get("highestQualification");
     const jobTitle = data.get("jobTitle");
+    const makePublic = data.get("makePublic") === "true";
 
-    if (!file || !name || !email || !phone || !jobTitle) {
+    // Validate all required fields
+    if (!file || !name || !fathersName || !email || !phone || !highestQualification || !jobTitle) {
       return NextResponse.json(
-        { error: "All fields are required" },
+        { success: false, error: "All fields are required" },
         { status: 400 }
       );
     }
 
-    // Convert file to Base64 for Cloudinary
     const bytes = await file.arrayBuffer();
     const buffer = Buffer.from(bytes);
     const base64 = `data:${file.type};base64,${buffer.toString("base64")}`;
 
-    // Upload to Cloudinary
     const upload = await cloudinary.uploader.upload(base64, {
       folder: "resumes",
       resource_type: "auto",
       public_id: `${Date.now()}_${name.replace(/\s/g, "_")}`,
     });
 
-    // Save to MongoDB
     const newCandidate = await Candidate.create({
       name,
+      fathersName,
       email,
       phone,
+      highestQualification,
       jobTitle,
-      appliedFor: data.get("appliedFor") || jobTitle,
+      appliedFor: jobTitle,
+      makePublic,
       resume: {
         fileName: file.name,
         fileUrl: upload.secure_url,
@@ -62,17 +65,10 @@ export async function POST(request) {
       candidateId: newCandidate._id,
       resumeUrl: upload.secure_url,
     });
-
   } catch (error) {
-    console.error("🔴 SERVER ERROR:", error);
-
+    console.error("Upload Error:", error);
     return NextResponse.json(
-      {
-        success: false,
-        message: error.message || "Unknown server error",
-        stack: error.stack || null,
-        cloudinaryError: error.error || null,
-      },
+      { success: false, error: error.message || "Upload failed. Please try again." },
       { status: 500 }
     );
   }

@@ -9,11 +9,18 @@ const candidateSchema = new mongoose.Schema(
       trim: true,
       minlength: 2,
     },
+    fathersName: {
+      type: String,
+      required: true,
+      trim: true,
+      minlength: 2,
+    },
     email: {
       type: String,
       required: true,
       lowercase: true,
       trim: true,
+      unique: true,
       match: [/^\S+@\S+\.\S+$/, "Invalid email"],
     },
     phone: {
@@ -21,8 +28,13 @@ const candidateSchema = new mongoose.Schema(
       required: true,
       trim: true,
       minlength: 10,
+      maxlength: 15,
     },
-
+    highestQualification: {
+      type: String,
+      required: true,
+      trim: true,
+    },
     // Job Info
     jobTitle: {
       type: String,
@@ -33,18 +45,21 @@ const candidateSchema = new mongoose.Schema(
       type: String,
       trim: true,
     },
-
     // Resume (Cloudinary)
     resume: {
       fileName: { type: String, required: true },
-      fileUrl: { type: String, required: true },     // Cloudinary URL
-      cloudinaryId: { type: String, required: true }, // For deleting later
+      fileUrl: { type: String, required: true },
+      cloudinaryId: { type: String, required: true },
       fileSize: { type: Number, required: true },
       fileType: { type: String, required: true },
       uploadedAt: { type: Date, default: Date.now },
     },
-
-    // Application status for admin
+    // Visibility
+    makePublic: {
+      type: Boolean,
+      default: true,
+    },
+    // Application status
     status: {
       type: String,
       enum: ["new", "viewed", "shortlisted", "interviewed", "hired", "rejected"],
@@ -54,8 +69,6 @@ const candidateSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-// Prevent duplicate model error in Next.js
 const Candidate =
   mongoose.models.Candidate || mongoose.model("Candidate", candidateSchema);
-
 export default Candidate;
