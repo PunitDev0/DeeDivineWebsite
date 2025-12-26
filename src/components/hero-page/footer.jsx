@@ -35,7 +35,7 @@ export default function Footer() {
           </div>
 
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.411563528497!2d77.054224!3d28.585963!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d19f0e42cdb3b%3A0x45dbbb7e5a28dd67!2sDee%20Divine%20PropInfra%20Pvt.%20Ltd.!5e0!3m2!1sen!2sin!4v1709899000000!5m2!1sen!2sin"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d245352.8073014646!2d76.73898449453122!3d28.412685900000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d2323bd5b493b%3A0x556ba537cfc6d921!2sDee%20Divine%20PropInfra%20Pvt.%20Ltd.!5e1!3m2!1sen!2sin!4v1766330154769!5m2!1sen!2sin"
             width="270"
             height="160"
             allowFullScreen

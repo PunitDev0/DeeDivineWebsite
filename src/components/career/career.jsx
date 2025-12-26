@@ -9,7 +9,7 @@ export default function Career() {
   const openings = [
     {
       id: 1,
-      title: "Sales Executive",
+      title: "Sales Team",
       location: "Gurugram, Haryana",
       type: "Full-time",
       description:
