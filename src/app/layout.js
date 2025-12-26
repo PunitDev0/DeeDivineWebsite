@@ -13,9 +13,38 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "Dee Divine Propinfra",
-  description: "Making real estate simple, transparent, and reliable",
+  title: "Dee Divine Developers",
+  description: "Real Estate Company Across India",
+
+  icons: {
+    icon: [
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon.ico" }
+    ],
+    apple: "/apple-touch-icon.png"
+  },
+
+  openGraph: {
+    title: "Dee Divine Developers",
+    description: "We are spread across multiple states in India",
+    images: [
+      {
+        url: "/android-chrome-512x512.png", // 👈 TEMP OG IMAGE
+        width: 512,
+        height: 512,
+        alt: "Dee Divine Developers"
+      }
+    ],
+    type: "website"
+  },
+
+  twitter: {
+    card: "summary",
+    images: ["/android-chrome-512x512.png"]
+  }
 };
+
 
 export default function RootLayout({ children }) {
   return (
