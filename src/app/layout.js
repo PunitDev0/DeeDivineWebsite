@@ -13,8 +13,8 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "Dee Divine Developers",
-  description: "Real Estate Company Across India",
+  title: "Dee Divine Propinfra",
+  description: "Dee Divine Propinfra is a trusted real estate company with a strong presence across multiple states in India.",
 
   icons: {
     icon: [
@@ -26,14 +26,14 @@ export const metadata = {
   },
 
   openGraph: {
-    title: "Dee Divine Developers",
-    description: "We are spread across multiple states in India",
+    title: "Dee Divine Propinfra",
+    description: "We are spread across multiple states in India, delivering reliable and value-driven real estate solutions.",
     images: [
       {
-        url: "/android-chrome-512x512.png", // 👈 TEMP OG IMAGE
+        url: "/android-chrome-512x512.png", // temporary OG image
         width: 512,
         height: 512,
-        alt: "Dee Divine Developers"
+        alt: "Dee Divine Propinfra"
       }
     ],
     type: "website"
@@ -41,9 +41,12 @@ export const metadata = {
 
   twitter: {
     card: "summary",
+    title: "Dee Divine Propinfra",
+    description: "Trusted real estate company with projects and presence across India.",
     images: ["/android-chrome-512x512.png"]
   }
 };
+
 
 
 export default function RootLayout({ children }) {
