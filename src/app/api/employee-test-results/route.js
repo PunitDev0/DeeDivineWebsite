@@ -1,15 +1,33 @@
-// app/api/employee-test-results/route.js
 import { NextResponse } from "next/server";
 import { connectDB } from "@/lib/mongodb";
 import EmployeeTest from "@/models/EmployeeTest";
-import questionsData from "@/lib/questions.json";
+import fs from "fs";
+import path from "path";
 
+/* ===============================
+   Load questions.json (PROD SAFE)
+================================ */
+let questionsData;
+
+try {
+  const filePath = path.join(process.cwd(), "lib", "questions.json");
+  const file = fs.readFileSync(filePath, "utf-8");
+  questionsData = JSON.parse(file);
+} catch (err) {
+  console.error("❌ Failed to load questions.json:", err);
+  questionsData = { sections: [] };
+}
+
+/* ===============================
+   POST: Submit Test
+================================ */
 export async function POST(request) {
   try {
     await connectDB();
 
     const body = await request.json();
-    const {
+
+    let {
       answers = [],
       cheatCount = 0,
       timeTaken = 0,
@@ -18,7 +36,7 @@ export async function POST(request) {
       designation,
     } = body;
 
-    // Validation
+    /* ---------- Validation ---------- */
     if (!name || !phone || !designation) {
       return NextResponse.json(
         { error: "Name, phone, and designation are required" },
@@ -26,15 +44,20 @@ export async function POST(request) {
       );
     }
 
-    if (!answers || answers.length === 0) {
+    if (!Array.isArray(answers) || answers.length === 0) {
       return NextResponse.json(
         { error: "Test answers are required" },
         { status: 400 }
       );
     }
 
-    // Prevent duplicate submission by phone
-    const existing = await EmployeeTest.findOne({ phone });
+    /* ---------- Normalize Data ---------- */
+    const cleanName = name.trim();
+    const cleanPhone = phone.toString().trim();
+    const cleanDesignation = designation.trim();
+
+    /* ---------- Prevent Duplicate ---------- */
+    const existing = await EmployeeTest.findOne({ phone: cleanPhone });
     if (existing) {
       return NextResponse.json(
         { error: "This phone number has already submitted the test." },
@@ -42,25 +65,39 @@ export async function POST(request) {
       );
     }
 
-    // Calculate Score
-    const allQuestions = questionsData.sections.flatMap((s) => s.questions);
+    /* ---------- Prepare Correct Answers Map ---------- */
+    const allQuestions = questionsData.sections.flatMap(
+      (section) => section.questions || []
+    );
+
     const correctMap = {};
     allQuestions.forEach((q) => {
-      correctMap[q.id] = q.correct;
+      if (q?.id) correctMap[q.id] = q.correct;
     });
 
+    /* ---------- Calculate Score ---------- */
     let correctCount = 0;
+
     answers.forEach((ans) => {
-      if (correctMap[ans.questionId] === ans.answer) correctCount++;
+      if (
+        ans &&
+        ans.questionId &&
+        correctMap.hasOwnProperty(ans.questionId) &&
+        correctMap[ans.questionId] === ans.answer
+      ) {
+        correctCount++;
+      }
     });
 
-    const scorePercentage = Math.round((correctCount / answers.length) * 100);
+    const scorePercentage = Math.round(
+      (correctCount / answers.length) * 100
+    );
 
-    // Create single document with all data
+    /* ---------- Save Result ---------- */
     const testResult = await EmployeeTest.create({
-      name: name.trim(),
-      phone: phone.trim(),
-      designation: designation.trim(),
+      name: cleanName,
+      phone: cleanPhone,
+      designation: cleanDesignation,
       answers,
       score: scorePercentage,
       cheatCount,
@@ -68,6 +105,7 @@ export async function POST(request) {
       completedAt: new Date(),
     });
 
+    /* ---------- Success Response ---------- */
     return NextResponse.json({
       success: true,
       message: "Test submitted successfully!",
@@ -78,7 +116,7 @@ export async function POST(request) {
       designation: testResult.designation,
     });
   } catch (error) {
-    console.error("Test submission error:", error);
+    console.error("🔥 Test submission error:", error);
 
     if (error.code === 11000) {
       return NextResponse.json(
@@ -88,13 +126,17 @@ export async function POST(request) {
     }
 
     return NextResponse.json(
-      { error: "Failed to submit test. Please try again." },
+      {
+        error: error?.message || "Failed to submit test. Please try again.",
+      },
       { status: 500 }
     );
   }
 }
 
-// GET: Fetch all test results (for admin)
+/* ===============================
+   GET: Fetch Results (Admin)
+================================ */
 export async function GET() {
   try {
     await connectDB();
@@ -103,9 +145,10 @@ export async function GET() {
       .sort({ completedAt: -1 })
       .lean();
 
+    /* ---------- Build Question Map ---------- */
     const questionMap = {};
     questionsData.sections.forEach((section) => {
-      section.questions.forEach((q) => {
+      section.questions?.forEach((q) => {
         questionMap[q.id] = {
           question: q.question,
           options: q.options,
@@ -114,8 +157,9 @@ export async function GET() {
       });
     });
 
+    /* ---------- Format Response ---------- */
     const formatted = results.map((r) => {
-      const detailedAnswers = r.answers.map((ans) => {
+      const detailedAnswers = (r.answers || []).map((ans) => {
         const q = questionMap[ans.questionId] || {};
         return {
           questionId: ans.questionId,
@@ -148,7 +192,10 @@ export async function GET() {
 
     return NextResponse.json({ success: true, results: formatted });
   } catch (error) {
-    console.error("Fetch results error:", error);
-    return NextResponse.json({ error: "Failed to fetch results" }, { status: 500 });
+    console.error("🔥 Fetch results error:", error);
+    return NextResponse.json(
+      { error: "Failed to fetch results" },
+      { status: 500 }
+    );
   }
 }
