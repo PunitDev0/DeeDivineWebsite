@@ -87,7 +87,7 @@ const FeaturedProperties = () => {
         key={property._id}
         className="pl-2 basis-full basis-1/2 sm:basis-1/2 md:basis-1/3 lg:basis-1/4 xl:basis-1/3 max-w-[350px]"
       >
-        <Link href={createSlug(property)} passHref>
+
           <Card className="group cursor-pointer transition-all rounded-sm duration-300 hover:shadow-lg hover:scale-[1.02] p-0">
             <CardContent className="sm:p-4 h-full flex flex-col p-0">
               {/* Image Section */}
@@ -113,7 +113,7 @@ const FeaturedProperties = () => {
               </div>
             </CardContent>
           </Card>
-        </Link>
+
       </CarouselItem>
     ));
   }, []);

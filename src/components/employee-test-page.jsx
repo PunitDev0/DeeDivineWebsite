@@ -164,7 +164,7 @@ export default function EmployeeTestPage() {
     setIsSubmitting(true);
     await handleAutoSubmit();
     toast.success("Test submitted successfully!");
-    setTimeout(() => router.push("/"), 2000);
+    // setTimeout(() => router.push("/"), 2000);
   };
 
   if (questions.length === 0) {
