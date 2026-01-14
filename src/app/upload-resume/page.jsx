@@ -131,7 +131,7 @@ export default function UploadResumePage() {
 
   return (
     <>
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center sm:p-4">
         <Card className="w-full max-w-5xl shadow-xl">
           <div className="grid md:grid-cols-2">
             {/* Left - Form */}
