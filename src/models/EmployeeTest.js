@@ -4,7 +4,7 @@ import mongoose from "mongoose";
 const employeeTestSchema = new mongoose.Schema({
   // Employee Details
   name: { type: String, required: true, trim: true },
-  phone: { type: String, required: true, trim: true, unique: true }, // Unique to prevent duplicate entries
+  phone: { type: String, required: true, trim: true, unique: true }, 
   designation: { type: String, required: true, trim: true },
 
   // Test Data
