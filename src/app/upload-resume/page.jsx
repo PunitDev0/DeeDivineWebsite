@@ -97,10 +97,10 @@ export default function UploadResumePage() {
 
       if (data.success) {
         toast.success("Resume uploaded successfully! Redirecting...");
-      
+
         // ✅ Auto redirect to test page
         window.location.href = `/test?candidate=${data.candidateId}`;
-      
+
         // (Optional) Reset form (redirect ke baad waise bhi page change ho jayega)
         setFile(null);
         setForm({
@@ -112,8 +112,10 @@ export default function UploadResumePage() {
           jobTitle: "",
           makePublic: true,
         });
+
+      } else {
+        toast.error(data.error || "Upload failed. Please try again.");
       }
-      
     } catch (err) {
       toast.error("Network error. Please check your connection.");
     } finally {
@@ -129,7 +131,7 @@ export default function UploadResumePage() {
 
   return (
     <>
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center sm:p-4">
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
         <Card className="w-full max-w-5xl shadow-xl">
           <div className="grid md:grid-cols-2">
             {/* Left - Form */}
