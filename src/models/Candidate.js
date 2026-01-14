@@ -20,7 +20,7 @@ const candidateSchema = new mongoose.Schema(
       required: true,
       lowercase: true,
       trim: true,
-      unique: true,
+
       match: [/^\S+@\S+\.\S+$/, "Invalid email"],
     },
     phone: {
