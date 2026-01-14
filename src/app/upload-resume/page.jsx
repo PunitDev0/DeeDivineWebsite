@@ -101,7 +101,7 @@ export default function UploadResumePage() {
         // ✅ Auto redirect to test page
         window.location.href = `/test?candidate=${data.candidateId}`;
 
-        // (Optional) Reset form (redirect ke baad waise bhi page change ho jayega)
+
         setFile(null);
         setForm({
           name: "",
