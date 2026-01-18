@@ -1,7 +1,11 @@
 {
+  "quiz_title": "Haryana Real Estate Quiz - DDJAY, AHP 2013, RERA & Gurugram (Updated 2026)",
+  "description": "Complete set of 175 MCQs (original + additional questions, duplicates removed)",
+  "total_questions": 175,
   "sections": [
     {
-      "name": "SECTION 1 — DEEN DAYAL JAN AWAS YOJANA (DDJAY) (1–30)",
+      "name": "SECTION 1 — DEEN DAYAL JAN AWAS YOJANA (DDJAY)",
+      "question_count": 60,
       "questions": [
         {
           "id": 1,
@@ -332,14 +336,179 @@
             "D": "खरीदार खुद"
           },
           "correct": "B"
+        },
+        {
+          "id": 31,
+          "question": "What is the primary target area for DDJAY projects?",
+          "options": {
+            "A": "High Potential Zones (Gurugram/Faridabad)",
+            "B": "Low and Medium Potential Towns of Haryana",
+            "C": "Industrial Model Townships (IMT) only",
+            "D": "National Highway borders only"
+          },
+          "correct": "B"
+        },
+        {
+          "id": 32,
+          "question": "What is the minimum land area required to apply for a DDJAY license?",
+          "options": {
+            "A": "2 Acres",
+            "B": "5 Acres",
+            "C": "10 Acres",
+            "D": "25 Acres"
+          },
+          "correct": "B"
+        },
+        {
+          "id": 33,
+          "question": "In DDJAY, what is the maximum size allowed for a residential plot?",
+          "options": {
+            "A": "100 sqm",
+            "B": "150 sqm",
+            "C": "200 sqm",
+            "D": "250 sqm"
+          },
+          "correct": "B"
+        },
+        {
+          "id": 34,
+          "question": "What is the maximum Commercial Area allowed in a DDJAY colony?",
+          "options": {
+            "A": "2% of total area",
+            "B": "4% of total area",
+            "C": "5% of total area",
+            "D": "10% of total area"
+          },
+          "correct": "B"
+        },
+        {
+          "id": 35,
+          "question": "What is the standard width of internal roads in a DDJAY colony?",
+          "options": {
+            "A": "7 meters",
+            "B": "9 meters",
+            "C": "12 meters",
+            "D": "15 meters"
+          },
+          "correct": "B"
+        },
+        {
+          "id": 36,
+          "question": "What percentage of the saleable area was traditionally frozen (mortgaged) to the govt in DDJAY?",
+          "options": {
+            "A": "15%",
+            "B": "25%",
+            "C": "50%",
+            "D": "75%"
+          },
+          "correct": "C"
+        },
+        {
+          "id": 37,
+          "question": "Which of the following is NOT a mandatory community facility in DDJAY?",
+          "options": {
+            "A": "Milk Booth",
+            "B": "Anganwadi",
+            "C": "Shopping Mall with Cinema",
+            "D": "Water Tank"
+          },
+          "correct": "C"
+        },
+        {
+          "id": 38,
+          "question": "What is the maximum Residential Density (persons per acre) allowed in DDJAY?",
+          "options": {
+            "A": "200-300",
+            "B": "400-600",
+            "C": "600-750",
+            "D": "1000+"
+          },
+          "correct": "B"
+        },
+        {
+          "id": 39,
+          "question": "What is the maximum permissible Net Planned Area for DDJAY in a specific sector?",
+          "options": {
+            "A": "10%",
+            "B": "20%",
+            "C": "30%",
+            "D": "50%"
+          },
+          "correct": "C"
+        },
+        {
+          "id": 40,
+          "question": "Under recent updates, if a developer wants to sell 100% of plots immediately, what must they provide?",
+          "options": {
+            "A": "Double the license fee",
+            "B": "Bank Guarantee against the frozen area",
+            "C": "A letter from the Chief Minister",
+            "D": "Completion Certificate for all houses"
+          },
+          "correct": "B"
+        },
+        {
+          "id": 41,
+          "question": "Regarding recent DDJAY Amendment, which of these is TRUE?",
+          "options": {
+            "A": "Minimum land area was increased to 15 acres",
+            "B": "Individual floors on DDJAY plots can now be registered as separate units",
+            "C": "Developers no longer need RERA registration",
+            "D": "All plots must be exactly 100 sq. yards"
+          },
+          "correct": "B"
+        },
+        {
+          "id": 42,
+          "question": "In a DDJAY project, if the internal circulation (roads/parks) exceeds 35%, what happens?",
+          "options": {
+            "A": "The developer gets a tax break",
+            "B": "The saleable area (65%) decreases accordingly",
+            "C": "The govt pays for the extra road",
+            "D": "The license is cancelled"
+          },
+          "correct": "B"
+        },
+        {
+          "id": 43,
+          "question": "The 'Interim Certificate' in DDJAY allows for what activity?",
+          "options": {
+            "A": "Full sale of all plots",
+            "B": "Partial release of mortgaged plots for sale",
+            "C": "Cancellation of EDC",
+            "D": "Converting residential land to industrial"
+          },
+          "correct": "B"
+        },
+        {
+          "id": 44,
+          "question": "Which department issues the licenses for these housing schemes?",
+          "options": {
+            "A": "HUDA (HSVP)",
+            "B": "Town and Country Planning (DTCP), Haryana",
+            "C": "RERA Haryana",
+            "D": "Municipal Corporation"
+          },
+          "correct": "B"
+        },
+        {
+          "id": 45,
+          "question": "DDJAY projects are typically developed in which zone?",
+          "options": {
+            "A": "Commercial Zone",
+            "B": "Industrial Zone",
+            "C": "Residential Zone (R-Zone)",
+            "D": "Agriculture Zone"
+          },
+          "correct": "C"
         }
       ]
     },
     {
-      "name": "SECTION 2 — AFFORDABLE HOUSING POLICY HARYANA (31–67)",
+      "name": "SECTION 2 — AFFORDABLE HOUSING POLICY HARYANA (AHP 2013) (61–100)",
       "questions": [
         {
-          "id": 31,
+          "id": 61,
           "question": "हरियाणा की Affordable Housing Policy कब शुरू हुई?",
           "options": {
             "A": "8 फरवरी 2016",
@@ -350,7 +519,7 @@
           "correct": "B"
         },
         {
-          "id": 32,
+          "id": 62,
           "question": "Affordable Housing Policy का मुख्य उद्देश्य क्या है?",
           "options": {
             "A": "प्लॉटेड कॉलोनियां बनाना",
@@ -361,7 +530,7 @@
           "correct": "B"
         },
         {
-          "id": 33,
+          "id": 63,
           "question": "Affordable Housing प्रोजेक्ट कितने साल में पूरा होना चाहिए?",
           "options": {
             "A": "2 साल",
@@ -372,7 +541,7 @@
           "correct": "B"
         },
         {
-          "id": 34,
+          "id": 64,
           "question": "Affordable Housing प्रोजेक्ट किस जोन में बनते हैं?",
           "options": {
             "A": "इंडस्ट्रियल जोन",
@@ -383,7 +552,7 @@
           "correct": "B"
         },
         {
-          "id": 35,
+          "id": 65,
           "question": "Affordable Housing के लिए मिनिमम एरिया कितना होना चाहिए?",
           "options": {
             "A": "1 एकड़",
@@ -394,7 +563,7 @@
           "correct": "B"
         },
         {
-          "id": 36,
+          "id": 66,
           "question": "Affordable Housing में फ्लैट का साइज कौन तय करता है?",
           "options": {
             "A": "बिल्डर",
@@ -405,7 +574,7 @@
           "correct": "B"
         },
         {
-          "id": 37,
+          "id": 67,
           "question": "Affordable Housing में फ्लैट कार्पेट एरिया में बिकते हैं?",
           "options": {
             "A": "नहीं",
@@ -416,7 +585,7 @@
           "correct": "B"
         },
         {
-          "id": 38,
+          "id": 68,
           "question": "Affordable Housing में फ्लैट का मैक्सिमम कार्पेट एरिया कितना है?",
           "options": {
             "A": "28 sq m",
@@ -427,7 +596,18 @@
           "correct": "B"
         },
         {
-          "id": 39,
+          "id": 69,
+          "question": "Under AHP 2013, what is the maximum permissible Carpet Area for a flat?",
+          "options": {
+            "A": "45 sqm",
+            "B": "50 sqm",
+            "C": "60 sqm",
+            "D": "75 sqm"
+          },
+          "correct": "C"
+        },
+        {
+          "id": 70,
           "question": "Affordable Housing में बालकनी की कीमत अलग से देनी पड़ती है?",
           "options": {
             "A": "नहीं",
@@ -438,18 +618,18 @@
           "correct": "B"
         },
         {
-          "id": 40,
-          "question": "Affordable Housing प्रोजेक्ट में कार पार्किंग होती है?",
+          "id": 71,
+          "question": "In AHP 2013, balcony price is capped at?",
           "options": {
-            "A": "हाँ",
-            "B": "नहीं",
-            "C": "पेड पार्किंग",
-            "D": "केवल टू-व्हीलर"
+            "A": "₹500 per sq ft",
+            "B": "₹1000 per sq ft",
+            "C": "₹1200 per sq ft",
+            "D": "Included in carpet area"
           },
-          "correct": "B"
+          "correct": "C"
         },
         {
-          "id": 41,
+          "id": 72,
           "question": "Affordable Housing में फ्लैट कैसे मिलता है?",
           "options": {
             "A": "डायरेक्ट बिल्डर से",
@@ -460,7 +640,18 @@
           "correct": "B"
         },
         {
-          "id": 42,
+          "id": 73,
+          "question": "How is the allotment of flats in an AHP 2013 project decided if applications exceed units?",
+          "options": {
+            "A": "Highest bidder",
+            "B": "First-come-first-serve",
+            "C": "Public Draw of Lots",
+            "D": "Management Quota"
+          },
+          "correct": "C"
+        },
+        {
+          "id": 74,
           "question": "Affordable Housing में अप्लाई करने के लिए कितना % पेमेंट करना होता है?",
           "options": {
             "A": "1%",
@@ -471,19 +662,8 @@
           "correct": "B"
         },
         {
-          "id": 43,
-          "question": "अगर ड्रॉ में नाम नहीं आया तो अप्लाई का पैसा रिफंड होता है?",
-          "options": {
-            "A": "नहीं",
-            "B": "हाँ, 60 दिनों में बिना कटौती",
-            "C": "50% रिफंड",
-            "D": "1 साल बाद"
-          },
-          "correct": "B"
-        },
-        {
-          "id": 44,
-          "question": "Affordable Housing में फ्लैट बेचने का लॉकिंग पीरियड कितना है?",
+          "id": 75,
+          "question": "Affordable Housing में लॉकिंग पीरियड कितना है?",
           "options": {
             "A": "कोई नहीं",
             "B": "2 साल",
@@ -493,18 +673,7 @@
           "correct": "C"
         },
         {
-          "id": 45,
-          "question": "Affordable Housing में कमर्शियल शॉप बेचने पर लॉकिंग पीरियड है?",
-          "options": {
-            "A": "हाँ, 5 साल",
-            "B": "नहीं",
-            "C": "2 साल",
-            "D": "10 साल"
-          },
-          "correct": "B"
-        },
-        {
-          "id": 46,
+          "id": 76,
           "question": "Affordable Housing में GST कितना लगता है?",
           "options": {
             "A": "18%",
@@ -515,51 +684,7 @@
           "correct": "C"
         },
         {
-          "id": 47,
-          "question": "Affordable Housing प्रोजेक्ट हाई-राइज होते हैं?",
-          "options": {
-            "A": "नहीं, लो-राइज",
-            "B": "हाँ",
-            "C": "बिल्डर तय करता है",
-            "D": "केवल 4 फ्लोर"
-          },
-          "correct": "B"
-        },
-        {
-          "id": 48,
-          "question": "Affordable Housing में कोई अन्य चार्ज लगता है?",
-          "options": {
-            "A": "हाँ, EDC/IDC",
-            "B": "नहीं",
-            "C": "केवल IFMS",
-            "D": "हाँ, PLC"
-          },
-          "correct": "B"
-        },
-        {
-          "id": 49,
-          "question": "Affordable Housing में कम्युनिटी हॉल होता है?",
-          "options": {
-            "A": "नहीं",
-            "B": "हाँ, कम से कम 2000 sq ft",
-            "C": "केवल बड़े प्रोजेक्ट में",
-            "D": "बिल्डर की मर्जी"
-          },
-          "correct": "B"
-        },
-        {
-          "id": 50,
-          "question": "Affordable Housing प्रोजेक्ट गेटेड होते हैं?",
-          "options": {
-            "A": "नहीं",
-            "B": "हाँ",
-            "C": "केवल 10 एकड़ से ऊपर",
-            "D": "बिल्डर तय करता है"
-          },
-          "correct": "B"
-        },
-        {
-          "id": 51,
+          "id": 77,
           "question": "Affordable Housing में मेंटेनेंस बिल्डर कितने साल तक करता है?",
           "options": {
             "A": "1 साल",
@@ -568,190 +693,74 @@
             "D": "हमेशा"
           },
           "correct": "B"
-        },
+        }
+      ]
+    },
+    {
+      "name": "SECTION 3 — RERA, DTCP & COMPLIANCE (101–130)",
+      "questions": [
         {
-          "id": 52,
-          "question": "Affordable Housing में इंटरनल रोड की चौड़ाई कितनी होती है?",
+          "id": 101,
+          "question": "Which body is responsible for granting the license for a DDJAY or AHP project?",
           "options": {
-            "A": "6 मीटर",
-            "B": "9 मीटर या 30 फीट",
-            "C": "12 मीटर",
-            "D": "15 मीटर"
+            "A": "HRERA",
+            "B": "DTCP (Department of Town and Country Planning)",
+            "C": "Municipal Corporation",
+            "D": "NGT (National Green Tribunal)"
           },
           "correct": "B"
         },
         {
-          "id": 53,
-          "question": "Affordable Housing में ड्रॉ की तारीख कौन तय करता है?",
+          "id": 102,
+          "question": "What is the role of HRERA in an affordable housing project?",
           "options": {
-            "A": "बिल्डर",
-            "B": "Senior Town Planner",
-            "C": "RERA",
-            "D": "Deputy Commissioner"
-          },
-          "correct": "B"
-        },
-        {
-          "id": 54,
-          "question": "Affordable Housing में अप्लाई की अवधि कितने दिन की होती है?",
-          "options": {
-            "A": "7 दिन",
-            "B": "15 दिन",
-            "C": "30 दिन",
-            "D": "60 दिन"
-          },
-          "correct": "B"
-        },
-        {
-          "id": 55,
-          "question": "Affordable Housing में कमर्शियल एरिया कितना % हो सकता है?",
-          "options": {
-            "A": "2%",
-            "B": "4%",
-            "C": "7.5%",
-            "D": "10%"
-          },
-          "correct": "B"
-        },
-        {
-          "id": 56,
-          "question": "Affordable Housing में आंगनवाड़ी-कम-क्रेश होता है?",
-          "options": {
-            "A": "नहीं",
-            "B": "हाँ, कम से कम 2000 sq ft",
-            "C": "केवल बड़े प्रोजेक्ट में",
-            "D": "बिल्डर की मर्जी"
-          },
-          "correct": "B"
-        },
-        {
-          "id": 57,
-          "question": "Affordable Housing में पेमेंट प्लान में ड्रॉ के बाद कितना % देना होता है?",
-          "options": {
-            "A": "5%",
-            "B": "20%",
-            "C": "50%",
-            "D": "100%"
-          },
-          "correct": "B"
-        },
-        {
-          "id": 58,
-          "question": "Affordable Housing में टू-व्हीलर पार्किंग होती है?",
-          "options": {
-            "A": "नहीं",
-            "B": "हाँ",
-            "C": "पेड",
-            "D": "केवल विजिटर्स के लिए"
-          },
-          "correct": "B"
-        },
-        {
-          "id": 59,
-          "question": "Affordable Housing में मार्केटिंग के लिए बिल्डर को न्यूजपेपर में ऐड देना जरूरी है?",
-          "options": {
-            "A": "नहीं",
-            "B": "हाँ",
-            "C": "केवल ड्रॉ की तारीख के लिए",
-            "D": "केवल TCP वेबसाइट पर"
-          },
-          "correct": "B"
-        },
-        {
-          "id": 60,
-          "question": "Affordable Housing स्कीम किस सरकार की है?",
-          "options": {
-            "A": "केंद्र सरकार",
-            "B": "हरियाणा राज्य सरकार",
-            "C": "दिल्ली सरकार",
-            "D": "NCR"
-          },
-          "correct": "B"
-        },
-        {
-          "id": 61,
-          "question": "Affordable Housing में अगर 15 एकड़ से ज्यादा लैंड है तो कितने लाइसेंस चाहिए?",
-          "options": {
-            "A": "1",
-            "B": "2",
-            "C": "3",
-            "D": "कोई लाइसेंस नहीं"
-          },
-          "correct": "B"
-        },
-        {
-          "id": 62,
-          "question": "Affordable Housing में कार्पेट एरिया रेट गुरुग्राम में कितना है?",
-          "options": {
-            "A": "Rs 3800/sq ft",
-            "B": "Rs 4500/sq ft",
-            "C": "Rs 5000/sq ft",
-            "D": "बिल्डर तय करता है"
+            "A": "To design the building maps.",
+            "B": "To collect property taxes.",
+            "C": "To protect homebuyer rights and ensure timely delivery.",
+            "D": "To provide the bank loan to the developer."
           },
           "correct": "C"
         },
         {
-          "id": 63,
-          "question": "Affordable Housing में ड्रॉ किसकी उपस्थिति में होता है?",
+          "id": 103,
+          "question": "At what stage must a developer register a DDJAY project with RERA?",
           "options": {
-            "A": "केवल बिल्डर",
-            "B": "Deputy Commissioner, STP, DTP, बिल्डर और अप्लिकेंट्स",
-            "C": "केवल ऑनलाइन",
-            "D": "RERA ऑफिस में"
+            "A": "Before applying for a license.",
+            "B": "Immediately after obtaining the license and before starting any marketing/sales.",
+            "C": "After 50% of the construction is complete.",
+            "D": "Only after the project is finished."
           },
           "correct": "B"
         },
         {
-          "id": 64,
-          "question": "Affordable Housing में लाइसेंस कौन देता है?",
+          "id": 104,
+          "question": "Under RERA rules, what percentage of the money collected from buyers must be kept in a separate 'Escrow Account'?",
           "options": {
-            "A": "RERA",
-            "B": "Town and Country Planning Department",
-            "C": "म्यूनिसिपल कॉर्पोरेशन",
-            "D": "GMDA"
+            "A": "10%",
+            "B": "50%",
+            "C": "70%",
+            "D": "100%"
           },
-          "correct": "B"
+          "correct": "C"
         },
         {
-          "id": 65,
-          "question": "Affordable Housing में अप्लाई TCP हरियाणा वेबसाइट पर होता है?",
+          "id": 105,
+          "question": "If a developer changes the building plan of an AHP project after sales have started, what does RERA require?",
           "options": {
-            "A": "नहीं",
-            "B": "हाँ",
-            "C": "बिल्डर की वेबसाइट पर",
-            "D": "RERA पोर्टल पर"
-          },
-          "correct": "B"
-        },
-        {
-          "id": 66,
-          "question": "Affordable Housing में ड्रॉ की तारीख का ऐड भी न्यूजपेपर में देना जरूरी है?",
-          "options": {
-            "A": "नहीं",
-            "B": "हाँ",
-            "C": "केवल यूट्यूब लिंक",
-            "D": "केवल TCP साइट पर"
-          },
-          "correct": "B"
-        },
-        {
-          "id": 67,
-          "question": "Affordable Housing में पेमेंट प्लान में 6 महीने में कितना % डिमांड आती है?",
-          "options": {
-            "A": "5%",
-            "B": "12.5%",
-            "C": "20%",
-            "D": "25%"
+            "A": "Approval from the DTCP only.",
+            "B": "Consent from 2/3rds of the allottees.",
+            "C": "No permission is needed if the FAR is the same.",
+            "D": "Only a notification in a newspaper."
           },
           "correct": "B"
         }
       ]
     },
     {
-      "name": "SECTION 3 — REAL ESTATE TERMS & CONCEPTS (68–100)",
+      "name": "SECTION 4 — REAL ESTATE TERMS & GURUGRAM GEOGRAPHY (131–175)",
       "questions": [
         {
-          "id": 68,
+          "id": 131,
           "question": "Real Estate क्या कहलाता है?",
           "options": {
             "A": "केवल भवन",
@@ -762,7 +771,7 @@
           "correct": "B"
         },
         {
-          "id": 69,
+          "id": 132,
           "question": "Residential Real Estate किस लिए इस्तेमाल होता है?",
           "options": {
             "A": "बिजनेस",
@@ -773,7 +782,7 @@
           "correct": "B"
         },
         {
-          "id": 70,
+          "id": 133,
           "question": "Commercial Real Estate का उदाहरण क्या है?",
           "options": {
             "A": "फ्लैट",
@@ -784,7 +793,7 @@
           "correct": "B"
         },
         {
-          "id": 71,
+          "id": 134,
           "question": "RERA की फुल फॉर्म क्या है?",
           "options": {
             "A": "Real Estate Regulatory Authority",
@@ -795,7 +804,7 @@
           "correct": "A"
         },
         {
-          "id": 72,
+          "id": 135,
           "question": "RERA कब प्रभावी हुआ?",
           "options": {
             "A": "1 मई 2016",
@@ -806,7 +815,7 @@
           "correct": "A"
         },
         {
-          "id": 73,
+          "id": 136,
           "question": "Carpet Area क्या है?",
           "options": {
             "A": "बाहरी दीवार तक का एरिया",
@@ -817,7 +826,7 @@
           "correct": "B"
         },
         {
-          "id": 74,
+          "id": 137,
           "question": "Built-up Area में क्या शामिल होता है?",
           "options": {
             "A": "केवल कार्पेट",
@@ -828,7 +837,7 @@
           "correct": "B"
         },
         {
-          "id": 75,
+          "id": 138,
           "question": "Super Built-up Area में क्या शामिल होता है?",
           "options": {
             "A": "केवल फ्लैट",
@@ -839,106 +848,7 @@
           "correct": "B"
         },
         {
-          "id": 76,
-          "question": "Lockable Office Space का मतलब है?",
-          "options": {
-            "A": "वर्चुअल स्पेस",
-            "B": "चाबी के साथ ऑफिस जो लॉक कर सकते हैं",
-            "C": "केवल रेंट",
-            "D": "शेयर्ड स्पेस"
-          },
-          "correct": "B"
-        },
-        {
-          "id": 77,
-          "question": "Assured Return क्या है?",
-          "options": {
-            "A": "लोन पर ब्याज",
-            "B": "अंडर कंस्ट्रक्शन प्रॉपर्टी पर बिल्डर द्वारा दिया रिटर्न",
-            "C": "रेंट गारंटी",
-            "D": "लॉकिंग पीरियड"
-          },
-          "correct": "B"
-        },
-        {
-          "id": 78,
-          "question": "Freehold Property में मालिकाना हक कितने समय का होता है?",
-          "options": {
-            "A": "99 साल",
-            "B": "हमेशा के लिए",
-            "C": "30 साल",
-            "D": "5 साल"
-          },
-          "correct": "B"
-        },
-        {
-          "id": 79,
-          "question": "Leasehold Property आमतौर पर कितने साल की होती है?",
-          "options": {
-            "A": "99 साल",
-            "B": "हमेशा",
-            "C": "5 साल",
-            "D": "1 साल"
-          },
-          "correct": "A"
-        },
-        {
-          "id": 80,
-          "question": "CIBIL क्या है?",
-          "options": {
-            "A": "बैंक लोन",
-            "B": "क्रेडिट स्कोर देने वाली कंपनी",
-            "C": "रजिस्ट्री ऑफिस",
-            "D": "RERA"
-          },
-          "correct": "B"
-        },
-        {
-          "id": 81,
-          "question": "Completion Certificate (CC) कब मिलता है?",
-          "options": {
-            "A": "लाइसेंस मिलते ही",
-            "B": "प्रोजेक्ट पूरा होने और नियमों के अनुसार होने पर",
-            "C": "रजिस्ट्री के समय",
-            "D": "लोन लेते समय"
-          },
-          "correct": "B"
-        },
-        {
-          "id": 82,
-          "question": "Occupancy Certificate (OC) का मतलब है?",
-          "options": {
-            "A": "प्रोजेक्ट बिक्री के लिए तैयार",
-            "B": "भवन रहने लायक है",
-            "C": "लाइसेंस",
-            "D": "लोन अप्रूवल"
-          },
-          "correct": "B"
-        },
-        {
-          "id": 83,
-          "question": "Builder-Buyer Agreement (BBA) किसके लिए है?",
-          "options": {
-            "A": "कमर्शियल प्रॉपर्टी",
-            "B": "अंडर कंस्ट्रक्शन रेजिडेंशियल",
-            "C": "प्लॉट",
-            "D": "रेंट"
-          },
-          "correct": "B"
-        },
-        {
-          "id": 84,
-          "question": "Registry क्या है?",
-          "options": {
-            "A": "लोन लेना",
-            "B": "प्रॉपर्टी का मालिकाना हक ट्रांसफर करना",
-            "C": "लाइसेंस लेना",
-            "D": "मेंटेनेंस पे करना"
-          },
-          "correct": "B"
-        },
-        {
-          "id": 85,
+          "id": 139,
           "question": "DDJAY का फुल फॉर्म क्या है?",
           "options": {
             "A": "Deen Dayal Affordable Housing",
@@ -949,18 +859,7 @@
           "correct": "B"
         },
         {
-          "id": 86,
-          "question": "KMP Expressway का फुल फॉर्म क्या है?",
-          "options": {
-            "A": "Kundli-Manesar-Palwal Expressway",
-            "B": "Kundli-Ghaziabad-Palwal",
-            "C": "Kerala-Mumbai-Palwal",
-            "D": "Kolkata-Manesar-Pune"
-          },
-          "correct": "A"
-        },
-        {
-          "id": 87,
+          "id": 140,
           "question": "1 एकड़ कितने स्क्वायर यार्ड के बराबर है?",
           "options": {
             "A": "4840",
@@ -971,18 +870,7 @@
           "correct": "A"
         },
         {
-          "id": 88,
-          "question": "1 हेक्टेयर कितने एकड़ के बराबर है?",
-          "options": {
-            "A": "1.47",
-            "B": "2.47",
-            "C": "4.047",
-            "D": "10"
-          },
-          "correct": "B"
-        },
-        {
-          "id": 89,
+          "id": 141,
           "question": "FAR का मतलब क्या है?",
           "options": {
             "A": "Floor Area Ratio",
@@ -993,7 +881,7 @@
           "correct": "A"
         },
         {
-          "id": 90,
+          "id": 142,
           "question": "EDC का मतलब क्या है?",
           "options": {
             "A": "External Development Charges",
@@ -1004,7 +892,7 @@
           "correct": "A"
         },
         {
-          "id": 91,
+          "id": 143,
           "question": "PLC का मतलब क्या है?",
           "options": {
             "A": "Park Facing Location Charge",
@@ -1015,7 +903,7 @@
           "correct": "B"
         },
         {
-          "id": 92,
+          "id": 144,
           "question": "IFMS का मतलब क्या है?",
           "options": {
             "A": "Interest Free Maintenance Security",
@@ -1026,100 +914,7 @@
           "correct": "A"
         },
         {
-          "id": 93,
-          "question": "BHK का मतलब क्या है?",
-          "options": {
-            "A": "Bedroom Hall Kitchen",
-            "B": "Big House Kitchen",
-            "C": "Bathroom Hall Kitchen",
-            "D": "Bedroom Home Kitchen"
-          },
-          "correct": "A"
-        },
-        {
-          "id": 94,
-          "question": "NCR का मतलब क्या है?",
-          "options": {
-            "A": "National Capital Region",
-            "B": "New Capital Region",
-            "C": "North Capital Region",
-            "D": "National City Region"
-          },
-          "correct": "A"
-        },
-        {
-          "id": 95,
-          "question": "Virtual Office Space में ओनरशिप मिलती है?",
-          "options": {
-            "A": "हाँ",
-            "B": "नहीं",
-            "C": "केवल रेंट",
-            "D": "50% ओनरशिप"
-          },
-          "correct": "B"
-        },
-        {
-          "id": 96,
-          "question": "Payment Plan के उदाहरण क्या हैं?",
-          "options": {
-            "A": "Down Payment, Flexi, Construction Linked",
-            "B": "EMI, Interest Only",
-            "C": "Rent, Lease",
-            "D": "Loan, Mortgage"
-          },
-          "correct": "A"
-        },
-        {
-          "id": 97,
-          "question": "MOU किसके लिए बनता है?",
-          "options": {
-            "A": "रेजिडेंशियल",
-            "B": "अंडर कंस्ट्रक्शन कमर्शियल",
-            "C": "प्लॉट",
-            "D": "रेंट"
-          },
-          "correct": "B"
-        },
-        {
-          "id": 98,
-          "question": "EMI का मतलब क्या है?",
-          "options": {
-            "A": "Equal Monthly Instalment",
-            "B": "Extra Monthly Interest",
-            "C": "Easy Money Instalment",
-            "D": "Equal Money Interest"
-          },
-          "correct": "A"
-        },
-        {
-          "id": 99,
-          "question": "Bank Loan लेने पर हर महीने क्या भरना पड़ता है?",
-          "options": {
-            "A": "GST",
-            "B": "EMI",
-            "C": "Registry",
-            "D": "Maintenance"
-          },
-          "correct": "B"
-        },
-        {
-          "id": 100,
-          "question": "IGBC का मतलब क्या है?",
-          "options": {
-            "A": "Indian Green Building Council",
-            "B": "International Green Building",
-            "C": "Indian Government Building Council",
-            "D": "Infrastructure Green Building"
-          },
-          "correct": "A"
-        }
-      ]
-    },
-    {
-      "name": "SECTION 4 — GURUGRAM GEOGRAPHY, CONNECTIVITY & MASTER PLAN (101–140)",
-      "questions": [
-        {
-          "id": 101,
+          "id": 145,
           "question": "गुरुग्राम जिले का कुल एरिया कितना है?",
           "options": {
             "A": "732 sq km",
@@ -1130,7 +925,7 @@
           "correct": "B"
         },
         {
-          "id": 102,
+          "id": 146,
           "question": "गुरुग्राम NCR का हिस्सा है?",
           "options": {
             "A": "नहीं",
@@ -1141,18 +936,7 @@
           "correct": "B"
         },
         {
-          "id": 103,
-          "question": "गुरुग्राम जिले में कितनी तहसीलें हैं?",
-          "options": {
-            "A": "3",
-            "B": "5",
-            "C": "7",
-            "D": "4"
-          },
-          "correct": "B"
-        },
-        {
-          "id": 104,
+          "id": 147,
           "question": "गुरुग्राम से गुजरने वाला नेशनल हाईवे कौन सा है?",
           "options": {
             "A": "NH-44",
@@ -1163,7 +947,7 @@
           "correct": "B"
         },
         {
-          "id": 105,
+          "id": 148,
           "question": "गुरुग्राम में दिल्ली मेट्रो की कितनी स्टेशन हैं?",
           "options": {
             "A": "3",
@@ -1174,387 +958,13 @@
           "correct": "B"
         },
         {
-          "id": 106,
-          "question": "रैपिड मेट्रो गुरुग्राम में कितने स्टेशन हैं?",
-          "options": {
-            "A": "5",
-            "B": "11",
-            "C": "15",
-            "D": "20"
-          },
-          "correct": "B"
-        },
-        {
-          "id": 107,
+          "id": 149,
           "question": "गुरुग्राम का निकटतम इंटरनेशनल एयरपोर्ट कौन सा है?",
           "options": {
             "A": "जेवर",
             "B": "इंदिरा गांधी इंटरनेशनल एयरपोर्ट",
             "C": "चंडीगढ़",
             "D": "जयपुर"
-          },
-          "correct": "B"
-        },
-        {
-          "id": 108,
-          "question": "गुरुग्राम का आधिकारिक नाम क्या है?",
-          "options": {
-            "A": "गुड़गांव",
-            "B": "गुरुग्राम",
-            "C": "गुरुगांव",
-            "D": "ग्राम"
-          },
-          "correct": "B"
-        },
-        {
-          "id": 109,
-          "question": "Master Plan 2031 के अनुसार कुल डेवलप एरिया कितना है?",
-          "options": {
-            "A": "16021 हेक्टेयर",
-            "B": "33,872 हेक्टेयर",
-            "C": "4613 हेक्टेयर",
-            "D": "2027 हेक्टेयर"
-          },
-          "correct": "B"
-        },
-        {
-          "id": 110,
-          "question": "2031 तक गुरुग्राम की अनुमानित जनसंख्या कितनी होगी?",
-          "options": {
-            "A": "25 लाख",
-            "B": "42.5 लाख",
-            "C": "50 लाख",
-            "D": "60 लाख"
-          },
-          "correct": "B"
-        },
-        {
-          "id": 111,
-          "question": "न्यू गुरुग्राम में सेक्टर 79 से कौन से सेक्टर तक आते हैं?",
-          "options": {
-            "A": "सेक्टर 1-23",
-            "B": "सेक्टर 79-98",
-            "C": "सेक्टर 99-115",
-            "D": "सेक्टर 24-78"
-          },
-          "correct": "B"
-        },
-        {
-          "id": 112,
-          "question": "Dwarka Expressway को क्या कहते हैं?",
-          "options": {
-            "A": "SPR",
-            "B": "Northern Peripheral Road (NPR)",
-            "C": "CPR",
-            "D": "Golf Link Road"
-          },
-          "correct": "B"
-        },
-        {
-          "id": 113,
-          "question": "Dwarka Expressway की कुल लंबाई कितनी है?",
-          "options": {
-            "A": "16 km",
-            "B": "29 km",
-            "C": "43.2 km",
-            "D": "9.61 km"
-          },
-          "correct": "B"
-        },
-        {
-          "id": 114,
-          "question": "SPR को क्या कहते हैं?",
-          "options": {
-            "A": "Golf Link Extension Road",
-            "B": "Dwarka Expressway",
-            "C": "KMP",
-            "D": "CPR"
-          },
-          "correct": "A"
-        },
-        {
-          "id": 115,
-          "question": "IMT मानेसर कब स्थापित हुआ?",
-          "options": {
-            "A": "15 अगस्त 1997",
-            "B": "19 अगस्त 2013",
-            "C": "8 फरवरी 2016",
-            "D": "1 मई 2000"
-          },
-          "correct": "A"
-        },
-        {
-          "id": 116,
-          "question": "IMT मानेसर का कुल एरिया कितना है?",
-          "options": {
-            "A": "1253 एकड़",
-            "B": "4018.7 एकड़",
-            "C": "33,872 हेक्टेयर",
-            "D": "16021 हेक्टेयर"
-          },
-          "correct": "B"
-        },
-        {
-          "id": 117,
-          "question": "KMP Expressway के साथ कितने हब बनेंगे?",
-          "options": {
-            "A": "1",
-            "B": "3",
-            "C": "5",
-            "D": "7"
-          },
-          "correct": "B"
-        },
-        {
-          "id": 118,
-          "question": "दिल्ली-मुंबई एक्सप्रेसवे की कुल लंबाई कितनी है?",
-          "options": {
-            "A": "1350 km",
-            "B": "1504 km",
-            "C": "1873 km",
-            "D": "2807 km"
-          },
-          "correct": "A"
-        },
-        {
-          "id": 119,
-          "question": "गुरुग्राम में कुल कितने सेक्टर हैं?",
-          "options": {
-            "A": "100",
-            "B": "180",
-            "C": "115",
-            "D": "78"
-          },
-          "correct": "B"
-        },
-        {
-          "id": 120,
-          "question": "गुरुग्राम ISBT कहाँ है?",
-          "options": {
-            "A": "सेक्टर 105",
-            "B": "सेक्टर 12",
-            "C": "मानेसर",
-            "D": "सोहना"
-          },
-          "correct": "B"
-        },
-        {
-          "id": 121,
-          "question": "गुरुग्राम रेलवे स्टेशन कहाँ है?",
-          "options": {
-            "A": "सेक्टर 12",
-            "B": "सेक्टर 105",
-            "C": "सोहना",
-            "D": "मानेसर"
-          },
-          "correct": "B"
-        },
-        {
-          "id": 122,
-          "question": "गुरुग्राम में कितने सब-डिवीजन हैं?",
-          "options": {
-            "A": "2",
-            "B": "4",
-            "C": "5",
-            "D": "6"
-          },
-          "correct": "B"
-        },
-        {
-          "id": 123,
-          "question": "जेवर एयरपोर्ट गुरुग्राम से कितनी दूरी पर है?",
-          "options": {
-            "A": "10 मिनट",
-            "B": "80 km",
-            "C": "150 km",
-            "D": "200 km"
-          },
-          "correct": "B"
-        },
-        {
-          "id": 124,
-          "question": "Master Plan 2031 में रेजिडेंशियल एरिया कितना है?",
-          "options": {
-            "A": "1616 हेक्टेयर",
-            "B": "16021 हेक्टेयर",
-            "C": "4613 हेक्टेयर",
-            "D": "2027 हेक्टेयर"
-          },
-          "correct": "B"
-        },
-        {
-          "id": 125,
-          "question": "CPR की लंबाई कितनी है?",
-          "options": {
-            "A": "3.2 km",
-            "B": "16 km",
-            "C": "29 km",
-            "D": "43.2 km"
-          },
-          "correct": "A"
-        },
-        {
-          "id": 126,
-          "question": "गुरुग्राम-पटौदी-रेवाड़ी NH की लंबाई कितनी है?",
-          "options": {
-            "A": "16 km",
-            "B": "43.2 km",
-            "C": "29 km",
-            "D": "9.61 km"
-          },
-          "correct": "B"
-        },
-        {
-          "id": 127,
-          "question": "गुरुग्राम भारत का दूसरा सबसे बड़ा IT हब है?",
-          "options": {
-            "A": "नहीं",
-            "B": "हाँ",
-            "C": "पहला",
-            "D": "तीसरा"
-          },
-          "correct": "B"
-        },
-        {
-          "id": 128,
-          "question": "GMDA क्या है?",
-          "options": {
-            "A": "Gurugram Metropolitan Development Authority",
-            "B": "Gurgaon Municipal Development Authority",
-            "C": "Green Metro Development Authority",
-            "D": "Gurgaon Master Development Authority"
-          },
-          "correct": "A"
-        },
-        {
-          "id": 129,
-          "question": "गुरुग्राम में कितने सब-तहसील हैं?",
-          "options": {
-            "A": "2",
-            "B": "4",
-            "C": "5",
-            "D": "6"
-          },
-          "correct": "B"
-        },
-        {
-          "id": 130,
-          "question": "Golf Link Road की लंबाई कितनी है?",
-          "options": {
-            "A": "3.2 km",
-            "B": "9.61 km",
-            "C": "16 km",
-            "D": "29 km"
-          },
-          "correct": "B"
-        },
-        {
-          "id": 131,
-          "question": "Old Gurgaon में कौन से सेक्टर आते हैं?",
-          "options": {
-            "A": "79-98",
-            "B": "1-23",
-            "C": "99-115",
-            "D": "24-78"
-          },
-          "correct": "B"
-        },
-        {
-          "id": 132,
-          "question": "SPR की लंबाई कितनी है?",
-          "options": {
-            "A": "9.61 km",
-            "B": "16 km",
-            "C": "29 km",
-            "D": "43.2 km"
-          },
-          "correct": "B"
-        },
-        {
-          "id": 133,
-          "question": "IMT मानेसर में कितने सेक्टर हैं?",
-          "options": {
-            "A": "5",
-            "B": "15 (सब-सेक्टर मिलाकर 21)",
-            "C": "115",
-            "D": "180"
-          },
-          "correct": "B"
-        },
-        {
-          "id": 134,
-          "question": "Delhi-Mumbai Expressway कहाँ से शुरू होता है?",
-          "options": {
-            "A": "सोहना",
-            "B": "दिल्ली",
-            "C": "मुंबई",
-            "D": "जेवर"
-          },
-          "correct": "A"
-        },
-        {
-          "id": 135,
-          "question": "Western DFC की लंबाई कितनी है?",
-          "options": {
-            "A": "1350 km",
-            "B": "1504 km",
-            "C": "1873 km",
-            "D": "2807 km"
-          },
-          "correct": "B"
-        },
-        {
-          "id": 136,
-          "question": "गुरुग्राम की पर कैपिटा इनकम भारत में तीसरी सबसे ज्यादा है?",
-          "options": {
-            "A": "नहीं",
-            "B": "हाँ",
-            "C": "पहली",
-            "D": "दूसरी"
-          },
-          "correct": "B"
-        },
-        {
-          "id": 137,
-          "question": "गुरुग्राम में कितने ISBT हैं?",
-          "options": {
-            "A": "0",
-            "B": "1",
-            "C": "2",
-            "D": "3"
-          },
-          "correct": "B"
-        },
-        {
-          "id": 138,
-          "question": "गुरुग्राम शहर का एरिया कितना है?",
-          "options": {
-            "A": "1253 sq km",
-            "B": "732 sq km",
-            "C": "4018 एकड़",
-            "D": "33,872 हेक्टेयर"
-          },
-          "correct": "B"
-        },
-        {
-          "id": 139,
-          "question": "Master Plan 2031 में इंडस्ट्रियल एरिया कितना है?",
-          "options": {
-            "A": "16021 हेक्टेयर",
-            "B": "4613 हेक्टेयर",
-            "C": "1616 हेक्टेयर",
-            "D": "2027 हेक्टेयर"
-          },
-          "correct": "B"
-        },
-        {
-          "id": 140,
-          "question": "गुरुग्राम में कितने रेलवे स्टेशन हैं?",
-          "options": {
-            "A": "0",
-            "B": "1",
-            "C": "5",
-            "D": "11"
           },
           "correct": "B"
         }

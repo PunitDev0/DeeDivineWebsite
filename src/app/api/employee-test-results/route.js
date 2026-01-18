@@ -31,15 +31,22 @@ export async function POST(request) {
       answers = [],
       cheatCount = 0,
       timeTaken = 0,
+
       name,
       phone,
       designation,
+
+      employeeCode, // ✅ NEW
+      teamLeaderName, // ✅ NEW
     } = body;
 
     /* ---------- Validation ---------- */
-    if (!name || !phone || !designation) {
+    if (!name || !phone || !designation || !employeeCode || !teamLeaderName) {
       return NextResponse.json(
-        { error: "Name, phone, and designation are required" },
+        {
+          error:
+            "Name, phone, designation, employeeCode and teamLeaderName are required",
+        },
         { status: 400 }
       );
     }
@@ -55,8 +62,11 @@ export async function POST(request) {
     const cleanName = name.trim();
     const cleanPhone = phone.toString().trim();
     const cleanDesignation = designation.trim();
+    const cleanEmployeeCode = employeeCode.toString().trim();
+    const cleanTeamLeaderName = teamLeaderName.trim();
 
     /* ---------- Prevent Duplicate ---------- */
+    // ✅ phone unique check
     const existing = await EmployeeTest.findOne({ phone: cleanPhone });
     if (existing) {
       return NextResponse.json(
@@ -89,15 +99,17 @@ export async function POST(request) {
       }
     });
 
-    const scorePercentage = Math.round(
-      (correctCount / answers.length) * 100
-    );
+    const scorePercentage = Math.round((correctCount / answers.length) * 100);
 
     /* ---------- Save Result ---------- */
     const testResult = await EmployeeTest.create({
       name: cleanName,
       phone: cleanPhone,
       designation: cleanDesignation,
+
+      employeeCode: cleanEmployeeCode, // ✅ NEW
+      teamLeaderName: cleanTeamLeaderName, // ✅ NEW
+
       answers,
       score: scorePercentage,
       cheatCount,
@@ -111,9 +123,14 @@ export async function POST(request) {
       message: "Test submitted successfully!",
       resultId: testResult._id,
       score: scorePercentage,
-      name: testResult.name,
-      phone: testResult.phone,
-      designation: testResult.designation,
+
+      employee: {
+        name: testResult.name,
+        phone: testResult.phone,
+        designation: testResult.designation,
+        employeeCode: testResult.employeeCode,
+        teamLeaderName: testResult.teamLeaderName,
+      },
     });
   } catch (error) {
     console.error("🔥 Test submission error:", error);
@@ -179,6 +196,9 @@ export async function GET() {
           name: r.name,
           phone: r.phone,
           designation: r.designation,
+
+          employeeCode: r.employeeCode || "", // ✅ NEW
+          teamLeaderName: r.teamLeaderName || "", // ✅ NEW
         },
         score: r.score,
         correct,
