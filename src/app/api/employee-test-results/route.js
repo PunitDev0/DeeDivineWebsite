@@ -4,7 +4,7 @@ import EmployeeTest from "@/models/EmployeeTest";
 import fs from "fs";
 import path from "path";
 
-// Load questions.json once (safe for production + Vercel)
+
 let questionsData = { sections: [] };
 try {
   const filePath = path.join(process.cwd(), "lib", "questions.json");
