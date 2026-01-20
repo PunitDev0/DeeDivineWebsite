@@ -1,6 +1,6 @@
 {
   "quiz_title": "Haryana Real Estate Quiz - DDJAY, AHP 2013, RERA & Gurugram (Updated 2026)",
-  "description": "Complete set of 175 MCQs (original + additional questions, duplicates removed)",
+  "description": "Updated set of MCQs with shuffled options for better practice.",
   "total_questions": 175,
   "sections": [
     {
@@ -12,143 +12,143 @@
           "question": "Deen Dayal Jan Awas Yojana (DDJAY) क्या है?",
           "options": {
             "A": "केंद्र सरकार की अफोर्डेबल हाउसिंग योजना",
-            "B": "हरियाणा सरकार की हाउसिंग पॉलिसी जो हाई-डेंसिटी प्लॉटेड कॉलोनियों को बढ़ावा देती है",
-            "C": "दिल्ली की प्लॉटेड सोसाइटी योजना",
+            "B": "दिल्ली की प्लॉटेड सोसाइटी योजना",
+            "C": "हरियाणा सरकार की हाउसिंग पॉलिसी जो हाई-डेंसिटी प्लॉटेड कॉलोनियों को बढ़ावा देती है",
             "D": "कमर्शियल प्रोजेक्ट्स के लिए योजना"
           },
-          "correct": "B"
+          "correct": "C"
         },
         {
           "id": 2,
           "question": "DDJAY योजना शुरू करने का मुख्य उद्देश्य क्या है?",
           "options": {
-            "A": "अनधिकृत कॉलोनियों पर अंकुश लगाना",
-            "B": "हाई-राइज बिल्डिंग्स बनाना",
+            "A": "हाई-राइज बिल्डिंग्स बनाना",
+            "B": "अनधिकृत कॉलोनियों पर अंकुश लगाना",
             "C": "कमर्शियल एरिया बढ़ाना",
             "D": "कृषि भूमि को बचाना"
           },
-          "correct": "A"
+          "correct": "B"
         },
         {
           "id": 3,
           "question": "DDJAY में किस मॉडल का उपयोग किया गया है?",
           "options": {
-            "A": "केवल सरकारी मॉडल",
-            "B": "Public-Private Partnership (PPP)",
+            "A": "Public-Private Partnership (PPP)",
+            "B": "केवल सरकारी मॉडल",
             "C": "केवल प्राइवेट मॉडल",
             "D": "NGO मॉडल"
           },
-          "correct": "B"
+          "correct": "A"
         },
         {
           "id": 4,
           "question": "DDJAY प्रोजेक्ट में बिल्डर क्या बेच सकता है?",
           "options": {
             "A": "केवल हाई-राइज फ्लैट्स",
-            "B": "प्लॉट्स और लो-राइज फ्लोर (Stilt + 4)",
-            "C": "केवल कमर्शियल शॉप्स",
-            "D": "एग्रीकल्चर लैंड"
+            "B": "केवल कमर्शियल शॉप्स",
+            "C": "एग्रीकल्चर लैंड",
+            "D": "प्लॉट्स और लो-राइज फ्लोर (Stilt + 4)"
           },
-          "correct": "B"
+          "correct": "D"
         },
         {
           "id": 5,
           "question": "DDJAY योजना किस राज्य की है?",
           "options": {
-            "A": "दिल्ली",
-            "B": "हरियाणा",
+            "A": "हरियाणा",
+            "B": "दिल्ली",
             "C": "उत्तर प्रदेश",
             "D": "राजस्थान"
           },
-          "correct": "B"
+          "correct": "A"
         },
         {
           "id": 6,
           "question": "DDJAY योजना कब शुरू हुई?",
           "options": {
             "A": "19 अगस्त 2013",
-            "B": "8 फरवरी 2016",
-            "C": "1 मई 2016",
+            "B": "1 मई 2016",
+            "C": "8 फरवरी 2016",
             "D": "फरवरी 2023"
           },
-          "correct": "B"
+          "correct": "C"
         },
         {
           "id": 7,
           "question": "फरवरी 2023 से फरीदाबाद और गुरुग्राम में DDJAY के नए लाइसेंस मिल रहे हैं?",
           "options": {
-            "A": "हाँ, मिल रहे हैं",
-            "B": "नहीं, नए लाइसेंस नहीं मिल रहे",
+            "A": "नहीं, नए लाइसेंस नहीं मिल रहे",
+            "B": "हाँ, मिल रहे हैं",
             "C": "केवल गुरुग्राम में मिल रहे",
             "D": "केवल फरीदाबाद में मिल रहे"
           },
-          "correct": "B"
+          "correct": "A"
         },
         {
           "id": 8,
           "question": "DDJAY में प्लॉट कौन खरीद सकता है?",
           "options": {
             "A": "केवल हरियाणा के निवासी",
-            "B": "कोई भी व्यक्ति",
-            "C": "केवल बिल्डर्स",
+            "B": "केवल बिल्डर्स",
+            "C": "कोई भी व्यक्ति",
             "D": "केवल सरकारी कर्मचारी"
           },
-          "correct": "B"
+          "correct": "C"
         },
         {
           "id": 9,
           "question": "DDJAY प्रोजेक्ट किस जोन में डेवलप होते हैं?",
           "options": {
             "A": "कमर्शियल जोन",
-            "B": "इंडस्ट्रियल जोन",
-            "C": "रेजिडेंशियल जोन (R-Zone)",
+            "B": "रेजिडेंशियल जोन (R-Zone)",
+            "C": "इंडस्ट्रियल जोन",
             "D": "एग्रीकल्चर जोन"
           },
-          "correct": "C"
+          "correct": "B"
         },
         {
           "id": 10,
           "question": "DDJAY का लाइसेंस कौन देता है?",
           "options": {
-            "A": "हरियाणा RERA",
-            "B": "Town and Country Planning Department",
+            "A": "Town and Country Planning Department",
+            "B": "हरियाणा RERA",
             "C": "केंद्र सरकार",
             "D": "म्यूनिसिपल कॉर्पोरेशन"
           },
-          "correct": "B"
+          "correct": "A"
         },
         {
           "id": 11,
           "question": "DDJAY लाइसेंस लेने के बाद प्रोजेक्ट को हरियाणा RERA में रजिस्टर करना जरूरी है?",
           "options": {
             "A": "नहीं",
-            "B": "हाँ",
-            "C": "केवल कमर्शियल के लिए",
-            "D": "केवल प्लॉट्स के लिए"
+            "B": "केवल कमर्शियल के लिए",
+            "C": "केवल प्लॉट्स के लिए",
+            "D": "हाँ"
           },
-          "correct": "B"
+          "correct": "D"
         },
         {
           "id": 12,
           "question": "DDJAY प्रोजेक्ट का मिनिमम एरिया क्या है?",
           "options": {
-            "A": "1 एकड़",
-            "B": "5 एकड़",
+            "A": "5 एकड़",
+            "B": "1 एकड़",
             "C": "10 एकड़",
             "D": "15 एकड़"
           },
-          "correct": "B"
+          "correct": "A"
         },
         {
           "id": 13,
           "question": "DDJAY में प्लॉट का मैक्सिमम साइज क्या है?",
           "options": {
             "A": "100 sq m",
-            "B": "150 sq m या 179.399 sq yd",
-            "C": "200 sq m",
+            "B": "200 sq m",
+            "C": "150 sq m या 179.399 sq yd",
             "D": "कोई लिमिट नहीं"
           },
-          "correct": "B"
+          "correct": "C"
         },
         {
           "id": 14,
@@ -165,34 +165,34 @@
           "id": 15,
           "question": "DDJAY में इंटरनल रोड्स की चौड़ाई क्या होती है?",
           "options": {
-            "A": "6 मीटर",
-            "B": "9 मीटर या 30 फीट",
+            "A": "9 मीटर या 30 फीट",
+            "B": "6 मीटर",
             "C": "12 मीटर",
             "D": "15 मीटर"
           },
-          "correct": "B"
+          "correct": "A"
         },
         {
           "id": 16,
           "question": "DDJAY प्रोजेक्ट में कितने % एरिया पार्क के लिए रखना होता है?",
           "options": {
             "A": "4%",
-            "B": "7.5%",
-            "C": "10%",
-            "D": "15%"
+            "B": "10%",
+            "C": "15%",
+            "D": "7.5%"
           },
-          "correct": "B"
+          "correct": "D"
         },
         {
           "id": 17,
           "question": "DDJAY में बिल्डर कितना % एरिया सरकार को फ्री ऑफ कॉस्ट देता है?",
           "options": {
             "A": "4%",
-            "B": "7.5%",
-            "C": "10%",
+            "B": "10%",
+            "C": "7.5%",
             "D": "15%"
           },
-          "correct": "C"
+          "correct": "B"
         },
         {
           "id": 18,
@@ -210,22 +210,22 @@
           "question": "DDJAY प्लॉट पर कितने फ्लोर तक निर्माण कर सकते हैं?",
           "options": {
             "A": "Stilt + 2",
-            "B": "Stilt + 4",
-            "C": "Stilt + 6",
+            "B": "Stilt + 6",
+            "C": "Stilt + 4",
             "D": "कोई लिमिट नहीं"
           },
-          "correct": "B"
+          "correct": "C"
         },
         {
           "id": 20,
           "question": "DDJAY में छोटे प्लॉट्स पर फ्लोर-वाइज रजिस्ट्री हो सकती है?",
           "options": {
-            "A": "नहीं",
-            "B": "हाँ",
+            "A": "हाँ",
+            "B": "नहीं",
             "C": "केवल बड़े प्लॉट्स पर",
             "D": "केवल कमर्शियल पर"
           },
-          "correct": "B"
+          "correct": "A"
         },
         {
           "id": 21,
@@ -254,55 +254,55 @@
           "question": "DDJAY प्लॉट पर GST लगती है?",
           "options": {
             "A": "हाँ, 18%",
-            "B": "हाँ, 5%",
-            "C": "नहीं",
+            "B": "नहीं",
+            "C": "हाँ, 5%",
             "D": "केवल कंस्ट्रक्शन पर"
           },
-          "correct": "C"
+          "correct": "B"
         },
         {
           "id": 24,
           "question": "क्या DDJAY में दो प्लॉट जोड़कर एक बड़ा प्लॉट बना सकते हैं?",
           "options": {
-            "A": "हाँ",
-            "B": "नहीं",
+            "A": "नहीं",
+            "B": "हाँ",
             "C": "बिल्डर की परमिशन से",
             "D": "सरकार की परमिशन से"
           },
-          "correct": "B"
+          "correct": "A"
         },
         {
           "id": 25,
           "question": "DDJAY प्लॉट का कमर्शियल यूज कर सकते हैं?",
           "options": {
             "A": "हाँ",
-            "B": "नहीं",
-            "C": "केवल ग्राउंड फ्लोर पर",
+            "B": "केवल ग्राउंड फ्लोर पर",
+            "C": "नहीं",
             "D": "बिल्डर की मर्जी"
           },
-          "correct": "B"
+          "correct": "C"
         },
         {
           "id": 26,
           "question": "DDJAY प्लॉट खरीदने पर बैंक लोन पर ब्याज दर लगभग कितनी होती है?",
           "options": {
             "A": "6.5%",
-            "B": "8.5%",
-            "C": "10%",
-            "D": "12%"
+            "B": "10%",
+            "C": "12%",
+            "D": "8.5%"
           },
-          "correct": "B"
+          "correct": "D"
         },
         {
           "id": 27,
           "question": "DDJAY में अगर 180 sq yd से बड़ा प्लॉट चाहिए तो?",
           "options": {
-            "A": "मिल जाएगा",
-            "B": "मैक्सिमम 179.399 sq yd ही है",
+            "A": "मैक्सिमम 179.399 sq yd ही है",
+            "B": "मिल जाएगा",
             "C": "दो लाइसेंस से मिल सकता है",
             "D": "अफोर्डेबल हाउसिंग में देखें"
           },
-          "correct": "B"
+          "correct": "A"
         },
         {
           "id": 28,
@@ -320,88 +320,88 @@
           "question": "DDJAY में कार पार्किंग की सुविधा है?",
           "options": {
             "A": "नहीं",
-            "B": "Stilt पार्किंग allowed",
-            "C": "केवल ओपन पार्किंग",
+            "B": "केवल ओपन पार्किंग",
+            "C": "Stilt पार्किंग allowed",
             "D": "केवल कमर्शियल में"
           },
-          "correct": "B"
+          "correct": "C"
         },
         {
           "id": 30,
           "question": "DDJAY प्रोजेक्ट में बेसिक सुविधाएं कौन देता है?",
           "options": {
             "A": "सरकार",
-            "B": "बिल्डर (पानी, बिजली, सीवेज, रोड, पार्क आदि)",
-            "C": "RWA",
+            "B": "RWA",
+            "C": "बिल्डर (पानी, बिजली, सीवेज, रोड, पार्क आदि)",
             "D": "खरीदार खुद"
           },
-          "correct": "B"
+          "correct": "C"
         },
         {
           "id": 31,
           "question": "What is the primary target area for DDJAY projects?",
           "options": {
-            "A": "High Potential Zones (Gurugram/Faridabad)",
-            "B": "Low and Medium Potential Towns of Haryana",
+            "A": "Low and Medium Potential Towns of Haryana",
+            "B": "High Potential Zones (Gurugram/Faridabad)",
             "C": "Industrial Model Townships (IMT) only",
             "D": "National Highway borders only"
           },
-          "correct": "B"
+          "correct": "A"
         },
         {
           "id": 32,
           "question": "What is the minimum land area required to apply for a DDJAY license?",
           "options": {
             "A": "2 Acres",
-            "B": "5 Acres",
-            "C": "10 Acres",
+            "B": "10 Acres",
+            "C": "5 Acres",
             "D": "25 Acres"
           },
-          "correct": "B"
+          "correct": "C"
         },
         {
           "id": 33,
           "question": "In DDJAY, what is the maximum size allowed for a residential plot?",
           "options": {
-            "A": "100 sqm",
-            "B": "150 sqm",
+            "A": "150 sqm",
+            "B": "100 sqm",
             "C": "200 sqm",
             "D": "250 sqm"
           },
-          "correct": "B"
+          "correct": "A"
         },
         {
           "id": 34,
           "question": "What is the maximum Commercial Area allowed in a DDJAY colony?",
           "options": {
             "A": "2% of total area",
-            "B": "4% of total area",
-            "C": "5% of total area",
-            "D": "10% of total area"
+            "B": "5% of total area",
+            "C": "10% of total area",
+            "D": "4% of total area"
           },
-          "correct": "B"
+          "correct": "D"
         },
         {
           "id": 35,
           "question": "What is the standard width of internal roads in a DDJAY colony?",
           "options": {
             "A": "7 meters",
-            "B": "9 meters",
-            "C": "12 meters",
+            "B": "12 meters",
+            "C": "9 meters",
             "D": "15 meters"
           },
-          "correct": "B"
+          "correct": "C"
         },
         {
           "id": 36,
           "question": "What percentage of the saleable area was traditionally frozen (mortgaged) to the govt in DDJAY?",
           "options": {
             "A": "15%",
-            "B": "25%",
-            "C": "50%",
+            "B": "50%",
+            "C": "25%",
             "D": "75%"
           },
-          "correct": "C"
+          "correct": "B"
         },
         {
           "id": 37,
@@ -409,21 +409,21 @@
           "options": {
             "A": "Milk Booth",
             "B": "Anganwadi",
-            "C": "Shopping Mall with Cinema",
-            "D": "Water Tank"
+            "C": "Water Tank",
+            "D": "Shopping Mall with Cinema"
           },
-          "correct": "C"
+          "correct": "D"
         },
         {
           "id": 38,
           "question": "What is the maximum Residential Density (persons per acre) allowed in DDJAY?",
           "options": {
-            "A": "200-300",
-            "B": "400-600",
+            "A": "400-600",
+            "B": "200-300",
             "C": "600-750",
             "D": "1000+"
           },
-          "correct": "B"
+          "correct": "A"
         },
         {
           "id": 39,
@@ -431,21 +431,21 @@
           "options": {
             "A": "10%",
             "B": "20%",
-            "C": "30%",
-            "D": "50%"
+            "C": "50%",
+            "D": "30%"
           },
-          "correct": "C"
+          "correct": "D"
         },
         {
           "id": 40,
           "question": "Under recent updates, if a developer wants to sell 100% of plots immediately, what must they provide?",
           "options": {
-            "A": "Double the license fee",
-            "B": "Bank Guarantee against the frozen area",
+            "A": "Bank Guarantee against the frozen area",
+            "B": "Double the license fee",
             "C": "A letter from the Chief Minister",
             "D": "Completion Certificate for all houses"
           },
-          "correct": "B"
+          "correct": "A"
         },
         {
           "id": 41,
@@ -505,18 +505,18 @@
       ]
     },
     {
-      "name": "SECTION 2 — AFFORDABLE HOUSING POLICY HARYANA (AHP 2013) (61–100)",
+      "name": "SECTION 2 — AFFORDABLE HOUSING POLICY HARYANA (AHP 2013)",
       "questions": [
         {
           "id": 61,
           "question": "हरियाणा की Affordable Housing Policy कब शुरू हुई?",
           "options": {
-            "A": "8 फरवरी 2016",
-            "B": "19 अगस्त 2013",
+            "A": "19 अगस्त 2013",
+            "B": "8 फरवरी 2016",
             "C": "1 मई 2016",
             "D": "फरवरी 2023"
           },
-          "correct": "B"
+          "correct": "A"
         },
         {
           "id": 62,
@@ -534,22 +534,22 @@
           "question": "Affordable Housing प्रोजेक्ट कितने साल में पूरा होना चाहिए?",
           "options": {
             "A": "2 साल",
-            "B": "4 साल",
-            "C": "5 साल",
+            "B": "5 साल",
+            "C": "4 साल",
             "D": "7 साल"
           },
-          "correct": "B"
+          "correct": "C"
         },
         {
           "id": 64,
           "question": "Affordable Housing प्रोजेक्ट किस जोन में बनते हैं?",
           "options": {
-            "A": "इंडस्ट्रियल जोन",
-            "B": "रेजिडेंशियल जोन",
+            "A": "रेजिडेंशियल जोन",
+            "B": "इंडस्ट्रियल जोन",
             "C": "कमर्शियल जोन",
             "D": "एग्रीकल्चर जोन"
           },
-          "correct": "B"
+          "correct": "A"
         },
         {
           "id": 65,
@@ -577,12 +577,12 @@
           "id": 67,
           "question": "Affordable Housing में फ्लैट कार्पेट एरिया में बिकते हैं?",
           "options": {
-            "A": "नहीं",
-            "B": "हाँ",
+            "A": "हाँ",
+            "B": "नहीं",
             "C": "सुपर एरिया में",
             "D": "बिल्ट-अप में"
           },
-          "correct": "B"
+          "correct": "A"
         },
         {
           "id": 68,
@@ -611,22 +611,22 @@
           "question": "Affordable Housing में बालकनी की कीमत अलग से देनी पड़ती है?",
           "options": {
             "A": "नहीं",
-            "B": "हाँ, Rs 1200 per sq ft",
-            "C": "हाँ, Rs 500 per sq ft",
-            "D": "बिल्डर तय करता है"
+            "B": "हाँ, Rs 500 per sq ft",
+            "C": "बिल्डर तय करता है",
+            "D": "हाँ, Rs 1200 per sq ft"
           },
-          "correct": "B"
+          "correct": "D"
         },
         {
           "id": 71,
           "question": "In AHP 2013, balcony price is capped at?",
           "options": {
-            "A": "₹500 per sq ft",
-            "B": "₹1000 per sq ft",
-            "C": "₹1200 per sq ft",
+            "A": "₹1200 per sq ft",
+            "B": "₹500 per sq ft",
+            "C": "₹1000 per sq ft",
             "D": "Included in carpet area"
           },
-          "correct": "C"
+          "correct": "A"
         },
         {
           "id": 72,
@@ -654,12 +654,12 @@
           "id": 74,
           "question": "Affordable Housing में अप्लाई करने के लिए कितना % पेमेंट करना होता है?",
           "options": {
-            "A": "1%",
-            "B": "5%",
+            "A": "5%",
+            "B": "1%",
             "C": "10%",
             "D": "20%"
           },
-          "correct": "B"
+          "correct": "A"
         },
         {
           "id": 75,
@@ -687,17 +687,17 @@
           "id": 77,
           "question": "Affordable Housing में मेंटेनेंस बिल्डर कितने साल तक करता है?",
           "options": {
-            "A": "1 साल",
-            "B": "5 साल",
+            "A": "5 साल",
+            "B": "1 साल",
             "C": "10 साल",
             "D": "हमेशा"
           },
-          "correct": "B"
+          "correct": "A"
         }
       ]
     },
     {
-      "name": "SECTION 3 — RERA, DTCP & COMPLIANCE (101–130)",
+      "name": "SECTION 3 — RERA, DTCP & COMPLIANCE",
       "questions": [
         {
           "id": 101,
@@ -757,18 +757,18 @@
       ]
     },
     {
-      "name": "SECTION 4 — REAL ESTATE TERMS & GURUGRAM GEOGRAPHY (131–175)",
+      "name": "SECTION 4 — REAL ESTATE TERMS & GURUGRAM GEOGRAPHY",
       "questions": [
         {
           "id": 131,
           "question": "Real Estate क्या कहलाता है?",
           "options": {
-            "A": "केवल भवन",
-            "B": "भूमि और उस पर बने स्थायी संरचनाएं",
+            "A": "भूमि और उस पर बने स्थायी संरचनाएं",
+            "B": "केवल भवन",
             "C": "केवल प्लॉट",
             "D": "केवल फर्नीचर"
           },
-          "correct": "B"
+          "correct": "A"
         },
         {
           "id": 132,
@@ -796,56 +796,56 @@
           "id": 134,
           "question": "RERA की फुल फॉर्म क्या है?",
           "options": {
-            "A": "Real Estate Regulatory Authority",
-            "B": "Real Estate Rules Act",
-            "C": "Rent Control Act",
-            "D": "Real Estate Registration"
+            "A": "Real Estate Rules Act",
+            "B": "Rent Control Act",
+            "C": "Real Estate Registration",
+            "D": "Real Estate Regulatory Authority"
           },
-          "correct": "A"
+          "correct": "D"
         },
         {
           "id": 135,
           "question": "RERA कब प्रभावी हुआ?",
           "options": {
-            "A": "1 मई 2016",
-            "B": "19 अगस्त 2013",
+            "A": "19 अगस्त 2013",
+            "B": "1 मई 2016",
             "C": "8 फरवरी 2016",
             "D": "1 जनवरी 2020"
           },
-          "correct": "A"
+          "correct": "B"
         },
         {
           "id": 136,
           "question": "Carpet Area क्या है?",
           "options": {
-            "A": "बाहरी दीवार तक का एरिया",
-            "B": "वह एरिया जहां कार्पेट बिछा सकते हैं",
+            "A": "वह एरिया जहां कार्पेट बिछा सकते हैं",
+            "B": "बाहरी दीवार तक का एरिया",
             "C": "बालकनी सहित",
             "D": "कॉमन एरिया सहित"
           },
-          "correct": "B"
+          "correct": "A"
         },
         {
           "id": 137,
           "question": "Built-up Area में क्या शामिल होता है?",
           "options": {
             "A": "केवल कार्पेट",
-            "B": "कार्पेट + दीवारें + बालकनी",
-            "C": "कॉमन एरिया",
+            "B": "कॉमन एरिया",
+            "C": "कार्पेट + दीवारें + बालकनी",
             "D": "पूरा प्लॉट"
           },
-          "correct": "B"
+          "correct": "C"
         },
         {
           "id": 138,
           "question": "Super Built-up Area में क्या शामिल होता है?",
           "options": {
-            "A": "केवल फ्लैट",
-            "B": "बिल्ट-अप + कॉमन एरिया का हिस्सा",
+            "A": "बिल्ट-अप + कॉमन एरिया का हिस्सा",
+            "B": "केवल फ्लैट",
             "C": "केवल बालकनी",
             "D": "केवल कार्पेट"
           },
-          "correct": "B"
+          "correct": "A"
         },
         {
           "id": 139,
@@ -862,12 +862,12 @@
           "id": 140,
           "question": "1 एकड़ कितने स्क्वायर यार्ड के बराबर है?",
           "options": {
-            "A": "4840",
-            "B": "43560",
-            "C": "11960",
+            "A": "43560",
+            "B": "11960",
+            "C": "4840",
             "D": "10000"
           },
-          "correct": "A"
+          "correct": "C"
         },
         {
           "id": 141,
@@ -884,23 +884,23 @@
           "id": 142,
           "question": "EDC का मतलब क्या है?",
           "options": {
-            "A": "External Development Charges",
-            "B": "Extra Development Cost",
+            "A": "Extra Development Cost",
+            "B": "External Development Charges",
             "C": "Electricity Development Charges",
             "D": "Entry Development Cost"
           },
-          "correct": "A"
+          "correct": "B"
         },
         {
           "id": 143,
           "question": "PLC का मतलब क्या है?",
           "options": {
             "A": "Park Facing Location Charge",
-            "B": "Preferential Location Charge",
-            "C": "Power Location Charge",
-            "D": "Plot Location Cost"
+            "B": "Power Location Charge",
+            "C": "Plot Location Cost",
+            "D": "Preferential Location Charge"
           },
-          "correct": "B"
+          "correct": "D"
         },
         {
           "id": 144,
@@ -918,22 +918,22 @@
           "question": "गुरुग्राम जिले का कुल एरिया कितना है?",
           "options": {
             "A": "732 sq km",
-            "B": "1253 sq km",
-            "C": "1500 sq km",
+            "B": "1500 sq km",
+            "C": "1253 sq km",
             "D": "2000 sq km"
           },
-          "correct": "B"
+          "correct": "C"
         },
         {
           "id": 146,
           "question": "गुरुग्राम NCR का हिस्सा है?",
           "options": {
             "A": "नहीं",
-            "B": "हाँ",
-            "C": "केवल आंशिक",
+            "B": "केवल आंशिक",
+            "C": "हाँ",
             "D": "केवल दिल्ली के साथ"
           },
-          "correct": "B"
+          "correct": "C"
         },
         {
           "id": 147,
@@ -951,22 +951,22 @@
           "question": "गुरुग्राम में दिल्ली मेट्रो की कितनी स्टेशन हैं?",
           "options": {
             "A": "3",
-            "B": "5",
-            "C": "11",
-            "D": "15"
+            "B": "11",
+            "C": "15",
+            "D": "5"
           },
-          "correct": "B"
+          "correct": "D"
         },
         {
           "id": 149,
           "question": "गुरुग्राम का निकटतम इंटरनेशनल एयरपोर्ट कौन सा है?",
           "options": {
             "A": "जेवर",
-            "B": "इंदिरा गांधी इंटरनेशनल एयरपोर्ट",
-            "C": "चंडीगढ़",
+            "B": "चंडीगढ़",
+            "C": "इंदिरा गांधी इंटरनेशनल एयरपोर्ट",
             "D": "जयपुर"
           },
-          "correct": "B"
+          "correct": "C"
         }
       ]
     }
