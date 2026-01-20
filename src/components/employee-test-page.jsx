@@ -12,24 +12,49 @@ import { Toaster, toast } from "sonner";
 import { Loader2, ChevronLeft, ChevronRight } from "lucide-react";
 import questionsData from "@/lib/employee-test-questions.json";
 
-function getRandom40Questions() {
-  // Combine ALL questions from ALL sections
+// ── Reliable Fisher-Yates shuffle ── always returns exactly requested count or all available
+function getShuffledQuestions(count = 40) {
   const allQuestions = questionsData.sections.flatMap((section) => section.questions);
 
-  // Shuffle the entire pool
-  const shuffled = [...allQuestions].sort(() => Math.random() - 0.5);
+  console.log(`Total available questions: ${allQuestions.length}`);
 
-  // Take first 40
-  return shuffled.slice(0, 40);
+  if (allQuestions.length === 0) {
+    console.error("No questions found in JSON!");
+    return [];
+  }
+
+  if (allQuestions.length < count) {
+    console.warn(`Not enough questions! Only ${allQuestions.length} available, returning all.`);
+    return [...allQuestions];
+  }
+
+  // Fisher-Yates shuffle (most reliable & unbiased)
+  const shuffled = [...allQuestions];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+
+  const selected = shuffled.slice(0, count);
+
+  // Final safety check
+  if (selected.length !== count) {
+    console.error("Shuffle failed to produce correct count!", selected.length);
+    // Ultimate fallback: just take first N
+    return allQuestions.slice(0, count);
+  }
+
+  console.log(`Successfully selected ${selected.length} questions`);
+  return selected;
 }
 
 export default function EmployeeTestPage() {
   const searchParams = useSearchParams();
   const tempId = searchParams?.get("temp") || Date.now().toString();
 
-  const TOTAL = 40;
-  const BASE_TIME = 120 * 60; // 2 hours
-  const CHEAT_PENALTY = 10 * 60;
+  const TOTAL_QUESTIONS = 40;
+  const BASE_TIME = 120 * 60; // 2 hours in seconds
+  const CHEAT_PENALTY = 10 * 60; // 10 minutes penalty
   const CHEAT_LOCK_MS = 2000;
   const STORAGE_KEY = "employee_test_state";
 
@@ -43,19 +68,19 @@ export default function EmployeeTestPage() {
   const [showForm, setShowForm] = useState(true);
   const [startTime, setStartTime] = useState(null);
 
+  const [showThankYou, setShowThankYou] = useState(false);
+
   // Employee details
   const [employeeName, setEmployeeName] = useState("");
   const [employeePhone, setEmployeePhone] = useState("");
   const [employeeCode, setEmployeeCode] = useState("");
   const [employeeDesignation, setEmployeeDesignation] = useState("");
-
-  // ✅ NEW: Team Leader Name
   const [teamLeaderName, setTeamLeaderName] = useState("");
 
   const timerRef = useRef(null);
   const cheatLockRef = useRef(false);
 
-  // Load saved state once on mount
+  // Load saved state on mount
   useEffect(() => {
     const saved = localStorage.getItem(STORAGE_KEY);
     if (saved) {
@@ -66,12 +91,10 @@ export default function EmployeeTestPage() {
           setEmployeePhone(savedState.employeePhone || "");
           setEmployeeCode(savedState.employeeCode || "");
           setEmployeeDesignation(savedState.employeeDesignation || "");
-
-          // ✅ NEW: Load Team Leader Name
           setTeamLeaderName(savedState.teamLeaderName || "");
 
-          if (savedState.startTime) {
-            setQuestions(savedState.questions || []);
+          if (savedState.startTime && savedState.questions?.length > 0) {
+            setQuestions(savedState.questions);
             setAnswers(savedState.answers || {});
             setCurrentQuesIndex(savedState.currentQuesIndex || 0);
             setCheatCount(savedState.cheatCount || 0);
@@ -88,14 +111,14 @@ export default function EmployeeTestPage() {
           }
         }
       } catch (e) {
-        console.error("Corrupted storage, clearing...", e);
+        console.error("Failed to load saved state, clearing...", e);
         localStorage.removeItem(STORAGE_KEY);
       }
     }
     setIsLoading(false);
   }, [tempId]);
 
-  // Save state whenever relevant values change (after test starts)
+  // Auto-save progress
   useEffect(() => {
     if (showForm || !startTime) return;
 
@@ -105,10 +128,7 @@ export default function EmployeeTestPage() {
       employeePhone,
       employeeCode,
       employeeDesignation,
-
-      // ✅ NEW: save Team Leader Name
       teamLeaderName,
-
       questions,
       answers,
       currentQuesIndex,
@@ -123,7 +143,7 @@ export default function EmployeeTestPage() {
     employeePhone,
     employeeCode,
     employeeDesignation,
-    teamLeaderName, // ✅ NEW dependency
+    teamLeaderName,
     questions,
     answers,
     currentQuesIndex,
@@ -132,7 +152,7 @@ export default function EmployeeTestPage() {
     showForm,
   ]);
 
-  // Timer
+  // Timer logic
   useEffect(() => {
     if (showForm || questions.length === 0) return;
 
@@ -140,7 +160,7 @@ export default function EmployeeTestPage() {
       setTimeLeft((prev) => {
         if (prev <= 1) {
           clearInterval(timerRef.current);
-          toast.error("Time over! Auto-submitting...");
+          toast.error("Time's up! Auto-submitting...");
           handleAutoSubmit();
           return 0;
         }
@@ -162,18 +182,20 @@ export default function EmployeeTestPage() {
 
       setCheatCount((prev) => prev + 1);
       setTimeLeft((prev) => Math.max(prev - CHEAT_PENALTY, 0));
-      setQuestions(getRandom40Questions()); // ← fresh random 40 questions
+
+      const newQuestions = getShuffledQuestions(TOTAL_QUESTIONS);
+      setQuestions(newQuestions);
       setCurrentQuesIndex(0);
       setAnswers({});
 
-      toast.error(`Cheating detected (${reason}) ❌ 10 min penalty & questions reset!`);
+      toast.error(`Cheating detected (${reason})! 10 min penalty & new questions.`);
     };
 
     const onVisibilityChange = () => {
-      if (document.hidden) handleCheat("Tab switched");
+      if (document.hidden) handleCheat("Tab/Window switch");
     };
 
-    const onBlur = () => handleCheat("Window focus lost");
+    const onBlur = () => handleCheat("Window lost focus");
 
     document.addEventListener("visibilitychange", onVisibilityChange);
     window.addEventListener("blur", onBlur);
@@ -186,55 +208,55 @@ export default function EmployeeTestPage() {
 
   const handleStartTest = () => {
     if (!employeeName.trim()) return toast.error("Please enter your Name");
-    if (!employeePhone.trim()) return toast.error("Please enter your Phone Number");
-    if (!employeeCode.trim()) return toast.error("Please enter your Employee Code");
-    if (!employeeDesignation.trim()) return toast.error("Please enter your Designation");
-
-    // ✅ NEW Validation: Team Leader Name
+    if (!employeePhone.trim()) return toast.error("Please enter Phone Number");
+    if (!employeeCode.trim()) return toast.error("Please enter Employee Code");
+    if (!employeeDesignation.trim()) return toast.error("Please enter Designation");
     if (!teamLeaderName.trim()) return toast.error("Please enter Team Leader Name");
 
     const now = Date.now();
-
-    const initialState = {
-      tempId,
-      employeeName,
-      employeePhone,
-      employeeCode,
-      employeeDesignation,
-
-      // ✅ NEW: save Team Leader Name
-      teamLeaderName,
-
-      questions: [],
-      answers: {},
-      currentQuesIndex: 0,
-      cheatCount: 0,
-      startTime: now,
-    };
-
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(initialState));
+    const selectedQuestions = getShuffledQuestions(TOTAL_QUESTIONS);
 
     setStartTime(now);
-    setQuestions(getRandom40Questions());
+    setQuestions(selectedQuestions);
     setShowForm(false);
+
+    // Save initial state
+    localStorage.setItem(
+      STORAGE_KEY,
+      JSON.stringify({
+        tempId,
+        employeeName,
+        employeePhone,
+        employeeCode,
+        employeeDesignation,
+        teamLeaderName,
+        questions: selectedQuestions,
+        answers: {},
+        currentQuesIndex: 0,
+        cheatCount: 0,
+        startTime: now,
+      })
+    );
   };
 
   const handleAnswerChange = (answer) => {
-    const q = questions[currentQuesIndex];
-    if (!q) return;
+    const currentQuestion = questions[currentQuesIndex];
+    if (!currentQuestion) return;
 
     setAnswers((prev) => ({
       ...prev,
-      [q.id]: answer,
+      [currentQuestion.id]: answer,
     }));
   };
 
   const handlePrevious = () => {
-    if (currentQuesIndex > 0) setCurrentQuesIndex((prev) => prev - 1);
+    if (currentQuesIndex > 0) {
+      setCurrentQuesIndex((prev) => prev - 1);
+    }
   };
 
   const handleNext = () => {
-    if (currentQuesIndex < TOTAL - 1) {
+    if (currentQuesIndex < TOTAL_QUESTIONS - 1) {
       setCurrentQuesIndex((prev) => prev + 1);
     } else {
       handleFinalSubmit();
@@ -242,6 +264,9 @@ export default function EmployeeTestPage() {
   };
 
   const handleAutoSubmit = async () => {
+    if (isSubmitting) return;
+    setIsSubmitting(true);
+
     try {
       const formattedAnswers = Object.entries(answers).map(([questionId, answer]) => ({
         questionId: parseInt(questionId),
@@ -260,26 +285,28 @@ export default function EmployeeTestPage() {
           phone: employeePhone,
           employeeCode,
           designation: employeeDesignation,
-
-          // ✅ NEW: send Team Leader Name
           teamLeaderName,
         }),
       });
 
       if (!res.ok) throw new Error("Submission failed");
 
-      toast.success("Test submitted successfully!");
+      setShowThankYou(true);
       localStorage.removeItem(STORAGE_KEY);
+
+      setTimeout(() => {
+        window.location.href = "/";
+      }, 2000);
     } catch (err) {
-      console.error("Submission failed:", err);
-      toast.error("Failed to submit. Please try again.");
+      console.error("Submission error:", err);
+      toast.error("Failed to submit test. Please try again.");
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
-  const handleFinalSubmit = async () => {
-    setIsSubmitting(true);
-    await handleAutoSubmit();
-    setIsSubmitting(false);
+  const handleFinalSubmit = () => {
+    handleAutoSubmit();
   };
 
   if (isLoading) {
@@ -290,174 +317,197 @@ export default function EmployeeTestPage() {
     );
   }
 
+  if (showThankYou) {
+    return (
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
+        <Card className="max-w-md w-full">
+          <div className="p-8 text-center">
+            <h2 className="text-2xl font-bold mb-2">Thank You!</h2>
+            <p className="text-gray-600 mb-6">Your test has been submitted successfully.</p>
+            <p className="text-sm text-gray-500">Redirecting to home page...</p>
+            <div className="mt-6 flex justify-center">
+              <Loader2 className="h-6 w-6 animate-spin" />
+            </div>
+          </div>
+        </Card>
+      </div>
+    );
+  }
+
   if (showForm) {
     return (
-      <>
-        <Toaster />
-        <div className="min-h-screen bg-gray-50 p-4 flex items-center justify-center">
-          <Card className="max-w-md w-full">
-            <div className="p-8">
-              <h2 className="text-2xl font-bold text-center mb-6">Enter Your Details</h2>
-              <p className="text-center text-gray-600 mb-8">
-                Fill once — saved automatically. No need to re-enter on refresh.
-              </p>
+      <div className="min-h-screen bg-gray-50 p-4 flex items-center justify-center">
+        <Card className="max-w-md w-full">
+          <div className="p-8">
+            <h2 className="text-2xl font-bold text-center mb-6">Employee Assessment</h2>
+            <p className="text-center text-gray-600 mb-8">
+              Please fill in your details to begin the test
+            </p>
 
-              <div className="space-y-5">
-                <div>
-                  <Label htmlFor="name">Full Name *</Label>
-                  <Input
-                    id="name"
-                    value={employeeName}
-                    onChange={(e) => setEmployeeName(e.target.value)}
-                    placeholder="Enter your name"
-                  />
-                </div>
-
-                <div>
-                  <Label htmlFor="phone">Phone Number *</Label>
-                  <Input
-                    id="phone"
-                    value={employeePhone}
-                    onChange={(e) => setEmployeePhone(e.target.value)}
-                    placeholder="Enter your phone"
-                  />
-                </div>
-
-                <div>
-                  <Label htmlFor="employeeCode">Employee Code *</Label>
-                  <Input
-                    id="employeeCode"
-                    value={employeeCode}
-                    onChange={(e) => setEmployeeCode(e.target.value)}
-                    placeholder="Enter your employee code"
-                  />
-                </div>
-
-                <div>
-                  <Label htmlFor="designation">Designation *</Label>
-                  <Input
-                    id="designation"
-                    value={employeeDesignation}
-                    onChange={(e) => setEmployeeDesignation(e.target.value)}
-                    placeholder="e.g., Sales Manager, Broker, etc."
-                  />
-                </div>
-
-                {/* ✅ NEW FIELD: Team Leader Name */}
-                <div>
-                  <Label htmlFor="teamLeaderName">Team Leader Name *</Label>
-                  <Input
-                    id="teamLeaderName"
-                    value={teamLeaderName}
-                    onChange={(e) => setTeamLeaderName(e.target.value)}
-                    placeholder="Enter team leader name"
-                  />
-                </div>
+            <div className="space-y-5">
+              <div>
+                <Label htmlFor="name">Full Name *</Label>
+                <Input
+                  id="name"
+                  value={employeeName}
+                  onChange={(e) => setEmployeeName(e.target.value)}
+                  placeholder="Your full name"
+                />
               </div>
 
-              <div className="mt-8 flex justify-center">
-                <Button
-                  onClick={handleStartTest}
-                  className="bg-green-600 hover:bg-green-700 px-8"
-                  disabled={isSubmitting}
-                >
-                  {isSubmitting ? (
-                    <>
-                      <Loader2 className="h-4 w-4 mr-2 animate-spin" />
-                      Starting...
-                    </>
-                  ) : (
-                    "Start Test"
-                  )}
-                </Button>
+              <div>
+                <Label htmlFor="phone">Phone Number *</Label>
+                <Input
+                  id="phone"
+                  value={employeePhone}
+                  onChange={(e) => setEmployeePhone(e.target.value)}
+                  placeholder="10-digit mobile number"
+                />
+              </div>
+
+              <div>
+                <Label htmlFor="employeeCode">Employee Code *</Label>
+                <Input
+                  id="employeeCode"
+                  value={employeeCode}
+                  onChange={(e) => setEmployeeCode(e.target.value)}
+                  placeholder="Your employee ID/code"
+                />
+              </div>
+
+              <div>
+                <Label htmlFor="designation">Designation *</Label>
+                <Input
+                  id="designation"
+                  value={employeeDesignation}
+                  onChange={(e) => setEmployeeDesignation(e.target.value)}
+                  placeholder="e.g. Sales Executive, Broker"
+                />
+              </div>
+
+              <div>
+                <Label htmlFor="teamLeaderName">Team Leader Name *</Label>
+                <Input
+                  id="teamLeaderName"
+                  value={teamLeaderName}
+                  onChange={(e) => setTeamLeaderName(e.target.value)}
+                  placeholder="Your reporting manager / TL"
+                />
               </div>
             </div>
-          </Card>
-        </div>
-      </>
+
+            <div className="mt-8 flex justify-center">
+              <Button
+                onClick={handleStartTest}
+                className="bg-green-600 hover:bg-green-700 px-10"
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? (
+                  <>
+                    <Loader2 className="h-4 w-4 mr-2 animate-spin" />
+                    Starting...
+                  </>
+                ) : (
+                  "Start Test"
+                )}
+              </Button>
+            </div>
+          </div>
+        </Card>
+      </div>
     );
   }
 
   const currentQuestion = questions[currentQuesIndex];
   const answeredCount = Object.keys(answers).length;
-  const isFirst = currentQuesIndex === 0;
-  const isLastQuestion = currentQuesIndex === TOTAL - 1;
 
   return (
     <>
       <Toaster />
       <div className="min-h-screen bg-gray-50 p-4">
         <div className="max-w-5xl mx-auto mb-4 p-3 bg-blue-50 border border-blue-200 rounded-lg text-sm">
-          <p className="font-medium">Logged in as:</p>
-          <p><strong>Name:</strong> {employeeName}</p>
+          <p className="font-medium">Current Candidate:</p>
           <p>
-            <strong>Code:</strong> {employeeCode} |{" "}
-            <strong>Designation:</strong> {employeeDesignation}
+            <strong>{employeeName}</strong> ({employeeCode})
           </p>
-
-          {/* ✅ NEW */}
-          <p><strong>Team Leader:</strong> {teamLeaderName}</p>
+          <p>
+            <strong>Designation:</strong> {employeeDesignation} •{" "}
+            <strong>TL:</strong> {teamLeaderName}
+          </p>
         </div>
 
         <Card className="max-w-5xl mx-auto">
           <div className="p-6">
-            <h1 className="text-3xl font-bold text-center mb-2">
-              Haryana Real Estate Quiz - DDJAY, AHP 2013, RERA & Gurugram (Updated 2026)
+            <h1 className="text-2xl md:text-3xl font-bold text-center mb-4">
+              Haryana Real Estate Assessment (2026 Updated)
             </h1>
 
-            <div className="text-center text-sm text-gray-600 mb-4">
-              ⏱ Time Left:{" "}
-              <b>
-                {Math.floor(timeLeft / 60)}:{String(timeLeft % 60).padStart(2, "0")}
-              </b>
-              {" | "}🚨 Cheats: {cheatCount}
-              {" | "}Progress: {answeredCount}/{TOTAL}
+            <div className="text-center text-sm text-gray-600 mb-4 space-x-4">
+              <span>
+                ⏱ <b>
+                  {Math.floor(timeLeft / 60)}:{String(timeLeft % 60).padStart(2, "0")}
+                </b>
+              </span>
+              <span>🚨 Cheats: {cheatCount}</span>
+              <span>Answered: {answeredCount}/{TOTAL_QUESTIONS}</span>
             </div>
 
-            <Progress value={(answeredCount / TOTAL) * 100} className="mb-6" />
+            <Progress value={(answeredCount / TOTAL_QUESTIONS) * 100} className="mb-6" />
 
-            <div className="text-right text-sm text-gray-500 mb-2">
-              Question {currentQuesIndex + 1} of {TOTAL}
+            <div className="text-right text-sm text-gray-500 mb-4">
+              Question {currentQuesIndex + 1} of {TOTAL_QUESTIONS}
             </div>
 
-            {currentQuestion && (
+            {currentQuestion ? (
               <>
-                <p className="text-lg font-medium mb-6">{currentQuestion.question}</p>
+                <p className="text-lg font-medium mb-6 leading-relaxed">
+                  {currentQuestion.question}
+                </p>
 
                 <RadioGroup
                   value={answers[currentQuestion.id] || ""}
                   onValueChange={handleAnswerChange}
                 >
-                  {Object.entries(currentQuestion.options).map(([key, val]) => (
+                  {Object.entries(currentQuestion.options).map(([key, value]) => (
                     <div
                       key={key}
-                      className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-100 transition mb-2"
+                      className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-50 transition mb-2 border border-gray-200"
                     >
                       <RadioGroupItem value={key} id={`${currentQuestion.id}-${key}`} />
                       <Label
                         htmlFor={`${currentQuestion.id}-${key}`}
                         className="cursor-pointer flex-1"
                       >
-                        <b>{key}.</b> {val}
+                        <strong>{key}.</strong> {value}
                       </Label>
                     </div>
                   ))}
                 </RadioGroup>
               </>
+            ) : (
+              <p className="text-red-600 text-center">No question loaded</p>
             )}
 
             <div className="flex justify-between items-center mt-10">
-              <Button onClick={handlePrevious} disabled={isFirst} variant="outline">
+              <Button
+                onClick={handlePrevious}
+                disabled={currentQuesIndex === 0 || isSubmitting}
+                variant="outline"
+              >
                 <ChevronLeft className="h-4 w-4 mr-2" />
                 Previous
               </Button>
 
-              <Button onClick={handleNext} disabled={isSubmitting}>
-                {isLastQuestion ? (
+              <Button
+                onClick={handleNext}
+                disabled={isSubmitting}
+                className={currentQuesIndex === TOTAL_QUESTIONS - 1 ? "bg-green-600 hover:bg-green-700" : ""}
+              >
+                {currentQuesIndex === TOTAL_QUESTIONS - 1 ? (
                   isSubmitting ? (
                     <>
                       <Loader2 className="h-4 w-4 mr-2 animate-spin" />
-                      Submitting…
+                      Submitting...
                     </>
                   ) : (
                     "Submit Test"
