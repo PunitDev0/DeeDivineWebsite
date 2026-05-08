@@ -42,8 +42,8 @@ function Contact() {
             <MapPin className="mx-auto mb-4 text-[#8b1fa9]" size={32} />
             <h3 className="font-semibold text-gray-900 mb-2 text-lg">Office Address</h3>
             <p className="text-sm text-gray-700">
-              6th Floor, 609-610, Spaze Itech Park, Sector 49,  
-              Gurugram, Haryana – 122018
+              M3M Broadway, 22nd Floor, D Block,
+              Sector 71, SPR Road, Gurgaon
             </p>
           </div>
 
