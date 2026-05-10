@@ -6,7 +6,7 @@ const teamMembers = [
   { name: "Kavita Dixit", role: "Chairman", image: "/assets/kavita.jpg" },
   { name: "Dhananjay Arya", role: "MD (Managing Director)", image: "/assets/dj.JPG" },
   // { name: "Himanshu Sharma", role: "Associate Director & MD", image: "/assets/himanshu.JPG" },
-  { name: "Anil Singh", role: "Head of Corporate Affairs", image: "/assets/anil.JPG" },
+  // { name: "Anil Singh", role: "Head of Corporate Affairs", image: "/assets/anil.JPG" },
   { name: "Aditya Singh", role: "VP", image: "/assets/aditya.jpg" },
   { name: "Poonam Yadav", role: "AVP", image: "/assets/poonam.jpg" },
   { name: "Saurav Kumar", role: "General Manager", image: "/assets/sourav.jpg" },
