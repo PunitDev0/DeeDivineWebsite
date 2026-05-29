@@ -19,7 +19,21 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Environment Setup
 
+Create a local env file before running the app:
+
+```bash
+cp .env.local.example .env.local
+```
+
+Then update `.env.local` with your MongoDB connection string:
+
+```env
+MONGODB_URI=mongodb+srv://user:pass@cluster0.xxxx.mongodb.net/DeeDivine
+```
+
+If you do not want to connect to MongoDB yet, the app can still build, but API routes requiring the database will fail at runtime until the variable is set.
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
