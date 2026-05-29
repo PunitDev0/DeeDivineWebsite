@@ -7,7 +7,7 @@ import path from "path";
 
 let questionsData = { sections: [] };
 try {
-  const filePath = path.join(process.cwd(), "lib", "questions.json");
+  const filePath = path.join(process.cwd(), "src", "lib", "questions.json");
   const fileContent = fs.readFileSync(filePath, "utf-8");
   questionsData = JSON.parse(fileContent);
 } catch (err) {

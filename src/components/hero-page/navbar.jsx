@@ -76,7 +76,7 @@ export default function Navbar() {
         <div className="hidden sm:flex">
           <Button className="flex items-center gap-2 bg-[#A13EA1] hover:bg-[#8b2b8b] text-white font-semibold px-4 py-2 text-sm shadow-md transition-all">
             <PhoneCall className="w-4 h-4" />
-            +91-9211494111
+            +91-9211496111
           </Button>
         </div>
 
@@ -115,7 +115,7 @@ export default function Navbar() {
 
           <Button className="mt-2 w-full flex items-center justify-center gap-2 bg-[#A13EA1] hover:bg-[#8b2b8b] text-white font-semibold px-4 py-2 text-sm shadow-md">
             <PhoneCall className="w-4 h-4" />
-            +91-9211494111
+            +91-9211496111
           </Button>
         </nav>
       </div>
