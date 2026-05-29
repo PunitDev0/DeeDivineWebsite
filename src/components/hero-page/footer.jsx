@@ -40,11 +40,12 @@ export default function Footer() {
           </p> */}
 
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d245352.8073014646!2d76.73898449453122!3d28.412685900000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d2323bd5b493b%3A0x556ba537cfc6d921!2sDee%20Divine%20PropInfra%20Pvt.%20Ltd.!5e1!3m2!1sen!2sin!4v1766330154769!5m2!1sen!2sin"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3509.5690235420916!2d77.01687877659543!3d28.402082275791372!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d2323bd5b493b%3A0x556ba537cfc6d921!2sDee%20Divine%20PropInfra%20Pvt.%20Ltd.!5e0!3m2!1sen!2sin!4v1780059213352!5m2!1sen!2sin"
             width="270"
             height="160"
             allowFullScreen
             loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
             className="rounded-lg border border-gray-300 shadow-md hover:shadow-lg transition-all"
           ></iframe>
         </div>
@@ -104,8 +105,8 @@ export default function Footer() {
             <li className="flex items-start gap-2">
               <MapPin className="w-4 h-4 text-[#A13EA1] mt-1" />
               <span>
-                 M3M Broadway, 22nd Floor, D Block,
-                 Sector 71, SPR Road, Gurgaon
+                M3M Broadway, 22nd Floor, D Block,
+                Sector 71, SPR Road, Gurgaon
               </span>
             </li>
 
