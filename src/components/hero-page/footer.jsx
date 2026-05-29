@@ -104,8 +104,8 @@ export default function Footer() {
             <li className="flex items-start gap-2">
               <MapPin className="w-4 h-4 text-[#A13EA1] mt-1" />
               <span>
-                6th Floor, B4, Spaze ITech Park, 609-610, <br />
-                Sector 49, Gurugram
+                 M3M Broadway, 22nd Floor, D Block,
+                 Sector 71, SPR Road, Gurgaon
               </span>
             </li>
 

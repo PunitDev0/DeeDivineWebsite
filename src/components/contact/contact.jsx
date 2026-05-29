@@ -50,8 +50,8 @@ function Contact() {
           <div className="bg-[#faf5fb] p-6 shadow-md border-t-[6px] border-[#8b1fa9] ">
             <Phone className="mx-auto mb-4 text-[#8b1fa9]" size={32} />
             <h3 className="font-semibold text-gray-900 mb-2 text-lg">Call Us</h3>
-            <p className="text-sm text-gray-700">+91 98100 12345</p>
-            <p className="text-sm text-gray-700">+91 98765 67890</p>
+            <p className="text-sm text-gray-700">+91 9211496111</p>
+            <p className="text-sm text-gray-700">+91 9211496111</p>
           </div>
 
           <div className="bg-[#faf5fb] p-6 shadow-md border-t-[6px] border-[#8b1fa9] ">
