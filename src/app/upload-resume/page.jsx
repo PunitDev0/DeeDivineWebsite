@@ -1,32 +1,29 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import {
   Upload,
-  CheckCircle2,
   Loader2,
   FileText,
   X,
+  Send,
+  ShieldCheck,
+  EyeOff,
+  BadgeCheck,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
 import { Card } from "@/components/ui/card";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-} from "@/components/ui/dialog";
-import { toast } from "sonner"; // Using sonner
+import { toast } from "sonner";
+import { cn } from "@/lib/utils";
 
 export default function UploadResumePage() {
   const [file, setFile] = useState(null);
   const [isUploading, setIsUploading] = useState(false);
-  const [showSuccessDialog, setShowSuccessDialog] = useState(false);
-  const [candidateId, setCandidateId] = useState(null);
+  const [jobTitleFromUrl, setJobTitleFromUrl] = useState("");
 
   const [form, setForm] = useState({
     name: "",
@@ -35,13 +32,25 @@ export default function UploadResumePage() {
     phone: "",
     highestQualification: "",
     jobTitle: "",
+    aim: "",
+    vision: "",
+    expectedSalary: "",
+    lastSalary: "",
     makePublic: true,
   });
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const job = params.get("job");
+    if (job) {
+      setJobTitleFromUrl(job);
+      setForm((prev) => ({ ...prev, jobTitle: job }));
+    }
+  }, []);
 
   const handleFileChange = (e) => {
     const selected = e.target.files?.[0];
     if (!selected) return;
-
     if (selected.type !== "application/pdf") {
       toast.error("Only PDF files are allowed.");
       return;
@@ -63,11 +72,10 @@ export default function UploadResumePage() {
   };
 
   const handleSubmit = async () => {
-    // Validate all required fields
     const required = ["name", "fathersName", "email", "phone", "highestQualification", "jobTitle"];
     for (const field of required) {
-      if (!form[field].trim()) {
-        toast.error(`Please fill in ${field.replace(/([A-Z])/g, ' $1').toLowerCase()}`);
+      if (!form[field]?.trim()) {
+        toast.error(`Please fill in ${field.replace(/([A-Z])/g, " $1").toLowerCase()}`);
         return;
       }
     }
@@ -79,29 +87,19 @@ export default function UploadResumePage() {
     setIsUploading(true);
     const formData = new FormData();
     formData.append("file", file);
-    formData.append("name", form.name);
-    formData.append("fathersName", form.fathersName);
-    formData.append("email", form.email);
-    formData.append("phone", form.phone);
-    formData.append("highestQualification", form.highestQualification);
-    formData.append("jobTitle", form.jobTitle);
-    formData.append("makePublic", form.makePublic);
+    Object.entries(form).forEach(([k, v]) => formData.append(k, String(v)));
 
     try {
       const res = await fetch("/api/quick-upload", {
         method: "POST",
         body: formData,
       });
-
       const data = await res.json();
 
       if (data.success) {
         toast.success("Resume uploaded successfully! Redirecting...");
-
-        // ✅ Auto redirect to test page
         window.location.href = `/test?candidate=${data.candidateId}`;
-
-
+        
         setFile(null);
         setForm({
           name: "",
@@ -109,266 +107,310 @@ export default function UploadResumePage() {
           email: "",
           phone: "",
           highestQualification: "",
-          jobTitle: "",
+          jobTitle: jobTitleFromUrl,
+          aim: "",
+          vision: "",
+          expectedSalary: "",
+          lastSalary: "",
           makePublic: true,
         });
-
       } else {
         toast.error(data.error || "Upload failed. Please try again.");
       }
-    } catch (err) {
+    } catch {
       toast.error("Network error. Please check your connection.");
     } finally {
       setIsUploading(false);
     }
   };
 
-  const goToTest = () => {
-    if (candidateId) {
-      window.location.href = `/test?candidate=${candidateId}`;
-    }
-  };
+  const steps = [
+    { num: 1, title: "Complete your profile", sub: "Add your details & upload resume" },
+    { num: 2, title: "Take a 10-min skill test", sub: "Role-specific questions, instant result", active: true },
+    { num: 3, title: "Get matched to jobs", sub: "Employers reach out to you directly" },
+  ];
 
   return (
-    <>
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center sm:p-4">
-        <Card className="w-full max-w-5xl shadow-xl">
-          <div className="grid md:grid-cols-2">
-            {/* Left - Form */}
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              className="p-8 md:p-12"
-            >
-              <h1 className="text-3xl font-bold text-gray-900 mb-2">
-                Upload Your Resume
+    <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4 md:p-8">
+      <Card className="w-full max-w-5xl shadow-xl overflow-hidden rounded-2xl border-0">
+        <div className="grid md:grid-cols-[1fr_380px]">
+
+          {/* Left: Form */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.4 }}
+            className="p-8 md:p-10"
+          >
+            {/* Progress */}
+            <div className="flex gap-2 mb-8">
+              <div className="h-1 flex-1 rounded-full bg-indigo-600" />
+              <div className="h-1 flex-1 rounded-full bg-indigo-300" />
+              <div className="h-1 flex-1 rounded-full bg-gray-200" />
+            </div>
+
+            <div className="flex items-center gap-3 mb-1">
+              <h1 className="text-2xl font-semibold text-gray-900">
+                Upload your resume
               </h1>
-              <p className="text-gray-600 mb-8">
-                Fill in your details and upload your resume (PDF only, max 1MB).
-              </p>
+              <span className="text-xs font-medium px-2.5 py-1 rounded-full bg-indigo-50 text-indigo-600 border border-indigo-100">
+                Step 2 of 3
+              </span>
+            </div>
+            <p className="text-sm text-gray-500 mb-8 leading-relaxed">
+              Complete your profile and upload a PDF resume to apply. Takes under 2 minutes.
+            </p>
 
-              <div className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="space-y-2">
-                    <Label>Full Name <span className="text-red-500">*</span></Label>
-                    <Input
-                      placeholder="John Doe"
-                      value={form.name}
-                      onChange={(e) => setForm({ ...form, name: e.target.value })}
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <Label>Father's Name <span className="text-red-500">*</span></Label>
-                    <Input
-                      placeholder="Robert Doe"
-                      value={form.fathersName}
-                      onChange={(e) => setForm({ ...form, fathersName: e.target.value })}
-                    />
-                  </div>
-                </div>
+            {/* Personal Information */}
+            <SectionLabel>Personal information</SectionLabel>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+              <Field label="Full name" required>
+                <Input
+                  placeholder="Rahul Sharma"
+                  value={form.name}
+                  onChange={(e) => setForm({ ...form, name: e.target.value })}
+                />
+              </Field>
+              <Field label="Father's name" required>
+                <Input
+                  placeholder="Suresh Sharma"
+                  value={form.fathersName}
+                  onChange={(e) => setForm({ ...form, fathersName: e.target.value })}
+                />
+              </Field>
+            </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="space-y-2">
-                    <Label>Email <span className="text-red-500">*</span></Label>
-                    <Input
-                      type="email"
-                      placeholder="john@example.com"
-                      value={form.email}
-                      onChange={(e) => setForm({ ...form, email: e.target.value })}
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <Label>Phone <span className="text-red-500">*</span></Label>
-                    <Input
-                      placeholder="+91 9876543210"
-                      value={form.phone}
-                      onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                    />
-                  </div>
-                </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+              <Field label="Email address" required>
+                <Input
+                  type="email"
+                  placeholder="rahul@example.com"
+                  value={form.email}
+                  onChange={(e) => setForm({ ...form, email: e.target.value })}
+                />
+              </Field>
+              <Field label="Phone number" required>
+                <Input
+                  type="tel"
+                  placeholder="+91 98765 43210"
+                  value={form.phone}
+                  onChange={(e) => setForm({ ...form, phone: e.target.value })}
+                />
+              </Field>
+            </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="space-y-2">
-                    <Label>Highest Qualification <span className="text-red-500">*</span></Label>
-                    <Input
-                      placeholder="e.g. B.Tech Computer Science"
-                      value={form.highestQualification}
-                      onChange={(e) => setForm({ ...form, highestQualification: e.target.value })}
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <Label>Desired Job Title <span className="text-red-500">*</span></Label>
-                    <Input
-                      placeholder="e.g. Frontend Developer"
-                      value={form.jobTitle}
-                      onChange={(e) => setForm({ ...form, jobTitle: e.target.value })}
-                    />
-                  </div>
-                </div>
+            {/* Professional Details */}
+            <SectionLabel>Professional details</SectionLabel>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+              <Field label="Highest qualification" required>
+                <Input
+                  placeholder="B.Tech Computer Science"
+                  value={form.highestQualification}
+                  onChange={(e) => setForm({ ...form, highestQualification: e.target.value })}
+                />
+              </Field>
+              <Field label="Desired job title" required>
+                <Input
+                  placeholder="Frontend Developer"
+                  value={form.jobTitle}
+                  onChange={(e) => setForm({ ...form, jobTitle: e.target.value })}
+                />
+              </Field>
+            </div>
 
-                {/* File Upload */}
-                <div className="space-y-3">
-                  <Label>Resume (PDF only, max 1MB) <span className="text-red-500">*</span></Label>
-                  {!file ? (
-                    <div
-                      onDragOver={(e) => e.preventDefault()}
-                      onDrop={handleDrop}
-                      className="border-2 border-dashed rounded-lg p-10 text-center hover:border-blue-500 transition bg-gray-50 cursor-pointer"
-                    >
-                      <Upload className="w-12 h-12 mx-auto text-gray-400 mb-4" />
-                      <p className="text-sm text-gray-600">
-                        Drag & drop or{" "}
-                        <label className="text-blue-600 font-medium cursor-pointer">
-                          browse
-                          <input
-                            type="file"
-                            accept=".pdf"
-                            onChange={handleFileChange}
-                            className="hidden"
-                          />
-                        </label>
-                      </p>
-                    </div>
-                  ) : (
-                    <div className="flex items-center justify-between bg-green-50 border border-green-300 rounded-lg p-4">
-                      <div className="flex items-center gap-3">
-                        <FileText className="w-10 h-10 text-green-600" />
-                        <div>
-                          <p className="font-medium">{file.name}</p>
-                          <p className="text-xs text-gray-500">
-                            {(file.size / 1024 / 1024).toFixed(2)} MB
-                          </p>
-                        </div>
-                      </div>
-                      <button onClick={() => setFile(null)} className="text-red-600 hover:text-red-800">
-                        <X className="w-5 h-5" />
-                      </button>
-                    </div>
-                  )}
-                </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+              <Field label="Expected salary (₹ LPA)">
+                <Input
+                  type="number"
+                  placeholder="12"
+                  value={form.expectedSalary}
+                  onChange={(e) => setForm({ ...form, expectedSalary: e.target.value })}
+                />
+              </Field>
+              <Field label="Last drawn salary (₹ LPA)">
+                <Input
+                  type="number"
+                  placeholder="8.5"
+                  value={form.lastSalary}
+                  onChange={(e) => setForm({ ...form, lastSalary: e.target.value })}
+                />
+              </Field>
+            </div>
 
-                <div className="flex items-center space-x-3">
-                  <Checkbox
-                    id="public"
-                    checked={form.makePublic}
-                    onCheckedChange={(c) => setForm({ ...form, makePublic: c })}
-                  />
-                  <Label htmlFor="public" className="text-sm cursor-pointer">
-                    Make resume <span className="font-bold">public</span> for employers
-                  </Label>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+              <Field label="Career aim">
+                <Textarea
+                  rows={3}
+                  placeholder="Short-term career goal…"
+                  value={form.aim}
+                  onChange={(e) => setForm({ ...form, aim: e.target.value })}
+                />
+              </Field>
+              <Field label="Long-term vision">
+                <Textarea
+                  rows={3}
+                  placeholder="Where do you see yourself in 5 years?"
+                  value={form.vision}
+                  onChange={(e) => setForm({ ...form, vision: e.target.value })}
+                />
+              </Field>
+            </div>
+
+            {/* Resume Upload */}
+            <SectionLabel>Resume</SectionLabel>
+            {!file ? (
+              <div
+                onDragOver={(e) => e.preventDefault()}
+                onDrop={handleDrop}
+                onClick={() => document.getElementById("resume-input")?.click()}
+                className="border-2 border-dashed border-gray-200 rounded-xl p-8 text-center cursor-pointer hover:border-indigo-400 hover:bg-indigo-50/40 transition-all duration-200 bg-gray-50"
+              >
+                <div className="w-12 h-12 rounded-full bg-indigo-50 flex items-center justify-center mx-auto mb-3">
+                  <Upload className="w-5 h-5 text-indigo-500" />
                 </div>
+                <p className="text-sm text-gray-600">
+                  Drag & drop your resume or{" "}
+                  <label className="text-indigo-600 font-medium cursor-pointer hover:underline">
+                    browse file
+                    <input
+                      id="resume-input"
+                      type="file"
+                      accept=".pdf"
+                      onChange={handleFileChange}
+                      className="hidden"
+                    />
+                  </label>
+                </p>
+                <p className="text-xs text-gray-400 mt-1">PDF only · max 1 MB</p>
               </div>
+            ) : (
+              <div className="flex items-center gap-3 border border-green-200 bg-green-50 rounded-xl px-4 py-3">
+                <div className="w-10 h-10 rounded-lg bg-green-100 flex items-center justify-center flex-shrink-0">
+                  <FileText className="w-5 h-5 text-green-600" />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <p className="text-sm font-medium text-green-800 truncate">{file.name}</p>
+                  <p className="text-xs text-green-600">
+                    {(file.size / 1024 / 1024).toFixed(2)} MB
+                  </p>
+                </div>
+                <button
+                  onClick={() => setFile(null)}
+                  className="text-green-500 hover:text-red-500 transition-colors"
+                >
+                  <X className="w-4 h-4" />
+                </button>
+              </div>
+            )}
 
-              <Button
-                onClick={handleSubmit}
-                disabled={isUploading || !file}
-                className="w-full mt-8 h-12 text-lg font-semibold"
-                size="lg"
-              >
-                {isUploading ? (
-                  <>
-                    <Loader2 className="mr-2 h-5 w-5 animate-spin" />
-                    Uploading...
-                  </>
-                ) : (
-                  "Upload & Continue"
-                )}
-              </Button>
-            </motion.div>
+            <div className="flex items-center gap-3 mt-5">
+              <Checkbox
+                id="makePublic"
+                checked={form.makePublic}
+                onCheckedChange={(c) => setForm({ ...form, makePublic: !!c })}
+              />
+              <Label htmlFor="makePublic" className="text-sm text-gray-500 cursor-pointer">
+                Make my resume <span className="font-semibold text-gray-700">public</span> for employers to discover
+              </Label>
+            </div>
 
-            {/* Right Panel */}
-            <div className="bg-gradient-to-br from-blue-600 to-indigo-700 p-10 text-white flex flex-col justify-center items-center text-center rounded-r-2xl">
-              <motion.div
-                initial={{ scale: 0.8 }}
-                animate={{ scale: 1 }}
-                transition={{ delay: 0.3 }}
-                className="mb-8"
-              >
-                <EnvelopeIllustration />
-              </motion.div>
-              <h2 className="text-2xl font-bold mb-6">
-                You're almost there!
+            <Button
+              onClick={handleSubmit}
+              disabled={isUploading || !file}
+              className={cn(
+                "w-full mt-6 h-11 text-sm font-medium rounded-xl gap-2",
+                "bg-indigo-600 hover:bg-indigo-700 text-white disabled:opacity-40"
+              )}
+            >
+              {isUploading ? (
+                <>
+                  <Loader2 className="w-4 h-4 animate-spin" />
+                  Uploading…
+                </>
+              ) : (
+                <>
+                  <Send className="w-4 h-4" />
+                  Submit & take skill test
+                </>
+              )}
+            </Button>
+          </motion.div>
+
+          {/* Right: Info Panel */}
+          <div className="hidden md:flex flex-col justify-between bg-[#1e1b4b] p-10 text-white">
+            <div>
+              <span className="inline-block text-xs px-3 py-1 rounded-full bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 mb-5">
+                🚀 Career Portal
+              </span>
+              <h2 className="text-xl font-semibold text-white leading-snug mb-3">
+                Get hired 3× faster with a verified skill score
               </h2>
-              <p className="text-white/90 max-w-xs">
-                After uploading, take a quick 5-minute skill test to boost your chances by 3x.
+              <p className="text-sm text-white/50 leading-relaxed">
+                Top employers check skill scores before shortlisting. Completing your profile puts you ahead of 90% of applicants.
               </p>
+
+              <div className="mt-7 space-y-5">
+                {steps.map((s) => (
+                  <div key={s.num} className="flex items-start gap-3">
+                    <div
+                      className={cn(
+                        "w-7 h-7 rounded-full flex items-center justify-center text-xs font-medium shrink-0 mt-0.5",
+                        s.active
+                          ? "bg-indigo-500/40 border border-indigo-400/60 text-indigo-100"
+                          : "bg-indigo-500/15 border border-indigo-500/25 text-indigo-400"
+                      )}
+                    >
+                      {s.num}
+                    </div>
+                    <div>
+                      <p className={cn("text-sm font-medium", s.active ? "text-indigo-200" : "text-white/70")}>
+                        {s.title}
+                      </p>
+                      <p className="text-xs text-white/35 mt-0.5">{s.sub}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="flex flex-wrap gap-4 pt-5 border-t border-white/10 mt-6">
+              <TrustBadge icon={<ShieldCheck className="w-3.5 h-3.5" />}>Data secure</TrustBadge>
+              <TrustBadge icon={<EyeOff className="w-3.5 h-3.5" />}>No spam</TrustBadge>
+              <TrustBadge icon={<BadgeCheck className="w-3.5 h-3.5" />}>Verified employers</TrustBadge>
             </div>
           </div>
-        </Card>
-
-        {/* Success Dialog */}
-        <Dialog open={showSuccessDialog} onOpenChange={setShowSuccessDialog}>
-          <DialogContent className="sm:max-w-md">
-            <DialogHeader>
-              <DialogTitle className="text-2xl font-bold text-center">
-                Congratulations!
-              </DialogTitle>
-              <DialogDescription className="text-center text-base mt-4">
-                Your resume has been uploaded successfully.
-                <br />
-                <span className="font-semibold text-green-600">
-                  Now take a quick skill test to stand out!
-                </span>
-              </DialogDescription>
-            </DialogHeader>
-            <div className="flex flex-col items-center gap-6 py-6">
-              <motion.div
-                animate={{ scale: [1, 1.2, 1] }}
-                transition={{ duration: 0.6, repeat: Infinity, repeatDelay: 2 }}
-              >
-                <CheckCircle2 className="w-20 h-20 text-green-500" />
-              </motion.div>
-              <div className="space-y-3 w-full">
-                <Button
-                  onClick={goToTest}
-                  className="w-full h-12 text-lg bg-green-600 hover:bg-green-700"
-                >
-                  Start Skill Test Now
-                </Button>
-                <Button
-                  variant="outline"
-                  onClick={() => setShowSuccessDialog(false)}
-                  className="w-full"
-                >
-                  Maybe Later
-                </Button>
-              </div>
-            </div>
-          </DialogContent>
-        </Dialog>
-      </div>
-    </>
+        </div>
+      </Card>
+    </div>
   );
 }
 
-function EnvelopeIllustration() {
+/* Helper Components */
+function SectionLabel({ children }) {
   return (
-    <svg width="180" height="180" viewBox="0 0 120 120">
-      <rect x="15" y="30" width="90" height="60" rx="8" fill="white" opacity="0.95" />
-      <path d="M15 48 L60 75 L105 48" fill="none" stroke="#93c5fd" strokeWidth="5" />
-      <path d="M15 90 L60 63 L105 90" fill="white" />
-      <path d="M15 90 L60 63 L105 90" fill="none" stroke="#93c5fd" strokeWidth="5" />
-      <motion.rect
-        x="35"
-        y="15"
-        width="50"
-        height="60"
-        rx="4"
-        fill="white"
-        stroke="#60a5fa"
-        strokeWidth="3"
-        initial={{ y: -80 }}
-        animate={{ y: -35 }}
-        transition={{
-          repeat: Infinity,
-          repeatType: "reverse",
-          duration: 2.8,
-          ease: "easeInOut",
-        }}
-      />
-      <rect x="40" y="35" width="40" height="4" fill="#e0e7ff" />
-      <rect x="40" y="45" width="35" height="4" fill="#e0e7ff" />
-      <rect x="40" y="55" width="30" height="4" fill="#e0e7ff" />
-    </svg>
+    <p className="text-[11px] font-semibold tracking-widest text-gray-400 uppercase mb-3 mt-1">
+      {children}
+    </p>
+  );
+}
+
+function Field({ label, required, children }) {
+  return (
+    <div className="space-y-1.5">
+      <Label className="text-xs text-gray-500 font-medium">
+        {label}
+        {required && <span className="text-red-400 ml-0.5">*</span>}
+      </Label>
+      {children}
+    </div>
+  );
+}
+
+function TrustBadge({ icon, children }) {
+  return (
+    <div className="flex items-center gap-1.5 text-xs text-white/40">
+      <span className="text-indigo-400">{icon}</span>
+      {children}
+    </div>
   );
 }
