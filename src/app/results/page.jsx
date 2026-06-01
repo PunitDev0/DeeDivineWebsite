@@ -284,6 +284,21 @@ export default function AdminResultsPage() {
             <p><strong>Job Title:</strong> {selectedResult?.candidate.jobTitle}</p>
             <p><strong>Father Name:</strong> {selectedResult?.candidate.fathersName}</p>
             <p><strong>Qualification:</strong> {selectedResult?.candidate.highestQualification}</p>
+            <p><strong>Last Company Name:</strong> {selectedResult?.candidate.lastCompanyName || "N/A"}</p>
+
+            {selectedResult?.candidate.salaryProof && selectedResult?.candidate.salaryProof !== "N/A" && (
+              <div className="mt-3">
+                <p className="font-semibold mb-1">Salary Proof Preview:</p>
+                {selectedResult.candidate.salaryProof.toLowerCase().includes(".pdf") ? (
+                  <iframe src={selectedResult.candidate.salaryProof} className="w-full h-64 border rounded"></iframe>
+                ) : (
+                  <img src={selectedResult.candidate.salaryProof} alt="Salary Proof" className="max-w-full max-h-64 object-contain border rounded" />
+                )}
+                <a href={selectedResult.candidate.salaryProof} target="_blank" rel="noopener noreferrer" className="text-blue-600 underline flex items-center gap-1 mt-2">
+                  <FileText className="w-4 h-4" /> Open Full Salary Proof
+                </a>
+              </div>
+            )}
 
             {selectedResult?.candidate.resume && (
               <div className="mt-3">

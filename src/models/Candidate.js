@@ -30,7 +30,7 @@ const candidateSchema = new mongoose.Schema(
       minlength: 10,
       maxlength: 15,
     },
-    highestQualification: {
+        highestQualification: {
       type: String,
       required: true,
       trim: true,
@@ -45,6 +45,11 @@ const candidateSchema = new mongoose.Schema(
       type: String,
       trim: true,
     },
+    // Experience Details
+    lastCompanyName: {
+      type: String,
+      trim: true,
+    },
     // Resume (Cloudinary)
     resume: {
       fileName: { type: String, required: true },
@@ -52,6 +57,15 @@ const candidateSchema = new mongoose.Schema(
       cloudinaryId: { type: String, required: true },
       fileSize: { type: Number, required: true },
       fileType: { type: String, required: true },
+      uploadedAt: { type: Date, default: Date.now },
+    },
+    // Salary Proof (Cloudinary)
+    salaryProof: {
+      fileName: { type: String },
+      fileUrl: { type: String },
+      cloudinaryId: { type: String },
+      fileSize: { type: Number },
+      fileType: { type: String },
       uploadedAt: { type: Date, default: Date.now },
     },
     // Visibility

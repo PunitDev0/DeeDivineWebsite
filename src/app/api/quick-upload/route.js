@@ -22,11 +22,22 @@ export async function POST(request) {
     const highestQualification = data.get("highestQualification");
     const jobTitle = data.get("jobTitle");
     const makePublic = data.get("makePublic") === "true";
+    
+    const lastCompanyName = data.get("lastCompanyName");
+    const isFresher = data.get("isFresher") === "true";
+    const salaryProof = data.get("salaryProof");
 
     // Validate all required fields
     if (!file || !name || !fathersName || !email || !phone || !highestQualification || !jobTitle) {
       return NextResponse.json(
         { success: false, error: "All fields are required" },
+        { status: 400 }
+      );
+    }
+
+    if (!isFresher && (!lastCompanyName || !salaryProof)) {
+      return NextResponse.json(
+        { success: false, error: "Last company name and salary proof are required for experienced candidates" },
         { status: 400 }
       );
     }
@@ -41,7 +52,28 @@ export async function POST(request) {
       public_id: `${Date.now()}_${name.replace(/\s/g, "_")}`,
     });
 
-    const newCandidate = await Candidate.create({
+    let salaryProofData = undefined;
+    if (!isFresher && salaryProof) {
+      const spBytes = await salaryProof.arrayBuffer();
+      const spBuffer = Buffer.from(spBytes);
+      const spBase64 = `data:${salaryProof.type};base64,${spBuffer.toString("base64")}`;
+
+      const spUpload = await cloudinary.uploader.upload(spBase64, {
+        folder: "salary_proofs",
+        resource_type: "auto",
+        public_id: `${Date.now()}_sp_${name.replace(/\s/g, "_")}`,
+      });
+
+      salaryProofData = {
+        fileName: salaryProof.name,
+        fileUrl: spUpload.secure_url,
+        cloudinaryId: spUpload.public_id,
+        fileSize: salaryProof.size,
+        fileType: salaryProof.type,
+      };
+    }
+
+    const candidatePayload = {
       name,
       fathersName,
       email,
@@ -57,7 +89,18 @@ export async function POST(request) {
         fileSize: file.size,
         fileType: file.type,
       },
-    });
+    };
+
+    if (!isFresher) {
+      candidatePayload.lastCompanyName = lastCompanyName;
+      if (salaryProofData) {
+        candidatePayload.salaryProof = salaryProofData;
+      }
+    } else {
+      candidatePayload.lastCompanyName = "Fresher (No Experience)";
+    }
+
+    const newCandidate = await Candidate.create(candidatePayload);
 
     return NextResponse.json({
       success: true,

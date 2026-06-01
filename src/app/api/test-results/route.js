@@ -59,7 +59,7 @@ export async function GET() {
     await connectDB();
 
     const results = await TestResult.find({})
-    .populate("candidateId", "name email phone jobTitle fathersName highestQualification resume.fileUrl")
+    .populate("candidateId", "name email phone jobTitle fathersName highestQualification resume.fileUrl lastCompanyName salaryProof.fileUrl")
       .sort({ completedAt: -1 })
       .lean();
 
@@ -103,7 +103,9 @@ export async function GET() {
           jobTitle: candidate.jobTitle || "N/A",
           resume: candidate?.resume?.fileUrl || "N/A",
           fathersName: candidate?.fathersName || "N/A",
-          highestQualification: candidate?.highestQualification
+          highestQualification: candidate?.highestQualification || "N/A",
+          lastCompanyName: candidate?.lastCompanyName || "N/A",
+          salaryProof: candidate?.salaryProof?.fileUrl || "N/A",
         },
         score: percentage,
         correct: correctCount,

@@ -22,6 +22,8 @@ import { cn } from "@/lib/utils";
 
 export default function UploadResumePage() {
   const [file, setFile] = useState(null);
+  const [salaryProofFile, setSalaryProofFile] = useState(null);
+  const [isFresher, setIsFresher] = useState(false);
   const [isUploading, setIsUploading] = useState(false);
   const [jobTitleFromUrl, setJobTitleFromUrl] = useState("");
 
@@ -36,6 +38,7 @@ export default function UploadResumePage() {
     vision: "",
     expectedSalary: "",
     lastSalary: "",
+    lastCompanyName: "",
     makePublic: true,
   });
 
@@ -71,11 +74,36 @@ export default function UploadResumePage() {
     }
   };
 
+  const handleSalaryProofChange = (e) => {
+    const selected = e.target.files?.[0];
+    if (!selected) return;
+    const allowedTypes = ["application/pdf", "image/png", "image/jpeg", "image/jpg"];
+    if (!allowedTypes.includes(selected.type)) {
+      toast.error("Only PDF or Image files are allowed for salary proof.");
+      return;
+    }
+    if (selected.size > 2 * 1024 * 1024) {
+      toast.error("Salary proof must be under 2MB.");
+      return;
+    }
+    setSalaryProofFile(selected);
+  };
+
   const handleSubmit = async () => {
     const required = ["name", "fathersName", "email", "phone", "highestQualification", "jobTitle"];
     for (const field of required) {
       if (!form[field]?.trim()) {
         toast.error(`Please fill in ${field.replace(/([A-Z])/g, " $1").toLowerCase()}`);
+        return;
+      }
+    }
+    if (!isFresher) {
+      if (!form.lastCompanyName?.trim()) {
+        toast.error("Please fill in last company name");
+        return;
+      }
+      if (!salaryProofFile) {
+        toast.error("Please upload your salary proof");
         return;
       }
     }
@@ -87,7 +115,18 @@ export default function UploadResumePage() {
     setIsUploading(true);
     const formData = new FormData();
     formData.append("file", file);
-    Object.entries(form).forEach(([k, v]) => formData.append(k, String(v)));
+    if (!isFresher && salaryProofFile) {
+      formData.append("salaryProof", salaryProofFile);
+    }
+    formData.append("isFresher", String(isFresher));
+
+    Object.entries(form).forEach(([k, v]) => {
+      if (isFresher && (k === "lastSalary" || k === "lastCompanyName")) {
+        formData.append(k, "");
+      } else {
+        formData.append(k, String(v));
+      }
+    });
 
     try {
       const res = await fetch("/api/quick-upload", {
@@ -101,6 +140,8 @@ export default function UploadResumePage() {
         window.location.href = `/test?candidate=${data.candidateId}`;
         
         setFile(null);
+        setSalaryProofFile(null);
+        setIsFresher(false);
         setForm({
           name: "",
           fathersName: "",
@@ -112,6 +153,7 @@ export default function UploadResumePage() {
           vision: "",
           expectedSalary: "",
           lastSalary: "",
+          lastCompanyName: "",
           makePublic: true,
         });
       } else {
@@ -218,6 +260,24 @@ export default function UploadResumePage() {
               </Field>
             </div>
 
+            {/* Fresher Option */}
+            <div className="flex items-center gap-3 mb-4 bg-indigo-50/40 p-4 rounded-xl border border-indigo-100/50">
+              <Checkbox
+                id="isFresher"
+                checked={isFresher}
+                onCheckedChange={(c) => {
+                  setIsFresher(!!c);
+                  if (c) {
+                    setForm((prev) => ({ ...prev, lastSalary: "", lastCompanyName: "" }));
+                    setSalaryProofFile(null);
+                  }
+                }}
+              />
+              <Label htmlFor="isFresher" className="text-sm font-medium text-indigo-950 cursor-pointer">
+                I am a fresher (No previous experience)
+              </Label>
+            </div>
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
               <Field label="Expected salary (₹ LPA)">
                 <Input
@@ -230,12 +290,67 @@ export default function UploadResumePage() {
               <Field label="Last drawn salary (₹ LPA)">
                 <Input
                   type="number"
-                  placeholder="8.5"
+                  placeholder={isFresher ? "N/A" : "8.5"}
                   value={form.lastSalary}
+                  disabled={isFresher}
                   onChange={(e) => setForm({ ...form, lastSalary: e.target.value })}
                 />
               </Field>
             </div>
+
+            {!isFresher && (
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                <Field label="Last Company Name" required>
+                  <Input
+                    placeholder="e.g. Google India"
+                    value={form.lastCompanyName}
+                    onChange={(e) => setForm({ ...form, lastCompanyName: e.target.value })}
+                  />
+                </Field>
+                <div className="space-y-1.5">
+                  <Label className="text-xs text-gray-500 font-medium">
+                    Salary Proof (Image/PDF) <span className="text-red-400 ml-0.5">*</span>
+                  </Label>
+                  {!salaryProofFile ? (
+                    <div
+                      onDragOver={(e) => e.preventDefault()}
+                      onDrop={(e) => {
+                        e.preventDefault();
+                        const droppedFile = e.dataTransfer.files[0];
+                        if (droppedFile) {
+                          const fakeEvent = { target: { files: [droppedFile] } };
+                          handleSalaryProofChange(fakeEvent);
+                        }
+                      }}
+                      onClick={() => document.getElementById("salary-proof-input")?.click()}
+                      className="border-2 border-dashed border-gray-200 rounded-xl p-3 text-center cursor-pointer hover:border-indigo-400 hover:bg-indigo-50/40 transition-all duration-200 bg-gray-50 flex items-center justify-center gap-2 h-10"
+                    >
+                      <Upload className="w-4 h-4 text-indigo-500" />
+                      <span className="text-xs text-indigo-600 font-medium animate-pulse">Upload Salary Proof (PDF/Image)</span>
+                      <input
+                        id="salary-proof-input"
+                        type="file"
+                        accept="application/pdf,image/*"
+                        onChange={handleSalaryProofChange}
+                        className="hidden"
+                      />
+                    </div>
+                  ) : (
+                    <div className="flex items-center gap-3 border border-indigo-200 bg-indigo-50/30 rounded-xl px-3 h-10">
+                      <FileText className="w-4 h-4 text-indigo-600 flex-shrink-0" />
+                      <p className="text-xs font-medium text-indigo-800 truncate flex-1">{salaryProofFile.name}</p>
+                      <button
+                        type="button"
+                        onClick={() => setSalaryProofFile(null)}
+                        className="text-indigo-500 hover:text-red-500 transition-colors"
+                      >
+                        <X className="w-4 h-4" />
+                      </button>
+                    </div>
+                  )}
+                </div>
+              </div>
+            )}
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
               <Field label="Career aim">
