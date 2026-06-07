@@ -54,26 +54,23 @@ export default function FeatureSections() {
             ].map((feature, index) => (
               <div
                 key={index}
-                className={`group relative overflow-hidden rounded-sm border border-gray-400 bg-white shadow-md hover:shadow-lg transition-all duration-300 p-6 ${
-                  index === 1
+                className={`group relative overflow-hidden rounded-sm border border-gray-400 bg-white shadow-md hover:shadow-lg transition-all duration-300 p-6 ${index === 1
                     ? "bg-[#A13EA1]  hover:bg-[#b74ebb]"
                     : ""
-                }`}
+                  }`}
               >
                 <div
-                  className={`inline-flex items-center justify-center rounded-xl p-3 mb-3 transition-transform duration-300 ${
-                    index === 1
+                  className={`inline-flex items-center justify-center rounded-xl p-3 mb-3 transition-transform duration-300 ${index === 1
                       ? "bg-white text-[#A13EA1]"
                       : "bg-[#F3E5F5] text-[#A13EA1]"
-                  } group-hover:scale-105`}
+                    } group-hover:scale-105`}
                 >
                   {feature.icon}
                 </div>
                 <h3 className="font-semibold text-base mb-1">{feature.title}</h3>
                 <p
-                  className={`text-sm leading-snug ${
-                    index === 1 ? "text-gray-600" : "text-gray-600"
-                  }`}
+                  className={`text-sm leading-snug ${index === 1 ? "text-gray-600" : "text-gray-600"
+                    }`}
                 >
                   {feature.description}
                 </p>
@@ -118,7 +115,7 @@ export default function FeatureSections() {
               <div className="leading-tight">
                 <p className="text-[11px] text-gray-600">Call Us Anytime</p>
                 <p className="text-sm font-semibold text-gray-900">
-                  +91 9818381295
+                  +91 9211496111
                 </p>
               </div>
             </div>

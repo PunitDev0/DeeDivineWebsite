@@ -24,7 +24,7 @@ export default function AdminResultsPage() {
   const [selectedResult, setSelectedResult] = useState(null);
   const [isDialogOpen, setIsDialogOpen] = useState(false);
 
-  const ADMIN_EMAIL = "admin@company.com";
+  const ADMIN_EMAIL = "admin@deedivine.com";
   const ADMIN_PASSWORD = "admin123";
 
   useEffect(() => {
