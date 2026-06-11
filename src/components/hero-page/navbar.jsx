@@ -41,10 +41,10 @@ export default function Navbar() {
             <Image
               unoptimized
               src="/assets/logo.webp"
-              width={500}
-              height={500}
+              width={300}
+              height={400}
               alt="DEE DIVINE Logo"
-              className="object-contain sm:w-52 w-32 "
+              className="object-contain sm:w-40 w-32 "
               priority
             />
           </Link>

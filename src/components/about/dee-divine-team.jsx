@@ -12,7 +12,15 @@ const teamMembers = [
   { name: "Saurav Kumar", role: "General Manager", image: "/assets/sourav.jpg" },
   { name: "Sagar Gola", role: "AVP", image: "/assets/sagar.jpg" },
   { name: "Manish Sharma", role: "Vice President (VP) – Finance / Accounts", image: "/assets/manish.JPG" },
-  { name: "Akshay Chauhan", role: "VP – Marketing", image: "/assets/akshay.jpg" }, // ab image daal dena
+  { name: "Akshay Chauhan", role: "VP – Marketing", image: "/assets/akshay.jpg" },
+  { name: "Deepak", role: "General Manager", image: "/assets/deepak.jpg" },
+  { name: "Raveesh", role: "VP – Sales", image: "/assets/raveesh.jpg" },
+  { name: "Rohit", role: "VP – Sales", image: "/assets/rohit.jpg" },
+  { name: "Sachin Saini", role: "Team Head", image: "/assets/sachin saini.jpg" },
+  { name: "Sanaya", role: "AVP – Sales", image: "/assets/sanaya.jpg" },
+  { name: "SN Jha", role: "VP – Sales", image: "/assets/sn jha.jpg" },
+  { name: "Sukhpreet", role: "VP – Sales", image: "/assets/Sukhpreet.jpg" },
+  { name: "Vipin", role: "AVP – Sales", image: "/assets/vipin.jpg" },
 ];
 
 export default function TeamSection() {
