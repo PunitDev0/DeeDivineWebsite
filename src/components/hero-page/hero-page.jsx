@@ -10,6 +10,8 @@ import TestimonialsSection from './testimonials'
 import PrimeLocations from './PrimeLocations'
 import FeaturedEvents from './featured-events'
 import OurServices from './our-services'
+import BuyingRoadmap from './buying-roadmap'
+import FAQAccordion from './faq-accordion'
 import AnimatedWave from './animated-wave-top'
 import AnimatedWave2 from './animated-wave-bottom'
 
@@ -25,9 +27,11 @@ function HeroPage() {
         {/* <OngoingProject/> */}
         <PrimeLocations/>
         <OurServices/>  
-        <AnimatedWave/>
+        <BuyingRoadmap />
+        {/* <AnimatedWave/> */}
         <FeaturedEvents/> 
-        <AnimatedWave2/>
+        <FAQAccordion />
+        {/* <AnimatedWave2/> */}
         <TestimonialsSection/>
     </div>
   )

@@ -1,81 +1,242 @@
 "use client";
-import Image from "next/image";
 
-const teamMembers = [
-  { name: "Mr. Diwakar Dixit", role: "Director", image: "/assets/diwakar-dixit.webp" },
-  { name: "Kavita Dixit", role: "Chairman", image: "/assets/kavita.jpg" },
-  { name: "Dhananjay Arya", role: "MD (Managing Director)", image: "/assets/dj.JPG" },
-  // { name: "Himanshu Sharma", role: "Associate Director & MD", image: "/assets/himanshu.JPG" },
-  // { name: "Anil Singh", role: "Head of Corporate Affairs", image: "/assets/anil.JPG" },
+import Image from "next/image";
+import React, { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
+// Categorized members based on exact requested hierarchy:
+// 1. Board & Leadership (Diwakar sir, Kavita mam, MD)
+// 2. VPs (Vice Presidents)
+// 3. AVPs (Assistant Vice Presidents)
+// 4. General Managers & Team Heads (GM, Team Head)
+
+const boardMembers = [
+  { name: "Mr. Diwakar Dixit", role: "Founder & Director", image: "/assets/diwakar-dixit.webp" },
+  { name: "Mrs. Kavita Dixit", role: "Chairman", image: "/assets/kavita.jpg" },
+  { name: "Mr. Dhananjay Arya", role: "MD (Managing Director)", image: "/assets/dj.JPG" },
+];
+
+const vpMembers = [
   { name: "Aditya Singh", role: "VP", image: "/assets/aditya.jpg" },
-  { name: "Poonam Yadav", role: "AVP", image: "/assets/poonam.jpg" },
-  { name: "Saurav Kumar", role: "General Manager", image: "/assets/sourav.jpg" },
-  { name: "Sagar Gola", role: "AVP", image: "/assets/sagar.jpg" },
   { name: "Manish Sharma", role: "Vice President (VP) – Finance / Accounts", image: "/assets/manish.JPG" },
   { name: "Akshay Chauhan", role: "VP – Marketing", image: "/assets/akshay.jpg" },
-  { name: "Deepak", role: "General Manager", image: "/assets/deepak.jpg" },
   { name: "Raveesh", role: "VP – Sales", image: "/assets/raveesh.jpg" },
   { name: "Rohit", role: "VP – Sales", image: "/assets/rohit.jpg" },
-  { name: "Sachin Saini", role: "Team Head", image: "/assets/sachin saini.jpg" },
-  { name: "Sanaya", role: "AVP – Sales", image: "/assets/sanaya.jpg" },
   { name: "SN Jha", role: "VP – Sales", image: "/assets/sn jha.jpg" },
   { name: "Sukhpreet", role: "VP – Sales", image: "/assets/Sukhpreet.jpg" },
+];
+
+const avpMembers = [
+  { name: "Poonam Yadav", role: "AVP", image: "/assets/poonam.jpg" },
+  { name: "Sagar Gola", role: "AVP", image: "/assets/sagar.jpg" },
+  { name: "Sanaya", role: "AVP – Sales", image: "/assets/sanaya.jpg" },
   { name: "Vipin", role: "AVP – Sales", image: "/assets/vipin.jpg" },
 ];
 
+const gmMembers = [
+  { name: "Saurav Kumar", role: "General Manager", image: "/assets/sourav.jpg" },
+  { name: "Deepak", role: "General Manager", image: "/assets/deepak.jpg" },
+  { name: "Sachin Saini", role: "Team Head", image: "/assets/sachin saini.jpg" },
+];
+
 export default function TeamSection() {
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      // Animate each team section group independently for performance and visual rhythm
+      const groups = gsap.utils.toArray(".team-section-group");
+      groups.forEach((group) => {
+        const title = group.querySelector(".team-group-title");
+        const cards = group.querySelectorAll(".team-card");
+
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: group,
+            start: "top 85%",
+            toggleActions: "play none none none",
+          },
+        });
+
+        if (title) {
+          tl.fromTo(
+            title,
+            { opacity: 0, x: -25 },
+            { opacity: 1, x: 0, duration: 0.6, ease: "power2.out" }
+          );
+        }
+
+        if (cards.length > 0) {
+          tl.fromTo(
+            cards,
+            { opacity: 0, y: 35 },
+            {
+              opacity: 1,
+              y: 0,
+              duration: 0.6,
+              stagger: 0.06,
+              ease: "power3.out",
+            },
+            "-=0.4"
+          );
+        }
+      });
+    }, containerRef);
+
+    return () => ctx.revert();
+  }, []);
+
+  // Card component for team members
+  const TeamCard = ({ member, isPriority }) => (
+    <div className="team-card flex flex-col justify-between group bg-white border border-neutral-200/70 p-5 hover:border-neutral-400 hover:shadow-lg hover:shadow-black/[0.02] transition-all duration-500 ease-out">
+      <div>
+        {/* Fixed aspect ratio square container */}
+        <div className="relative w-full aspect-[4/5] overflow-hidden bg-neutral-50 mb-5 border border-neutral-100/50">
+          {member.image ? (
+            <Image
+              src={member.image}
+              alt={member.name}
+              fill
+              sizes="(max-width: 640px) 45vw, (max-width: 1024px) 25vw, 15vw"
+              loading={isPriority ? "eager" : "lazy"}
+              priority={isPriority}
+              className="object-cover object-top group-hover:scale-[1.03] transition-all duration-700 ease-out"
+            />
+          ) : (
+            <div className="w-full h-full flex items-center justify-center text-[10px] uppercase tracking-wider text-neutral-400 font-bold">
+              No Image
+            </div>
+          )}
+        </div>
+
+        {/* Name and Designation */}
+        <h4 className="font-extrabold text-sm uppercase tracking-wider text-[#0c0d12] transition-colors duration-300 group-hover:text-red-600 leading-snug w-full truncate">
+          {member.name}
+        </h4>
+        <p className="text-[10px] font-bold text-neutral-400 group-hover:text-neutral-600 uppercase tracking-widest mt-1.5 transition-colors duration-300 leading-relaxed">
+          {member.role}
+        </p>
+      </div>
+
+      {/* Modern micro-animation highlight line at bottom */}
+      <div className="w-0 h-[2px] bg-red-500 transition-all duration-500 group-hover:w-full mt-4" />
+    </div>
+  );
+
   return (
-    <section className="bg-white py-16 px-6 md:px-12 lg:px-20">
+    <section ref={containerRef} className="bg-[#fafafa] py-24 px-6 md:px-16 border-t border-neutral-200/50">
       <div className="max-w-7xl mx-auto">
 
-        {/* Heading + Description */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16 items-start">
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
-            A TEAM OF <br />
-            <span className="text-gray-900">DEE DIVINE</span>
-          </h2>
-          <div className="text-gray-600 text-base sm:text-lg space-y-4 leading-relaxed">
-            <p>BLOCKJOY STARTED AS A PROJECT TO MANAGE STAKING WITH FRIENDS AND FAMILY.</p>
-            <p>We built automated tooling to optimize validator management for teams at scale. Now, we’re building the best validator management platform in Web3.</p>
-            <p>We’ve already saved 1000s of staff hours for networks because of our automated provisioning, validator upgrades, and monitoring systems.</p>
+        {/* Headline section */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-24 items-start">
+          <div className="lg:col-span-5">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-6 h-[2px] bg-red-500" />
+              <span className="text-[10px] font-extrabold uppercase tracking-[0.35em] text-[#e63946]">
+                Our Team
+              </span>
+            </div>
+            <h2 className="text-3xl md:text-5xl font-black leading-tight uppercase tracking-tight text-[#0c0d12]">
+              Shaping Real Estate <br />
+              <span className="text-neutral-400">Together</span>
+            </h2>
+          </div>
+          
+          <div className="lg:col-span-7 text-neutral-500 text-sm leading-relaxed space-y-4">
+            <p>
+              Dee Divine Propinfra is powered by a dedicated team of real estate experts, market analysts, and customer relation managers who work in unison to provide seamless guidance across Gurugram.
+            </p>
+            <p>
+              With decades of collective experience, our leaders and sales professionals focus on customer satisfaction, absolute transparency, and long-term values to make your property acquisition effortless.
+            </p>
           </div>
         </div>
 
-        {/* Team Grid – Sab Images Exact Same Size */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 sm:gap-8 lg:gap-20">
-          {teamMembers.map((member, idx) => (
-            <div
-              key={idx}
-              className="flex flex-col items-center group"
-            >
-              {/* Fixed Size Image Container – Yeh sabse important hai */}
-              <div className="w-40 h-52 sm:w-48 sm:h-60 md:w-56 md:h-72 lg:w-64 lg:h-80 relative overflow-hidden rounded-2xl shadow-lg mb-4">
-                {member.image ? (
-                  <Image
-                    src={member.image}
-                    alt={member.name}
-                    fill
-                    className="object-cover object-top group-hover:scale-110 transition-transform duration-500"
-                    sizes="(max-width: 640px) 45vw, (max-width: 1024px) 30vw, 20vw"
-                    priority={idx < 6} // first 6 images fast load
-                  />
-                ) : (
-                  <div className="bg-gray-200 border-2 border-dashed rounded-2xl w-full h-full flex items-center justify-center">
-                    <span className="text-gray-500 text-xs">No Image</span>
+        {/* ── 1. BOARD & LEADERSHIP SECTION ── */}
+        <div className="team-section-group mb-24">
+          <div className="team-group-title flex items-center gap-3 mb-10">
+            <div className="w-1.5 h-1.5 bg-red-500 rounded-full" />
+            <h3 className="font-black text-xs uppercase tracking-[0.25em] text-[#0c0d12] border-b border-red-500/10 pb-1 w-full">
+              Board & Leadership
+            </h3>
+          </div>
+          {/* Prominent layout for leadership with larger cards */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl">
+            {boardMembers.map((member, idx) => (
+              <div key={idx} className="team-card flex flex-col justify-between group bg-white border border-neutral-200 p-6 hover:border-red-500 hover:shadow-xl hover:shadow-black/[0.03] transition-all duration-500 ease-out">
+                <div>
+                  <div className="relative w-full aspect-[4/5] overflow-hidden bg-neutral-50 mb-6 border border-neutral-100">
+                    <Image
+                      src={member.image}
+                      alt={member.name}
+                      fill
+                      sizes="(max-width: 640px) 90vw, 30vw"
+                      loading="eager"
+                      priority={true}
+                      className="object-cover object-top group-hover:scale-[1.04] transition-all duration-700 ease-out"
+                    />
                   </div>
-                )}
+                  <h4 className="font-black text-base uppercase tracking-wider text-[#0c0d12] transition-colors duration-300 group-hover:text-red-600 leading-snug">
+                    {member.name}
+                  </h4>
+                  <p className="text-[11px] font-extrabold text-red-500 uppercase tracking-widest mt-2">
+                    {member.role}
+                  </p>
+                </div>
+                <div className="w-full h-[2px] bg-red-500 transition-all duration-500 mt-6" />
               </div>
-
-              {/* Name & Role */}
-              <p className="font-semibold border1 border-black text-center text-sm sm:text-base text-gray-900 leading-tight">
-                {member.name}
-              </p>
-              <p className="text-xs sm:text-sm text-gray-600 text-center mt-1">
-                {member.role}
-              </p>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
+
+        {/* ── 2. VICE PRESIDENTS (VP) ── */}
+        <div className="team-section-group mb-24">
+          <div className="team-group-title flex items-center gap-3 mb-10">
+            <div className="w-1.5 h-1.5 bg-red-500 rounded-full" />
+            <h3 className="font-black text-xs uppercase tracking-[0.25em] text-[#0c0d12] border-b border-red-500/10 pb-1 w-full">
+              Vice Presidents (VP)
+            </h3>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            {vpMembers.map((member, idx) => (
+              <TeamCard key={idx} member={member} isPriority={false} />
+            ))}
+          </div>
+        </div>
+
+        {/* ── 3. ASSISTANT VICE PRESIDENTS (AVP) ── */}
+        <div className="team-section-group mb-24">
+          <div className="team-group-title flex items-center gap-3 mb-10">
+            <div className="w-1.5 h-1.5 bg-red-500 rounded-full" />
+            <h3 className="font-black text-xs uppercase tracking-[0.25em] text-[#0c0d12] border-b border-red-500/10 pb-1 w-full">
+              Assistant Vice Presidents (AVP)
+            </h3>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            {avpMembers.map((member, idx) => (
+              <TeamCard key={idx} member={member} isPriority={false} />
+            ))}
+          </div>
+        </div>
+
+        {/* ── 4. GENERAL MANAGERS & TEAM HEADS ── */}
+        <div className="team-section-group">
+          <div className="team-group-title flex items-center gap-3 mb-10">
+            <div className="w-1.5 h-1.5 bg-red-500 rounded-full" />
+            <h3 className="font-black text-xs uppercase tracking-[0.25em] text-[#0c0d12] border-b border-red-500/10 pb-1 w-full">
+              General Managers & Team Heads
+            </h3>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            {gmMembers.map((member, idx) => (
+              <TeamCard key={idx} member={member} isPriority={false} />
+            ))}
+          </div>
+        </div>
+
       </div>
     </section>
   );

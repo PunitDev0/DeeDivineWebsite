@@ -3,6 +3,7 @@ import Navbar from "@/components/hero-page/navbar";
 import Footer from "@/components/hero-page/footer";
 import { Poppins } from "next/font/google";
 import { Toaster } from "sonner";
+import SmoothScroll from "@/components/SmoothScroll";
 
 // ✅ Load only Poppins font
 const poppins = Poppins({
@@ -55,6 +56,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${poppins.variable} font-poppins antialiased overflow-x-hidden`}
       >
+        <SmoothScroll />
         <Navbar />
         {children}
         <Toaster/>

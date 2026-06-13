@@ -33,22 +33,23 @@ export default function TestimonialsSlider() {
   ];
 
   return (
-    <section className="bg-purple-200 py-16 px-6 md:px-10 z-[1000]">
-       
-      <div className="max-w-6xl mx-auto text-center">
-        {/* Subtitle */}
-        <div className="mb-3">
-          <span className="bg-[#A13EA1] text-white text-xs tracking-wider font-semibold uppercase px-3 py-1 ">
-            Testimonial
-          </span>
+    <section className="bg-[#f8f9fa] py-24 px-6 md:px-16 border-t border-black/5">
+      <div className="max-w-7xl mx-auto text-center">
+        
+        {/* Title */}
+        <div className="flex flex-col items-center mb-16">
+          <div className="flex items-center gap-3 mb-4">
+            <div className="w-6 h-[2px] bg-red-500" />
+            <span className="text-[10px] font-extrabold uppercase tracking-[0.35em] text-[#e63946]">
+              Testimonial
+            </span>
+          </div>
+          <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tight text-[#0c0d12]">
+            What Clients Say About Us
+          </h2>
         </div>
 
-        {/* Heading */}
-        <h2 className="text-3xl md:text-4xl  text-gray-900 ">
-          What Clients Say About Us
-        </h2>
-
-        {/* Carousel (No autoplay) */}
+        {/* Carousel */}
         <Carousel
           opts={{
             align: "start",
@@ -62,14 +63,15 @@ export default function TestimonialsSlider() {
                 key={index}
                 className="basis-full sm:basis-1/2 md:basis-1/3"
               >
-                <div className="bg-white border border-gray-100 rounded-xl shadow-sm hover:shadow-md transition-all p-8 text-left h-full flex flex-col justify-between">
-                  <div className="mb-6">
-                    <Quote className="w-8 h-8 text-[#A13EA1] mb-3" />
-                    <p className="text-gray-700 text-sm leading-relaxed italic">
+                <div className="bg-white border border-neutral-100 shadow-sm hover:shadow-md transition-all duration-300 p-8 text-left h-full flex flex-col justify-between">
+                  <div>
+                    <Quote className="w-6 h-6 text-red-500 mb-4" />
+                    <p className="text-neutral-500 text-xs sm:text-sm leading-relaxed italic">
                       “{t.quote}”
                     </p>
                   </div>
-                  <h4 className="font-semibold text-sm text-[#A13EA1] mt-4">
+                  
+                  <h4 className="font-black text-xs uppercase tracking-wider text-[#0c0d12] mt-6 border-t border-neutral-100 pt-4">
                     {t.name}
                   </h4>
                 </div>
