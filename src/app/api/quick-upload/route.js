@@ -35,9 +35,9 @@ export async function POST(request) {
       );
     }
 
-    if (!isFresher && (!lastCompanyName || !salaryProof)) {
+    if (!isFresher && !lastCompanyName) {
       return NextResponse.json(
-        { success: false, error: "Last company name and salary proof are required for experienced candidates" },
+        { success: false, error: "Last company name is required for experienced candidates" },
         { status: 400 }
       );
     }

@@ -22,10 +22,10 @@ import { cn } from "@/lib/utils";
 
 export default function UploadResumePage() {
   const [file, setFile] = useState(null);
-  const [salaryProofFile, setSalaryProofFile] = useState(null);
   const [isFresher, setIsFresher] = useState(false);
   const [isUploading, setIsUploading] = useState(false);
   const [jobTitleFromUrl, setJobTitleFromUrl] = useState("");
+  const [isApplyForJob, setIsApplyForJob] = useState(false);
 
   const [form, setForm] = useState({
     name: "",
@@ -48,6 +48,9 @@ export default function UploadResumePage() {
     if (job) {
       setJobTitleFromUrl(job);
       setForm((prev) => ({ ...prev, jobTitle: job }));
+      setIsApplyForJob(true);
+    } else {
+      setIsApplyForJob(false);
     }
   }, []);
 
@@ -74,20 +77,7 @@ export default function UploadResumePage() {
     }
   };
 
-  const handleSalaryProofChange = (e) => {
-    const selected = e.target.files?.[0];
-    if (!selected) return;
-    const allowedTypes = ["application/pdf", "image/png", "image/jpeg", "image/jpg"];
-    if (!allowedTypes.includes(selected.type)) {
-      toast.error("Only PDF or Image files are allowed for salary proof.");
-      return;
-    }
-    if (selected.size > 2 * 1024 * 1024) {
-      toast.error("Salary proof must be under 2MB.");
-      return;
-    }
-    setSalaryProofFile(selected);
-  };
+
 
   const handleSubmit = async () => {
     const required = ["name", "fathersName", "email", "phone", "highestQualification", "jobTitle"];
@@ -102,10 +92,6 @@ export default function UploadResumePage() {
         toast.error("Please fill in last company name");
         return;
       }
-      if (!salaryProofFile) {
-        toast.error("Please upload your salary proof");
-        return;
-      }
     }
     if (!file) {
       toast.error("Please upload your resume (PDF)");
@@ -115,9 +101,6 @@ export default function UploadResumePage() {
     setIsUploading(true);
     const formData = new FormData();
     formData.append("file", file);
-    if (!isFresher && salaryProofFile) {
-      formData.append("salaryProof", salaryProofFile);
-    }
     formData.append("isFresher", String(isFresher));
 
     Object.entries(form).forEach(([k, v]) => {
@@ -136,26 +119,33 @@ export default function UploadResumePage() {
       const data = await res.json();
 
       if (data.success) {
-        toast.success("Resume uploaded successfully! Redirecting...");
-        window.location.href = `/test?candidate=${data.candidateId}`;
-        
-        setFile(null);
-        setSalaryProofFile(null);
-        setIsFresher(false);
-        setForm({
-          name: "",
-          fathersName: "",
-          email: "",
-          phone: "",
-          highestQualification: "",
-          jobTitle: jobTitleFromUrl,
-          aim: "",
-          vision: "",
-          expectedSalary: "",
-          lastSalary: "",
-          lastCompanyName: "",
-          makePublic: true,
-        });
+        if (isApplyForJob) {
+          toast.success("Resume uploaded successfully! Redirecting to skill test...");
+          window.location.href = `/test?candidate=${data.candidateId}`;
+        } else {
+          toast.success("Resume submitted successfully!");
+          
+          setFile(null);
+          setIsFresher(false);
+          setForm({
+            name: "",
+            fathersName: "",
+            email: "",
+            phone: "",
+            highestQualification: "",
+            jobTitle: "",
+            aim: "",
+            vision: "",
+            expectedSalary: "",
+            lastSalary: "",
+            lastCompanyName: "",
+            makePublic: true,
+          });
+
+          setTimeout(() => {
+            window.location.href = "/career";
+          }, 2000);
+        }
       } else {
         toast.error(data.error || "Upload failed. Please try again.");
       }
@@ -166,11 +156,16 @@ export default function UploadResumePage() {
     }
   };
 
-  const steps = [
-    { num: 1, title: "Complete your profile", sub: "Add your details & upload resume" },
-    { num: 2, title: "Take a 10-min skill test", sub: "Role-specific questions, instant result", active: true },
-    { num: 3, title: "Get matched to jobs", sub: "Employers reach out to you directly" },
-  ];
+  const steps = isApplyForJob
+    ? [
+        { num: 1, title: "Complete your profile", sub: "Add your details & upload resume" },
+        { num: 2, title: "Take a 10-min skill test", sub: "Role-specific questions, instant result", active: true },
+        { num: 3, title: "Get matched to jobs", sub: "Employers reach out to you directly" },
+      ]
+    : [
+        { num: 1, title: "Complete your profile", sub: "Add your details & upload resume", active: true },
+        { num: 2, title: "Submit Application", sub: "Submit details for review" },
+      ];
 
   return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4 md:p-8">
@@ -187,8 +182,14 @@ export default function UploadResumePage() {
             {/* Progress */}
             <div className="flex gap-2 mb-8">
               <div className="h-1 flex-1 rounded-full bg-indigo-600" />
-              <div className="h-1 flex-1 rounded-full bg-indigo-300" />
-              <div className="h-1 flex-1 rounded-full bg-gray-200" />
+              {isApplyForJob ? (
+                <>
+                  <div className="h-1 flex-1 rounded-full bg-indigo-300" />
+                  <div className="h-1 flex-1 rounded-full bg-gray-200" />
+                </>
+              ) : (
+                <div className="h-1 flex-1 rounded-full bg-gray-200" />
+              )}
             </div>
 
             <div className="flex items-center gap-3 mb-1">
@@ -196,7 +197,7 @@ export default function UploadResumePage() {
                 Upload your resume
               </h1>
               <span className="text-xs font-medium px-2.5 py-1 rounded-full bg-indigo-50 text-indigo-600 border border-indigo-100">
-                Step 2 of 3
+                {isApplyForJob ? "Step 2 of 3" : "General Application"}
               </span>
             </div>
             <p className="text-sm text-gray-500 mb-8 leading-relaxed">
@@ -269,7 +270,6 @@ export default function UploadResumePage() {
                   setIsFresher(!!c);
                   if (c) {
                     setForm((prev) => ({ ...prev, lastSalary: "", lastCompanyName: "" }));
-                    setSalaryProofFile(null);
                   }
                 }}
               />
@@ -299,7 +299,7 @@ export default function UploadResumePage() {
             </div>
 
             {!isFresher && (
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+              <div className="mb-4">
                 <Field label="Last Company Name" required>
                   <Input
                     placeholder="e.g. Google India"
@@ -307,48 +307,6 @@ export default function UploadResumePage() {
                     onChange={(e) => setForm({ ...form, lastCompanyName: e.target.value })}
                   />
                 </Field>
-                <div className="space-y-1.5">
-                  <Label className="text-xs text-gray-500 font-medium">
-                    Salary Proof (Image/PDF) <span className="text-red-400 ml-0.5">*</span>
-                  </Label>
-                  {!salaryProofFile ? (
-                    <div
-                      onDragOver={(e) => e.preventDefault()}
-                      onDrop={(e) => {
-                        e.preventDefault();
-                        const droppedFile = e.dataTransfer.files[0];
-                        if (droppedFile) {
-                          const fakeEvent = { target: { files: [droppedFile] } };
-                          handleSalaryProofChange(fakeEvent);
-                        }
-                      }}
-                      onClick={() => document.getElementById("salary-proof-input")?.click()}
-                      className="border-2 border-dashed border-gray-200 rounded-xl p-3 text-center cursor-pointer hover:border-indigo-400 hover:bg-indigo-50/40 transition-all duration-200 bg-gray-50 flex items-center justify-center gap-2 h-10"
-                    >
-                      <Upload className="w-4 h-4 text-indigo-500" />
-                      <span className="text-xs text-indigo-600 font-medium animate-pulse">Upload Salary Proof (PDF/Image)</span>
-                      <input
-                        id="salary-proof-input"
-                        type="file"
-                        accept="application/pdf,image/*"
-                        onChange={handleSalaryProofChange}
-                        className="hidden"
-                      />
-                    </div>
-                  ) : (
-                    <div className="flex items-center gap-3 border border-indigo-200 bg-indigo-50/30 rounded-xl px-3 h-10">
-                      <FileText className="w-4 h-4 text-indigo-600 flex-shrink-0" />
-                      <p className="text-xs font-medium text-indigo-800 truncate flex-1">{salaryProofFile.name}</p>
-                      <button
-                        type="button"
-                        onClick={() => setSalaryProofFile(null)}
-                        className="text-indigo-500 hover:text-red-500 transition-colors"
-                      >
-                        <X className="w-4 h-4" />
-                      </button>
-                    </div>
-                  )}
-                </div>
               </div>
             )}
 
@@ -445,7 +403,7 @@ export default function UploadResumePage() {
               ) : (
                 <>
                   <Send className="w-4 h-4" />
-                  Submit & take skill test
+                  {isApplyForJob ? "Submit & take skill test" : "Submit Resume"}
                 </>
               )}
             </Button>
@@ -458,10 +416,14 @@ export default function UploadResumePage() {
                 🚀 Career Portal
               </span>
               <h2 className="text-xl font-semibold text-white leading-snug mb-3">
-                Get hired 3× faster with a verified skill score
+                {isApplyForJob
+                  ? "Get hired 3× faster with a verified skill score"
+                  : "Submit your resume for future opportunities"}
               </h2>
               <p className="text-sm text-white/50 leading-relaxed">
-                Top employers check skill scores before shortlisting. Completing your profile puts you ahead of 90% of applicants.
+                {isApplyForJob
+                  ? "Top employers check skill scores before shortlisting. Completing your profile puts you ahead of 90% of applicants."
+                  : "We review every submission carefully and will contact you as soon as a matching position opens up."}
               </p>
 
               <div className="mt-7 space-y-5">
