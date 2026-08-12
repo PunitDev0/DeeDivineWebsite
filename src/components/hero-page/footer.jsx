@@ -11,6 +11,7 @@ import {
   Clock,
   Building2,
   ShieldCheck,
+  AlertCircle,
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -177,6 +178,9 @@ export default function Footer() {
         </p>
 
         <div className="flex items-center gap-6 mt-4 md:mt-0 uppercase">
+          <Link href="/disclaimer" className="flex items-center gap-1.5 hover:text-white transition">
+            <AlertCircle className="w-3.5 h-3.5" /> Disclaimer
+          </Link>
           <Link href="/privacy-policy" className="flex items-center gap-1.5 hover:text-white transition">
             <ShieldCheck className="w-3.5 h-3.5" /> Privacy Policy
           </Link>

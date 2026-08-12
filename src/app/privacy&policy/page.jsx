@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import PrivacyPolicyContent from "@/components/privacy/PrivacyPolicyContent";
 
-function page() {
-  return (
-    <div>page</div>
-  )
+export const metadata = {
+  title: "Privacy Policy | Dee Divine Propinfra",
+  description:
+    "Official Privacy Policy of Dee Divine Propinfra. Learn how we collect, use, protect, and handle your information.",
+};
+
+export default function PrivacyAndPolicyPage() {
+  return <PrivacyPolicyContent />;
 }
-
-export default page
