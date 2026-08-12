@@ -75,7 +75,6 @@ export default function Footer() {
             {[
               { name: "Home", link: "/" },
               { name: "About Us", link: "/about" },
-              { name: "Our Services", link: "/services" },
               { name: "Career", link: "/career" },
               { name: "Contact Us", link: "/contact" },
             ].map((item, i) => (

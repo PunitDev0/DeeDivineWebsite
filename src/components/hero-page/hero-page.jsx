@@ -2,7 +2,6 @@ import React from 'react'
 import Navbar from './navbar'
 import HeroSection from './hero-section'
 import StatsSection from './stats-section'
-import FeaturedProperty from './featured-properties'
 import FeatureSections from './featured-section'
 import OngoingProject from './ongoing-project'
 
@@ -22,7 +21,6 @@ function HeroPage() {
        <HeroSection/>
        </div>
         <StatsSection/>
-        <FeaturedProperty/>
         <FeatureSections/>
         {/* <OngoingProject/> */}
         <PrimeLocations/>
