@@ -177,15 +177,21 @@ export default function Footer() {
           © {new Date().getFullYear()} DEE DIVINE PROPINFRA PVT. LTD. ALL RIGHTS RESERVED.
         </p>
 
-        <div className="flex items-center gap-6 mt-4 md:mt-0 uppercase">
+        <div className="flex flex-wrap items-center gap-4 sm:gap-6 mt-4 md:mt-0 uppercase">
           <Link href="/disclaimer" className="flex items-center gap-1.5 hover:text-white transition">
             <AlertCircle className="w-3.5 h-3.5" /> Disclaimer
           </Link>
           <Link href="/privacy-policy" className="flex items-center gap-1.5 hover:text-white transition">
             <ShieldCheck className="w-3.5 h-3.5" /> Privacy Policy
           </Link>
-          <Link href="/terms" className="hover:text-white transition">
+          <Link href="/terms-and-conditions" className="hover:text-white transition">
             Terms & Conditions
+          </Link>
+          <Link href="/refund-policy" className="hover:text-white transition">
+            Refund Policy
+          </Link>
+          <Link href="/payment-terms" className="hover:text-white transition">
+            Payment Terms
           </Link>
         </div>
       </div>
