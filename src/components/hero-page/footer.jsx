@@ -29,7 +29,7 @@ export default function Footer() {
         />
       </div>
 
-      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 relative z-10">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-10 relative z-10">
         
         {/* Column 1: Logo & Map */}
         <div className="flex flex-col items-center md:items-start space-y-6">
@@ -100,13 +100,13 @@ export default function Footer() {
           </div>
           <ul className="space-y-3 text-xs tracking-wider text-neutral-400">
             {[
-              "Residential Properties",
-              "Commercial Leasing",
-              "Land Acquisition",
-              "Investment Consulting",
-              "RERA Approved Projects",
+              "Real Estate Profile",
+              "Vaastu Consultancy",
+              "Property Investment",
+              "Residential Property",
+              "Commercial Property",
             ].map((service, i) => (
-              <li key={i} className="flex items-center gap-3">
+              <li key={i} className="flex items-center gap-3 hover:text-white transition-colors duration-300 cursor-pointer">
                 <span className="w-1.5 h-1.5 bg-neutral-600 rounded-full" />
                 <span>{service}</span>
               </li>
@@ -114,7 +114,34 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Column 4: Contact Info */}
+        {/* Column 4: DDJAY Resources */}
+        <div className="text-left">
+          <div className="flex items-center gap-2 mb-6">
+            <div className="w-4 h-[2px] bg-red-500" />
+            <h3 className="font-black text-xs uppercase tracking-[0.25em] text-white">
+              DDJAY Resources
+            </h3>
+          </div>
+          <ul className="space-y-3 text-xs tracking-wider text-neutral-400">
+            {[
+              { name: "What is DDJAY?", href: "/what-is-deen-dayal-jan-awas-yojna-ddjay-guide" },
+              { name: "DDJAY Eligibility & Documents", href: "/ddjay-eligibility-and-documents-checklist" },
+              { name: "DDJAY Loan & Financing Guide", href: "/ddjay-loan-financing-guide" },
+            ].map((resource, i) => (
+              <li key={i}>
+                <Link
+                  href={resource.href}
+                  className="flex items-center gap-3 hover:text-white transition-colors duration-300"
+                >
+                  <span className="w-1.5 h-1.5 bg-neutral-600 rounded-full" />
+                  <span>{resource.name}</span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Column 5: Contact Info */}
         <div className="text-left">
           <div className="flex items-center gap-2 mb-6">
             <div className="w-4 h-[2px] bg-red-500" />
