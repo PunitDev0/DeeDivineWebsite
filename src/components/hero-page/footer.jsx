@@ -100,15 +100,20 @@ export default function Footer() {
           </div>
           <ul className="space-y-3 text-xs tracking-wider text-neutral-400">
             {[
-              "Real Estate Profile",
-              "Vaastu Consultancy",
-              "Property Investment",
-              "Residential Property",
-              "Commercial Property",
+              { name: "Real Estate Profile", href: "#" },
+              { name: "Vassta Consultancy", href: "/vassta-consultancy" },
+              { name: "Property Investment", href: "/property-investment-in-gurgaon" },
+              { name: "Residential Property", href: "#" },
+              { name: "Commercial Property", href: "#" },
             ].map((service, i) => (
-              <li key={i} className="flex items-center gap-3 hover:text-white transition-colors duration-300 cursor-pointer">
-                <span className="w-1.5 h-1.5 bg-neutral-600 rounded-full" />
-                <span>{service}</span>
+              <li key={i}>
+                <Link
+                  href={service.href}
+                  className="flex items-center gap-3 hover:text-white transition-colors duration-300"
+                >
+                  <span className="w-1.5 h-1.5 bg-neutral-600 rounded-full" />
+                  <span>{service.name}</span>
+                </Link>
               </li>
             ))}
           </ul>
