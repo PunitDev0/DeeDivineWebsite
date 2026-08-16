@@ -172,6 +172,7 @@ function Header() {
               alt="Logo Graphic"
               fill
               priority
+              sizes="80px"
               className="object-contain p-4"
             />
           </div>
@@ -184,9 +185,9 @@ function Header() {
               DEE DIVINE
             </span>
             <span className={`font-bold text-xs tracking-[0.4em] uppercase mt-1 transition-colors duration-500 ${
-              isDark ? "text-neutral-400" : "text-neutral-600"
+              isDark ? "text-red-500" : "text-[#e63946]"
             }`}>
-              GROUPS
+              PROPINFRA
             </span>
           </Link>
         </div>

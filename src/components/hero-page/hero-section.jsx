@@ -218,6 +218,7 @@ export default function HeroSection() {
                       src={property.image}
                       alt={property.title}
                       fill
+                      sizes="(max-width: 768px) 100vw, 25vw"
                       className="object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                     <div className="absolute top-3 right-3 bg-[#0c0d12]/80 backdrop-blur-sm px-3 py-1 border border-white/10 text-[9px] uppercase tracking-wider text-white font-bold">

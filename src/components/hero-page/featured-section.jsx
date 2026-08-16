@@ -205,6 +205,7 @@ export default function FeatureSections() {
                 src="/assets/featureSection1.webp"
                 alt="Luxury Real Estate Property Gurgaon"
                 fill
+                sizes="(max-width: 768px) 100vw, 40vw"
                 className="object-cover hover:scale-105 transition-all duration-700 ease-out"
               />
             </div>
