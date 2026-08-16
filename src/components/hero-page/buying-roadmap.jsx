@@ -10,22 +10,22 @@ const steps = [
   {
     num: "01",
     title: "Consultation & Matching",
-    desc: "We analyze your capital, location goals, and size preferences. We then compile a curated portfolio matching your criteria."
+    desc: "We assess your budget, location goals, and preferences to curate a personalized property shortlist."
   },
   {
     num: "02",
     title: "Guided Site Visits",
-    desc: "Experience hand-picked projects in person. We provide comprehensive site evaluations and comparative analysis of prices."
+    desc: "Experience shortlisted properties in person with comparative pricing insights."
   },
   {
     num: "03",
     title: "Due Diligence Audit",
-    desc: "Our regulatory experts verify HARERA approvals, ownership records, municipal permits, and builder agreements."
+    desc: "Our team verifies HARERA approvals, ownership records, and builder agreements."
   },
   {
     num: "04",
     title: "Registry & Handover",
-    desc: "We handle the entire transaction process. From bank coordination and legal drafting to final registry execution."
+    desc: "We manage the entire transaction, from bank coordination to final registry execution."
   }
 ];
 
@@ -81,15 +81,16 @@ export default function BuyingRoadmap() {
           <div className="flex items-center gap-3 mb-4">
             <div className="w-6 h-[2px] bg-red-500" />
             <span className="text-[10px] font-extrabold uppercase tracking-[0.35em] text-[#e63946]">
-              Our Process
+              Seamless Execution
             </span>
           </div>
+          
           <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tight text-[#0c0d12]">
-            The Acquisition <br />
-            <span className="text-neutral-400">Roadmap</span>
+            Our Property Acquisition Process
           </h2>
-          <p className="text-neutral-500 text-sm max-w-xl mt-4 leading-relaxed">
-            Acquiring premium properties shouldn&apos;t be stressful. We follow a highly transparent, professional workflow to secure your real estate assets safely and seamlessly.
+          
+          <p className="text-neutral-600 text-sm md:text-base max-w-xl mt-4 leading-relaxed font-medium">
+            We follow a structured, transparent process to make your property acquisition seamless:
           </p>
         </div>
 
@@ -123,7 +124,7 @@ export default function BuyingRoadmap() {
                 </h3>
 
                 {/* Description */}
-                <p className="text-xs text-neutral-500 leading-relaxed">
+                <p className="text-xs text-neutral-600 leading-relaxed">
                   {step.desc}
                 </p>
               </div>

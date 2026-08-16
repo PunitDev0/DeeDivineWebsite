@@ -140,19 +140,19 @@ export default function HeroSection() {
             <div className="hero-badge flex items-center space-x-3 opacity-0">
               <span className="w-8 h-[1px] bg-red-500"></span>
               <span className="text-[10px] font-extrabold tracking-[0.4em] text-neutral-300 uppercase">
-                Premium Real Estate
+                Trusted Real Estate Consultants
               </span>
             </div>
 
             {/* Custom reveal heading */}
-            <h1 className="text-4xl sm:text-5xl md:text-7xl font-black tracking-tight text-white uppercase leading-none overflow-hidden">
-              <span className="hero-title-line block opacity-0">TURNING DREAMS</span>
-              <span className="hero-title-line block opacity-0 text-neutral-300">INTO REALITY</span>
+            <h1 className="text-3xl sm:text-4xl md:text-6xl font-black tracking-tight text-white uppercase leading-[1.08] overflow-hidden">
+              <span className="hero-title-line block opacity-0">Your Trusted Real Estate Partner</span>
+              <span className="hero-title-line block opacity-0 text-red-500">in Delhi NCR (Gurgaon)</span>
             </h1>
             
             {/* Description Text */}
-            <p className="hero-fade-in text-xs sm:text-sm text-neutral-400 font-medium tracking-wide leading-relaxed max-w-md opacity-0">
-              Discover the most luxurious plotted developments and premium residential properties across prime locations in Gurgaon.
+            <p className="hero-fade-in text-xs sm:text-sm text-neutral-300 font-medium tracking-wide leading-relaxed max-w-xl opacity-0">
+              Dee Divine Propinfra offers trusted real estate consulting in Delhi NCR & Gurgaon — RERA approved plots, verified listings & expert guidance. Book a consultation today.
             </p>
 
             {/* Minimal Grid Data Table */}

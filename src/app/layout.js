@@ -14,27 +14,24 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "Dee Divine Propinfra",
-  description: "Dee Divine Propinfra is a trusted real estate company with a strong presence across multiple states in India.",
+  title: "Trusted Real Estate Consultants in Delhi NCR | Dee Divine Propinfra",
+  description: "Dee Divine Propinfra offers trusted real estate consulting in Delhi NCR & Gurgaon- RERA approved plots, verified listings & expert guidance. Book a consultation today.",
 
   icons: {
-    icon: [
-      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
-      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
-      { url: "/favicon.ico" }
-    ],
-    apple: "/apple-touch-icon.png"
+    icon: "/assets/logo.png",
+    shortcut: "/assets/logo.png",
+    apple: "/assets/logo.png",
   },
 
   openGraph: {
-    title: "Dee Divine Propinfra",
-    description: "We are spread across multiple states in India, delivering reliable and value-driven real estate solutions.",
+    title: "Trusted Real Estate Consultants in Delhi NCR | Dee Divine Propinfra",
+    description: "Dee Divine Propinfra offers trusted real estate consulting in Delhi NCR & Gurgaon- RERA approved plots, verified listings & expert guidance. Book a consultation today.",
     images: [
       {
-        url: "/android-chrome-512x512.png", // temporary OG image
+        url: "/assets/logo.png",
         width: 512,
         height: 512,
-        alt: "Dee Divine Propinfra"
+        alt: "Dee Divine Propinfra Logo"
       }
     ],
     type: "website"
@@ -42,9 +39,9 @@ export const metadata = {
 
   twitter: {
     card: "summary",
-    title: "Dee Divine Propinfra",
-    description: "Trusted real estate company with projects and presence across India.",
-    images: ["/android-chrome-512x512.png"]
+    title: "Trusted Real Estate Consultants in Delhi NCR | Dee Divine Propinfra",
+    description: "Dee Divine Propinfra offers trusted real estate consulting in Delhi NCR & Gurgaon- RERA approved plots, verified listings & expert guidance.",
+    images: ["/assets/logo.png"]
   }
 };
 
