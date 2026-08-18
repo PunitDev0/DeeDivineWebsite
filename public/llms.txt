@@ -1,0 +1,75 @@
+# llms.txt for deedivinepropinfra.com
+
+# Owner
+Owner: Dee Divine Group
+Website: https://deedivinepropinfra.com/
+
+# Dee Divine PropInfra is a Gurgaon-based real estate consulting firm specializing in DDJAY (Deen Dayal Jan Awas Yojna) plots, residential properties, and verified rental listings across Delhi NCR. HARERA-verified projects, financing support, and end-to-end buying assistance.
+
+## Sitemaps
+- [XML Sitemap](https://deedivinepropinfra.com/sitemap.xml): Includes every public page intended for search engine crawling and indexing.
+
+## Key Features
+- **DDJAY Plot Advisory**: Expert guidance on Deen Dayal Jan Awas Yojna plots, eligibility, pricing, and HARERA-verified documentation.
+- **Property Search**: Browse residential plots, apartments, and commercial listings across Gurgaon, Delhi, and Noida.
+- **Financing Support**: Bank loan coordination and pre-approval assistance for plot and property purchases.
+- **Site Visits**: Guided, transport-assisted site visits with dedicated consultants across Gurgaon sectors.
+- **Rental Listings**: Verified 2BHK, 3BHK, and luxury rental options across Delhi NCR.
+
+## Property Types
+- Residential: Plots, Apartments, Independent Floors, Builder Floors.
+- Plotted Development: DDJAY Plots (150-500 sq. yards) across licensed Gurgaon colonies.
+- Rental: 2BHK, 3BHK, Luxury Apartments.
+
+## About Dee Divine PropInfra
+- [About Us](https://deedivinepropinfra.com/about): Company background, advisory experience, and team information in the Delhi NCR real estate market.
+- [Contact Us](https://deedivinepropinfra.com/contact): Office at M3M Broadway, 22nd Floor, D Block, Sector 71, SPR Road, Gurgaon. Phone: +91-9211496111.
+
+## Core Services
+- [DDJAY Plots Overview](https://deedivinepropinfra.com/what-is-deen-dayal-jan-awas-yojna-ddjay-guide): Introduction to Deen Dayal Jan Awas Yojna, plot sizes, pricing, and why DDJAY is a preferred affordable-housing route in Gurgaon.
+- [DDJAY Eligibility](https://deedivinepropinfra.com/ddjay-eligibility-and-documents-checklist): Eligibility criteria, required KYC documents, and the plot booking process.
+- [DDJAY Loan & Financing Guide](https://deedivinepropinfra.com/ddjay-loan-financing-guide): Bank loan eligibility, loan-to-value ratios, and required documentation for DDJAY plot financing.
+- [Property Investment in Gurgaon](https://deedivinepropinfra.com/property-investment-in-gurgaon): Advisory services, coverage areas, and consultant credentials across Delhi NCR.
+- [Vassta Consultancy](https://deedivinepropinfra.com/vassta-consultancy): Property investment and real estate advisory services.
+- [Frequently Asked Questions](https://deedivinepropinfra.com/faq): Comprehensive Q&A on DDJAY plots, HARERA compliance, buying process, and financing.
+
+## Residential & Rental
+- [Featured Projects](https://deedivinepropinfra.com/projects): Residential apartments and independent floors across Gurgaon, Delhi, and Noida.
+
+## Legal & Compliance
+- All listed projects are cross-verified against the Haryana Real Estate Regulatory Authority (HARERA) database before publication.
+- Dee Divine PropInfra does not guarantee investment returns; appreciation figures referenced are based on historical market trends and are subject to change.
+- [Terms & Conditions](https://deedivinepropinfra.com/terms-and-conditions): Platform usage policies and terms of service.
+- [Privacy Policy](https://deedivinepropinfra.com/privacy-policy): Information about data collection, usage, and privacy practices.
+- [Disclaimer](https://deedivinepropinfra.com/disclaimer): Legal notices, content disclaimers, and limitation of liability.
+
+## Career Opportunities
+- [Careers](https://deedivinepropinfra.com/career): Open roles at Dee Divine PropInfra across sales, digital marketing, and operations.
+
+User-agent: *
+# Keep private and resource-intensive backend routes blocked.
+Disallow: /api/
+Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /auth/
+Disallow: /wp-admin/
+Allow: /wp-content/uploads/
+
+# Block aggressive bots that generate excessive server load
+User-agent: Amazonbot
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
+# Sitemap Link
+Sitemap: https://deedivinepropinfra.com/sitemap.xml
+
+# Use Cases
+AllowUseCases:
+  - Real Estate content
+  - DDJAY plot advisory
+  - Property investment guidance
+
+# Last Updated
+LastUpdated: 2026-08-16
