@@ -5,6 +5,9 @@ export const metadata = {
   title: "Property Investment in Gurgaon | Real Estate Investment Guide",
   description:
     "Discover the best property investment opportunities in Gurgaon, top locations, investment options and key factors to consider before investing.",
+  alternates: {
+    canonical: "/property-investment-in-gurgaon",
+  },
   openGraph: {
     title: "Property Investment in Gurgaon | Real Estate Investment Guide",
     description:

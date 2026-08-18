@@ -5,6 +5,9 @@ export const metadata = {
   title: "Refund & Cancellation Policy | Dee Divine Propinfra",
   description:
     "Official Refund & Cancellation Policy of Dee Divine Propinfra Pvt. Ltd. detailing cancellation timelines, eligibility stages, and 5-7 business days refund process.",
+  alternates: {
+    canonical: "/refund-policy",
+  },
   openGraph: {
     title: "Refund & Cancellation Policy | Dee Divine Propinfra",
     description:

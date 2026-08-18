@@ -5,6 +5,9 @@ export const metadata = {
   title: "DDJAY Eligibility & Documents Required — Full Checklist",
   description:
     "Check DDJAY eligibility criteria, income limits for EWS/LIG/MIG, NRI rules, and the full list of documents required for plot registration.",
+  alternates: {
+    canonical: "/ddjay-eligibility-and-documents-checklist",
+  },
   openGraph: {
     title: "DDJAY Eligibility & Documents Required — Full Checklist",
     description:

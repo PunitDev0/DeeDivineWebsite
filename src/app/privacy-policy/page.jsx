@@ -5,6 +5,9 @@ export const metadata = {
   title: "Privacy Policy | Dee Divine Propinfra",
   description:
     "Official Privacy Policy of Dee Divine Propinfra. Learn how we collect, use, protect, and handle your information when using our website and property services.",
+  alternates: {
+    canonical: "/privacy-policy",
+  },
   openGraph: {
     title: "Privacy Policy | Dee Divine Propinfra",
     description:

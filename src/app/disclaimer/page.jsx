@@ -5,6 +5,9 @@ export const metadata = {
   title: "Disclaimer | Dee Divine Propinfra",
   description:
     "Official Disclaimer and property information notice for Dee Divine Propinfra website. Read terms on property details, prices, investment disclaimers, RERA approvals, and user responsibilities.",
+  alternates: {
+    canonical: "/disclaimer",
+  },
   openGraph: {
     title: "Disclaimer | Dee Divine Propinfra",
     description:

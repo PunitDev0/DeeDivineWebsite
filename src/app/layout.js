@@ -14,8 +14,12 @@ const poppins = Poppins({
 });
 
 export const metadata = {
+  metadataBase: new URL("https://deedivinepropinfra.com"),
   title: "Trusted Real Estate Consultants in Delhi NCR | Dee Divine Propinfra",
   description: "Dee Divine Propinfra offers trusted real estate consulting in Delhi NCR & Gurgaon- RERA approved plots, verified listings & expert guidance. Book a consultation today.",
+  alternates: {
+    canonical: "/",
+  },
 
   icons: {
     icon: "/assets/logo.png",

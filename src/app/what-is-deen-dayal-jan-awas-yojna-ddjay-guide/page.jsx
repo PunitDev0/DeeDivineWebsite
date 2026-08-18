@@ -5,6 +5,9 @@ export const metadata = {
   title: "What is Deen Dayal Jan Awas Yojna? DDJAY Guide 2026-27",
   description:
     "Confused about DDJAY? Learn what Deen Dayal Jan Awas Yojna is, eligibility, registration process, documents, and how to verify plot authenticity.",
+  alternates: {
+    canonical: "/what-is-deen-dayal-jan-awas-yojna-ddjay-guide",
+  },
   openGraph: {
     title: "What is Deen Dayal Jan Awas Yojna? DDJAY Guide 2026-27",
     description:

@@ -5,6 +5,9 @@ export const metadata = {
   title: "Payment & Booking Terms | Dee Divine Propinfra",
   description:
     "Transparent explanation of Expression of Interest (EOI), booking tokens, consultation charges, and transaction rules for Dee Divine Propinfra Pvt. Ltd.",
+  alternates: {
+    canonical: "/payment-terms",
+  },
   openGraph: {
     title: "Payment & Booking Terms | Dee Divine Propinfra",
     description:

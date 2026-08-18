@@ -5,6 +5,9 @@ export const metadata = {
   title: "Vassta Consultancy | Property Investment & Real Estate Advisory",
   description:
     "Get expert property investment guidance with Vassta Consultancy. Explore residential, commercial and land investment opportunities with informed advice.",
+  alternates: {
+    canonical: "/vassta-consultancy",
+  },
   openGraph: {
     title: "Vassta Consultancy | Property Investment & Real Estate Advisory",
     description:
