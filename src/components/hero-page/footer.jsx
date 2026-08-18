@@ -75,6 +75,7 @@ export default function Footer() {
             {[
               { name: "Home", link: "/" },
               { name: "About Us", link: "/about" },
+              { name: "Blogs", link: "/blog" },
               { name: "FAQs", link: "/faq" },
               { name: "Career", link: "/career" },
               { name: "Contact Us", link: "/contact" },
