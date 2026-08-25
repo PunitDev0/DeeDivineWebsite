@@ -19,12 +19,36 @@ const faqsData = [
     id: 1,
     category: "ddjay",
     categoryLabel: "DDJAY & Plotted Development",
-    question: "What is Deen Dayal Jan Awas Yojna (DDJAY) in Haryana?",
+    question: "What is DDJAY and how does it work in Gurgaon?",
     answer:
-      "Deen Dayal Jan Awas Yojna (DDJAY) is a Haryana government policy that allows licensed developers to create affordable, plotted residential colonies in a phased manner. It offers buyers ownership of freehold land with defined zoning, road width, and infrastructure norms, making it a popular route for plotted development investment in Gurgaon and surrounding sectors."
+      "DDJAY (Deen Dayal Jan Awas Yojna) is a Haryana government scheme that allows licensed developers to create affordable, plotted colonies with defined infrastructure standards. Buyers get direct ownership of a plot rather than a built unit, along with access to planned roads, sewage, and other civic amenities as per the scheme's layout norms. It's a popular route for buyers who want land ownership with more construction flexibility."
   },
   {
     id: 2,
+    category: "ddjay",
+    categoryLabel: "DDJAY & Plotted Development",
+    question: "What is the difference between freehold and DDJAY plots?",
+    answer:
+      "Freehold plots come with full, unrestricted ownership rights and no scheme-based conditions. DDJAY plots, while also giving direct ownership, follow specific government scheme guidelines around plot usage, construction timelines, and resale in some cases. Buyers should review the applicable terms for each before deciding which fits their goals better."
+  },
+  {
+    id: 3,
+    category: "ddjay",
+    categoryLabel: "DDJAY & Plotted Development",
+    question: "What is the price range for DDJAY plots in Gurgaon?",
+    answer:
+      "Pricing for DDJAY plots varies based on location, plot size, and the specific phase of development. Rather than quoting a fixed range here, we'd recommend checking current inventory directly, since prices are updated as new phases and sectors open up — this ensures you're working with accurate, current figures rather than outdated estimates."
+  },
+  {
+    id: 4,
+    category: "ddjay",
+    categoryLabel: "DDJAY & Plotted Development",
+    question: "Which areas in Gurgaon are best for plotted development investment?",
+    answer:
+      "Corridors like New Gurgaon and Dwarka Expressway have seen consistent plotted-development activity due to improving connectivity and civic infrastructure. The right area ultimately depends on your budget, purpose (end-use vs. long-term holding), and how soon you'd want access to developed infrastructure."
+  },
+  {
+    id: 5,
     category: "ddjay",
     categoryLabel: "DDJAY & Plotted Development",
     question: "Who is eligible to buy a DDJAY plot in Gurugram?",
@@ -32,7 +56,7 @@ const faqsData = [
       "Any Indian resident who meets the developer's documentation requirements can purchase a DDJAY plot in Gurugram. There is no restriction limiting these plots to first-time buyers or a specific income group. Buyers typically need standard KYC documents, PAN, address proof, and funds or loan pre-approval for the booking amount."
   },
   {
-    id: 3,
+    id: 6,
     category: "ddjay",
     categoryLabel: "DDJAY & Plotted Development",
     question: "What is the minimum plot size in DDJAY Gurgaon schemes?",
@@ -40,7 +64,7 @@ const faqsData = [
       "DDJAY plots in Gurgaon are generally available starting from 150 sq. yards, going up to 500 sq. yards, depending on the specific licensed colony and sector. Larger corner or park-facing plots may carry a premium over standard-facing plots of the same size."
   },
   {
-    id: 4,
+    id: 7,
     category: "ddjay",
     categoryLabel: "DDJAY & Plotted Development",
     question: "What is the difference between a DDJAY plot and a licensed colony plot?",
@@ -48,7 +72,7 @@ const faqsData = [
       "DDJAY plots fall under a specific Haryana government affordable-housing policy with fixed EDC/IDC charges, defined road and park infrastructure, and HARERA registration. A standard licensed colony plot follows general development norms but may not carry the same affordability caps or plot-size framework. Both require HARERA registration, but DDJAY is specifically designed to keep entry pricing accessible."
   },
   {
-    id: 5,
+    id: 8,
     category: "ddjay",
     categoryLabel: "DDJAY & Plotted Development",
     question: "How is a DDJAY plot different from an open-market plot in Delhi NCR?",
@@ -56,15 +80,7 @@ const faqsData = [
       "DDJAY plots are developed under a government-approved licensing framework with fixed charges, defined road and park infrastructure, and HARERA registration. Open-market plots in Delhi NCR may lack this regulatory oversight, which can mean unclear titles, inconsistent infrastructure, or unregistered transactions. DDJAY plots generally offer more predictable documentation and bank loan eligibility as a result."
   },
   {
-    id: 6,
-    category: "ddjay",
-    categoryLabel: "DDJAY & Plotted Development",
-    question: "What is the price per sq. yard for DDJAY plots in Gurgaon?",
-    answer:
-      "DDJAY plot prices in Gurgaon vary by sector, proximity to Golf Course Road, Dwarka Expressway, or Sohna Road, and the specific licensed colony's development stage. Corner and park-facing plots typically command a premium over standard-facing plots. Our team shares current per-sq.-yard pricing for each active project during consultation, as rates are revised periodically."
-  },
-  {
-    id: 7,
+    id: 9,
     category: "ddjay",
     categoryLabel: "DDJAY & Plotted Development",
     question: "Is there a time limit to construct on a DDJAY plot?",
@@ -72,7 +88,7 @@ const faqsData = [
       "Yes, DDJAY license conditions typically require construction to begin within a stipulated period after possession, as specified in the colony's license terms. Buyers should confirm the exact construction timeline clause with the developer's agreement before booking."
   },
   {
-    id: 8,
+    id: 10,
     category: "ddjay",
     categoryLabel: "DDJAY & Plotted Development",
     question: "What is the typical possession time for a DDJAY plot?",
@@ -80,7 +96,7 @@ const faqsData = [
       "Possession timelines depend on the project's construction and infrastructure development phase as disclosed in its HARERA registration. Buyers should check the specific possession date committed in the builder-buyer agreement, since this varies from project to project and is not standardized across DDJAY colonies."
   },
   {
-    id: 9,
+    id: 11,
     category: "ddjay",
     categoryLabel: "DDJAY & Plotted Development",
     question: "Can I resell a DDJAY plot after purchase?",
@@ -90,7 +106,15 @@ const faqsData = [
 
   // ── Category: HARERA & Legal Compliance ──
   {
-    id: 10,
+    id: 12,
+    category: "legal",
+    categoryLabel: "HARERA & Legal Compliance",
+    question: "Is Dee Divine PropInfra RERA/HARERA registered?",
+    answer:
+      "Yes. Dee Divine PropInfra operates under RERA Certificate No. 902 4611 RC/HARERA/GGM/3889/3484/2025/766. This registration means project details, layout plans, and timelines are documented and available for verification, giving buyers a transparent basis to evaluate any project before making a decision."
+  },
+  {
+    id: 13,
     category: "legal",
     categoryLabel: "HARERA & Legal Compliance",
     question: "How do you verify that a Gurgaon project is HARERA registered?",
@@ -98,7 +122,7 @@ const faqsData = [
       "Our legal team cross-checks every project's registration number directly against the Haryana Real Estate Regulatory Authority (HARERA) database before listing it. We also verify the developer's compliance history, project timelines, and any pending complaints on record."
   },
   {
-    id: 11,
+    id: 14,
     category: "legal",
     categoryLabel: "HARERA & Legal Compliance",
     question: "How do I check a DDJAY plot's HARERA registration number online?",
@@ -106,7 +130,7 @@ const faqsData = [
       "Buyers can search the project's registration number directly on the official HARERA (Haryana Real Estate Regulatory Authority) website, which lists approved projects, developer details, and compliance status. Our team also shares the verified registration number for every listed project upfront, so you can cross-check it independently."
   },
   {
-    id: 12,
+    id: 15,
     category: "legal",
     categoryLabel: "HARERA & Legal Compliance",
     question: "What documents should I check before buying a plot in Gurgaon?",
@@ -114,7 +138,7 @@ const faqsData = [
       "Key documents include the HARERA registration certificate, the license issued to the developer, the sale/allotment agreement, encumbrance status of the land, and the layout plan approved by the competent authority. We recommend buyers review these with independent legal counsel in addition to our due diligence report."
   },
   {
-    id: 13,
+    id: 16,
     category: "legal",
     categoryLabel: "HARERA & Legal Compliance",
     question: "What is the plot registry process after full payment?",
@@ -122,7 +146,7 @@ const faqsData = [
       "Once full payment is made, the developer issues a no-dues certificate, after which the conveyance deed is executed and registered at the local sub-registrar office. Our team coordinates document preparation, stamp duty calculation, and appointment scheduling to help this process go smoothly."
   },
   {
-    id: 14,
+    id: 17,
     category: "legal",
     categoryLabel: "HARERA & Legal Compliance",
     question: "What is the stamp duty on plot registration in Haryana?",
@@ -130,7 +154,7 @@ const faqsData = [
       "Stamp duty and registration charges in Haryana vary based on the buyer's gender, municipal area, and property value, and rates are revised periodically by the state government. We advise confirming the current applicable rate with our team or the sub-registrar office at the time of registry."
   },
   {
-    id: 15,
+    id: 18,
     category: "legal",
     categoryLabel: "HARERA & Legal Compliance",
     question: "What if there is a dispute with the developer after booking a DDJAY plot?",
@@ -140,7 +164,31 @@ const faqsData = [
 
   // ── Category: Buying Process ──
   {
-    id: 16,
+    id: 19,
+    category: "process",
+    categoryLabel: "Buying Process",
+    question: "How do I book a site visit with Dee Divine PropInfra?",
+    answer:
+      "You can schedule a site visit by filling out the enquiry form on our website or reaching out via the listed contact number/WhatsApp. Our team will follow up to understand your requirements and arrange a convenient time."
+  },
+  {
+    id: 20,
+    category: "process",
+    categoryLabel: "Buying Process",
+    question: "What documents are required to buy a plot in Gurgaon?",
+    answer:
+      "Typically, buyers need identity proof (Aadhaar/PAN), address proof, income documents if applying for a home loan, and the sale agreement along with the project's RERA registration details for reference. Our team can guide you through the exact checklist based on your specific purchase."
+  },
+  {
+    id: 21,
+    category: "process",
+    categoryLabel: "Buying Process",
+    question: "Can NRIs invest in Dee Divine PropInfra projects?",
+    answer:
+      "Yes, NRIs can invest in our projects, subject to standard RBI and FEMA guidelines applicable to property purchases by non-resident Indians. Our team can walk you through the documentation and remittance process specific to NRI buyers."
+  },
+  {
+    id: 22,
     category: "process",
     categoryLabel: "Buying Process",
     question: "How do I schedule a plot site visit in Gurgaon?",
@@ -148,7 +196,7 @@ const faqsData = [
       "You can schedule a guided site visit by submitting an enquiry through our Contact page or by calling our team directly. We arrange transport support, a dedicated executive, and a comparative walkthrough of shortlisted projects based on your budget and preferences."
   },
   {
-    id: 17,
+    id: 23,
     category: "process",
     categoryLabel: "Buying Process",
     question: "How much is the booking amount for a DDJAY plot?",
@@ -156,7 +204,7 @@ const faqsData = [
       "Booking amounts vary by project and plot size, typically ranging from a fixed token amount to a percentage of the total plot value. Our sales team shares the exact figure along with the payment schedule for each specific project during consultation."
   },
   {
-    id: 18,
+    id: 24,
     category: "process",
     categoryLabel: "Buying Process",
     question: "What payment plans are available for plots in Gurgaon?",
@@ -164,7 +212,7 @@ const faqsData = [
       "Most projects offer a construction-linked or time-linked payment plan, alongside a down-payment plan for buyers who prefer to pay a larger portion upfront in exchange for a rebate. Specific plan structures differ by project and are shared during the consultation stage."
   },
   {
-    id: 19,
+    id: 25,
     category: "process",
     categoryLabel: "Buying Process",
     question: "How long does the plot buying process take from booking to registry?",
@@ -172,7 +220,7 @@ const faqsData = [
       "From initial consultation to registry, the process typically takes a few weeks to a couple of months, depending on loan processing time, document readiness, and the developer's registry scheduling. Our team works to keep this timeline as efficient as possible."
   },
   {
-    id: 20,
+    id: 26,
     category: "process",
     categoryLabel: "Buying Process",
     question: "Which sectors and areas in Gurgaon do you cover?",
@@ -182,7 +230,7 @@ const faqsData = [
 
   // ── Category: Financing & Bank Loans ──
   {
-    id: 21,
+    id: 27,
     category: "loans",
     categoryLabel: "Financing & Bank Loans",
     question: "Can I get a bank loan for a DDJAY plot in Gurgaon?",
@@ -190,7 +238,7 @@ const faqsData = [
       "Yes, most major banks and housing finance companies offer plot loans for DDJAY properties in Gurgaon, since these projects are HARERA-registered and carry clear title documentation. Loan-to-value ratio and eligibility depend on the bank's internal policy and the applicant's credit profile."
   },
   {
-    id: 22,
+    id: 28,
     category: "loans",
     categoryLabel: "Financing & Bank Loans",
     question: "What percentage of the plot value can I get as a bank loan?",
@@ -198,7 +246,7 @@ const faqsData = [
       "Banks generally finance up to 70-80% of the plot's value for eligible applicants, though this varies based on the lender, the applicant's income profile, and the specific project's approval status with that bank. We recommend confirming the exact figure with your chosen bank during pre-approval."
   },
   {
-    id: 23,
+    id: 29,
     category: "loans",
     categoryLabel: "Financing & Bank Loans",
     question: "What documents are required for a plot loan in Haryana?",
@@ -206,7 +254,7 @@ const faqsData = [
       "Typical requirements include income proof (salary slips or ITRs), bank statements, KYC documents, the builder-buyer agreement, and the project's HARERA and title documents. Our team assists in coordinating with banking partners to streamline document submission."
   },
   {
-    id: 24,
+    id: 30,
     category: "loans",
     categoryLabel: "Financing & Bank Loans",
     question: "Do you help with bank loan pre-approval for plots?",
@@ -214,17 +262,25 @@ const faqsData = [
       "Yes, we coordinate with our banking partners to guide buyers through loan evaluation, documentation processing, and pre-approval, so financing does not delay your booking or registry timeline."
   },
 
-  // ── Category: Company & Service ──
+  // ── Category: Company, Investment & Partnerships ──
   {
-    id: 25,
+    id: 31,
     category: "company",
     categoryLabel: "Company & Service",
-    question: "Is investing in a DDJAY plot in Gurgaon a good option?",
+    question: "Is Gurgaon a good place to invest in real estate in 2026?",
     answer:
-      "Gurugram benefits from proximity to IGI Airport, expanding expressway infrastructure, and a concentration of corporate offices, which together support consistent demand for both residential and plotted developments. DDJAY plots specifically offer HARERA-backed documentation and bank loan eligibility, which many buyers find reassuring for long-term ownership. Historical trends suggest steady appreciation in well-located sectors, though actual returns depend on market conditions and should not be treated as guaranteed."
+      "Gurgaon remains one of North India's most active real estate markets, backed by strong employment growth in IT, finance, and manufacturing, along with continued infrastructure development along corridors like Dwarka Expressway and New Gurgaon. Property prices and demand have shown steady movement across residential and plotted segments, though like any market, outcomes depend on location, project type, and timing it's worth evaluating each opportunity on its own merits."
   },
   {
-    id: 26,
+    id: 32,
+    category: "company",
+    categoryLabel: "Company & Service",
+    question: "How do I become a channel partner with Dee Divine PropInfra?",
+    answer:
+      "You can apply directly through our channel partner portal by submitting your basic details and KYC documents. Once verified, you get access to project brochures, pricing sheets, and a defined commission structure to start bringing in buyers."
+  },
+  {
+    id: 33,
     category: "company",
     categoryLabel: "Company & Service",
     question: "Do you charge a fee for property consultation?",
@@ -232,7 +288,7 @@ const faqsData = [
       "Initial consultation and property shortlisting with our team is free of charge for buyers. Any applicable service or advisory fees, where relevant, are disclosed transparently before any engagement."
   },
   {
-    id: 27,
+    id: 34,
     category: "company",
     categoryLabel: "Company & Service",
     question: "How does Dee Divine PropInfra verify its property listings?",
@@ -240,7 +296,7 @@ const faqsData = [
       "Every listing goes through a due diligence process covering HARERA registration, developer track record, land title status, and municipal approvals before it is added to our portfolio."
   },
   {
-    id: 28,
+    id: 35,
     category: "company",
     categoryLabel: "Company & Service",
     question: "Do you also assist with renting properties in Delhi NCR?",
@@ -248,7 +304,7 @@ const faqsData = [
       "Yes, in addition to plotted developments and residential sales, we assist buyers and tenants with verified rental listings across Delhi, Noida, and Gurgaon, including 2BHK, 3BHK, and luxury apartment options."
   },
   {
-    id: 29,
+    id: 36,
     category: "company",
     categoryLabel: "Company & Service",
     question: "How can I contact the Dee Divine PropInfra team directly?",
@@ -276,8 +332,26 @@ export default function FaqContent() {
     return matchesCategory && matchesSearch;
   });
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqsData.map((faq) => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  };
+
   return (
     <div className="w-full pb-20">
+      {/* Insert JSON-LD Schema markup into Head */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       
       {/* ── HERO BANNER SECTION ── */}
       <section className="bg-[#0c0d12] text-white py-20 px-6 md:px-16 border-b border-white/10 relative overflow-hidden">

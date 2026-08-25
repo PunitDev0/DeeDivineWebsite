@@ -4,24 +4,36 @@ import React, { useState } from "react";
 
 const faqs = [
   {
-    question: "Why is Gurugram the top choice for real estate investments in North India?",
-    answer: "Gurugram has emerged as the premier investment hub due to massive infrastructural growth, proximity to the IGI Airport, and the expansion of key expressway corridors like Dwarka Expressway and Golf Course Road Ext. It offers high appreciation rates (10%-15% annually), premium corporate headquarters, and high rental yield opportunities."
+    question: "Is Gurgaon a good place to invest in real estate in 2026?",
+    answer: "Gurgaon remains one of North India's most active real estate markets, backed by strong employment growth in IT, finance, and manufacturing, along with continued infrastructure development along corridors like Dwarka Expressway and New Gurgaon. Property prices and demand have shown steady movement across residential and plotted segments, though like any market, outcomes depend on location, project type, and timing it's worth evaluating each opportunity on its own merits."
   },
   {
-    question: "How does Dee Divine Propinfra ensure properties are verified and RERA-approved?",
-    answer: "Our legal and sales compliance teams verify every listing against the Haryana Real Estate Regulatory Authority (HARERA) database before onboarding. We audit registration numbers, developer records, land titles, and project compliance timelines so that your investment is 100% safe and secure."
+    question: "What is DDJAY and how does it work in Gurgaon?",
+    answer: "DDJAY (Deen Dayal Jan Awas Yojna) is a Haryana government scheme that allows licensed developers to create affordable, plotted colonies with defined infrastructure standards. Buyers get direct ownership of a plot rather than a built unit, along with access to planned roads, sewage, and other civic amenities as per the scheme's layout norms. It's a popular route for buyers who want land ownership with more construction flexibility."
   },
   {
-    question: "What financial and documentation assistance do you offer to property buyers?",
-    answer: "We offer end-to-end guidance through our strategic banking partnerships. Our advisory team coordinates the entire property buying lifecycle, including loan evaluations, documentation processing, legal title reviews, registry formatting, and final execution checks."
+    question: "Is Dee Divine PropInfra RERA/HARERA registered?",
+    answer: "Yes. Dee Divine PropInfra operates under RERA Certificate No. 902 4611 RC/HARERA/GGM/3889/3484/2025/766. This registration means project details, layout plans, and timelines are documented and available for verification, giving buyers a transparent basis to evaluate any project before making a decision."
   },
   {
-    question: "Are there plotted developments under Deen Dayal Jan Awas Yojna (DDJAY) available?",
-    answer: "Yes, we deal extensively in plotted developments under Haryana's DDJAY scheme. These plots offer excellent zoning features, gated community parameters, bank loan capabilities up to 80%, and modular construction options across sectors of Gurugram."
+    question: "What is the price range for DDJAY plots in Gurgaon?",
+    answer: "Pricing for DDJAY plots varies based on location, plot size, and the specific phase of development. Rather than quoting a fixed range here, we'd recommend checking current inventory directly, since prices are updated as new phases and sectors open up — this ensures you're working with accurate, current figures rather than outdated estimates."
   },
   {
-    question: "How can I schedule a site visit or consultation with a Dee Divine expert?",
-    answer: "You can schedule a private, guided site tour by clicking the 'Book Consultation' button or submitting an enquiry on our Contact form. We provide personalized transport support, detailed pricing summaries, brochures, and dedicated executive assistance on-site."
+    question: "Which areas in Gurgaon are best for plotted development investment?",
+    answer: "Corridors like New Gurgaon and Dwarka Expressway have seen consistent plotted-development activity due to improving connectivity and civic infrastructure. The right area ultimately depends on your budget, purpose (end-use vs. long-term holding), and how soon you'd want access to developed infrastructure."
+  },
+  {
+    question: "Can NRIs invest in Dee Divine PropInfra projects?",
+    answer: "Yes, NRIs can invest in our projects, subject to standard RBI and FEMA guidelines applicable to property purchases by non-resident Indians. Our team can walk you through the documentation and remittance process specific to NRI buyers."
+  },
+  {
+    question: "How do I become a channel partner with Dee Divine PropInfra?",
+    answer: "You can apply directly through our channel partner portal by submitting your basic details and KYC documents. Once verified, you get access to project brochures, pricing sheets, and a defined commission structure to start bringing in buyers."
+  },
+  {
+    question: "How do I book a site visit with Dee Divine PropInfra?",
+    answer: "You can schedule a site visit by filling out the enquiry form on our website or reaching out via the listed contact number/WhatsApp. Our team will follow up to understand your requirements and arrange a convenient time."
   }
 ];
 
