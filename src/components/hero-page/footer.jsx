@@ -134,6 +134,7 @@ export default function Footer() {
               { name: "What is DDJAY?", href: "/what-is-deen-dayal-jan-awas-yojna-ddjay-guide" },
               { name: "DDJAY Eligibility & Documents", href: "/ddjay-eligibility-and-documents-checklist" },
               { name: "DDJAY Loan & Financing Guide", href: "/ddjay-loan-financing-guide" },
+              { name: "DDJAY Gurgaon Guide 2026", href: "/deen-dayal-plots-gurgaon-ddjay-guide-2026" },
             ].map((resource, i) => (
               <li key={i}>
                 <Link
