@@ -107,6 +107,7 @@ export default function Footer() {
               { name: "Property Investment", href: "/property-investment-in-gurgaon" },
               { name: "Residential Property", href: "#" },
               { name: "Commercial Property", href: "#" },
+              { name: "Best Real Estate Company in Gurgaon", href: "/best-real-estate-company-in-gurgaon" },
             ].map((service, i) => (
               <li key={i}>
                 <Link
