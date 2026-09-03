@@ -260,7 +260,7 @@ export default function PropertyInvestmentGurgaonContent() {
               Real Estate Investment in Gurgaon: Key Factors
             </h2>
             <p className="text-neutral-600 text-sm mt-2 max-w-3xl">
-              Real Estate Investment in Gurgaon can offer investors access to one of the NCR&apos;s most diverse property markets. Established locations provide mature infrastructure, while emerging corridors offer growth linked to future development.
+              <Link href="https://deedivinepropinfra.com/property-investment-in-gurgaon" className="text-neutral-900 font-bold">Real Estate Investment in Gurgaon</Link> can offer investors access to one of the NCR&apos;s most diverse property markets. Established locations provide mature infrastructure, while emerging corridors offer growth linked to future development.
             </p>
           </div>
 
@@ -321,7 +321,7 @@ export default function PropertyInvestmentGurgaonContent() {
               Best Areas for Property Investment in Gurgaon
             </h2>
             <p className="text-neutral-600 text-sm mt-2">
-              There is no single best location for every investor. The Best Areas for Property Investment in Gurgaon depend on budget, investment horizon, property type, and intended use.
+              There is no single best location for every investor. <Link href="https://deedivinepropinfra.com/blog/real-estate-investment-in-gurgaon-2026-guide-trends" className="text-neutral-900 font-bold">The Best Areas for Property Investment in Gurgaon</Link> depend on budget, investment horizon, property type, and intended use.
             </p>
           </div>
 
@@ -409,7 +409,7 @@ export default function PropertyInvestmentGurgaonContent() {
                 Property Investment Company in Gurgaon
               </h2>
               <p className="text-xs sm:text-sm text-neutral-600 leading-relaxed mb-4">
-                Finding the right Property Investment Company in Gurgaon is important when you need guidance across multiple property options. Vassta Consultancy focuses on a research-led approach to property evaluation, helping clients explore residential, commercial, plotted, and luxury investment opportunities across Gurgaon.
+                <Link href="https://deedivinepropinfra.com/property-investment-in-gurgaon" className="text-neutral-900 font-bold">Finding the right Property Investment Company in Gurgaon</Link> is important when you need guidance across multiple property options. Vassta Consultancy focuses on a research-led approach to property evaluation, helping clients explore residential, commercial, plotted, and luxury investment opportunities across Gurgaon.
               </p>
               <p className="text-xs sm:text-sm text-neutral-600 leading-relaxed font-medium">
                 Our role is to provide clarity around the opportunity, highlight key considerations, and help investors compare suitable options based on their individual requirements.
@@ -507,7 +507,7 @@ export default function PropertyInvestmentGurgaonContent() {
             <span>Disclaimer</span>
           </div>
           <p>
-            Property investment involves market risks, and returns are not guaranteed. The information provided by Vassta Consultancy is for general informational and consultancy purposes only and should not be considered financial, legal, or investment advice. Investors should independently verify project, regulatory, legal, pricing, tax, and financial information before making any investment decision.
+            Property investment involves market risks, and returns are not guaranteed. The information provided by <Link href="https://deedivinepropinfra.com/vassta-consultancy" className="text-neutral-900 font-bold">Vassta Consultancy</Link> is for general informational and consultancy purposes only and should not be considered financial, legal, or investment advice. Investors should independently verify project, regulatory, legal, pricing, tax, and financial information before making any investment decision.
           </p>
         </div>
 

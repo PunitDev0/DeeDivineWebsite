@@ -74,7 +74,7 @@ export default function DDJAYLoanContent() {
 
             <div className="bg-white/5 backdrop-blur-md rounded-2xl p-6 border border-white/10 text-neutral-300 text-sm sm:text-base leading-relaxed mb-8">
               <p>
-                Buying a plot under the <strong className="text-white font-bold">Deen Dayal Jan Awas Yojna</strong> is affordable by design, but most buyers still don&apos;t pay the full amount upfront. This guide covers home loans for DDJAY plot options, DDJAY plot loan eligibility, how the payment plan works, and what to expect from banks when you apply for financing.
+                Buying a plot under the <Link href="https://deedivinepropinfra.com/ddjay-loan-financing-guide" className="text-white font-bold">Deen Dayal Jan Awas Yojna</Link> is affordable by design, but most buyers still don&apos;t pay the full amount upfront. This guide covers home loans for DDJAY plot options, DDJAY plot loan eligibility, how the payment plan works, and what to expect from banks when you apply for financing.
               </p>
               <div className="flex flex-wrap gap-3 mt-4 text-xs font-medium">
                 <Link href="/ddjay-eligibility-and-documents-checklist" className="text-red-400 hover:text-red-300 underline flex items-center gap-1">
@@ -397,7 +397,7 @@ export default function DDJAYLoanContent() {
 
             <div className="space-y-4 text-neutral-600 leading-relaxed text-sm sm:text-base">
               <p>
-                <strong className="text-neutral-900 font-bold">DDJAY plot investment returns</strong> are driven by proximity to highways, speed of infrastructure rollout (roads, water, electricity), and neighborhood development.
+                <Link href="https://deedivinepropinfra.com/ddjay-loan-financing-guide" className="text-neutral-900 font-bold">DDJAY plot investment returns</Link> are driven by proximity to highways, speed of infrastructure rollout (roads, water, electricity), and neighborhood development.
               </p>
               <p>
                 Because plots are sold at policy-linked rates at allotment, early buyers in well-located corridors often see strong long-term appreciation as surrounding sectors mature.

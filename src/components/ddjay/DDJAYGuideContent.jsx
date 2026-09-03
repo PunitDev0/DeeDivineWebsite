@@ -74,7 +74,7 @@ export default function DDJAYGuideContent() {
 
             <div className="bg-white/5 backdrop-blur-md rounded-2xl p-6 border border-white/10 text-neutral-300 text-sm sm:text-base leading-relaxed mb-8">
               <p>
-                If you are exploring affordable plots in Haryana, chances are you have come across the term <strong className="text-white font-bold">DDJAY</strong>. So what is Deen Dayal Jan Awas Yojna, exactly? It is a state government policy that lets private developers build low-rise, plotted colonies for middle-income and lower-income families across Haryana. Instead of buying a flat in a high-rise tower, buyers get an actual plot of land, or in some layouts, an independent floor with its own registry. This guide walks you through the full form, eligibility, registration process, required documents, verification steps, and how DDJAY plots compare with regular licensed colony plots.
+                If you are exploring affordable plots in Haryana, chances are you have come across the term <strong className="text-white font-bold">DDJAY</strong>. So <Link href="https://deedivinepropinfra.com/what-is-deen-dayal-jan-awas-yojna-ddjay-guide" className="text-white font-bold">what is Deen Dayal Jan Awas Yojna, exactly?</Link> It is a state government policy that lets private developers build low-rise, plotted colonies for middle-income and lower-income families across Haryana. Instead of buying a flat in a high-rise tower, buyers get an actual plot of land, or in some layouts, an independent floor with its own registry. This guide walks you through the full form, eligibility, registration process, required documents, verification steps, and how DDJAY plots compare with regular licensed colony plots.
               </p>
             </div>
 
@@ -137,7 +137,7 @@ export default function DDJAYGuideContent() {
             
             <div className="space-y-4 text-neutral-600 leading-relaxed text-sm sm:text-base">
               <p>
-                <strong className="text-neutral-900 font-bold">DDJAY</strong> stands for <strong className="text-neutral-900 font-bold">Deen Dayal Jan Awas Yojna</strong>. In English, it roughly translates to <em>"Deen Dayal Public Housing Scheme."</em>
+                <strong className="text-neutral-900 font-bold">DDJAY</strong> stands for <Link href="https://deedivinepropinfra.com/what-is-deen-dayal-jan-awas-yojna-ddjay-guide" className="text-neutral-900 font-bold">Deen Dayal Jan Awas Yojna</Link>. In English, it roughly translates to <em>"Deen Dayal Public Housing Scheme."</em>
               </p>
               <p>
                 It was introduced by the Haryana government in 2016 under the state&apos;s <strong className="text-neutral-900">Affordable Plotted Housing Policy</strong>, named after the eminent political thinker Pandit Deen Dayal Upadhyaya.
@@ -231,7 +231,7 @@ export default function DDJAYGuideContent() {
 
             <div className="space-y-4 text-neutral-600 leading-relaxed text-sm sm:text-base">
               <p>
-                Eligibility under DDJAY is kept fairly open, which is part of why the scheme sees such heavy demand at every project launch. Here is who can typically apply:
+                <Link href="https://deedivinepropinfra.com/ddjay-eligibility-and-documents-checklist" className="text-neutral-900 font-bold">Eligibility under DDJAY</Link> is kept fairly open, which is part of why the scheme sees such heavy demand at every project launch. Here is who can typically apply:
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 my-4">
