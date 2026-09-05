@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from './navbar'
 import HeroSection from './hero-section'
+import DdjayResidentialProjects from './ddjay-residential-projects'
 import StatsSection from './stats-section'
 import FeatureSections from './featured-section'
 import OngoingProject from './ongoing-project'
@@ -22,6 +23,7 @@ function HeroPage() {
        <HeroSection/>
        </div>
         <StatsSection/>
+        <DdjayResidentialProjects />
         <FeatureSections/>
         {/* <OngoingProject/> */}
         <PrimeLocations/>

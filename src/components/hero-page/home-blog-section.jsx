@@ -13,9 +13,12 @@ export default async function HomeBlogSection() {
   return (
     <section className="max-w-7xl mx-auto px-6 md:px-12 py-16 bg-white sm:bg-transparent">
       <div className="text-center max-w-5xl mx-auto mb-12">
-        <h2 className="text-2xl md:text-3xl lg:text-4xl font-black uppercase tracking-tight text-[#0c0d12] mb-4 whitespace-nowrap">
-          Real Estate Research & Market Analysis
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-black uppercase tracking-tight text-[#0c0d12] mb-4">
+          DDJAY Plots Real Estate Market in Gurgaon: 2026 Trends & Analysis
         </h2>
+        <p className="text-neutral-600 text-sm md:text-base leading-relaxed mt-4">
+          Pricing trends, demand drivers, and DTCP approval status shaping the DDJAY plots market in Gurgaon for 2026.
+        </p>
       </div>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
