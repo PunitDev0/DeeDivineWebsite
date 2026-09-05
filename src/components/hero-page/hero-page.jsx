@@ -13,6 +13,7 @@ import BuyingRoadmap from './buying-roadmap'
 import FAQAccordion from './faq-accordion'
 import AnimatedWave from './animated-wave-top'
 import AnimatedWave2 from './animated-wave-bottom'
+import HomeBlogSection from './home-blog-section'
 
 function HeroPage() {
   return (
@@ -28,6 +29,7 @@ function HeroPage() {
         <BuyingRoadmap />
         {/* <AnimatedWave/> */}
         <FeaturedEvents/> 
+        <HomeBlogSection />
         <FAQAccordion />
         {/* <AnimatedWave2/> */}
         <TestimonialsSection/>
