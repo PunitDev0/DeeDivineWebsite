@@ -327,7 +327,7 @@ export default function DeenDayalPlotsGurgaon2026Content() {
               A common misconception is that <strong className="text-neutral-900">&quot;DDJAY&quot;</strong> as a scheme name automatically means a plot is safe. That&apos;s only partly true. The scheme sets the framework—defined plot sizes, internal infrastructure norms, and pricing caps for affordable categories—but individual compliance still depends on the developer executing within that framework correctly.
             </p>
             <p>
-              When evaluating <strong>Deen Dayal Plots Gurgaon</strong>, separate two things: <em>the scheme&apos;s regulatory intent</em>, and <em>the specific project&apos;s actual approval paperwork</em>. A DTCP license number that doesn&apos;t match the marketed project name, or a HARERA registration still shown as &quot;pending,&quot; are red flags regardless of how well the scheme itself is designed.
+              When evaluating <Link href="https://deedivinepropinfra.com/deen-dayal-plots-gurgaon-ddjay-guide-2026"><strong>Deen Dayal Plots Gurgaon</strong></Link>, separate two things: <em>the scheme&apos;s regulatory intent</em>, and <em>the specific project&apos;s actual approval paperwork</em>. A DTCP license number that doesn&apos;t match the marketed project name, or a HARERA registration still shown as &quot;pending,&quot; are red flags regardless of how well the scheme itself is designed.
             </p>
           </div>
 
