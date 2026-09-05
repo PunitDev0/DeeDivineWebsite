@@ -9,7 +9,7 @@ export default function DdjayResidentialProjects() {
       id: 1,
       title: "Aaranya Greens",
       location: "Sonipat, Haryana",
-      image: "/assets/project1.jpeg",
+      image: "/assets/project1-new.png",
       url: "https://deendayaljanawasyojnareg.com/",
       type: "DDJAY Plots",
     },
@@ -17,7 +17,7 @@ export default function DdjayResidentialProjects() {
       id: 2,
       title: "Deen Dayal Jan Awas Yojna",
       location: "Sector 27, Jhajjar",
-      image: "/assets/project2.jpeg",
+      image: "/assets/project2-new.png",
       url: "https://www.deendayaljanawasyojanajhajjar.org/",
       type: "Residential",
     },
@@ -25,7 +25,7 @@ export default function DdjayResidentialProjects() {
       id: 3,
       title: "Shree KRISHNA HERITAGE",
       location: "Jhajjar",
-      image: "/assets/project3.jpeg",
+      image: "/assets/project3-new.png",
       url: "https://www.deendayaljanawasyojanajhajjar.com/",
       type: "Premium Plots",
     },
@@ -52,17 +52,20 @@ export default function DdjayResidentialProjects() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (
-            <div
+            <Link
               key={project.id}
+              href={project.url}
+              target="_blank"
+              rel="noopener noreferrer"
               className="group bg-white border border-neutral-100 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-500 flex flex-col justify-between rounded-sm"
             >
               <div>
-                <div className="relative h-60 w-full bg-neutral-200 overflow-hidden">
+                <div className="relative h-60 w-full bg-[#0c0d12] overflow-hidden">
                   <Image
                     src={project.image}
                     alt={project.title}
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                    className="object-contain group-hover:scale-105 transition-transform duration-700 ease-out"
                   />
                   <div className="absolute top-4 left-4">
                     <span className="text-[10px] font-bold uppercase tracking-wider px-3 py-1.5 bg-[#0c0d12]/80 backdrop-blur-md text-white border border-white/10">
@@ -71,29 +74,17 @@ export default function DdjayResidentialProjects() {
                   </div>
                 </div>
                 
-                <div className="p-6 md:p-8">
-                  <h3 className="text-xl font-black text-[#0c0d12] uppercase tracking-wide mb-3 leading-snug group-hover:text-red-600 transition-colors">
+                <div className="p-5 md:p-6">
+                  <h3 className="text-xl font-black text-[#0c0d12] uppercase tracking-wide mb-2 leading-snug group-hover:text-red-600 transition-colors">
                     {project.title}
                   </h3>
-                  <div className="flex items-center gap-2 text-neutral-500 text-sm mb-6">
+                  <div className="flex items-center gap-2 text-neutral-500 text-sm">
                     <MapPin size={16} className="text-red-500" />
                     <span>{project.location}</span>
                   </div>
                 </div>
               </div>
-
-              <div className="p-6 md:p-8 pt-0 mt-auto">
-                <Link
-                  href={project.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full inline-flex items-center justify-between px-6 py-4 bg-neutral-50 hover:bg-[#0c0d12] text-[#0c0d12] hover:text-white border border-neutral-200 hover:border-[#0c0d12] text-xs font-black uppercase tracking-[0.15em] transition-all duration-300 group/btn"
-                >
-                  <span>View Project</span>
-                  <ArrowRight size={16} className="text-red-500 group-hover/btn:translate-x-1 transition-transform" />
-                </Link>
-              </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
