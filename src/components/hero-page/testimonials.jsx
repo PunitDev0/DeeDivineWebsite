@@ -213,9 +213,9 @@ export default function TestimonialsSlider() {
             href="https://www.google.com/search?q=dee+divine+group&rlz=1C5CHFA_enIN994IN996&oq=dee+divine+&gs_lcrp=EgZjaHJvbWUqBggBECMYJzIGCAAQRRg5MgYIARAjGCcyBggCECMYJzIHCAMQABiABDIHCAQQABiABDIHCAUQABiABDIHCAYQABiABDIHCAcQABiABNIBCTc3ODBqMGoxNagCCLACAfEFMzo8dAFP0fs&sourceid=chrome&source=chrome.rb&ie=UTF-8#sv=CAESzQEKuQEStgEKd0FKaVQ0dEtPOWlHakI0N1RKNlZwT1htbU1TenZ6dWlJdjBVM3U0MG02czZaU3pzOUlmR2FqVlBzMk54M0RjOXJHNzd5bExpOVBYWWR4R0sxODZCcm1MT0VwalBKNkVucm9VUG53Zlg5RThHNnZpdGRpalMtTU9nEhdWTDZmYXJ5S0pmaWI0LUVQdXIzb3FRbxoiQURzcjlmUVlPbUdIVXR1Y0Q4X1pTMWVOVHVmRnhiRFd6URIEODA1MRoBMyoAMAA4AUAAGAAg5_KuuwVKAhAC"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex h-11 items-center justify-center rounded-md bg-[#e63946] px-8 text-sm font-semibold uppercase tracking-wider text-white transition-colors hover:bg-[#d62828] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500 disabled:pointer-events-none disabled:opacity-50"
+            className="inline-flex items-center justify-center px-8 py-3.5 bg-[#0c0d12] hover:bg-red-600 text-white text-sm font-black uppercase tracking-wider transition-colors duration-300 rounded-full"
           >
-            View More Reviews
+            View More Reviews →
           </a>
         </div>
       </div>
