@@ -1,6 +1,7 @@
 import "./globals.css";
 import Navbar from "@/components/hero-page/navbar";
 import Footer from "@/components/hero-page/footer";
+import FloatingSocialWidget from "@/components/FloatingSocialWidget";
 import { Poppins } from "next/font/google";
 import { Toaster } from "sonner";
 import SmoothScroll from "@/components/SmoothScroll";
@@ -61,6 +62,7 @@ export default function RootLayout({ children }) {
         <Navbar />
         {children}
         <Toaster/>
+        <FloatingSocialWidget />
         <Footer />
       </body>
     </html>

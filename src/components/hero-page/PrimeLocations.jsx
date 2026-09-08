@@ -4,69 +4,88 @@ import Image from "next/image";
 
 const locations = [
   {
-    name: "Golf Course Road",
-    image: "/assets/golf-course-road.webp",
-  },
-  {
     name: "Dwarka Expressway",
-    image: "/assets/dwarka-expressway.webp",
-  },
-  {
-    name: "Golf Course Ext. Road",
-    image: "/assets/golf-course-ext.webp",
-  },
-  {
-    name: "Sohna Road",
-    image: "/assets/sonha-road.webp",
+    image: "/assets/locations/dwarka-expressway.png",
+    className: "col-span-1 sm:col-span-2 row-span-1", // Spans 2 columns on desktop
   },
   {
     name: "SPR Road",
-    image: "/assets/spr-road.webp",
+    image: "/assets/locations/spr-road.png",
+    className: "col-span-1",
+  },
+  {
+    name: "New Gurgaon",
+    image: "/assets/locations/new-gurgaon.png",
+    className: "col-span-1",
+  },
+  {
+    name: "Manesar",
+    image: "/assets/locations/manesar.png",
+    className: "col-span-1",
+  },
+  {
+    name: "Golf Course Road",
+    image: "/assets/locations/golf-course-road.png",
+    className: "col-span-1",
+  },
+  {
+    name: "Golf Course Ext. Road",
+    image: "/assets/locations/golf-course-ext-road.png",
+    className: "col-span-1",
+  },
+  {
+    name: "Sohna Road",
+    image: "/assets/locations/sohna-road.png",
+    className: "col-span-1",
   },
 ];
 
 export default function PrimeLocations() {
   return (
-    <section className="py-24 bg-[#ffffff] text-center border-b border-neutral-100">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="py-24 bg-[#f8f6f5] text-center border-b border-neutral-100">
+      <div className="max-w-6xl mx-auto px-6">
         
         {/* Title */}
-        <div className="flex flex-col items-center mb-16">
+        <div className="flex flex-col items-center mb-16 text-center">
           <div className="flex items-center gap-3 mb-4">
             <div className="w-6 h-[2px] bg-red-500" />
             <span className="text-[10px] font-extrabold uppercase tracking-[0.35em] text-[#e63946]">
               Destinations
             </span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tight text-[#0c0d12] max-w-2xl">
-            Explore Properties Across Prime Locations
+          <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tight text-[#0c0d12] max-w-2xl mb-4">
+            Create the Perfect Home at the Perfect Place
           </h2>
+          <p className="text-neutral-500 text-sm md:text-base max-w-2xl">
+            Choose Your Location, and Let Us Create a Home That Matches Your Imagination
+          </p>
         </div>
 
-        {/* Location Circles Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8 justify-center">
+        {/* Location Asymmetric Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[250px]">
           {locations.map((loc, index) => (
             <div
               key={index}
-              className="flex flex-col items-center group hover:scale-102 transition-all duration-300"
+              className={`relative rounded-3xl overflow-hidden group cursor-pointer ${loc.className}`}
             >
-              {/* Circle Wrapper */}
-              <div className="w-24 h-24 sm:w-36 sm:h-36 rounded-full overflow-hidden p-1.5 border border-neutral-100 bg-white group-hover:border-red-500/50 shadow-sm transition-all duration-500">
-                <div className="relative w-full h-full rounded-full overflow-hidden">
-                  <Image
-                    src={loc.image}
-                    unoptimized
-                    alt={loc.name}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-700"
-                  />
-                </div>
-              </div>
+              {/* Image */}
+              <Image
+                src={loc.image}
+                unoptimized
+                alt={loc.name}
+                fill
+                className="object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out"
+              />
               
-              {/* Label */}
-              <p className="mt-4 text-[#0c0d12] font-black uppercase tracking-wider text-[11px]">
-                {loc.name}
-              </p>
+              {/* Gradient Overlay for Text Readability */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-300" />
+              
+              {/* Text Label */}
+              <div className="absolute bottom-6 left-6 text-left">
+                <h3 className="text-white text-sm md:text-base font-black uppercase tracking-wider">
+                  {loc.name}
+                </h3>
+              </div>
             </div>
           ))}
         </div>
