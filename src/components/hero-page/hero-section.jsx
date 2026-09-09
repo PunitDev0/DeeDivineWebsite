@@ -138,8 +138,8 @@ export default function HeroSection() {
             {/* Sub-heading badge */}
             <div className="hero-badge flex items-start space-x-3 opacity-0 pt-1">
               <span className="w-8 h-[1px] bg-red-500 shrink-0 mt-2"></span>
-              <span className="text-[10px] font-extrabold tracking-[0.4em] text-neutral-300 uppercase leading-relaxed">
-                Trusted Projects Across HR, Delhi NCR, UP, PB, MP, JH, GJ, RJ & Goa
+              <span className="text-xs font-extrabold tracking-widest text-neutral-300 uppercase leading-relaxed">
+                Trusted Projects Across Haryana, Delhi NCR, Uttar Pradesh, Punjab, Madhya Pradesh, Jharkhand, Gujarat, Rajasthan & Goa
               </span>
             </div>
 
