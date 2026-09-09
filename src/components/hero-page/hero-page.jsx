@@ -16,7 +16,7 @@ import HomeBlogSection from './home-blog-section'
 
 function HeroPage() {
   return (
-    <div className=''>
+    <div className='overflow-x-hidden'>
        <div className='sm:px-5 px-2'>
        <HeroSection/>
        </div>

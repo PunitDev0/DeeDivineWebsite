@@ -42,21 +42,21 @@ const locations = [
 
 export default function PrimeLocations() {
   return (
-    <section className="py-24 bg-[#f8f6f5] text-center border-b border-neutral-100">
-      <div className="max-w-6xl mx-auto px-6">
+    <section className="py-12 md:py-24 bg-[#f8f6f5] text-center border-b border-neutral-100">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
         
         {/* Title */}
-        <div className="flex flex-col items-center mb-16 text-center">
+        <div className="flex flex-col items-center mb-10 md:mb-16 text-center">
           <div className="flex items-center gap-3 mb-4">
-            <div className="w-6 h-[2px] bg-red-500" />
-            <span className="text-[10px] font-extrabold uppercase tracking-[0.35em] text-[#e63946]">
+            <div className="w-4 sm:w-6 h-[2px] bg-red-500" />
+            <span className="text-[9px] sm:text-[10px] font-extrabold uppercase tracking-[0.2em] sm:tracking-[0.35em] text-[#e63946]">
               Destinations
             </span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tight text-[#0c0d12] max-w-2xl mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-black uppercase tracking-tight text-[#0c0d12] max-w-2xl mb-4 px-2">
             Create the Perfect Home at the Perfect Place
           </h2>
-          <p className="text-neutral-500 text-sm md:text-base max-w-2xl">
+          <p className="text-neutral-500 text-xs sm:text-sm md:text-base max-w-2xl px-2">
             Choose Your Location, and Let Us Create a Home That Matches Your Imagination
           </p>
         </div>

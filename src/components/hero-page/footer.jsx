@@ -18,7 +18,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="relative bg-[#0c0d12] text-white pt-20 pb-12 px-6 md:px-16 overflow-hidden border-t border-white/5">
+    <footer className="relative bg-[#0c0d12] text-white pt-12 md:pt-20 pb-8 md:pb-12 px-4 sm:px-6 md:px-16 overflow-hidden border-t border-white/5">
       {/* Decorative radial background overlay */}
       <div className="absolute inset-0 pointer-events-none z-0">
         <div

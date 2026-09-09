@@ -103,7 +103,59 @@ export default function HeroSection() {
       location: "Sector 79 Gurgaon",
       image: "/assets/AuraAvenue.jpg",
     },
+    {
+      id: 5,
+      title: "Om Dream Homes",
+      type: "RESIDENTIAL",
+      price: "₹ 1 Cr*",
+      location: "Sec-27 Jhajjar",
+      image: "/assets/om dream home.webp",
+    },
+    {
+      id: 6,
+      title: "Shri Krishna Heritage",
+      type: "RESIDENTIAL",
+      price: "₹ 1 Cr*",
+      location: "Sector 9A, Jhajjar",
+      image: "/assets/Shri-Krishna-Heritage-jhajjar.webp",
+    },
   ];
+
+  const PropertyCard = ({ property }) => (
+    <div className="group bg-white border border-neutral-100 flex flex-col overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 h-full">
+      {/* Image wrapper */}
+      <div className="relative aspect-video w-full overflow-hidden bg-neutral-200">
+        <Image
+          src={property.image}
+          alt={property.title}
+          fill
+          sizes="(max-width: 768px) 100vw, 33vw"
+          className="object-cover group-hover:scale-105 transition-transform duration-500"
+        />
+        <div className="absolute top-3 right-3 bg-[#0c0d12]/80 backdrop-blur-sm px-3 py-1 border border-white/10 text-[9px] uppercase tracking-wider text-white font-bold">
+          {property.type}
+        </div>
+      </div>
+
+      {/* Info contents */}
+      <div className="p-5 flex-1 flex flex-col justify-between">
+        <div>
+          <h3 className="text-[13px] font-black uppercase tracking-wider text-[#0c0d12] mb-1.5 truncate">
+            {property.title}
+          </h3>
+          <div className="flex items-center gap-1.5 text-neutral-500 text-xs mt-1">
+            <MapPin size={12} className="text-red-500" />
+            <span className="truncate">{property.location}</span>
+          </div>
+        </div>
+
+        <div className="border-t border-neutral-100 mt-4 pt-3 flex items-center justify-between">
+          <span className="text-[10px] font-bold text-neutral-400 uppercase tracking-wider">Starting Price</span>
+          <span className="text-xs font-black text-red-500">{property.price}</span>
+        </div>
+      </div>
+    </div>
+  );
 
   return (
     <div ref={containerRef} className="w-full flex flex-col bg-[#f8f9fa] border-b border-black/5">
@@ -132,16 +184,8 @@ export default function HeroSection() {
         <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-transparent z-1"></div>
 
         {/* Text Content Block */}
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-16 flex flex-col justify-end h-full pb-24 md:pb-32">
-          <div className="max-w-2xl text-left space-y-6">
-
-            {/* Sub-heading badge */}
-            <div className="hero-badge flex items-start space-x-3 opacity-0 pt-1">
-              <span className="w-8 h-[1px] bg-red-500 shrink-0 mt-2"></span>
-              <span className="text-xs font-extrabold tracking-widest text-neutral-300 uppercase leading-relaxed">
-                Trusted Projects Across Haryana, Delhi NCR, Uttar Pradesh, Punjab, Madhya Pradesh, Jharkhand, Gujarat, Rajasthan & Goa
-              </span>
-            </div>
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-16 flex flex-col justify-end h-full pb-20 sm:pb-24 md:pb-32">
+          <div className="max-w-2xl text-left space-y-4 sm:space-y-6">
 
             {/* Custom reveal heading */}
             <h1 className="text-3xl sm:text-4xl md:text-6xl font-black tracking-tight text-white uppercase leading-[1.08] overflow-hidden">
@@ -154,20 +198,28 @@ export default function HeroSection() {
               Explore thoughtfully planned residential and investment opportunities across multiple high-growth locations.
             </p>
 
+            {/* Sub-heading badge moved below description */}
+            <div className="hero-badge flex items-start space-x-2 sm:space-x-3 opacity-0 pt-2 sm:pt-4">
+              <span className="w-6 sm:w-8 h-[1px] bg-red-500 shrink-0 mt-2"></span>
+              <span className="text-[10px] sm:text-xs font-extrabold tracking-widest text-neutral-300 uppercase leading-relaxed max-w-lg">
+                Trusted Projects Across <span className="text-white font-black">Haryana, Delhi NCR, Uttar Pradesh, Punjab, Madhya Pradesh, Jharkhand, Gujarat, Rajasthan & Goa</span>
+              </span>
+            </div>
+
             {/* Minimal Grid Data Table */}
-            <div className="hero-fade-in grid grid-cols-3 gap-6 pt-6 border-t border-white/10 max-w-xs sm:max-w-sm opacity-0">
+            <div className="hero-fade-in grid grid-cols-3 gap-3 sm:gap-6 pt-4 sm:pt-6 border-t border-white/10 max-w-xs sm:max-w-sm opacity-0">
               <div>
-                <p className="text-[9px] font-bold text-neutral-500 tracking-widest uppercase mb-1">Expertise</p>
-                <p className="text-[11px] font-black text-white tracking-wide uppercase">Plots & Homes</p>
+                <p className="text-[8px] sm:text-[9px] font-bold text-neutral-500 tracking-widest uppercase mb-1">Expertise</p>
+                <p className="text-[10px] sm:text-[11px] font-black text-white tracking-wide uppercase">Plots & Homes</p>
               </div>
               <div>
-                <p className="text-[9px] font-bold text-neutral-500 tracking-widest uppercase mb-1">Focus</p>
-                <p className="text-[11px] font-black text-white tracking-wide uppercase">Gurugram</p>
+                <p className="text-[8px] sm:text-[9px] font-bold text-neutral-500 tracking-widest uppercase mb-1">Focus</p>
+                <p className="text-[10px] sm:text-[11px] font-black text-white tracking-wide uppercase">Gurugram</p>
               </div>
               <div>
-                <p className="text-[9px] font-bold text-neutral-500 tracking-widest uppercase mb-1">Status</p>
-                <p className="text-[11px] font-black text-emerald-400 tracking-wide uppercase flex items-center">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 mr-1.5 animate-pulse"></span>
+                <p className="text-[8px] sm:text-[9px] font-bold text-neutral-500 tracking-widest uppercase mb-1">Status</p>
+                <p className="text-[10px] sm:text-[11px] font-black text-emerald-400 tracking-wide uppercase flex items-center">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 mr-1 sm:mr-1.5 animate-pulse"></span>
                   RERA Appr.
                 </p>
               </div>
@@ -192,60 +244,35 @@ export default function HeroSection() {
             </span>
           </div>
 
-          <Swiper
-            modules={[Navigation, Autoplay]}
-            spaceBetween={24}
-            slidesPerView={1.2}
-            loop={true}
-            autoplay={{
-              delay: 4000,
-              disableOnInteraction: false,
-            }}
-            breakpoints={{
-              640: { slidesPerView: 2 },
-              1024: { slidesPerView: 4 },
-            }}
-            className="w-full"
-          >
+          {/* Mobile Swiper */}
+          <div className="md:hidden">
+            <Swiper
+              modules={[Navigation, Autoplay]}
+              spaceBetween={24}
+              slidesPerView={1.2}
+              loop={true}
+              autoplay={{
+                delay: 4000,
+                disableOnInteraction: false,
+              }}
+              className="w-full"
+            >
+              {properties.map((property) => (
+                <SwiperSlide key={property.id}>
+                  <PropertyCard property={property} />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
+
+          {/* Desktop & Tablet Grid */}
+          <div className="hidden md:grid grid-cols-2 lg:grid-cols-3 gap-6">
             {properties.map((property) => (
-              <SwiperSlide key={property.id}>
-                <div className="group bg-white border border-neutral-100 flex flex-col overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 h-full">
-
-                  {/* Image wrapper */}
-                  <div className="relative aspect-video w-full overflow-hidden bg-neutral-200">
-                    <Image
-                      src={property.image}
-                      alt={property.title}
-                      fill
-                      sizes="(max-width: 768px) 100vw, 25vw"
-                      className="object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                    <div className="absolute top-3 right-3 bg-[#0c0d12]/80 backdrop-blur-sm px-3 py-1 border border-white/10 text-[9px] uppercase tracking-wider text-white font-bold">
-                      {property.type}
-                    </div>
-                  </div>
-
-                  {/* Info contents */}
-                  <div className="p-5 flex-1 flex flex-col justify-between">
-                    <div>
-                      <h3 className="text-[13px] font-black uppercase tracking-wider text-[#0c0d12] mb-1.5 truncate">
-                        {property.title}
-                      </h3>
-                      <div className="flex items-center gap-1.5 text-neutral-500 text-xs mt-1">
-                        <MapPin size={12} className="text-red-500" />
-                        <span className="truncate">{property.location}</span>
-                      </div>
-                    </div>
-
-                    <div className="border-t border-neutral-100 mt-4 pt-3 flex items-center justify-between">
-                      <span className="text-[10px] font-bold text-neutral-400 uppercase tracking-wider">Starting Price</span>
-                      <span className="text-xs font-black text-red-500">{property.price}</span>
-                    </div>
-                  </div>
-                </div>
-              </SwiperSlide>
+              <div key={property.id}>
+                <PropertyCard property={property} />
+              </div>
             ))}
-          </Swiper>
+          </div>
         </div>
       </div>
     </div>

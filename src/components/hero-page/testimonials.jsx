@@ -156,18 +156,18 @@ export default function TestimonialsSlider() {
   };
 
   return (
-    <section className="bg-[#f8f9fa] py-24 px-6 md:px-16 border-t border-black/5">
+    <section className="bg-[#f8f9fa] py-12 md:py-24 px-4 sm:px-6 md:px-16 border-t border-black/5">
       <div className="max-w-7xl mx-auto text-center">
         
         {/* Title */}
-        <div className="flex flex-col items-center mb-16">
+        <div className="flex flex-col items-center mb-10 md:mb-16">
           <div className="flex items-center gap-3 mb-4">
-            <div className="w-6 h-[2px] bg-red-500" />
-            <span className="text-[10px] font-extrabold uppercase tracking-[0.35em] text-[#e63946]">
+            <div className="w-4 sm:w-6 h-[2px] bg-red-500" />
+            <span className="text-[9px] sm:text-[10px] font-extrabold uppercase tracking-[0.2em] sm:tracking-[0.35em] text-[#e63946]">
               Testimonial
             </span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tight text-[#0c0d12]">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-black uppercase tracking-tight text-[#0c0d12] px-2">
             What Clients Say About Us
           </h2>
         </div>

@@ -43,23 +43,23 @@ export default function OurServices() {
   ];
 
   return (
-    <section className="py-24 px-6 md:px-16 bg-[#f8f9fa] border-b border-black/5">
+    <section className="py-12 md:py-24 px-4 sm:px-6 md:px-16 bg-[#f8f9fa] border-b border-black/5">
       <div className="max-w-7xl mx-auto text-center">
         
         {/* Title Header */}
-        <div className="flex flex-col items-center mb-16">
+        <div className="flex flex-col items-center mb-10 md:mb-16">
           <div className="flex items-center gap-3 mb-4">
-            <div className="w-6 h-[2px] bg-red-500" />
-            <span className="text-[10px] font-extrabold uppercase tracking-[0.35em] text-[#e63946]">
+            <div className="w-4 sm:w-6 h-[2px] bg-red-500" />
+            <span className="text-[9px] sm:text-[10px] font-extrabold uppercase tracking-[0.2em] sm:tracking-[0.35em] text-[#e63946]">
               End-to-End Solutions
             </span>
           </div>
           
-          <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tight text-[#0c0d12] max-w-3xl">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-black uppercase tracking-tight text-[#0c0d12] max-w-3xl px-2">
             Our Real Estate Consulting Services in Gurgaon
           </h2>
           
-          <p className="text-neutral-600 text-sm md:text-base leading-relaxed max-w-2xl mt-4">
+          <p className="text-neutral-600 text-xs sm:text-sm md:text-base leading-relaxed max-w-2xl mt-4 px-2">
             We offer comprehensive, end-to-end real estate consulting designed to simplify every step of your property journey:
           </p>
         </div>

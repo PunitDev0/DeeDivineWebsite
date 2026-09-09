@@ -59,7 +59,7 @@ export default function FAQAccordion() {
   };
 
   return (
-    <section className="bg-[#fafafa] py-24 px-6 md:px-16 border-t border-neutral-200/50">
+    <section className="bg-[#fafafa] py-12 md:py-24 px-4 sm:px-6 md:px-16 border-t border-neutral-200/50">
       
       {/* Insert JSON-LD Schema markup into Head */}
       <script
@@ -68,21 +68,21 @@ export default function FAQAccordion() {
       />
 
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 items-start">
           
           {/* LEFT: Text description */}
           <div className="lg:col-span-5">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-6 h-[2px] bg-red-500" />
-              <span className="text-[10px] font-extrabold uppercase tracking-[0.35em] text-[#e63946]">
+              <div className="w-4 sm:w-6 h-[2px] bg-red-500" />
+              <span className="text-[9px] sm:text-[10px] font-extrabold uppercase tracking-[0.2em] sm:tracking-[0.35em] text-[#e63946]">
                 Assistance
               </span>
             </div>
-            <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tight text-[#0c0d12]">
-              Frequently <br />
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-black uppercase tracking-tight text-[#0c0d12]">
+              Frequently <br className="hidden sm:block" />
               <span className="text-neutral-400">Asked Queries</span>
             </h2>
-            <p className="text-neutral-500 text-sm max-w-sm mt-5 leading-relaxed">
+            <p className="text-neutral-500 text-xs sm:text-sm max-w-sm mt-4 sm:mt-5 leading-relaxed">
               Have doubts about land acquisitions, RERA registration parameters, or registry guidelines? Browse through our responses or contact our representative directly.
             </p>
             

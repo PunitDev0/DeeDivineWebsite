@@ -49,17 +49,17 @@ export default function StatsSection() {
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-2 md:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-white/5">
           {stats.map((stat, index) => (
-            <div key={index} className="flex flex-col items-center py-10 md:py-14 text-center px-4">
+            <div key={index} className="flex flex-col items-center py-8 md:py-14 text-center px-2 sm:px-4">
               {/* Stat number holding ref */}
               <span
                 ref={(el) => (valRefs.current[index] = el)}
-                className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-white"
+                className="text-2xl sm:text-4xl md:text-5xl font-black tracking-tight text-white"
               >
                 0{stat.suffix}
               </span>
               
               {/* Label */}
-              <span className="text-[10px] sm:text-xs font-bold tracking-[0.3em] uppercase text-white/40 mt-3">
+              <span className="text-[9px] sm:text-[10px] md:text-xs font-bold tracking-widest sm:tracking-[0.3em] uppercase text-white/40 mt-2 sm:mt-3">
                 {stat.label}
               </span>
             </div>
