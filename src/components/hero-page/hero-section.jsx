@@ -42,11 +42,11 @@ export default function HeroSection() {
       gsap.fromTo(
         ".hero-title-line",
         { opacity: 0, y: 50 },
-        { 
-          opacity: 1, 
-          y: 0, 
-          duration: 1.2, 
-          stagger: 0.15, 
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1.2,
+          stagger: 0.15,
           ease: "power4.out",
           delay: 0.1
         }
@@ -56,13 +56,13 @@ export default function HeroSection() {
       gsap.fromTo(
         ".hero-fade-in",
         { opacity: 0, y: 25 },
-        { 
-          opacity: 1, 
-          y: 0, 
-          duration: 1, 
-          stagger: 0.12, 
-          ease: "power3.out", 
-          delay: 0.5 
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          stagger: 0.12,
+          ease: "power3.out",
+          delay: 0.5
         }
       );
     }, containerRef);
@@ -109,14 +109,13 @@ export default function HeroSection() {
     <div ref={containerRef} className="w-full flex flex-col bg-[#f8f9fa] border-b border-black/5">
       {/* 🏠 Main Hero Banner */}
       <section className="relative w-full h-[78vh] min-h-[550px] flex items-center overflow-hidden bg-neutral-900 z-10 border-b border-white/5">
-        
+
         {/* Background Image Slideshow with smooth crossfade */}
         {bgImages.map((src, index) => (
           <div
             key={src}
-            className={`absolute inset-0 transition-opacity duration-[1200ms] ease-in-out ${
-              index === activeBg ? "opacity-100 scale-100" : "opacity-0 scale-105"
-            }`}
+            className={`absolute inset-0 transition-opacity duration-[1200ms] ease-in-out ${index === activeBg ? "opacity-100 scale-100" : "opacity-0 scale-105"
+              }`}
             style={{ transitionProperty: "opacity, transform" }}
           >
             <Image
@@ -133,26 +132,26 @@ export default function HeroSection() {
         <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-transparent z-1"></div>
 
         {/* Text Content Block */}
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-16 flex flex-col justify-end h-full pb-16">
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-16 flex flex-col justify-end h-full pb-24 md:pb-32">
           <div className="max-w-2xl text-left space-y-6">
-            
+
             {/* Sub-heading badge */}
-            <div className="hero-badge flex items-center space-x-3 opacity-0">
-              <span className="w-8 h-[1px] bg-red-500"></span>
-              <span className="text-[10px] font-extrabold tracking-[0.4em] text-neutral-300 uppercase">
-                Trusted Real Estate Consultants
+            <div className="hero-badge flex items-start space-x-3 opacity-0 pt-1">
+              <span className="w-8 h-[1px] bg-red-500 shrink-0 mt-2"></span>
+              <span className="text-[10px] font-extrabold tracking-[0.4em] text-neutral-300 uppercase leading-relaxed">
+                Trusted Projects Across HR, Delhi NCR, UP, PB, MP, JH, GJ, RJ & Goa
               </span>
             </div>
 
             {/* Custom reveal heading */}
             <h1 className="text-3xl sm:text-4xl md:text-6xl font-black tracking-tight text-white uppercase leading-[1.08] overflow-hidden">
-              <span className="hero-title-line block opacity-0">Your Trusted Real Estate Partner</span>
-              <span className="hero-title-line block opacity-0 text-red-500">in Delhi NCR (Gurgaon)</span>
+              <span className="hero-title-line block opacity-0">Premium Real Estate Projects</span>
+              <span className="hero-title-line block opacity-0 text-red-500">Across India</span>
             </h1>
-            
+
             {/* Description Text */}
             <p className="hero-fade-in text-xs sm:text-sm text-neutral-300 font-medium tracking-wide leading-relaxed max-w-xl opacity-0">
-              Dee Divine Propinfra offers trusted real estate consulting in Delhi NCR & Gurgaon — RERA approved plots, verified listings & expert guidance. Book a consultation today.
+              Explore thoughtfully planned residential and investment opportunities across multiple high-growth locations.
             </p>
 
             {/* Minimal Grid Data Table */}
@@ -211,7 +210,7 @@ export default function HeroSection() {
             {properties.map((property) => (
               <SwiperSlide key={property.id}>
                 <div className="group bg-white border border-neutral-100 flex flex-col overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 h-full">
-                  
+
                   {/* Image wrapper */}
                   <div className="relative aspect-video w-full overflow-hidden bg-neutral-200">
                     <Image
@@ -237,7 +236,7 @@ export default function HeroSection() {
                         <span className="truncate">{property.location}</span>
                       </div>
                     </div>
-                    
+
                     <div className="border-t border-neutral-100 mt-4 pt-3 flex items-center justify-between">
                       <span className="text-[10px] font-bold text-neutral-400 uppercase tracking-wider">Starting Price</span>
                       <span className="text-xs font-black text-red-500">{property.price}</span>
