@@ -218,17 +218,27 @@ export default function TestimonialsSlider() {
                         >
                           <Quote size={20} />
                         </div>
-                        <div className="flex gap-1">
-                          {[...Array(t.rating)].map((_, i) => (
-                            <Star
-                              key={i}
-                              className={`w-4 h-4 ${
-                                isRed
-                                  ? "fill-white/80 text-white/80"
-                                  : "fill-[#D9233E]/80 text-[#D9233E]/80"
-                              }`}
-                            />
-                          ))}
+                        <div className="flex flex-col items-end gap-1.5">
+                          <span className="text-xs font-black uppercase tracking-widest text-[#0c0d12]">
+                            Google Review
+                          </span>
+                          <div className="flex items-center gap-2">
+                            <div className="flex gap-1">
+                              {[...Array(t.rating)].map((_, i) => (
+                                <Star
+                                  key={i}
+                                  className={`w-4 h-4 ${
+                                    isRed
+                                      ? "fill-white/80 text-white/80"
+                                      : "fill-[#D9233E]/80 text-[#D9233E]/80"
+                                  }`}
+                                />
+                              ))}
+                            </div>
+                            <span className={`text-[11px] font-black tracking-wide ${isRed ? 'text-white/90' : 'text-[#0c0d12]/70'}`}>
+                              5/5
+                            </span>
+                          </div>
                         </div>
                       </div>
                       <p
