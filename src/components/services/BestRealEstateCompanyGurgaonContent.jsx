@@ -180,18 +180,18 @@ export default function BestRealEstateCompanyGurgaonContent() {
         
         {/* HERO BANNER */}
         <div className="bg-[#0c0d12] text-white rounded-3xl p-8 sm:p-12 md:p-16 mb-16 relative overflow-hidden shadow-2xl border border-black/10">
-          <div className="absolute -top-24 -right-24 w-96 h-96 bg-red-600/15 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute -top-24 -right-24 w-96 h-96 bg-[#B51F3B]/15 rounded-full blur-3xl pointer-events-none" />
           <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-amber-600/10 rounded-full blur-3xl pointer-events-none" />
 
           <div className="relative z-10 max-w-4xl">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 text-white text-[10px] sm:text-xs font-extrabold uppercase tracking-[0.25em] mb-6 backdrop-blur-md border border-white/10">
-              <Star className="w-3.5 h-3.5 text-red-500" />
+              <Star className="w-3.5 h-3.5 text-[#B51F3B]" />
               <span>Real Estate Guide • Gurugram</span>
             </div>
 
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-black uppercase tracking-tight text-white mb-4 leading-tight">
               Best Real Estate Company in Gurgaon
-              <span className="block text-red-500 text-2xl sm:text-3xl md:text-4xl mt-2 font-extrabold">
+              <span className="block text-[#B51F3B] text-2xl sm:text-3xl md:text-4xl mt-2 font-extrabold">
                 Your Complete Guide to Smart Property Investment
               </span>
             </h1>
@@ -208,7 +208,7 @@ export default function BestRealEstateCompanyGurgaonContent() {
             <div className="flex flex-wrap items-center gap-4">
               <Link
                 href="/contact"
-                className="px-8 py-4 bg-red-600 hover:bg-red-700 text-white font-black text-xs uppercase tracking-widest rounded-full transition-all duration-300 shadow-lg flex items-center gap-2 active:scale-95"
+                className="px-8 py-4 bg-[#B51F3B] hover:bg-[#8F1230] text-white font-black text-xs uppercase tracking-widest rounded-full transition-all duration-300 shadow-lg flex items-center gap-2 active:scale-95"
               >
                 <span>Talk to Our Team</span>
                 <ArrowRight className="w-4 h-4" />
@@ -221,8 +221,8 @@ export default function BestRealEstateCompanyGurgaonContent() {
         <div className="bg-white rounded-3xl p-8 sm:p-12 border border-neutral-200/80 shadow-sm mb-16">
           <div className="flex flex-col items-start mb-8">
             <div className="flex items-center gap-3 mb-3">
-              <div className="w-6 h-[2px] bg-red-500" />
-              <span className="text-xs font-extrabold uppercase tracking-[0.25em] text-red-600">
+              <div className="w-6 h-[2px] bg-[#B51F3B]" />
+              <span className="text-xs font-extrabold uppercase tracking-[0.25em] text-[#B51F3B]">
                 Defining Excellence
               </span>
             </div>
@@ -238,7 +238,7 @@ export default function BestRealEstateCompanyGurgaonContent() {
             {bestPillars.map((p, idx) => (
               <div key={idx} className="bg-neutral-50 p-6 rounded-2xl border border-neutral-200 flex flex-col">
                 <h3 className="font-bold text-sm sm:text-base text-neutral-900 uppercase tracking-wide mb-2 flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-red-500" />
+                  <CheckCircle2 className="w-4 h-4 text-[#B51F3B]" />
                   {p.title}
                 </h3>
                 <p className="text-xs sm:text-sm text-neutral-600 leading-relaxed ml-6">
@@ -249,7 +249,7 @@ export default function BestRealEstateCompanyGurgaonContent() {
           </div>
           
           <p className="text-neutral-600 text-sm leading-relaxed border-l-4 border-red-500 pl-4">
-            <Link href="/" className="font-semibold text-red-600 hover:underline">Dee Divine PropInfra</Link> was built around these four pillars over 10+ years of operating in Gurgaon-NCR, which is why clients searching for a best property dealer in Gurgaon consistently find their way back to a company-first, project-second approach rather than the reverse.
+            <Link href="/" className="font-semibold text-[#B51F3B] hover:underline">Dee Divine PropInfra</Link> was built around these four pillars over 10+ years of operating in Gurgaon-NCR, which is why clients searching for a best property dealer in Gurgaon consistently find their way back to a company-first, project-second approach rather than the reverse.
           </p>
         </div>
 
@@ -257,7 +257,7 @@ export default function BestRealEstateCompanyGurgaonContent() {
         <div className="bg-[#0c0d12] text-white rounded-3xl p-8 sm:p-12 mb-16 border border-black/10 relative overflow-hidden shadow-xl">
           <div className="relative z-10">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-6 h-[2px] bg-red-500" />
+              <div className="w-6 h-[2px] bg-[#B51F3B]" />
               <span className="text-xs font-extrabold uppercase tracking-[0.25em] text-red-400">
                 Our Advantage
               </span>
@@ -269,7 +269,7 @@ export default function BestRealEstateCompanyGurgaonContent() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {whyChooseUs.map((w, idx) => (
                 <div key={idx} className="bg-white/5 backdrop-blur-md p-6 rounded-2xl border border-white/10">
-                  <span className="text-xs font-black text-red-500 uppercase tracking-widest block mb-2">
+                  <span className="text-xs font-black text-[#B51F3B] uppercase tracking-widest block mb-2">
                     {w.step}
                   </span>
                   <h3 className="font-bold text-base text-white uppercase tracking-wide mb-3">
@@ -288,8 +288,8 @@ export default function BestRealEstateCompanyGurgaonContent() {
         <div className="bg-white rounded-3xl p-8 sm:p-12 border border-neutral-200/80 shadow-sm mb-16">
           <div className="flex flex-col items-start mb-8">
             <div className="flex items-center gap-3 mb-3">
-              <div className="w-6 h-[2px] bg-red-500" />
-              <span className="text-xs font-extrabold uppercase tracking-[0.25em] text-red-600">
+              <div className="w-6 h-[2px] bg-[#B51F3B]" />
+              <span className="text-xs font-extrabold uppercase tracking-[0.25em] text-[#B51F3B]">
                 Full-Spectrum Services
               </span>
             </div>
@@ -310,7 +310,7 @@ export default function BestRealEstateCompanyGurgaonContent() {
               "Market analysis and micro-location assessments"
             ].map((item, idx) => (
               <div key={idx} className="flex items-start gap-2.5 bg-neutral-50 p-4 rounded-xl border border-neutral-200 text-xs font-medium text-neutral-800">
-                <span className="w-1.5 h-1.5 bg-red-500 rounded-full flex-shrink-0 mt-1" />
+                <span className="w-1.5 h-1.5 bg-[#B51F3B] rounded-full flex-shrink-0 mt-1" />
                 <span>{item}</span>
               </div>
             ))}
@@ -325,8 +325,8 @@ export default function BestRealEstateCompanyGurgaonContent() {
         <div className="bg-white rounded-3xl p-8 sm:p-12 border border-neutral-200/80 shadow-sm mb-16">
           <div className="flex flex-col items-start mb-8">
             <div className="flex items-center gap-3 mb-3">
-              <div className="w-6 h-[2px] bg-red-500" />
-              <span className="text-xs font-extrabold uppercase tracking-[0.25em] text-red-600">
+              <div className="w-6 h-[2px] bg-[#B51F3B]" />
+              <span className="text-xs font-extrabold uppercase tracking-[0.25em] text-[#B51F3B]">
                 Market Analysis
               </span>
             </div>
@@ -342,7 +342,7 @@ export default function BestRealEstateCompanyGurgaonContent() {
             {microMarkets.map((m, idx) => (
               <div key={idx} className="bg-neutral-50 p-6 rounded-2xl border border-neutral-200 flex flex-col md:flex-row md:items-center justify-between gap-4">
                 <div className="flex items-center gap-3">
-                  <MapPin className="w-5 h-5 text-red-500 flex-shrink-0" />
+                  <MapPin className="w-5 h-5 text-[#B51F3B] flex-shrink-0" />
                   <h3 className="font-bold text-sm sm:text-base text-neutral-900 uppercase tracking-wide">
                     {m.title}
                   </h3>
@@ -363,8 +363,8 @@ export default function BestRealEstateCompanyGurgaonContent() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
           <div className="bg-white rounded-3xl p-8 border border-neutral-200/80 shadow-sm">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-6 h-[2px] bg-red-500" />
-              <span className="text-xs font-extrabold uppercase tracking-[0.25em] text-red-600">
+              <div className="w-6 h-[2px] bg-[#B51F3B]" />
+              <span className="text-xs font-extrabold uppercase tracking-[0.25em] text-[#B51F3B]">
                 Our Process
               </span>
             </div>
@@ -379,7 +379,7 @@ export default function BestRealEstateCompanyGurgaonContent() {
               {howWeWork.map((h, idx) => (
                 <div key={idx} className="flex gap-4">
                   <div className="flex flex-col items-center">
-                    <div className="w-6 h-6 rounded-full bg-red-100 text-red-600 flex items-center justify-center font-bold text-xs shrink-0">
+                    <div className="w-6 h-6 rounded-full bg-red-100 text-[#B51F3B] flex items-center justify-center font-bold text-xs shrink-0">
                       {idx + 1}
                     </div>
                     {idx < howWeWork.length - 1 && <div className="w-0.5 h-full bg-neutral-200 my-1" />}
@@ -439,8 +439,8 @@ export default function BestRealEstateCompanyGurgaonContent() {
         <div className="bg-white rounded-3xl p-8 sm:p-12 border border-neutral-200/80 shadow-sm mb-16">
           <div className="flex flex-col items-start mb-8">
             <div className="flex items-center gap-3 mb-3">
-              <div className="w-6 h-[2px] bg-red-500" />
-              <span className="text-xs font-extrabold uppercase tracking-[0.25em] text-red-600">
+              <div className="w-6 h-[2px] bg-[#B51F3B]" />
+              <span className="text-xs font-extrabold uppercase tracking-[0.25em] text-[#B51F3B]">
                 FAQs
               </span>
             </div>
@@ -480,7 +480,7 @@ export default function BestRealEstateCompanyGurgaonContent() {
             </p>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-red-600 hover:bg-red-700 text-white font-black text-xs uppercase tracking-widest rounded-full transition-all duration-300 shadow-xl active:scale-95"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-[#B51F3B] hover:bg-[#8F1230] text-white font-black text-xs uppercase tracking-widest rounded-full transition-all duration-300 shadow-xl active:scale-95"
             >
               <span>Schedule a Consultation</span>
               <ArrowRight className="w-4 h-4" />

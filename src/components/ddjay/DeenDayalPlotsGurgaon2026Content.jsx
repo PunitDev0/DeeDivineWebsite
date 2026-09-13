@@ -225,18 +225,18 @@ export default function DeenDayalPlotsGurgaon2026Content() {
         
         {/* HERO BANNER */}
         <div className="bg-[#0c0d12] text-white rounded-3xl p-8 sm:p-12 md:p-16 mb-12 relative overflow-hidden shadow-2xl border border-black/10">
-          <div className="absolute -top-24 -right-24 w-96 h-96 bg-red-600/15 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute -top-24 -right-24 w-96 h-96 bg-[#B51F3B]/15 rounded-full blur-3xl pointer-events-none" />
           <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-amber-600/10 rounded-full blur-3xl pointer-events-none" />
 
           <div className="relative z-10 max-w-4xl">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 text-white text-[10px] sm:text-xs font-extrabold uppercase tracking-[0.25em] mb-6 backdrop-blur-md border border-white/10">
-              <Sparkles className="w-3.5 h-3.5 text-red-500" />
+              <Sparkles className="w-3.5 h-3.5 text-[#B51F3B]" />
               <span>Comprehensive Buyer Intelligence • Gurugram 2026</span>
             </div>
 
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black uppercase tracking-tight text-white mb-6 leading-tight">
               Deen Dayal Plots in Gurgaon
-              <span className="block text-red-500 text-2xl sm:text-3xl md:text-4xl mt-2 font-extrabold">
+              <span className="block text-[#B51F3B] text-2xl sm:text-3xl md:text-4xl mt-2 font-extrabold">
                 Complete Guide for Buyers (2026)
               </span>
             </h1>
@@ -247,7 +247,7 @@ export default function DeenDayalPlotsGurgaon2026Content() {
 
             <div className="flex flex-wrap items-center gap-4 sm:gap-6 text-xs text-neutral-400 font-medium">
               <div className="flex items-center gap-2 bg-white/5 px-3.5 py-2 rounded-xl border border-white/10">
-                <BookOpen className="w-4 h-4 text-red-500" />
+                <BookOpen className="w-4 h-4 text-[#B51F3B]" />
                 <span>Buyer Guide 2026</span>
               </div>
               <div className="flex items-center gap-2 bg-white/5 px-3.5 py-2 rounded-xl border border-white/10">
@@ -266,7 +266,7 @@ export default function DeenDayalPlotsGurgaon2026Content() {
         <div className="sticky top-24 z-40 bg-white/90 backdrop-blur-md p-4 rounded-2xl border border-neutral-200/80 shadow-md mb-12">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-2 text-xs font-black uppercase tracking-wider text-neutral-900 flex-shrink-0">
-              <Compass className="w-4 h-4 text-red-500" />
+              <Compass className="w-4 h-4 text-[#B51F3B]" />
               <span>Guide Navigation:</span>
             </div>
 
@@ -292,11 +292,11 @@ export default function DeenDayalPlotsGurgaon2026Content() {
         <div id="quick-answer" className="mb-14 scroll-mt-36">
           <div className="bg-gradient-to-br from-neutral-900 to-[#12131a] rounded-3xl p-8 sm:p-10 border border-neutral-800 text-white shadow-xl relative overflow-hidden">
             <div className="flex items-start gap-4">
-              <div className="w-12 h-12 rounded-2xl bg-red-500/10 border border-red-500/30 flex items-center justify-center flex-shrink-0 text-red-400 mt-1">
+              <div className="w-12 h-12 rounded-2xl bg-[#B51F3B]/10 border border-red-500/30 flex items-center justify-center flex-shrink-0 text-red-400 mt-1">
                 <CheckCircle2 className="w-6 h-6" />
               </div>
               <div className="space-y-3">
-                <div className="inline-block px-3 py-1 rounded-full bg-red-500/20 text-red-400 text-[10px] font-black uppercase tracking-widest">
+                <div className="inline-block px-3 py-1 rounded-full bg-[#B51F3B]/20 text-red-400 text-[10px] font-black uppercase tracking-widest">
                   Executive Summary
                 </div>
                 <h2 className="text-xl sm:text-2xl font-black uppercase tracking-tight text-white">
@@ -313,8 +313,8 @@ export default function DeenDayalPlotsGurgaon2026Content() {
         {/* ── SECTION 2: WHAT DDJAY GUARANTEES (AND WHAT IT DOESN'T) ── */}
         <div id="scheme-guarantees" className="mb-16 scroll-mt-36">
           <div className="flex items-center gap-3 mb-4">
-            <div className="w-6 h-[2px] bg-red-500" />
-            <span className="text-xs font-black uppercase tracking-[0.25em] text-red-600">
+            <div className="w-6 h-[2px] bg-[#B51F3B]" />
+            <span className="text-xs font-black uppercase tracking-[0.25em] text-[#B51F3B]">
               Regulatory Realities
             </span>
           </div>
@@ -357,26 +357,26 @@ export default function DeenDayalPlotsGurgaon2026Content() {
               </ul>
             </div>
 
-            <div className="bg-red-50/60 border border-red-200/80 rounded-2xl p-6">
+            <div className="bg-[#B51F3B]/10/60 border border-[#B51F3B]/30/80 rounded-2xl p-6">
               <div className="flex items-center gap-2.5 mb-3 text-red-800 font-black text-sm uppercase tracking-wide">
-                <X className="w-5 h-5 text-red-600 flex-shrink-0" />
+                <X className="w-5 h-5 text-[#B51F3B] flex-shrink-0" />
                 <span>What DDJAY Does NOT Guarantee</span>
               </div>
               <ul className="space-y-2.5 text-xs sm:text-sm text-red-950">
                 <li className="flex items-start gap-2">
-                  <span className="text-red-600 font-bold">•</span>
+                  <span className="text-[#B51F3B] font-bold">•</span>
                   <span>Automatic bank loan approval without individual developer screening.</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-red-600 font-bold">•</span>
+                  <span className="text-[#B51F3B] font-bold">•</span>
                   <span>Instant possession if the developer faces execution or cash-flow delays.</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-red-600 font-bold">•</span>
+                  <span className="text-[#B51F3B] font-bold">•</span>
                   <span>Protection against unapproved brochure modifications unless cross-checked on HARERA.</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-red-600 font-bold">•</span>
+                  <span className="text-[#B51F3B] font-bold">•</span>
                   <span>Immunity from resale lock-in conditions stipulated in private allotment letters.</span>
                 </li>
               </ul>
@@ -387,8 +387,8 @@ export default function DeenDayalPlotsGurgaon2026Content() {
         {/* ── SECTION 3: WHERE DDJAY PLOTS ARE CONCENTRATED ── */}
         <div id="corridors" className="mb-16 scroll-mt-36">
           <div className="flex items-center gap-3 mb-4">
-            <div className="w-6 h-[2px] bg-red-500" />
-            <span className="text-xs font-black uppercase tracking-[0.25em] text-red-600">
+            <div className="w-6 h-[2px] bg-[#B51F3B]" />
+            <span className="text-xs font-black uppercase tracking-[0.25em] text-[#B51F3B]">
               Location Matrix
             </span>
           </div>
@@ -420,7 +420,7 @@ export default function DeenDayalPlotsGurgaon2026Content() {
                     {c.name}
                   </h3>
 
-                  <div className="flex items-center gap-2 text-xs font-bold text-red-600 mb-4 bg-red-50/70 px-3 py-1.5 rounded-lg w-fit">
+                  <div className="flex items-center gap-2 text-xs font-bold text-[#B51F3B] mb-4 bg-[#B51F3B]/10/70 px-3 py-1.5 rounded-lg w-fit">
                     <Layers className="w-3.5 h-3.5" />
                     <span>Plot Sizes: {c.size}</span>
                   </div>
@@ -442,8 +442,8 @@ export default function DeenDayalPlotsGurgaon2026Content() {
         {/* ── SECTION 4: LEGAL VERIFICATION CHECKLIST ── */}
         <div id="legal-checklist" className="mb-16 scroll-mt-36">
           <div className="flex items-center gap-3 mb-4">
-            <div className="w-6 h-[2px] bg-red-500" />
-            <span className="text-xs font-black uppercase tracking-[0.25em] text-red-600">
+            <div className="w-6 h-[2px] bg-[#B51F3B]" />
+            <span className="text-xs font-black uppercase tracking-[0.25em] text-[#B51F3B]">
               Risk Mitigation
             </span>
           </div>
@@ -479,7 +479,7 @@ export default function DeenDayalPlotsGurgaon2026Content() {
                 </div>
 
                 <div className="md:w-72 bg-neutral-50 p-3 rounded-xl border border-neutral-200/60 flex-shrink-0">
-                  <span className="text-[10px] font-black uppercase tracking-widest text-red-600 block mb-0.5">
+                  <span className="text-[10px] font-black uppercase tracking-widest text-[#B51F3B] block mb-0.5">
                     Actionable Check
                   </span>
                   <p className="text-xs text-neutral-700 font-medium leading-snug">
@@ -494,8 +494,8 @@ export default function DeenDayalPlotsGurgaon2026Content() {
         {/* ── SECTION 5: FINANCING ── */}
         <div id="financing" className="mb-16 scroll-mt-36">
           <div className="flex items-center gap-3 mb-4">
-            <div className="w-6 h-[2px] bg-red-500" />
-            <span className="text-xs font-black uppercase tracking-[0.25em] text-red-600">
+            <div className="w-6 h-[2px] bg-[#B51F3B]" />
+            <span className="text-xs font-black uppercase tracking-[0.25em] text-[#B51F3B]">
               Bank Appraisal
             </span>
           </div>
@@ -510,7 +510,7 @@ export default function DeenDayalPlotsGurgaon2026Content() {
 
             <div className="grid sm:grid-cols-2 gap-4 pt-2">
               <div className="p-4 bg-neutral-50 rounded-xl border border-neutral-200/60 flex items-start gap-3">
-                <ShieldCheck className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
+                <ShieldCheck className="w-5 h-5 text-[#B51F3B] flex-shrink-0 mt-0.5" />
                 <div className="text-xs sm:text-sm">
                   <strong className="block text-neutral-900 font-bold mb-0.5">HARERA Validity</strong>
                   <span>Whether the specific project holds an active, unexpired HARERA registration at the time of loan disbursal.</span>
@@ -518,7 +518,7 @@ export default function DeenDayalPlotsGurgaon2026Content() {
               </div>
 
               <div className="p-4 bg-neutral-50 rounded-xl border border-neutral-200/60 flex items-start gap-3">
-                <Landmark className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
+                <Landmark className="w-5 h-5 text-[#B51F3B] flex-shrink-0 mt-0.5" />
                 <div className="text-xs sm:text-sm">
                   <strong className="block text-neutral-900 font-bold mb-0.5">Bank Panel Approval</strong>
                   <span>Whether the developer&apos;s colony is on the lender&apos;s approved project facility (APF) panel.</span>
@@ -526,7 +526,7 @@ export default function DeenDayalPlotsGurgaon2026Content() {
               </div>
 
               <div className="p-4 bg-neutral-50 rounded-xl border border-neutral-200/60 flex items-start gap-3">
-                <Percent className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
+                <Percent className="w-5 h-5 text-[#B51F3B] flex-shrink-0 mt-0.5" />
                 <div className="text-xs sm:text-sm">
                   <strong className="block text-neutral-900 font-bold mb-0.5">Loan-To-Value (LTV) Cap</strong>
                   <span>Plot loans typically carry an LTV of 70%–80%, lower than the 85%–90% offered on built-up apartments.</span>
@@ -534,7 +534,7 @@ export default function DeenDayalPlotsGurgaon2026Content() {
               </div>
 
               <div className="p-4 bg-neutral-50 rounded-xl border border-neutral-200/60 flex items-start gap-3">
-                <UserCheck className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
+                <UserCheck className="w-5 h-5 text-[#B51F3B] flex-shrink-0 mt-0.5" />
                 <div className="text-xs sm:text-sm">
                   <strong className="block text-neutral-900 font-bold mb-0.5">Income & Credit Auditing</strong>
                   <span>CIBIL score verification, existing EMI exposure, and valid income tax returns.</span>
@@ -547,7 +547,7 @@ export default function DeenDayalPlotsGurgaon2026Content() {
                 <strong>Practical Advisor Tip:</strong> Ask your property consultant which nationalized or private banks have already sanctioned and disbursed loans in that specific colony.{" "}
                 <Link
                   href="/ddjay-loan-financing-guide"
-                  className="text-red-600 font-black hover:underline inline-flex items-center gap-1"
+                  className="text-[#B51F3B] font-black hover:underline inline-flex items-center gap-1"
                 >
                   Loan approval on Deen Dayal Plots Gurgaon isn&apos;t automatic <ArrowRight className="w-3.5 h-3.5" />
                 </Link>
@@ -560,8 +560,8 @@ export default function DeenDayalPlotsGurgaon2026Content() {
         {/* ── SECTION 6: THREE MISTAKES ── */}
         <div id="buyer-mistakes" className="mb-16 scroll-mt-36">
           <div className="flex items-center gap-3 mb-4">
-            <div className="w-6 h-[2px] bg-red-500" />
-            <span className="text-xs font-black uppercase tracking-[0.25em] text-red-600">
+            <div className="w-6 h-[2px] bg-[#B51F3B]" />
+            <span className="text-xs font-black uppercase tracking-[0.25em] text-[#B51F3B]">
               Buyer Hazards
             </span>
           </div>
@@ -570,10 +570,10 @@ export default function DeenDayalPlotsGurgaon2026Content() {
           </h2>
 
           <div className="grid md:grid-cols-3 gap-6">
-            <div className="bg-white rounded-2xl p-6 sm:p-7 border border-red-100 shadow-sm relative overflow-hidden flex flex-col justify-between">
-              <div className="w-2 h-full bg-red-500 absolute left-0 top-0" />
+            <div className="bg-white rounded-2xl p-6 sm:p-7 border border-[#B51F3B]/20 shadow-sm relative overflow-hidden flex flex-col justify-between">
+              <div className="w-2 h-full bg-[#B51F3B] absolute left-0 top-0" />
               <div>
-                <span className="text-red-600 text-xs font-black uppercase tracking-widest block mb-2">
+                <span className="text-[#B51F3B] text-xs font-black uppercase tracking-widest block mb-2">
                   Mistake #1
                 </span>
                 <h3 className="text-base sm:text-lg font-black uppercase text-neutral-900 mb-3">
@@ -588,10 +588,10 @@ export default function DeenDayalPlotsGurgaon2026Content() {
               </div>
             </div>
 
-            <div className="bg-white rounded-2xl p-6 sm:p-7 border border-red-100 shadow-sm relative overflow-hidden flex flex-col justify-between">
-              <div className="w-2 h-full bg-red-500 absolute left-0 top-0" />
+            <div className="bg-white rounded-2xl p-6 sm:p-7 border border-[#B51F3B]/20 shadow-sm relative overflow-hidden flex flex-col justify-between">
+              <div className="w-2 h-full bg-[#B51F3B] absolute left-0 top-0" />
               <div>
-                <span className="text-red-600 text-xs font-black uppercase tracking-widest block mb-2">
+                <span className="text-[#B51F3B] text-xs font-black uppercase tracking-widest block mb-2">
                   Mistake #2
                 </span>
                 <h3 className="text-base sm:text-lg font-black uppercase text-neutral-900 mb-3">
@@ -606,10 +606,10 @@ export default function DeenDayalPlotsGurgaon2026Content() {
               </div>
             </div>
 
-            <div className="bg-white rounded-2xl p-6 sm:p-7 border border-red-100 shadow-sm relative overflow-hidden flex flex-col justify-between">
-              <div className="w-2 h-full bg-red-500 absolute left-0 top-0" />
+            <div className="bg-white rounded-2xl p-6 sm:p-7 border border-[#B51F3B]/20 shadow-sm relative overflow-hidden flex flex-col justify-between">
+              <div className="w-2 h-full bg-[#B51F3B] absolute left-0 top-0" />
               <div>
-                <span className="text-red-600 text-xs font-black uppercase tracking-widest block mb-2">
+                <span className="text-[#B51F3B] text-xs font-black uppercase tracking-widest block mb-2">
                   Mistake #3
                 </span>
                 <h3 className="text-base sm:text-lg font-black uppercase text-neutral-900 mb-3">
@@ -629,8 +629,8 @@ export default function DeenDayalPlotsGurgaon2026Content() {
         {/* ── SECTION 7: PLOTS VS APARTMENTS ── */}
         <div id="plots-vs-apartments" className="mb-16 scroll-mt-36">
           <div className="flex items-center gap-3 mb-4">
-            <div className="w-6 h-[2px] bg-red-500" />
-            <span className="text-xs font-black uppercase tracking-[0.25em] text-red-600">
+            <div className="w-6 h-[2px] bg-[#B51F3B]" />
+            <span className="text-xs font-black uppercase tracking-[0.25em] text-[#B51F3B]">
               Comparative Analysis
             </span>
           </div>
@@ -653,7 +653,7 @@ export default function DeenDayalPlotsGurgaon2026Content() {
                     <td className="py-4 px-6 font-black text-neutral-900 whitespace-nowrap">
                       {row.factor}
                     </td>
-                    <td className="py-4 px-6 text-neutral-700 leading-relaxed bg-red-50/20">
+                    <td className="py-4 px-6 text-neutral-700 leading-relaxed bg-[#B51F3B]/10/20">
                       {row.plot}
                     </td>
                     <td className="py-4 px-6 text-neutral-600 leading-relaxed">
@@ -668,7 +668,7 @@ export default function DeenDayalPlotsGurgaon2026Content() {
 
         {/* ── BOTTOM LINE SUMMARY ── */}
         <div className="mb-16 bg-neutral-900 rounded-3xl p-8 sm:p-12 text-white border border-neutral-800 shadow-2xl relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-80 h-80 bg-red-500/10 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute top-0 right-0 w-80 h-80 bg-[#B51F3B]/10 rounded-full blur-3xl pointer-events-none" />
 
           <div className="relative z-10 max-w-3xl">
             <span className="text-[10px] font-black uppercase tracking-[0.3em] text-red-400 block mb-3">
@@ -687,7 +687,7 @@ export default function DeenDayalPlotsGurgaon2026Content() {
             <div className="flex flex-wrap gap-4">
               <Link
                 href="/contact"
-                className="px-8 py-4 bg-red-500 hover:bg-red-600 text-white font-black text-xs uppercase tracking-[0.2em] rounded-xl shadow-lg transition-transform active:scale-95 inline-flex items-center gap-2"
+                className="px-8 py-4 bg-[#B51F3B] hover:bg-[#B51F3B] text-white font-black text-xs uppercase tracking-[0.2em] rounded-xl shadow-lg transition-transform active:scale-95 inline-flex items-center gap-2"
               >
                 <span>Request Verified Plot Shortlist</span>
                 <ArrowRight className="w-4 h-4" />
@@ -706,8 +706,8 @@ export default function DeenDayalPlotsGurgaon2026Content() {
         {/* ── SECTION 8: FAQS ACCORDION ── */}
         <div id="faqs" className="mb-16 scroll-mt-36">
           <div className="flex items-center gap-3 mb-4">
-            <div className="w-6 h-[2px] bg-red-500" />
-            <span className="text-xs font-black uppercase tracking-[0.25em] text-red-600">
+            <div className="w-6 h-[2px] bg-[#B51F3B]" />
+            <span className="text-xs font-black uppercase tracking-[0.25em] text-[#B51F3B]">
               Common Questions
             </span>
           </div>
@@ -732,7 +732,7 @@ export default function DeenDayalPlotsGurgaon2026Content() {
                     className="w-full p-6 flex items-center justify-between text-left gap-4 hover:bg-neutral-50/50 transition-colors"
                   >
                     <div className="flex items-start gap-3">
-                      <span className="text-xs font-black text-red-500 bg-red-50 px-2 py-0.5 rounded border border-red-100 mt-0.5 flex-shrink-0">
+                      <span className="text-xs font-black text-[#B51F3B] bg-[#B51F3B]/10 px-2 py-0.5 rounded border border-[#B51F3B]/20 mt-0.5 flex-shrink-0">
                         Q{index + 1}
                       </span>
                       <h3 className="text-sm sm:text-base font-black text-neutral-900 tracking-wide leading-snug">
@@ -742,7 +742,7 @@ export default function DeenDayalPlotsGurgaon2026Content() {
 
                     <div
                       className={`w-8 h-8 rounded-full flex items-center justify-center transition-transform duration-300 flex-shrink-0 ${
-                        isOpen ? "bg-red-500 text-white rotate-180" : "bg-neutral-100 text-neutral-600"
+                        isOpen ? "bg-[#B51F3B] text-white rotate-180" : "bg-neutral-100 text-neutral-600"
                       }`}
                     >
                       <ChevronDown size={16} />
@@ -764,7 +764,7 @@ export default function DeenDayalPlotsGurgaon2026Content() {
         <div className="pt-10 border-t border-neutral-200">
           <div className="flex items-center justify-between mb-8">
             <div>
-              <span className="text-[10px] font-black uppercase tracking-[0.25em] text-red-600 block mb-1">
+              <span className="text-[10px] font-black uppercase tracking-[0.25em] text-[#B51F3B] block mb-1">
                 Explore More
               </span>
               <h3 className="text-xl sm:text-2xl font-black uppercase text-neutral-900">
@@ -773,7 +773,7 @@ export default function DeenDayalPlotsGurgaon2026Content() {
             </div>
             <Link
               href="/faq"
-              className="text-xs font-bold text-red-600 hover:underline flex items-center gap-1"
+              className="text-xs font-bold text-[#B51F3B] hover:underline flex items-center gap-1"
             >
               <span>View All FAQs</span>
               <ArrowRight className="w-3.5 h-3.5" />
@@ -785,8 +785,8 @@ export default function DeenDayalPlotsGurgaon2026Content() {
               href="/what-is-deen-dayal-jan-awas-yojna-ddjay-guide"
               className="bg-white p-6 rounded-2xl border border-neutral-200/80 hover:border-red-500 hover:shadow-md transition-all group"
             >
-              <FileCheck className="w-6 h-6 text-red-500 mb-3" />
-              <h4 className="font-black text-sm uppercase text-neutral-900 group-hover:text-red-600 transition mb-2">
+              <FileCheck className="w-6 h-6 text-[#B51F3B] mb-3" />
+              <h4 className="font-black text-sm uppercase text-neutral-900 group-hover:text-[#B51F3B] transition mb-2">
                 What is DDJAY?
               </h4>
               <p className="text-xs text-neutral-500 line-clamp-2">
@@ -798,8 +798,8 @@ export default function DeenDayalPlotsGurgaon2026Content() {
               href="/ddjay-eligibility-and-documents-checklist"
               className="bg-white p-6 rounded-2xl border border-neutral-200/80 hover:border-red-500 hover:shadow-md transition-all group"
             >
-              <UserCheck className="w-6 h-6 text-red-500 mb-3" />
-              <h4 className="font-black text-sm uppercase text-neutral-900 group-hover:text-red-600 transition mb-2">
+              <UserCheck className="w-6 h-6 text-[#B51F3B] mb-3" />
+              <h4 className="font-black text-sm uppercase text-neutral-900 group-hover:text-[#B51F3B] transition mb-2">
                 Eligibility & Documents
               </h4>
               <p className="text-xs text-neutral-500 line-clamp-2">
@@ -811,8 +811,8 @@ export default function DeenDayalPlotsGurgaon2026Content() {
               href="/ddjay-loan-financing-guide"
               className="bg-white p-6 rounded-2xl border border-neutral-200/80 hover:border-red-500 hover:shadow-md transition-all group"
             >
-              <Landmark className="w-6 h-6 text-red-500 mb-3" />
-              <h4 className="font-black text-sm uppercase text-neutral-900 group-hover:text-red-600 transition mb-2">
+              <Landmark className="w-6 h-6 text-[#B51F3B] mb-3" />
+              <h4 className="font-black text-sm uppercase text-neutral-900 group-hover:text-[#B51F3B] transition mb-2">
                 Loan & Financing Guide
               </h4>
               <p className="text-xs text-neutral-500 line-clamp-2">

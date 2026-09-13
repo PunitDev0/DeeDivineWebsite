@@ -2,15 +2,15 @@ import "./globals.css";
 import Navbar from "@/components/hero-page/navbar";
 import Footer from "@/components/hero-page/footer";
 import FloatingSocialWidget from "@/components/FloatingSocialWidget";
-import { Poppins } from "next/font/google";
+import { Manrope } from "next/font/google";
 import { Toaster } from "sonner";
 import SmoothScroll from "@/components/SmoothScroll";
 
-// ✅ Load only Poppins font
-const poppins = Poppins({
+// ✅ Load only Manrope font
+const manrope = Manrope({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "800"],
-  variable: "--font-poppins",
+  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-manrope",
   display: "swap",
 });
 
@@ -56,12 +56,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${poppins.variable} font-poppins antialiased overflow-x-hidden`}
+        className={`${manrope.variable} font-sans antialiased overflow-x-hidden`}
       >
         <SmoothScroll />
         <Navbar />
         {children}
-        <Toaster/>
+        <Toaster />
         <FloatingSocialWidget />
         <Footer />
       </body>

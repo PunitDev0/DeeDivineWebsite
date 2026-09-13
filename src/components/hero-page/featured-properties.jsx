@@ -118,7 +118,7 @@ export default function FeaturedProperties() {
   return (
     <section className="py-20 px-6 md:px-16 bg-[#f8f9fa] border-b border-black/5">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-12 items-start justify-between">
-        
+
         {/* Left Section Title */}
         <div className="max-w-sm flex-shrink-0">
           <div className="flex items-center gap-3 mb-4">
@@ -127,11 +127,11 @@ export default function FeaturedProperties() {
               Properties
             </span>
           </div>
-          
+
           <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tight text-[#0c0d12] leading-[1.1] mb-5">
             OUR FEATURED<br />PROPERTIES
           </h2>
-          
+
           <p className="text-neutral-500 text-sm leading-relaxed mb-6">
             Handpicked premium listings in Delhi NCR, verified for transparency and compliance, ensuring value-driven housing.
           </p>

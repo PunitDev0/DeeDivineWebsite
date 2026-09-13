@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import { ChevronDown } from "lucide-react";
 
 const faqs = [
   {
@@ -59,33 +60,35 @@ export default function FAQAccordion() {
   };
 
   return (
-    <section className="bg-[#fafafa] py-12 md:py-24 px-4 sm:px-6 md:px-16 border-t border-neutral-200/50">
-      
+    <section className="relative py-20 md:py-28 px-6 md:px-12 lg:px-16 bg-[#fcfcfc] overflow-hidden">
+      {/* Subtle Premium Background Glow */}
+      <div className="absolute top-1/4 right-0 w-[600px] h-[600px] bg-[radial-gradient(ellipse_at_center,rgba(217,35,62,0.03)_0%,transparent_70%)] blur-3xl pointer-events-none" />
+
       {/* Insert JSON-LD Schema markup into Head */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 items-start">
-          
+      <div className="relative z-10 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 md:gap-16 items-start">
+
           {/* LEFT: Text description */}
-          <div className="lg:col-span-5">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-4 sm:w-6 h-[2px] bg-red-500" />
-              <span className="text-[9px] sm:text-[10px] font-extrabold uppercase tracking-[0.2em] sm:tracking-[0.35em] text-[#e63946]">
+          <div className="lg:col-span-5 sticky top-32">
+            <div className="flex items-center gap-3 mb-5">
+              <div className="w-6 h-[2px] bg-gradient-to-r from-[#8F1230] to-[#FF5A67]" />
+              <span className="text-[10px] sm:text-[11px] font-extrabold uppercase tracking-[0.35em] bg-gradient-to-r from-[#8F1230] to-[#FF5A67] bg-clip-text text-transparent">
                 Assistance
               </span>
             </div>
-            <h2 className="text-2xl sm:text-3xl md:text-5xl font-black uppercase tracking-tight text-[#0c0d12]">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-black uppercase tracking-tight text-[#0c0d12] leading-[1.15]">
               Frequently <br className="hidden sm:block" />
-              <span className="text-neutral-400">Asked Queries</span>
+              <span className="text-[#8b8c91]">Asked Queries</span>
             </h2>
-            <p className="text-neutral-500 text-xs sm:text-sm max-w-sm mt-4 sm:mt-5 leading-relaxed">
+            <p className="text-[#5F6065] text-sm md:text-base max-w-sm mt-6 leading-relaxed">
               Have doubts about land acquisitions, RERA registration parameters, or registry guidelines? Browse through our responses or contact our representative directly.
             </p>
-            
+
             <button
               onClick={() => {
                 const element = document.getElementById("contact");
@@ -93,41 +96,55 @@ export default function FAQAccordion() {
                   element.scrollIntoView({ behavior: "smooth" });
                 }
               }}
-              className="mt-8 px-6 py-4 bg-[#0c0d12] hover:bg-red-500 text-white text-[10px] font-black uppercase tracking-widest transition-colors duration-300"
+              className="mt-10 inline-flex items-center justify-center px-8 py-3.5 bg-gradient-to-r from-[#8F1230] via-[#D9233E] to-[#FF5A67] hover:shadow-[0_8px_25px_rgba(217,35,62,0.4)] hover:-translate-y-[2px] text-white rounded-xl text-xs font-black uppercase tracking-[0.2em] transition-all duration-300"
             >
               Ask a Different Question →
             </button>
           </div>
 
           {/* RIGHT: Accordion Layout */}
-          <div className="lg:col-span-7 space-y-4">
+          <div className="lg:col-span-7 space-y-4 md:space-y-5">
             {faqs.map((faq, index) => {
               const isOpen = activeIndex === index;
               return (
                 <div
                   key={index}
-                  className="bg-white border border-neutral-200/70 p-5 transition-all duration-300"
+                  className={`relative group bg-white/60 backdrop-blur-md rounded-2xl overflow-hidden transition-all duration-500 border ${
+                    isOpen 
+                      ? "border-[#D9233E]/30 shadow-[0_8px_30px_rgba(217,35,62,0.08)] bg-white/80" 
+                      : "border-white/60 shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-[0_8px_30px_rgba(217,35,62,0.06)] hover:-translate-y-0.5 hover:border-[#D9233E]/20"
+                  }`}
                 >
+                  {/* Subtle hover glow for closed cards */}
+                  {!isOpen && (
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_right,rgba(217,35,62,0.03)_0%,transparent_60%)] pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  )}
+                  {/* Subtle active glow for opened card */}
+                  {isOpen && (
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(217,35,62,0.05)_0%,transparent_70%)] pointer-events-none transition-opacity duration-500" />
+                  )}
+
                   <button
                     onClick={() => toggleAccordion(index)}
-                    className="w-full flex items-center justify-between text-left focus:outline-none"
+                    className="relative z-10 w-full flex items-center justify-between text-left focus:outline-none p-6 md:p-8"
                     aria-expanded={isOpen}
                   >
-                    <span className="text-xs md:text-sm font-extrabold uppercase tracking-wider text-[#0c0d12] pr-4 leading-snug">
+                    <span className={`text-[13px] md:text-[14px] font-black uppercase tracking-wide transition-colors duration-300 pr-6 leading-snug ${isOpen ? "text-[#D9233E]" : "text-[#0c0d12]"}`}>
                       {faq.question}
                     </span>
-                    <span className={`text-xs text-neutral-400 transform transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}>
-                      ▼
+                    <span className={`flex items-center justify-center w-8 h-8 rounded-full transition-all duration-500 flex-shrink-0 ${isOpen ? "bg-gradient-to-br from-[#8F1230] to-[#FF5A67] text-white shadow-[0_4px_12px_rgba(217,35,62,0.3)] rotate-180" : "bg-gradient-to-br from-[#8F1230]/5 to-[#FF5A67]/5 text-[#D9233E] border border-[#D9233E]/20 group-hover:bg-[#8F1230]/10"}`}>
+                      <ChevronDown size={16} />
                     </span>
                   </button>
 
                   {/* Animated collapse height */}
                   <div
-                    className={`transition-all duration-500 ease-in-out overflow-hidden ${
-                      isOpen ? "max-h-[200px] opacity-100 mt-4 border-t border-neutral-100 pt-4" : "max-h-0 opacity-0"
+                    className={`relative z-10 transition-all duration-500 ease-in-out overflow-hidden px-6 md:px-8 ${
+                      isOpen ? "max-h-[500px] opacity-100 pb-8" : "max-h-0 opacity-0 pb-0"
                     }`}
                   >
-                    <p className="text-xs md:text-sm text-neutral-500 leading-relaxed">
+                    <div className="w-8 h-[2px] bg-gradient-to-r from-[#8F1230] to-[#FF5A67] mb-5 opacity-60" />
+                    <p className="text-[13px] md:text-sm text-[#5F6065] leading-relaxed">
                       {faq.answer}
                     </p>
                   </div>

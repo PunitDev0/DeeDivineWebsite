@@ -7,182 +7,195 @@ import { ArrowRight, Mail, MapPin, Phone } from "lucide-react";
 
 export default function Contact() {
   return (
-    <main className="font-sans text-[#0c0d12] bg-white pt-24">
-      {/* HERO Banner */}
-      <div className="px-6 md:px-16 py-8">
-        <div
-          className="relative w-full h-[250px] md:h-[380px] flex items-end pb-8 pl-8 overflow-hidden bg-cover bg-center border border-black/5"
-          style={{ backgroundImage: "url('/assets/contact-banner.webp')" }}
-        >
-          {/* Overlay gradient */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent z-0" />
-          
-          <div className="relative z-10 bg-[#0c0d12]/80 backdrop-blur-sm text-white px-5 py-3 border border-white/10">
-            <Link href="/contact" className="flex items-center gap-2 text-xs font-black uppercase tracking-wider">
-              Contact Us <ArrowRight size={14} className="text-red-500" />
-            </Link>
-          </div>
-        </div>
+    <main className="font-sans text-[#0c0d12] bg-[#FDFDFD] min-h-screen pt-28 md:pt-36 overflow-hidden relative">
+      
+      {/* GLOBAL BACKGROUND GLOW */}
+      <div className="fixed inset-0 pointer-events-none z-0">
+        <div className="absolute top-[10%] left-[50%] -translate-x-1/2 w-[800px] h-[800px] bg-[radial-gradient(circle_at_center,rgba(181,31,59,0.04),transparent_60%)] blur-3xl" />
+        <div className="absolute bottom-[20%] right-[-10%] w-[600px] h-[600px] bg-[radial-gradient(circle_at_center,rgba(229,45,79,0.03),transparent_60%)] blur-3xl" />
       </div>
 
-      {/* CONTACT INFO SECTION */}
-      <section className="py-24 px-6 md:px-16 bg-white text-gray-800">
-        <div className="max-w-6xl mx-auto text-center mb-16">
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <div className="w-6 h-[2px] bg-red-500" />
-            <span className="text-[10px] font-extrabold uppercase tracking-[0.35em] text-[#e63946]">
-              Get In Touch
-            </span>
-            <div className="w-6 h-[2px] bg-red-500" />
-          </div>
-
-          <h2 className="text-3xl md:text-5xl font-black text-gray-900 mb-4 uppercase leading-tight">
-            Contact Dee Divine Propinfra
-          </h2>
-          
-          <p className="text-neutral-500 text-sm max-w-2xl mx-auto leading-relaxed">
-            Have questions or want to discuss your next real estate investment?  
-            We’re here to help you with the right guidance, insights, and support.
-          </p>
-        </div>
-
-        {/* Info Grid Cards */}
-        <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto text-center">
-          
-          {/* Card 1 */}
-          <div className="bg-[#f8f9fa] border border-neutral-100 p-8 shadow-sm flex flex-col items-center hover:shadow-md transition-all duration-300">
-            <div className="w-12 h-12 bg-white flex items-center justify-center text-red-500 shadow-sm mb-6">
-              <MapPin size={22} />
-            </div>
-            <h3 className="font-black text-xs uppercase tracking-widest text-[#0c0d12] mb-3">Office Address</h3>
-            <p className="text-xs text-neutral-500 leading-relaxed max-w-xs">
-              M3M Broadway, 22nd Floor, D Block,
-              Sector 71, SPR Road, Gurgaon
-            </p>
-          </div>
-
-          {/* Card 2 */}
-          <div className="bg-[#f8f9fa] border border-neutral-100 p-8 shadow-sm flex flex-col items-center hover:shadow-md transition-all duration-300">
-            <div className="w-12 h-12 bg-white flex items-center justify-center text-red-500 shadow-sm mb-6">
-              <Phone size={22} />
-            </div>
-            <h3 className="font-black text-xs uppercase tracking-widest text-[#0c0d12] mb-3">Call Us</h3>
-            <p className="text-xs text-neutral-500 leading-relaxed max-w-xs font-bold">
-              +91 9211496111
-            </p>
-          </div>
-
-          {/* Card 3 */}
-          <div className="bg-[#f8f9fa] border border-neutral-100 p-8 shadow-sm flex flex-col items-center hover:shadow-md transition-all duration-300">
-            <div className="w-12 h-12 bg-white flex items-center justify-center text-red-500 shadow-sm mb-6">
-              <Mail size={22} />
-            </div>
-            <h3 className="font-black text-xs uppercase tracking-widest text-[#0c0d12] mb-3">Email Us</h3>
-            <p className="text-xs text-neutral-500 leading-relaxed max-w-xs">
-              info@deedivinepropinfra.com  
-              <br />
-              careers@deedivinepropinfra.com
-            </p>
-          </div>
-          
-        </div>
-      </section>
-
-      {/* CONTACT FORM SECTION */}
-      <section className="bg-white py-24 px-6 md:px-16 border-t border-neutral-100">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
-          
-          {/* LEFT TEXT */}
-          <div className="space-y-6">
-            <div className="flex items-center gap-3">
-              <div className="w-6 h-[2px] bg-red-500" />
-              <span className="text-[10px] font-extrabold uppercase tracking-[0.35em] text-[#e63946]">Inquiry</span>
+      <div className="relative z-10">
+        
+        {/* HERO SECTION */}
+        <section className="px-6 md:px-16 pb-12 md:pb-20 text-center">
+          <div className="max-w-4xl mx-auto flex flex-col items-center">
+            
+            <div className="flex items-center justify-center gap-3 mb-6">
+              <div className="w-8 h-[2px] bg-gradient-to-r from-[#B51F3B] to-[#FF5364]" />
+              <span className="text-[11px] font-black uppercase tracking-[0.3em] text-[#0c0d12]">
+                Contact Us
+              </span>
+              <div className="w-8 h-[2px] bg-gradient-to-l from-[#B51F3B] to-[#FF5364]" />
             </div>
             
-            <h2 className="text-2xl md:text-4xl font-black text-[#0c0d12] uppercase leading-tight">
-              Let’s Start a <br />Conversation
-            </h2>
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-black uppercase tracking-tight text-[#0c0d12] mb-6 relative inline-block whitespace-nowrap">
+              <span className="relative z-10">Contact Dee Divine Propinfra</span>
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-[radial-gradient(ellipse_at_center,rgba(229,45,79,0.06),transparent_70%)] blur-2xl z-0 pointer-events-none" />
+            </h1>
             
-            <p className="text-neutral-500 text-sm leading-relaxed max-w-md">
-              Whether you’re looking to buy your dream property, explore investment opportunities, or simply have questions about our services, our team would love to hear from you.
+            <p className="text-neutral-500 text-sm md:text-base leading-relaxed font-medium max-w-2xl mx-auto">
+              Have questions or want to discuss your next real estate investment? We’re here to help you with the right guidance, insights, and support.
             </p>
           </div>
+        </section>
 
-          {/* RIGHT FORM */}
-          <form className="bg-[#f8f9fa] border border-neutral-100 p-10 md:p-14 space-y-6">
+        {/* MAIN LAYOUT: INFO + FORM */}
+        <section className="px-6 md:px-16 pb-24">
+          <div className="max-w-7xl mx-auto grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)] gap-10 md:gap-16 items-start">
             
-            <div>
-              <label className="block text-[10px] font-bold tracking-[0.3em] uppercase text-neutral-400 mb-2">
-                Full Name
-              </label>
-              <input
-                type="text"
-                placeholder="Enter your name"
-                className="w-full bg-transparent border-b border-neutral-200 focus:border-red-500 pb-3 text-sm text-[#0c0d12] placeholder:text-neutral-300 outline-none transition-colors duration-300"
-                required
-              />
+            {/* LEFT: CONTACT INFO */}
+            <div className="flex flex-col gap-6">
+              <div className="mb-4">
+                <h2 className="text-[10px] font-extrabold uppercase tracking-[0.35em] text-neutral-400 mb-2">Get In Touch</h2>
+                <h3 className="text-2xl md:text-3xl font-black uppercase tracking-tight text-[#0c0d12]">
+                  Reach Out To Us
+                </h3>
+              </div>
+              
+              {/* Card 1: Address */}
+              <div className="bg-white/80 backdrop-blur-[16px] border border-white/65 rounded-[24px] p-8 shadow-[0_8px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_15px_40px_rgba(229,45,79,0.08)] hover:-translate-y-1 transition-all duration-500 flex flex-col md:flex-row items-start md:items-center gap-6">
+                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#B51F3B] to-[#FF5364] flex items-center justify-center text-white shadow-[0_4px_15px_rgba(229,45,79,0.3)] shrink-0">
+                  <MapPin size={24} />
+                </div>
+                <div>
+                  <h4 className="font-black text-[11px] uppercase tracking-widest text-[#0c0d12] mb-2">Office Address</h4>
+                  <p className="text-sm font-medium text-neutral-500 leading-relaxed">
+                    M3M Broadway, 22nd Floor, D Block,
+                    <br />Sector 71, SPR Road, Gurgaon
+                  </p>
+                </div>
+              </div>
+
+              {/* Card 2: Phone */}
+              <div className="bg-white/80 backdrop-blur-[16px] border border-white/65 rounded-[24px] p-8 shadow-[0_8px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_15px_40px_rgba(229,45,79,0.08)] hover:-translate-y-1 transition-all duration-500 flex flex-col md:flex-row items-start md:items-center gap-6">
+                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#B51F3B] to-[#FF5364] flex items-center justify-center text-white shadow-[0_4px_15px_rgba(229,45,79,0.3)] shrink-0">
+                  <Phone size={24} />
+                </div>
+                <div>
+                  <h4 className="font-black text-[11px] uppercase tracking-widest text-[#0c0d12] mb-2">Call Us</h4>
+                  <p className="text-sm font-bold text-neutral-600 leading-relaxed">
+                    +91 9211496111
+                  </p>
+                </div>
+              </div>
+
+              {/* Card 3: Email */}
+              <div className="bg-white/80 backdrop-blur-[16px] border border-white/65 rounded-[24px] p-8 shadow-[0_8px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_15px_40px_rgba(229,45,79,0.08)] hover:-translate-y-1 transition-all duration-500 flex flex-col md:flex-row items-start md:items-center gap-6">
+                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#B51F3B] to-[#FF5364] flex items-center justify-center text-white shadow-[0_4px_15px_rgba(229,45,79,0.3)] shrink-0">
+                  <Mail size={24} />
+                </div>
+                <div>
+                  <h4 className="font-black text-[11px] uppercase tracking-widest text-[#0c0d12] mb-2">Email Us</h4>
+                  <p className="text-sm font-medium text-neutral-500 leading-relaxed">
+                    info@deedivinepropinfra.com  
+                    <br />
+                    careers@deedivinepropinfra.com
+                  </p>
+                </div>
+              </div>
             </div>
 
-            <div>
-              <label className="block text-[10px] font-bold tracking-[0.3em] uppercase text-neutral-400 mb-2">
-                Email Address
-              </label>
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="w-full bg-transparent border-b border-neutral-200 focus:border-red-500 pb-3 text-sm text-[#0c0d12] placeholder:text-neutral-300 outline-none transition-colors duration-300"
-                required
-              />
+            {/* RIGHT: INQUIRY FORM */}
+            <div className="bg-white/82 backdrop-blur-[18px] border border-white/70 rounded-[28px] p-8 md:p-12 shadow-[0_10px_40px_rgba(0,0,0,0.04)] relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-[#B51F3B]/5 to-transparent rounded-full blur-3xl pointer-events-none" />
+              
+              <div className="relative z-10 mb-8">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-4 h-[2px] bg-gradient-to-r from-[#B51F3B] to-[#FF5364]" />
+                  <span className="text-[10px] font-extrabold uppercase tracking-[0.35em] text-[#B51F3B]">Inquiry</span>
+                </div>
+                <h3 className="text-2xl md:text-3xl font-black uppercase tracking-tight text-[#0c0d12] mb-4">
+                  Let’s Start a Conversation
+                </h3>
+                <p className="text-sm font-medium text-neutral-500 leading-relaxed">
+                  Whether you’re looking to buy your dream property, explore investment opportunities, or simply have questions about our services, our team would love to hear from you.
+                </p>
+              </div>
+
+              <form className="space-y-6 relative z-10">
+                <div>
+                  <label className="block text-[10px] font-bold tracking-[0.2em] uppercase text-[#0c0d12] mb-2">
+                    Full Name
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="Enter your name"
+                    className="w-full bg-white/75 border border-neutral-100/50 rounded-2xl px-5 py-4 text-sm font-medium text-[#0c0d12] placeholder:text-neutral-400 outline-none focus:border-[#B51F3B] focus:ring-4 focus:ring-[#B51F3B]/10 transition-all duration-300"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-[10px] font-bold tracking-[0.2em] uppercase text-[#0c0d12] mb-2">
+                    Email Address
+                  </label>
+                  <input
+                    type="email"
+                    placeholder="Enter your email"
+                    className="w-full bg-white/75 border border-neutral-100/50 rounded-2xl px-5 py-4 text-sm font-medium text-[#0c0d12] placeholder:text-neutral-400 outline-none focus:border-[#B51F3B] focus:ring-4 focus:ring-[#B51F3B]/10 transition-all duration-300"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-[10px] font-bold tracking-[0.2em] uppercase text-[#0c0d12] mb-2">
+                    Phone Number
+                  </label>
+                  <input
+                    type="tel"
+                    placeholder="Enter your phone number"
+                    className="w-full bg-white/75 border border-neutral-100/50 rounded-2xl px-5 py-4 text-sm font-medium text-[#0c0d12] placeholder:text-neutral-400 outline-none focus:border-[#B51F3B] focus:ring-4 focus:ring-[#B51F3B]/10 transition-all duration-300"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-[10px] font-bold tracking-[0.2em] uppercase text-[#0c0d12] mb-2">
+                    Message
+                  </label>
+                  <textarea
+                    rows="4"
+                    placeholder="Write your message..."
+                    className="w-full bg-white/75 border border-neutral-100/50 rounded-2xl px-5 py-4 text-sm font-medium text-[#0c0d12] placeholder:text-neutral-400 outline-none resize-none focus:border-[#B51F3B] focus:ring-4 focus:ring-[#B51F3B]/10 transition-all duration-300"
+                    required
+                  ></textarea>
+                </div>
+
+                <button
+                  type="submit"
+                  className="group w-full h-14 bg-gradient-to-r from-[#B51F3B] to-[#FF5364] text-white text-[11px] font-black uppercase tracking-[0.2em] rounded-full shadow-[0_6px_20px_rgba(229,45,79,0.3)] hover:shadow-[0_10px_30px_rgba(229,45,79,0.4)] hover:-translate-y-0.5 active:scale-[0.98] transition-all duration-300 flex items-center justify-center gap-3 mt-4"
+                >
+                  <span>Send Message</span>
+                  <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+                </button>
+              </form>
             </div>
+            
+          </div>
+        </section>
 
-            <div>
-              <label className="block text-[10px] font-bold tracking-[0.3em] uppercase text-neutral-400 mb-2">
-                Phone Number
-              </label>
-              <input
-                type="tel"
-                placeholder="Enter your phone number"
-                className="w-full bg-transparent border-b border-neutral-200 focus:border-red-500 pb-3 text-sm text-[#0c0d12] placeholder:text-neutral-300 outline-none transition-colors duration-300"
-              />
+        {/* MAP SECTION */}
+        <section className="px-6 md:px-16 pb-24">
+          <div className="max-w-7xl mx-auto relative group">
+            <div className="absolute inset-0 bg-gradient-to-br from-[#B51F3B]/10 to-transparent blur-3xl rounded-[2.5rem] pointer-events-none" />
+            <div className="relative rounded-[2.5rem] overflow-hidden border border-white/80 bg-white/40 backdrop-blur-md p-3 shadow-[0_10px_50px_rgba(0,0,0,0.05)]">
+              <div className="relative w-full h-[400px] md:h-[500px] rounded-[2rem] overflow-hidden bg-neutral-100">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3509.217745284304!2d77.0412748114687!3d28.412685875684485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d2323bd5b493b%3A0x556ba537cfc6d921!2sDee%20Divine%20PropInfra%20Pvt.%20Ltd.!5e0!3m2!1sen!2sin!4v1763623084043!5m2!1sen!2sin"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="rounded-[2rem] filter grayscale-[20%] group-hover:grayscale-0 transition-all duration-700"
+                ></iframe>
+              </div>
             </div>
+          </div>
+        </section>
 
-            <div>
-              <label className="block text-[10px] font-bold tracking-[0.3em] uppercase text-neutral-400 mb-2">
-                Message
-              </label>
-              <textarea
-                rows="3"
-                placeholder="Write your message..."
-                className="w-full bg-transparent border-b border-neutral-200 focus:border-red-500 pb-3 text-sm text-[#0c0d12] placeholder:text-neutral-300 outline-none resize-none transition-colors duration-300"
-                required
-              ></textarea>
-            </div>
-
-            <button
-              type="submit"
-              className="w-full px-8 py-4 bg-[#0c0d12] text-white text-xs font-black uppercase tracking-[0.25em] hover:bg-neutral-800 active:scale-98 transition-all duration-300 flex items-center justify-center gap-3"
-            >
-              <span>Send Message</span>
-              <span>→</span>
-            </button>
-          </form>
-          
-        </div>
-      </section>
-
-      {/* MAP SECTION */}
-      <section className="w-full border-t border-neutral-100">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3509.217745284304!2d77.0412748114687!3d28.412685875684485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d2323bd5b493b%3A0x556ba537cfc6d921!2sDee%20Divine%20PropInfra%20Pvt.%20Ltd.!5e0!3m2!1sen!2sin!4v1763623084043!5m2!1sen!2sin"
-          width="100%"
-          height="450"
-          style={{ border: 0 }}
-          allowFullScreen=""
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-          className="rounded-none border border-neutral-100"
-        ></iframe>
-      </section>
+      </div>
     </main>
   );
 }

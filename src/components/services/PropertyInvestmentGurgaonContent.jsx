@@ -95,7 +95,7 @@ export default function PropertyInvestmentGurgaonContent() {
     }
   ];
 
-  const vasstaServices = [
+  const vastuServices = [
     {
       step: "01",
       title: "Investment Requirement Analysis",
@@ -167,18 +167,18 @@ export default function PropertyInvestmentGurgaonContent() {
         
         {/* HERO BANNER */}
         <div className="bg-[#0c0d12] text-white rounded-3xl p-8 sm:p-12 md:p-16 mb-16 relative overflow-hidden shadow-2xl border border-black/10">
-          <div className="absolute -top-24 -right-24 w-96 h-96 bg-red-600/15 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute -top-24 -right-24 w-96 h-96 bg-[#B51F3B]/15 rounded-full blur-3xl pointer-events-none" />
           <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-amber-600/10 rounded-full blur-3xl pointer-events-none" />
 
           <div className="relative z-10 max-w-4xl">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 text-white text-[10px] sm:text-xs font-extrabold uppercase tracking-[0.25em] mb-6 backdrop-blur-md border border-white/10">
-              <Sparkles className="w-3.5 h-3.5 text-red-500" />
+              <Sparkles className="w-3.5 h-3.5 text-[#B51F3B]" />
               <span>Real Estate Investment Guide • Gurugram</span>
             </div>
 
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-black uppercase tracking-tight text-white mb-4 leading-tight">
               Property Investment in Gurgaon
-              <span className="block text-red-500 text-2xl sm:text-3xl md:text-4xl mt-2 font-extrabold">
+              <span className="block text-[#B51F3B] text-2xl sm:text-3xl md:text-4xl mt-2 font-extrabold">
                 Smarter Property Investment Starts With the Right Guidance
               </span>
             </h1>
@@ -195,9 +195,9 @@ export default function PropertyInvestmentGurgaonContent() {
             <div className="flex flex-wrap items-center gap-4">
               <Link
                 href="/contact"
-                className="px-8 py-4 bg-red-600 hover:bg-red-700 text-white font-black text-xs uppercase tracking-widest rounded-full transition-all duration-300 shadow-lg flex items-center gap-2 active:scale-95"
+                className="px-8 py-4 bg-[#B51F3B] hover:bg-[#8F1230] text-white font-black text-xs uppercase tracking-widest rounded-full transition-all duration-300 shadow-lg flex items-center gap-2 active:scale-95"
               >
-                <span>Speak With Vassta Consultancy</span>
+                <span>Speak With Vastu Consultancy</span>
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
@@ -208,8 +208,8 @@ export default function PropertyInvestmentGurgaonContent() {
         <div className="bg-white rounded-3xl p-8 sm:p-12 border border-neutral-200/80 shadow-sm mb-16">
           <div className="max-w-4xl">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-6 h-[2px] bg-red-500" />
-              <span className="text-xs font-extrabold uppercase tracking-[0.25em] text-red-600">
+              <div className="w-6 h-[2px] bg-[#B51F3B]" />
+              <span className="text-xs font-extrabold uppercase tracking-[0.25em] text-[#B51F3B]">
                 Market Dynamics
               </span>
             </div>
@@ -234,7 +234,7 @@ export default function PropertyInvestmentGurgaonContent() {
                   "Long-term growth opportunities"
                 ].map((item, idx) => (
                   <div key={idx} className="flex items-center gap-2.5 bg-white p-3 rounded-xl border border-neutral-200 text-xs font-medium text-neutral-800">
-                    <span className="w-1.5 h-1.5 bg-red-500 rounded-full flex-shrink-0" />
+                    <span className="w-1.5 h-1.5 bg-[#B51F3B] rounded-full flex-shrink-0" />
                     <span>{item}</span>
                   </div>
                 ))}
@@ -251,8 +251,8 @@ export default function PropertyInvestmentGurgaonContent() {
         <div className="bg-white rounded-3xl p-8 sm:p-12 border border-neutral-200/80 shadow-sm mb-16">
           <div className="flex flex-col items-start mb-8">
             <div className="flex items-center gap-3 mb-3">
-              <div className="w-6 h-[2px] bg-red-500" />
-              <span className="text-xs font-extrabold uppercase tracking-[0.25em] text-red-600">
+              <div className="w-6 h-[2px] bg-[#B51F3B]" />
+              <span className="text-xs font-extrabold uppercase tracking-[0.25em] text-[#B51F3B]">
                 Evaluation Metrics
               </span>
             </div>
@@ -284,7 +284,7 @@ export default function PropertyInvestmentGurgaonContent() {
         <div className="bg-[#0c0d12] text-white rounded-3xl p-8 sm:p-12 mb-16 border border-black/10 relative overflow-hidden shadow-xl">
           <div className="relative z-10">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-6 h-[2px] bg-red-500" />
+              <div className="w-6 h-[2px] bg-[#B51F3B]" />
               <span className="text-xs font-extrabold uppercase tracking-[0.25em] text-red-400">
                 Asset Classes
               </span>
@@ -312,8 +312,8 @@ export default function PropertyInvestmentGurgaonContent() {
         <div className="bg-white rounded-3xl p-8 sm:p-12 border border-neutral-200/80 shadow-sm mb-16">
           <div className="flex flex-col items-start mb-8">
             <div className="flex items-center gap-3 mb-3">
-              <div className="w-6 h-[2px] bg-red-500" />
-              <span className="text-xs font-extrabold uppercase tracking-[0.25em] text-red-600">
+              <div className="w-6 h-[2px] bg-[#B51F3B]" />
+              <span className="text-xs font-extrabold uppercase tracking-[0.25em] text-[#B51F3B]">
                 Micro-Market Analysis
               </span>
             </div>
@@ -329,7 +329,7 @@ export default function PropertyInvestmentGurgaonContent() {
             {areas.map((a, idx) => (
               <div key={idx} className="bg-neutral-50 p-6 rounded-2xl border border-neutral-200 flex flex-col md:flex-row md:items-center justify-between gap-4">
                 <div className="flex items-center gap-3">
-                  <MapPin className="w-5 h-5 text-red-500 flex-shrink-0" />
+                  <MapPin className="w-5 h-5 text-[#B51F3B] flex-shrink-0" />
                   <h3 className="font-bold text-sm sm:text-base text-neutral-900 uppercase tracking-wide">
                     {a.title}
                   </h3>
@@ -342,25 +342,25 @@ export default function PropertyInvestmentGurgaonContent() {
           </div>
         </div>
 
-        {/* HOW VASSTA CONSULTANCY HELPS */}
+        {/* HOW VASTU CONSULTANCY HELPS */}
         <div className="bg-white rounded-3xl p-8 sm:p-12 border border-neutral-200/80 shadow-sm mb-16">
           <div className="flex flex-col items-start mb-8">
             <div className="flex items-center gap-3 mb-3">
-              <div className="w-6 h-[2px] bg-red-500" />
-              <span className="text-xs font-extrabold uppercase tracking-[0.25em] text-red-600">
+              <div className="w-6 h-[2px] bg-[#B51F3B]" />
+              <span className="text-xs font-extrabold uppercase tracking-[0.25em] text-[#B51F3B]">
                 Consultancy Support
               </span>
             </div>
             <h2 className="text-2xl sm:text-3xl font-black uppercase tracking-tight text-neutral-900">
-              How Vassta Consultancy Helps Investors
+              How Vastu Consultancy Helps Investors
             </h2>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 mb-8">
-            {vasstaServices.map((v, idx) => (
+            {vastuServices.map((v, idx) => (
               <div key={idx} className="bg-neutral-50 p-5 rounded-2xl border border-neutral-200 flex flex-col justify-between">
                 <div>
-                  <span className="text-xs font-black text-red-600 uppercase tracking-widest block mb-2">
+                  <span className="text-xs font-black text-[#B51F3B] uppercase tracking-widest block mb-2">
                     {v.step}
                   </span>
                   <h3 className="font-bold text-sm text-neutral-900 uppercase tracking-wide mb-2">
@@ -396,7 +396,7 @@ export default function PropertyInvestmentGurgaonContent() {
                 "Resale and exit considerations"
               ].map((check, i) => (
                 <div key={i} className="flex items-center gap-2 bg-neutral-50 p-2.5 rounded-lg border border-neutral-100">
-                  <CheckCircle2 className="w-4 h-4 text-red-500 flex-shrink-0" />
+                  <CheckCircle2 className="w-4 h-4 text-[#B51F3B] flex-shrink-0" />
                   <span>{check}</span>
                 </div>
               ))}
@@ -409,7 +409,7 @@ export default function PropertyInvestmentGurgaonContent() {
                 Property Investment Company in Gurgaon
               </h2>
               <p className="text-xs sm:text-sm text-neutral-600 leading-relaxed mb-4">
-                <Link href="https://deedivinepropinfra.com/property-investment-in-gurgaon" className="text-neutral-900 font-bold">Finding the right Property Investment Company in Gurgaon</Link> is important when you need guidance across multiple property options. Vassta Consultancy focuses on a research-led approach to property evaluation, helping clients explore residential, commercial, plotted, and luxury investment opportunities across Gurgaon.
+                <Link href="https://deedivinepropinfra.com/property-investment-in-gurgaon" className="text-neutral-900 font-bold">Finding the right Property Investment Company in Gurgaon</Link> is important when you need guidance across multiple property options. Vastu Consultancy focuses on a research-led approach to property evaluation, helping clients explore residential, commercial, plotted, and luxury investment opportunities across Gurgaon.
               </p>
               <p className="text-xs sm:text-sm text-neutral-600 leading-relaxed font-medium">
                 Our role is to provide clarity around the opportunity, highlight key considerations, and help investors compare suitable options based on their individual requirements.
@@ -422,8 +422,8 @@ export default function PropertyInvestmentGurgaonContent() {
         <div className="bg-white rounded-3xl p-8 sm:p-12 border border-neutral-200/80 shadow-sm mb-16">
           <div className="flex flex-col items-start mb-8">
             <div className="flex items-center gap-3 mb-3">
-              <div className="w-6 h-[2px] bg-red-500" />
-              <span className="text-xs font-extrabold uppercase tracking-[0.25em] text-red-600">
+              <div className="w-6 h-[2px] bg-[#B51F3B]" />
+              <span className="text-xs font-extrabold uppercase tracking-[0.25em] text-[#B51F3B]">
                 Target Profiles
               </span>
             </div>
@@ -435,7 +435,7 @@ export default function PropertyInvestmentGurgaonContent() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
             {investorTypes.map((inv, idx) => (
               <div key={idx} className="bg-neutral-50 p-5 rounded-2xl border border-neutral-200">
-                <Users className="w-6 h-6 text-red-500 mb-3" />
+                <Users className="w-6 h-6 text-[#B51F3B] mb-3" />
                 <h3 className="font-bold text-xs sm:text-sm text-neutral-900 uppercase tracking-wide mb-2">
                   {inv.title}
                 </h3>
@@ -451,8 +451,8 @@ export default function PropertyInvestmentGurgaonContent() {
         <div className="bg-white rounded-3xl p-8 sm:p-12 border border-neutral-200/80 shadow-sm mb-16">
           <div className="flex flex-col items-start mb-8">
             <div className="flex items-center gap-3 mb-3">
-              <div className="w-6 h-[2px] bg-red-500" />
-              <span className="text-xs font-extrabold uppercase tracking-[0.25em] text-red-600">
+              <div className="w-6 h-[2px] bg-[#B51F3B]" />
+              <span className="text-xs font-extrabold uppercase tracking-[0.25em] text-[#B51F3B]">
                 FAQs
               </span>
             </div>
@@ -492,9 +492,9 @@ export default function PropertyInvestmentGurgaonContent() {
             </p>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-red-600 hover:bg-red-700 text-white font-black text-xs uppercase tracking-widest rounded-full transition-all duration-300 shadow-xl active:scale-95"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-[#B51F3B] hover:bg-[#8F1230] text-white font-black text-xs uppercase tracking-widest rounded-full transition-all duration-300 shadow-xl active:scale-95"
             >
-              <span>Speak With Vassta Consultancy</span>
+              <span>Speak With Vastu Consultancy</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
@@ -507,7 +507,7 @@ export default function PropertyInvestmentGurgaonContent() {
             <span>Disclaimer</span>
           </div>
           <p>
-            Property investment involves market risks, and returns are not guaranteed. The information provided by <Link href="https://deedivinepropinfra.com/vassta-consultancy" className="text-neutral-900 font-bold">Vassta Consultancy</Link> is for general informational and consultancy purposes only and should not be considered financial, legal, or investment advice. Investors should independently verify project, regulatory, legal, pricing, tax, and financial information before making any investment decision.
+            Property investment involves market risks, and returns are not guaranteed. The information provided by <Link href="https://deedivinepropinfra.com/vastu-consultancy" className="text-neutral-900 font-bold">Vastu Consultancy</Link> is for general informational and consultancy purposes only and should not be considered financial, legal, or investment advice. Investors should independently verify project, regulatory, legal, pricing, tax, and financial information before making any investment decision.
           </p>
         </div>
 

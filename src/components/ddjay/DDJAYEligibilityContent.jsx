@@ -53,18 +53,18 @@ export default function DDJAYEligibilityContent() {
         
         {/* HERO BANNER */}
         <div className="bg-[#0c0d12] text-white rounded-3xl p-8 sm:p-12 md:p-16 mb-12 relative overflow-hidden shadow-2xl border border-black/10">
-          <div className="absolute -top-24 -right-24 w-96 h-96 bg-red-600/15 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute -top-24 -right-24 w-96 h-96 bg-[#B51F3B]/15 rounded-full blur-3xl pointer-events-none" />
           <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-amber-600/10 rounded-full blur-3xl pointer-events-none" />
 
           <div className="relative z-10 max-w-4xl">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 text-white text-[10px] sm:text-xs font-extrabold uppercase tracking-[0.25em] mb-6 backdrop-blur-md border border-white/10">
-              <FileCheck className="w-3.5 h-3.5 text-red-500" />
+              <FileCheck className="w-3.5 h-3.5 text-[#B51F3B]" />
               <span>Official Criteria & Requirements Guide</span>
             </div>
 
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-black uppercase tracking-tight text-white mb-6 leading-tight">
               DDJAY Eligibility & Documents
-              <span className="block text-red-500 text-2xl sm:text-3xl md:text-4xl mt-2 font-extrabold">
+              <span className="block text-[#B51F3B] text-2xl sm:text-3xl md:text-4xl mt-2 font-extrabold">
                 Complete Checklist for Plot Buyers
               </span>
             </h1>
@@ -77,7 +77,7 @@ export default function DDJAYEligibilityContent() {
 
             <div className="flex flex-wrap items-center gap-4 sm:gap-6 text-xs text-neutral-400 font-medium">
               <div className="flex items-center gap-2 bg-white/5 px-3 py-1.5 rounded-lg border border-white/10">
-                <BookOpen className="w-4 h-4 text-red-500" />
+                <BookOpen className="w-4 h-4 text-[#B51F3B]" />
                 <span>Verified Checklist</span>
               </div>
               <div className="flex items-center gap-2 bg-white/5 px-3 py-1.5 rounded-lg border border-white/10">
@@ -96,7 +96,7 @@ export default function DDJAYEligibilityContent() {
         <div className="sticky top-24 z-40 bg-white/90 backdrop-blur-md p-4 rounded-2xl border border-neutral-200/80 shadow-md mb-12">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-2 text-xs font-black uppercase tracking-wider text-neutral-900 flex-shrink-0">
-              <Compass className="w-4 h-4 text-red-500" />
+              <Compass className="w-4 h-4 text-[#B51F3B]" />
               <span>Section Menu:</span>
             </div>
 
@@ -124,7 +124,7 @@ export default function DDJAYEligibilityContent() {
           {/* SECTION 1: WHO CAN APPLY */}
           <div id="who-can-apply" className="bg-white rounded-3xl p-6 sm:p-10 border border-neutral-200/80 shadow-sm transition-all hover:shadow-md">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center font-black text-sm border border-red-100">
+              <div className="w-10 h-10 rounded-2xl bg-[#B51F3B]/10 text-[#B51F3B] flex items-center justify-center font-black text-sm border border-[#B51F3B]/20">
                 01
               </div>
               <h2 className="text-xl sm:text-2xl font-black uppercase tracking-tight text-neutral-900">
@@ -156,7 +156,7 @@ export default function DDJAYEligibilityContent() {
                 }
               ].map((item, idx) => (
                 <div key={idx} className="bg-neutral-50 p-5 rounded-2xl border border-neutral-200 flex items-start gap-3">
-                  <UserCheck className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" />
+                  <UserCheck className="w-5 h-5 text-[#B51F3B] flex-shrink-0 mt-0.5" />
                   <div>
                     <h4 className="font-bold text-xs sm:text-sm text-neutral-900 uppercase tracking-wide mb-1">
                       {item.title}
@@ -177,7 +177,7 @@ export default function DDJAYEligibilityContent() {
           {/* SECTION 2: INCOME LIMITS */}
           <div id="income-limits" className="bg-white rounded-3xl p-6 sm:p-10 border border-neutral-200/80 shadow-sm transition-all hover:shadow-md">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center font-black text-sm border border-red-100">
+              <div className="w-10 h-10 rounded-2xl bg-[#B51F3B]/10 text-[#B51F3B] flex items-center justify-center font-black text-sm border border-[#B51F3B]/20">
                 02
               </div>
               <h2 className="text-xl sm:text-2xl font-black uppercase tracking-tight text-neutral-900">
@@ -235,7 +235,7 @@ export default function DDJAYEligibilityContent() {
           {/* SECTION 3: NRI APPLICANTS */}
           <div id="nri-eligibility" className="bg-white rounded-3xl p-6 sm:p-10 border border-neutral-200/80 shadow-sm transition-all hover:shadow-md">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center font-black text-sm border border-red-100">
+              <div className="w-10 h-10 rounded-2xl bg-[#B51F3B]/10 text-[#B51F3B] flex items-center justify-center font-black text-sm border border-[#B51F3B]/20">
                 03
               </div>
               <h2 className="text-xl sm:text-2xl font-black uppercase tracking-tight text-neutral-900">
@@ -272,7 +272,7 @@ export default function DDJAYEligibilityContent() {
           {/* SECTION 4: GOVT EMPLOYEES */}
           <div id="govt-employees" className="bg-white rounded-3xl p-6 sm:p-10 border border-neutral-200/80 shadow-sm transition-all hover:shadow-md">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center font-black text-sm border border-red-100">
+              <div className="w-10 h-10 rounded-2xl bg-[#B51F3B]/10 text-[#B51F3B] flex items-center justify-center font-black text-sm border border-[#B51F3B]/20">
                 04
               </div>
               <h2 className="text-xl sm:text-2xl font-black uppercase tracking-tight text-neutral-900">
@@ -296,7 +296,7 @@ export default function DDJAYEligibilityContent() {
           {/* SECTION 5: DOCUMENTS LIST */}
           <div id="documents-list" className="bg-white rounded-3xl p-6 sm:p-10 border border-neutral-200/80 shadow-sm transition-all hover:shadow-md">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center font-black text-sm border border-red-100">
+              <div className="w-10 h-10 rounded-2xl bg-[#B51F3B]/10 text-[#B51F3B] flex items-center justify-center font-black text-sm border border-[#B51F3B]/20">
                 05
               </div>
               <h2 className="text-xl sm:text-2xl font-black uppercase tracking-tight text-neutral-900">
@@ -318,7 +318,7 @@ export default function DDJAYEligibilityContent() {
                 { label: "Income Proof Documents", detail: "Salary slip / income certificate (where applicable for EWS/LIG)" }
               ].map((doc, i) => (
                 <div key={i} className="flex items-start gap-3 bg-neutral-50 p-4 rounded-2xl border border-neutral-200">
-                  <FileText className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" />
+                  <FileText className="w-5 h-5 text-[#B51F3B] flex-shrink-0 mt-0.5" />
                   <div>
                     <h4 className="font-bold text-xs sm:text-sm text-neutral-900 uppercase tracking-wide">
                       {doc.label}
@@ -335,7 +335,7 @@ export default function DDJAYEligibilityContent() {
           {/* SECTION 6: ID & INCOME PROOF REQUIREMENTS */}
           <div id="id-income-proof" className="bg-white rounded-3xl p-6 sm:p-10 border border-neutral-200/80 shadow-sm transition-all hover:shadow-md">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center font-black text-sm border border-red-100">
+              <div className="w-10 h-10 rounded-2xl bg-[#B51F3B]/10 text-[#B51F3B] flex items-center justify-center font-black text-sm border border-[#B51F3B]/20">
                 06
               </div>
               <h2 className="text-xl sm:text-2xl font-black uppercase tracking-tight text-neutral-900">
@@ -375,7 +375,7 @@ export default function DDJAYEligibilityContent() {
           {/* SECTION 7: AFFIDAVIT FORMAT */}
           <div id="affidavit-format" className="bg-white rounded-3xl p-6 sm:p-10 border border-neutral-200/80 shadow-sm transition-all hover:shadow-md">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center font-black text-sm border border-red-100">
+              <div className="w-10 h-10 rounded-2xl bg-[#B51F3B]/10 text-[#B51F3B] flex items-center justify-center font-black text-sm border border-[#B51F3B]/20">
                 07
               </div>
               <h2 className="text-xl sm:text-2xl font-black uppercase tracking-tight text-neutral-900">
@@ -389,15 +389,15 @@ export default function DDJAYEligibilityContent() {
 
             <div className="bg-neutral-50 p-6 rounded-2xl border border-neutral-200 space-y-3 text-xs sm:text-sm font-medium text-neutral-800 mb-6">
               <div className="flex items-center gap-3">
-                <CheckCircle2 className="w-4 h-4 text-red-500 flex-shrink-0" />
+                <CheckCircle2 className="w-4 h-4 text-[#B51F3B] flex-shrink-0" />
                 <span>That you do not own a plot or house under any other government housing scheme in Haryana.</span>
               </div>
               <div className="flex items-center gap-3">
-                <CheckCircle2 className="w-4 h-4 text-red-500 flex-shrink-0" />
+                <CheckCircle2 className="w-4 h-4 text-[#B51F3B] flex-shrink-0" />
                 <span>Your correct income category (EWS, LIG, or MIG), where applicable.</span>
               </div>
               <div className="flex items-center gap-3">
-                <CheckCircle2 className="w-4 h-4 text-red-500 flex-shrink-0" />
+                <CheckCircle2 className="w-4 h-4 text-[#B51F3B] flex-shrink-0" />
                 <span>That the information provided in the application is true to the best of your knowledge.</span>
               </div>
             </div>
@@ -410,7 +410,7 @@ export default function DDJAYEligibilityContent() {
           {/* SECTION 8: POST ALLOTMENT DOCS */}
           <div id="post-allotment-docs" className="bg-white rounded-3xl p-6 sm:p-10 border border-neutral-200/80 shadow-sm transition-all hover:shadow-md">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center font-black text-sm border border-red-100">
+              <div className="w-10 h-10 rounded-2xl bg-[#B51F3B]/10 text-[#B51F3B] flex items-center justify-center font-black text-sm border border-[#B51F3B]/20">
                 08
               </div>
               <h2 className="text-xl sm:text-2xl font-black uppercase tracking-tight text-neutral-900">
@@ -440,7 +440,7 @@ export default function DDJAYEligibilityContent() {
           {/* SECTION 9: CHECK ONLINE */}
           <div id="check-online" className="bg-white rounded-3xl p-6 sm:p-10 border border-neutral-200/80 shadow-sm transition-all hover:shadow-md">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center font-black text-sm border border-red-100">
+              <div className="w-10 h-10 rounded-2xl bg-[#B51F3B]/10 text-[#B51F3B] flex items-center justify-center font-black text-sm border border-[#B51F3B]/20">
                 09
               </div>
               <h2 className="text-xl sm:text-2xl font-black uppercase tracking-tight text-neutral-900">
@@ -459,7 +459,7 @@ export default function DDJAYEligibilityContent() {
                 "Check the application window dates to make sure you're not applying after the deadline closes"
               ].map((step, i) => (
                 <div key={i} className="flex items-center gap-3 bg-neutral-50 p-3.5 rounded-xl border border-neutral-200 text-xs sm:text-sm font-medium text-neutral-800">
-                  <Search className="w-4 h-4 text-red-500 flex-shrink-0" />
+                  <Search className="w-4 h-4 text-[#B51F3B] flex-shrink-0" />
                   <span>{step}</span>
                 </div>
               ))}
@@ -473,7 +473,7 @@ export default function DDJAYEligibilityContent() {
           {/* SECTION 10: FINAL THOUGHTS */}
           <div className="bg-[#0c0d12] text-white rounded-3xl p-8 sm:p-12 border border-black/10 relative overflow-hidden shadow-xl">
             <div className="relative z-10">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-500/20 text-red-400 text-[10px] font-extrabold uppercase tracking-widest mb-4 border border-red-500/30">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#B51F3B]/20 text-red-400 text-[10px] font-extrabold uppercase tracking-widest mb-4 border border-red-500/30">
                 <CheckCircle2 className="w-3.5 h-3.5" />
                 <span>Final Checklist Summary</span>
               </div>
@@ -490,7 +490,7 @@ export default function DDJAYEligibilityContent() {
                 </div>
                 <Link
                   href="/contact"
-                  className="px-6 py-3 bg-red-600 hover:bg-red-700 text-white font-bold text-xs uppercase tracking-widest rounded-full transition-all duration-300 flex items-center gap-2 shadow-lg active:scale-95 flex-shrink-0"
+                  className="px-6 py-3 bg-[#B51F3B] hover:bg-[#8F1230] text-white font-bold text-xs uppercase tracking-widest rounded-full transition-all duration-300 flex items-center gap-2 shadow-lg active:scale-95 flex-shrink-0"
                 >
                   <span>Get Assistance</span>
                   <ArrowRight className="w-4 h-4" />

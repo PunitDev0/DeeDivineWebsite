@@ -10,10 +10,10 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 const bgImages = [
-  "/assets/heroslide2.webp",
-  "/assets/heroslide3.webp",
-  "/assets/heroslide4.webp",
-  "/assets/heroslide5.webp",
+  "/assets/uploaded_slide1.jpg",
+  "/assets/uploaded_slide2.jpg",
+  "/assets/uploaded_slide3.jpg",
+  "/assets/uploaded_slide4.jpg",
 ];
 
 export default function HeroSection() {
@@ -75,7 +75,7 @@ export default function HeroSection() {
       id: 1,
       title: "Aaranya Greens",
       type: "Plots",
-      price: "₹ 7.25 Cr*",
+      price: "₹1.2 Cr*",
       location: "Sector 35 Gurgaon",
       image: "/assets/aaranya.jpeg",
     },
@@ -83,7 +83,7 @@ export default function HeroSection() {
       id: 2,
       title: "Elite Home + 02 Homes",
       type: "Residential",
-      price: "₹ 5.8 Cr*",
+      price: "₹1.5 Cr*",
       location: "Sector 24 Gurgaon",
       image: "/assets/elite.jpg",
     },
@@ -91,7 +91,7 @@ export default function HeroSection() {
       id: 3,
       title: "Solitaire - 70",
       type: "Residential",
-      price: "₹ 2.9 Cr*",
+      price: "₹1 Cr*",
       location: "Sector 72 Gurgaon",
       image: "/assets/solitaire.jpg",
     },
@@ -99,7 +99,7 @@ export default function HeroSection() {
       id: 4,
       title: "Aura Avenue",
       type: "Residential",
-      price: "₹ 1.75 Cr*",
+      price: "₹1.7 Cr*",
       location: "Sector 79 Gurgaon",
       image: "/assets/AuraAvenue.jpg",
     },
@@ -122,36 +122,40 @@ export default function HeroSection() {
   ];
 
   const PropertyCard = ({ property }) => (
-    <div className="group bg-white border border-neutral-100 flex flex-col overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 h-full">
+    <div className="group relative bg-white/70 backdrop-blur-xl border border-white/40 flex flex-col overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_12px_40px_rgba(217,35,62,0.12)] hover:-translate-y-1 hover:border-[#D9233E]/20 transition-all duration-500 h-full rounded-3xl p-3 sm:p-4">
+      {/* Subtle red gradient glow inside the card on hover */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#FF5A67]/0 to-[#8F1230]/0 group-hover:from-[#FF5A67]/5 group-hover:to-[#8F1230]/5 transition-colors duration-500 rounded-3xl pointer-events-none z-0"></div>
+
       {/* Image wrapper */}
-      <div className="relative aspect-video w-full overflow-hidden bg-neutral-200">
+      <div className="relative aspect-[4/3] w-full overflow-hidden bg-neutral-200 rounded-2xl z-10">
         <Image
           src={property.image}
           alt={property.title}
           fill
           sizes="(max-width: 768px) 100vw, 33vw"
-          className="object-cover group-hover:scale-105 transition-transform duration-500"
+          className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
         />
-        <div className="absolute top-3 right-3 bg-[#0c0d12]/80 backdrop-blur-sm px-3 py-1 border border-white/10 text-[9px] uppercase tracking-wider text-white font-bold">
+        {/* Premium Red Glass Badge */}
+        <div className="absolute top-3 right-3 bg-gradient-to-r from-[#8F1230]/90 to-[#D9233E]/90 backdrop-blur-md px-3.5 py-1.5 border border-white/20 text-[9px] uppercase tracking-widest text-white font-black rounded-full shadow-[0_4px_12px_rgba(217,35,62,0.4)]">
           {property.type}
         </div>
       </div>
 
       {/* Info contents */}
-      <div className="p-5 flex-1 flex flex-col justify-between">
+      <div className="pt-5 pb-2 px-2 flex-1 flex flex-col justify-between relative z-10">
         <div>
-          <h3 className="text-[13px] font-black uppercase tracking-wider text-[#0c0d12] mb-1.5 truncate">
+          <h3 className="text-[14px] sm:text-[15px] font-black uppercase tracking-wider text-[#0c0d12] mb-1.5 line-clamp-1 transition-colors duration-300">
             {property.title}
           </h3>
-          <div className="flex items-center gap-1.5 text-neutral-500 text-xs mt-1">
-            <MapPin size={12} className="text-red-500" />
-            <span className="truncate">{property.location}</span>
+          <div className="flex items-center gap-1.5 text-neutral-500 text-xs mt-2">
+            <MapPin size={13} className="text-[#D9233E]" />
+            <span className="truncate font-medium">{property.location}</span>
           </div>
         </div>
 
-        <div className="border-t border-neutral-100 mt-4 pt-3 flex items-center justify-between">
+        <div className="border-t border-neutral-200/60 mt-5 pt-4 flex items-center justify-between">
           <span className="text-[10px] font-bold text-neutral-400 uppercase tracking-wider">Starting Price</span>
-          <span className="text-xs font-black text-red-500">{property.price}</span>
+          <span className="text-[13px] sm:text-[14px] font-black bg-gradient-to-r from-[#8F1230] to-[#FF5A67] bg-clip-text text-transparent">{property.price}</span>
         </div>
       </div>
     </div>
@@ -160,7 +164,7 @@ export default function HeroSection() {
   return (
     <div ref={containerRef} className="w-full flex flex-col bg-[#f8f9fa] border-b border-black/5">
       {/* 🏠 Main Hero Banner */}
-      <section className="relative w-full h-[78vh] min-h-[550px] flex items-center overflow-hidden bg-neutral-900 z-10 border-b border-white/5">
+      <section className="relative w-full min-h-[100svh] flex items-center overflow-hidden bg-neutral-900 z-10 border-b border-white/5 pt-32 pb-16">
 
         {/* Background Image Slideshow with smooth crossfade */}
         {bgImages.map((src, index) => (
@@ -185,43 +189,43 @@ export default function HeroSection() {
 
         {/* Text Content Block */}
         <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-16 flex flex-col justify-end h-full pb-10 sm:pb-14 md:pb-20 pt-8 sm:pt-10 md:pt-[50px]">
-          <div className="max-w-2xl text-left space-y-4 sm:space-y-6">
+          <div className="max-w-3xl text-left flex flex-col space-y-6 sm:space-y-10">
 
             {/* Custom reveal heading */}
-            <h1 className="text-3xl sm:text-4xl md:text-6xl font-black tracking-tight text-white uppercase leading-[1.08] overflow-hidden">
+            <h1 className="font-black text-4xl sm:text-5xl md:text-6xl lg:text-[72px] tracking-tight text-white uppercase leading-[1.15] overflow-hidden drop-shadow-md">
               <span className="hero-title-line block opacity-0">Premium Real Estate Projects</span>
-              <span className="hero-title-line block opacity-0 text-red-500">Across India</span>
+              <span className="hero-title-line inline-block opacity-0 bg-gradient-to-r from-[#8F1230] via-[#FF5A67] to-[#D9233E] bg-clip-text text-transparent pb-2 mt-1">Across India</span>
             </h1>
 
             {/* Description Text */}
-            <p className="hero-fade-in text-xs sm:text-sm text-neutral-300 font-medium tracking-wide leading-relaxed max-w-xl opacity-0">
+            <p className="hero-fade-in text-sm sm:text-base text-neutral-200 font-light tracking-wide leading-relaxed max-w-2xl opacity-0">
               Explore thoughtfully planned residential and investment opportunities across multiple high-growth locations.
             </p>
 
             {/* Sub-heading badge moved below description */}
-            <div className="hero-badge flex items-start space-x-2 sm:space-x-3 opacity-0 pt-2 sm:pt-4">
-              <span className="w-6 sm:w-8 h-[1px] bg-red-500 shrink-0 mt-2"></span>
+            <div className="hero-badge flex items-start space-x-3 sm:space-x-4 opacity-0 pt-2 sm:pt-4">
+              <span className="w-8 h-[1px] bg-red-500 shrink-0 mt-2"></span>
               <span className="text-[10px] sm:text-xs font-extrabold tracking-widest text-neutral-300 uppercase leading-relaxed max-w-lg">
                 Trusted Projects Across <span className="text-white font-black">Haryana, Delhi NCR, Uttar Pradesh, Punjab, Madhya Pradesh, Jharkhand, Gujarat, Rajasthan & Goa</span>
               </span>
             </div>
 
-            {/* Minimal Grid Data Table */}
-            <div className="hero-fade-in grid grid-cols-3 gap-3 sm:gap-6 pt-4 sm:pt-6 border-t border-white/10 max-w-xs sm:max-w-sm opacity-0">
-              <div>
-                <p className="text-[8px] sm:text-[9px] font-bold text-neutral-500 tracking-widest uppercase mb-1">Expertise</p>
-                <p className="text-[10px] sm:text-[11px] font-black text-white tracking-wide uppercase">Plots & Homes</p>
+            {/* Premium Glassmorphism Info Panel */}
+            <div className="hero-fade-in flex flex-col sm:flex-row w-full max-w-full md:max-w-[850px] gap-6 sm:gap-12 mt-12 sm:mt-20 p-6 sm:p-10 bg-black/40 backdrop-blur-xl border border-white/20 rounded-3xl shadow-[0_8px_32px_rgba(0,0,0,0.5)] opacity-0 relative overflow-hidden">
+              {/* Subtle inner highlight */}
+              <div className="absolute inset-0 bg-gradient-to-b from-white/10 to-transparent pointer-events-none rounded-3xl"></div>
+
+              <div className="relative z-10 flex flex-col justify-center flex-1">
+                <p className="text-[10px] sm:text-[11px] font-medium text-white/60 tracking-[0.2em] uppercase mb-2">Expertise</p>
+                <p className="text-sm sm:text-base font-black text-white tracking-widest uppercase">Plots & Homes</p>
               </div>
-              <div>
-                <p className="text-[8px] sm:text-[9px] font-bold text-neutral-500 tracking-widest uppercase mb-1">Focus</p>
-                <p className="text-[10px] sm:text-[11px] font-black text-white tracking-wide uppercase">Gurugram</p>
-              </div>
-              <div>
-                <p className="text-[8px] sm:text-[9px] font-bold text-neutral-500 tracking-widest uppercase mb-1">Status</p>
-                <p className="text-[10px] sm:text-[11px] font-black text-emerald-400 tracking-wide uppercase flex items-center">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 mr-1 sm:mr-1.5 animate-pulse"></span>
-                  RERA Appr.
-                </p>
+
+              <div className="relative z-10 flex flex-col justify-center flex-1 border-t sm:border-t-0 sm:border-l border-white/20 pt-6 sm:pt-0 sm:pl-10">
+                <p className="text-[10px] sm:text-[11px] font-medium text-white/60 tracking-[0.2em] uppercase mb-2">Status</p>
+                <div className="inline-flex items-center gap-2 bg-gradient-to-r from-[#D9233E]/20 to-[#FF5A67]/10 border border-[#D9233E]/40 rounded-full px-4 py-2 backdrop-blur-sm self-start">
+                  <span className="w-3 h-[2px] rounded-full bg-gradient-to-r from-[#FF5A67] to-[#D9233E] shadow-[0_0_8px_rgba(217,35,62,0.5)]"></span>
+                  <span className="text-[10px] font-black text-[#f7ebce] tracking-widest uppercase mt-px">RERA Appr.</span>
+                </div>
               </div>
             </div>
 

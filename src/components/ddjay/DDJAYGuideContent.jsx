@@ -56,18 +56,18 @@ export default function DDJAYGuideContent() {
         {/* HERO BANNER & HEADER */}
         <div className="bg-[#0c0d12] text-white rounded-3xl p-8 sm:p-12 md:p-16 mb-12 relative overflow-hidden shadow-2xl border border-black/10">
           {/* Background Glow Overlay */}
-          <div className="absolute -top-24 -right-24 w-96 h-96 bg-red-600/15 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute -top-24 -right-24 w-96 h-96 bg-[#B51F3B]/15 rounded-full blur-3xl pointer-events-none" />
           <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-amber-600/10 rounded-full blur-3xl pointer-events-none" />
 
           <div className="relative z-10 max-w-4xl">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 text-white text-[10px] sm:text-xs font-extrabold uppercase tracking-[0.25em] mb-6 backdrop-blur-md border border-white/10">
-              <Sparkles className="w-3.5 h-3.5 text-red-500" />
+              <Sparkles className="w-3.5 h-3.5 text-[#B51F3B]" />
               <span>Affordable Plotted Housing Policy • Haryana</span>
             </div>
 
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-black uppercase tracking-tight text-white mb-6 leading-tight">
               What is Deen Dayal Jan Awas Yojna?
-              <span className="block text-red-500 text-2xl sm:text-3xl md:text-4xl mt-2 font-extrabold">
+              <span className="block text-[#B51F3B] text-2xl sm:text-3xl md:text-4xl mt-2 font-extrabold">
                 Complete DDJAY Guide for Plot Buyers
               </span>
             </h1>
@@ -80,7 +80,7 @@ export default function DDJAYGuideContent() {
 
             <div className="flex flex-wrap items-center gap-4 sm:gap-6 text-xs text-neutral-400 font-medium">
               <div className="flex items-center gap-2 bg-white/5 px-3 py-1.5 rounded-lg border border-white/10">
-                <BookOpen className="w-4 h-4 text-red-500" />
+                <BookOpen className="w-4 h-4 text-[#B51F3B]" />
                 <span>Guide 2026–2027</span>
               </div>
               <div className="flex items-center gap-2 bg-white/5 px-3 py-1.5 rounded-lg border border-white/10">
@@ -99,7 +99,7 @@ export default function DDJAYGuideContent() {
         <div className="sticky top-24 z-40 bg-white/90 backdrop-blur-md p-4 rounded-2xl border border-neutral-200/80 shadow-md mb-12">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-2 text-xs font-black uppercase tracking-wider text-neutral-900 flex-shrink-0">
-              <Compass className="w-4 h-4 text-red-500" />
+              <Compass className="w-4 h-4 text-[#B51F3B]" />
               <span>Quick Navigation:</span>
             </div>
 
@@ -127,7 +127,7 @@ export default function DDJAYGuideContent() {
           {/* SECTION 1: FULL FORM */}
           <div id="full-form" className="bg-white rounded-3xl p-6 sm:p-10 border border-neutral-200/80 shadow-sm transition-all hover:shadow-md">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center font-black text-sm border border-red-100">
+              <div className="w-10 h-10 rounded-2xl bg-[#B51F3B]/10 text-[#B51F3B] flex items-center justify-center font-black text-sm border border-[#B51F3B]/20">
                 01
               </div>
               <h2 className="text-xl sm:text-2xl font-black uppercase tracking-tight text-neutral-900">
@@ -162,7 +162,7 @@ export default function DDJAYGuideContent() {
           {/* SECTION 2: WHAT IS DDJAY SCHEME (IN DETAIL) */}
           <div id="in-detail" className="bg-white rounded-3xl p-6 sm:p-10 border border-neutral-200/80 shadow-sm transition-all hover:shadow-md">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center font-black text-sm border border-red-100">
+              <div className="w-10 h-10 rounded-2xl bg-[#B51F3B]/10 text-[#B51F3B] flex items-center justify-center font-black text-sm border border-[#B51F3B]/20">
                 02
               </div>
               <h2 className="text-xl sm:text-2xl font-black uppercase tracking-tight text-neutral-900">
@@ -178,24 +178,24 @@ export default function DDJAYGuideContent() {
               <div className="my-6 grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="bg-neutral-50 p-5 rounded-2xl border border-neutral-200">
                   <h4 className="font-bold text-neutral-900 text-xs sm:text-sm uppercase tracking-wider mb-2 flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-red-500" />
+                    <CheckCircle2 className="w-4 h-4 text-[#B51F3B]" />
                     Mandatory Infrastructure Norms
                   </h4>
                   <ul className="space-y-2 text-xs sm:text-sm text-neutral-600">
                     <li className="flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 bg-red-500 rounded-full" />
+                      <span className="w-1.5 h-1.5 bg-[#B51F3B] rounded-full" />
                       <span>Minimum internal road width (9 meters / 30 feet)</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 bg-red-500 rounded-full" />
+                      <span className="w-1.5 h-1.5 bg-[#B51F3B] rounded-full" />
                       <span>Separate drinking and recycled water supply pipelines</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 bg-red-500 rounded-full" />
+                      <span className="w-1.5 h-1.5 bg-[#B51F3B] rounded-full" />
                       <span>Underground electrification and sewage network</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 bg-red-500 rounded-full" />
+                      <span className="w-1.5 h-1.5 bg-[#B51F3B] rounded-full" />
                       <span>Mandatory land allocation for green parks & open spaces</span>
                     </li>
                   </ul>
@@ -203,7 +203,7 @@ export default function DDJAYGuideContent() {
 
                 <div className="bg-neutral-50 p-5 rounded-2xl border border-neutral-200">
                   <h4 className="font-bold text-neutral-900 text-xs sm:text-sm uppercase tracking-wider mb-2 flex items-center gap-2">
-                    <Building2 className="w-4 h-4 text-red-500" />
+                    <Building2 className="w-4 h-4 text-[#B51F3B]" />
                     Stilt + 4 Floor Construction
                   </h4>
                   <p className="text-xs sm:text-sm text-neutral-600 leading-relaxed">
@@ -221,7 +221,7 @@ export default function DDJAYGuideContent() {
           {/* SECTION 3: ELIGIBILITY CRITERIA */}
           <div id="eligibility" className="bg-white rounded-3xl p-6 sm:p-10 border border-neutral-200/80 shadow-sm transition-all hover:shadow-md">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center font-black text-sm border border-red-100">
+              <div className="w-10 h-10 rounded-2xl bg-[#B51F3B]/10 text-[#B51F3B] flex items-center justify-center font-black text-sm border border-[#B51F3B]/20">
                 03
               </div>
               <h2 className="text-xl sm:text-2xl font-black uppercase tracking-tight text-neutral-900">
@@ -262,7 +262,7 @@ export default function DDJAYGuideContent() {
                   }
                 ].map((item, idx) => (
                   <div key={idx} className="bg-neutral-50 p-4 rounded-2xl border border-neutral-100 flex items-start gap-3">
-                    <UserCheck className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" />
+                    <UserCheck className="w-5 h-5 text-[#B51F3B] flex-shrink-0 mt-0.5" />
                     <div>
                       <h4 className="font-bold text-xs sm:text-sm text-neutral-900 uppercase tracking-wide mb-1">
                         {item.title}
@@ -280,7 +280,7 @@ export default function DDJAYGuideContent() {
           {/* SECTION 4: REGISTRATION PROCESS */}
           <div id="registration" className="bg-white rounded-3xl p-6 sm:p-10 border border-neutral-200/80 shadow-sm transition-all hover:shadow-md">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center font-black text-sm border border-red-100">
+              <div className="w-10 h-10 rounded-2xl bg-[#B51F3B]/10 text-[#B51F3B] flex items-center justify-center font-black text-sm border border-[#B51F3B]/20">
                 04
               </div>
               <h2 className="text-xl sm:text-2xl font-black uppercase tracking-tight text-neutral-900">
@@ -349,7 +349,7 @@ export default function DDJAYGuideContent() {
           {/* SECTION 5: REQUIRED DOCUMENTS */}
           <div id="documents" className="bg-white rounded-3xl p-6 sm:p-10 border border-neutral-200/80 shadow-sm transition-all hover:shadow-md">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center font-black text-sm border border-red-100">
+              <div className="w-10 h-10 rounded-2xl bg-[#B51F3B]/10 text-[#B51F3B] flex items-center justify-center font-black text-sm border border-[#B51F3B]/20">
                 05
               </div>
               <h2 className="text-xl sm:text-2xl font-black uppercase tracking-tight text-neutral-900">
@@ -371,7 +371,7 @@ export default function DDJAYGuideContent() {
                 "Affidavit confirming no prior ownership of a government-allotted plot in Haryana"
               ].map((doc, i) => (
                 <div key={i} className="flex items-center gap-3 bg-neutral-50 p-3.5 rounded-xl border border-neutral-100 text-xs sm:text-sm font-medium text-neutral-800">
-                  <FileText className="w-4 h-4 text-red-500 flex-shrink-0" />
+                  <FileText className="w-4 h-4 text-[#B51F3B] flex-shrink-0" />
                   <span>{doc}</span>
                 </div>
               ))}
@@ -385,7 +385,7 @@ export default function DDJAYGuideContent() {
           {/* SECTION 6: VERIFY AUTHENTICITY */}
           <div id="verify-authenticity" className="bg-white rounded-3xl p-6 sm:p-10 border border-neutral-200/80 shadow-sm transition-all hover:shadow-md">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center font-black text-sm border border-red-100">
+              <div className="w-10 h-10 rounded-2xl bg-[#B51F3B]/10 text-[#B51F3B] flex items-center justify-center font-black text-sm border border-[#B51F3B]/20">
                 06
               </div>
               <h2 className="text-xl sm:text-2xl font-black uppercase tracking-tight text-neutral-900">
@@ -435,7 +435,7 @@ export default function DDJAYGuideContent() {
             </div>
 
             <div className="mt-6 bg-[#0c0d12] text-white p-5 rounded-2xl border border-neutral-800 flex items-center gap-4">
-              <CheckCircle2 className="w-6 h-6 text-red-500 flex-shrink-0" />
+              <CheckCircle2 className="w-6 h-6 text-[#B51F3B] flex-shrink-0" />
               <p className="text-xs sm:text-sm leading-relaxed text-neutral-300">
                 A genuine DDJAY plot will always have a traceable license number, an active HARERA registration, and a payment plan tied strictly to construction milestones.
               </p>
@@ -445,7 +445,7 @@ export default function DDJAYGuideContent() {
           {/* SECTION 7: DDJAY VS LICENSED COLONY */}
           <div id="ddjay-vs-licensed" className="bg-white rounded-3xl p-6 sm:p-10 border border-neutral-200/80 shadow-sm transition-all hover:shadow-md">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center font-black text-sm border border-red-100">
+              <div className="w-10 h-10 rounded-2xl bg-[#B51F3B]/10 text-[#B51F3B] flex items-center justify-center font-black text-sm border border-[#B51F3B]/20">
                 07
               </div>
               <h2 className="text-xl sm:text-2xl font-black uppercase tracking-tight text-neutral-900">
@@ -469,27 +469,27 @@ export default function DDJAYGuideContent() {
                 <tbody className="divide-y divide-neutral-200 bg-white font-medium text-neutral-700">
                   <tr>
                     <td className="p-4 font-bold text-neutral-900">Allotment Mode</td>
-                    <td className="p-4 bg-red-50/30">Computerized draw of lots with income reservations</td>
+                    <td className="p-4 bg-[#B51F3B]/10/30">Computerized draw of lots with income reservations</td>
                     <td className="p-4">Direct purchase (First-come, first-served)</td>
                   </tr>
                   <tr>
                     <td className="p-4 font-bold text-neutral-900">Pricing & Rates</td>
-                    <td className="p-4 bg-red-50/30">Regulated & generally lower due to policy norms</td>
+                    <td className="p-4 bg-[#B51F3B]/10/30">Regulated & generally lower due to policy norms</td>
                     <td className="p-4">Fully market-driven pricing</td>
                   </tr>
                   <tr>
                     <td className="p-4 font-bold text-neutral-900">Plot Sizes</td>
-                    <td className="p-4 bg-red-50/30">Smaller, standardized sizes (up to ~180 sq. yards)</td>
+                    <td className="p-4 bg-[#B51F3B]/10/30">Smaller, standardized sizes (up to ~180 sq. yards)</td>
                     <td className="p-4">Wide range of plot sizes, including large luxury plots</td>
                   </tr>
                   <tr>
                     <td className="p-4 font-bold text-neutral-900">Eligibility Rules</td>
-                    <td className="p-4 bg-red-50/30">Income & prior non-ownership conditions apply</td>
+                    <td className="p-4 bg-[#B51F3B]/10/30">Income & prior non-ownership conditions apply</td>
                     <td className="p-4">No restrictions beyond purchasing capacity</td>
                   </tr>
                   <tr>
                     <td className="p-4 font-bold text-neutral-900">Resale Restrictions</td>
-                    <td className="p-4 bg-red-50/30">May carry lock-in periods to prevent speculation</td>
+                    <td className="p-4 bg-[#B51F3B]/10/30">May carry lock-in periods to prevent speculation</td>
                     <td className="p-4">Free to resell once registered</td>
                   </tr>
                 </tbody>
@@ -504,7 +504,7 @@ export default function DDJAYGuideContent() {
           {/* SECTION 8: HARERA VERIFICATION PROCESS */}
           <div id="harera-verification" className="bg-white rounded-3xl p-6 sm:p-10 border border-neutral-200/80 shadow-sm transition-all hover:shadow-md">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center font-black text-sm border border-red-100">
+              <div className="w-10 h-10 rounded-2xl bg-[#B51F3B]/10 text-[#B51F3B] flex items-center justify-center font-black text-sm border border-[#B51F3B]/20">
                 08
               </div>
               <h2 className="text-xl sm:text-2xl font-black uppercase tracking-tight text-neutral-900">
@@ -546,7 +546,7 @@ export default function DDJAYGuideContent() {
               ].map((hStep, i) => (
                 <div key={i} className="bg-neutral-50 p-4 rounded-2xl border border-neutral-200/80 flex flex-col justify-between">
                   <div>
-                    <span className="text-[10px] font-black uppercase tracking-wider text-red-500">
+                    <span className="text-[10px] font-black uppercase tracking-wider text-[#B51F3B]">
                       {hStep.step}
                     </span>
                     <h4 className="font-bold text-xs sm:text-sm text-neutral-900 uppercase tracking-wide mt-1">
@@ -560,7 +560,7 @@ export default function DDJAYGuideContent() {
               ))}
             </div>
 
-            <div className="bg-red-50 border-l-4 border-red-500 p-4 rounded-r-2xl text-red-950 text-xs sm:text-sm font-medium">
+            <div className="bg-[#B51F3B]/10 border-l-4 border-red-500 p-4 rounded-r-2xl text-red-950 text-xs sm:text-sm font-medium">
               <strong className="font-bold">Warning:</strong> A project without an active HARERA number should be treated as a red flag, regardless of how attractive the pricing or marketing brochure looks.
             </div>
           </div>
@@ -568,7 +568,7 @@ export default function DDJAYGuideContent() {
           {/* SECTION 9: FINAL THOUGHTS */}
           <div className="bg-[#0c0d12] text-white rounded-3xl p-8 sm:p-12 border border-black/10 relative overflow-hidden shadow-xl">
             <div className="relative z-10">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-500/20 text-red-400 text-[10px] font-extrabold uppercase tracking-widest mb-4 border border-red-500/30">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#B51F3B]/20 text-red-400 text-[10px] font-extrabold uppercase tracking-widest mb-4 border border-red-500/30">
                 <CheckCircle2 className="w-3.5 h-3.5" />
                 <span>Conclusion & Advice</span>
               </div>
@@ -585,7 +585,7 @@ export default function DDJAYGuideContent() {
                 </div>
                 <Link
                   href="/contact"
-                  className="px-6 py-3 bg-red-600 hover:bg-red-700 text-white font-bold text-xs uppercase tracking-widest rounded-full transition-all duration-300 flex items-center gap-2 shadow-lg active:scale-95 flex-shrink-0"
+                  className="px-6 py-3 bg-[#B51F3B] hover:bg-[#8F1230] text-white font-bold text-xs uppercase tracking-widest rounded-full transition-all duration-300 flex items-center gap-2 shadow-lg active:scale-95 flex-shrink-0"
                 >
                   <span>Consult An Expert</span>
                   <ArrowRight className="w-4 h-4" />

@@ -56,18 +56,18 @@ export default function DDJAYLoanContent() {
         
         {/* HERO BANNER */}
         <div className="bg-[#0c0d12] text-white rounded-3xl p-8 sm:p-12 md:p-16 mb-12 relative overflow-hidden shadow-2xl border border-black/10">
-          <div className="absolute -top-24 -right-24 w-96 h-96 bg-red-600/15 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute -top-24 -right-24 w-96 h-96 bg-[#B51F3B]/15 rounded-full blur-3xl pointer-events-none" />
           <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-amber-600/10 rounded-full blur-3xl pointer-events-none" />
 
           <div className="relative z-10 max-w-4xl">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 text-white text-[10px] sm:text-xs font-extrabold uppercase tracking-[0.25em] mb-6 backdrop-blur-md border border-white/10">
-              <Landmark className="w-3.5 h-3.5 text-red-500" />
+              <Landmark className="w-3.5 h-3.5 text-[#B51F3B]" />
               <span>Plot Loan & Bank Financing Guide</span>
             </div>
 
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-black uppercase tracking-tight text-white mb-6 leading-tight">
               DDJAY Loan & Financing Guide
-              <span className="block text-red-500 text-2xl sm:text-3xl md:text-4xl mt-2 font-extrabold">
+              <span className="block text-[#B51F3B] text-2xl sm:text-3xl md:text-4xl mt-2 font-extrabold">
                 How to Fund Your Plot Purchase
               </span>
             </h1>
@@ -91,7 +91,7 @@ export default function DDJAYLoanContent() {
 
             <div className="flex flex-wrap items-center gap-4 sm:gap-6 text-xs text-neutral-400 font-medium">
               <div className="flex items-center gap-2 bg-white/5 px-3 py-1.5 rounded-lg border border-white/10">
-                <BookOpen className="w-4 h-4 text-red-500" />
+                <BookOpen className="w-4 h-4 text-[#B51F3B]" />
                 <span>Financing & LTV Guide</span>
               </div>
               <div className="flex items-center gap-2 bg-white/5 px-3 py-1.5 rounded-lg border border-white/10">
@@ -110,7 +110,7 @@ export default function DDJAYLoanContent() {
         <div className="sticky top-24 z-40 bg-white/90 backdrop-blur-md p-4 rounded-2xl border border-neutral-200/80 shadow-md mb-12">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-2 text-xs font-black uppercase tracking-wider text-neutral-900 flex-shrink-0">
-              <Compass className="w-4 h-4 text-red-500" />
+              <Compass className="w-4 h-4 text-[#B51F3B]" />
               <span>Section Menu:</span>
             </div>
 
@@ -138,7 +138,7 @@ export default function DDJAYLoanContent() {
           {/* SECTION 1: IS LOAN AVAILABLE */}
           <div id="loan-available" className="bg-white rounded-3xl p-6 sm:p-10 border border-neutral-200/80 shadow-sm transition-all hover:shadow-md">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center font-black text-sm border border-red-100">
+              <div className="w-10 h-10 rounded-2xl bg-[#B51F3B]/10 text-[#B51F3B] flex items-center justify-center font-black text-sm border border-[#B51F3B]/20">
                 01
               </div>
               <h2 className="text-xl sm:text-2xl font-black uppercase tracking-tight text-neutral-900">
@@ -156,20 +156,20 @@ export default function DDJAYLoanContent() {
 
               <div className="bg-neutral-50 p-5 rounded-2xl border border-neutral-200 my-4">
                 <h4 className="font-bold text-xs sm:text-sm text-neutral-900 uppercase tracking-wider mb-2 flex items-center gap-2">
-                  <ShieldCheck className="w-4 h-4 text-red-500" />
+                  <ShieldCheck className="w-4 h-4 text-[#B51F3B]" />
                   Key Requirements Banks Look For:
                 </h4>
                 <ul className="space-y-2 text-xs sm:text-sm text-neutral-600">
                   <li className="flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 bg-red-500 rounded-full" />
+                    <span className="w-1.5 h-1.5 bg-[#B51F3B] rounded-full" />
                     <span>Clean, marketable title & encumbrance-free land status</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 bg-red-500 rounded-full" />
+                    <span className="w-1.5 h-1.5 bg-[#B51F3B] rounded-full" />
                     <span>Active HARERA registration certificate</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 bg-red-500 rounded-full" />
+                    <span className="w-1.5 h-1.5 bg-[#B51F3B] rounded-full" />
                     <span>Executed Builder-Buyer Agreement specifying payment milestones</span>
                   </li>
                 </ul>
@@ -180,7 +180,7 @@ export default function DDJAYLoanContent() {
           {/* SECTION 2: HOW IT WORKS */}
           <div id="how-it-works" className="bg-white rounded-3xl p-6 sm:p-10 border border-neutral-200/80 shadow-sm transition-all hover:shadow-md">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center font-black text-sm border border-red-100">
+              <div className="w-10 h-10 rounded-2xl bg-[#B51F3B]/10 text-[#B51F3B] flex items-center justify-center font-black text-sm border border-[#B51F3B]/20">
                 02
               </div>
               <h2 className="text-xl sm:text-2xl font-black uppercase tracking-tight text-neutral-900">
@@ -226,7 +226,7 @@ export default function DDJAYLoanContent() {
           {/* SECTION 3 & 4: SBI & HDFC LOANS */}
           <div id="sbi-loan" className="bg-white rounded-3xl p-6 sm:p-10 border border-neutral-200/80 shadow-sm transition-all hover:shadow-md">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center font-black text-sm border border-red-100">
+              <div className="w-10 h-10 rounded-2xl bg-[#B51F3B]/10 text-[#B51F3B] flex items-center justify-center font-black text-sm border border-[#B51F3B]/20">
                 03
               </div>
               <h2 className="text-xl sm:text-2xl font-black uppercase tracking-tight text-neutral-900">
@@ -249,7 +249,7 @@ export default function DDJAYLoanContent() {
 
               <div id="hdfc-loan" className="bg-neutral-50 p-5 rounded-2xl border border-neutral-200">
                 <div className="flex items-center gap-2 mb-3">
-                  <Building2 className="w-5 h-5 text-red-600" />
+                  <Building2 className="w-5 h-5 text-[#B51F3B]" />
                   <h3 className="font-bold text-neutral-900 text-base uppercase tracking-wide">
                     HDFC Loan for Haryana Govt Plots
                   </h3>
@@ -264,7 +264,7 @@ export default function DDJAYLoanContent() {
           {/* SECTION 5: BANK COMPARISON */}
           <div id="nationalized-vs-private" className="bg-white rounded-3xl p-6 sm:p-10 border border-neutral-200/80 shadow-sm transition-all hover:shadow-md">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center font-black text-sm border border-red-100">
+              <div className="w-10 h-10 rounded-2xl bg-[#B51F3B]/10 text-[#B51F3B] flex items-center justify-center font-black text-sm border border-[#B51F3B]/20">
                 04
               </div>
               <h2 className="text-xl sm:text-2xl font-black uppercase tracking-tight text-neutral-900">
@@ -284,22 +284,22 @@ export default function DDJAYLoanContent() {
                 <tbody className="divide-y divide-neutral-200 bg-white font-medium text-neutral-700">
                   <tr>
                     <td className="p-4 font-bold text-neutral-900">Interest Rates</td>
-                    <td className="p-4 bg-red-50/30">Generally lower & policy-subsidized rates</td>
+                    <td className="p-4 bg-[#B51F3B]/10/30">Generally lower & policy-subsidized rates</td>
                     <td className="p-4">Slightly higher competitive market rates</td>
                   </tr>
                   <tr>
                     <td className="p-4 font-bold text-neutral-900">Processing Speed</td>
-                    <td className="p-4 bg-red-50/30">Standard verification turnaround (7-14 days)</td>
+                    <td className="p-4 bg-[#B51F3B]/10/30">Standard verification turnaround (7-14 days)</td>
                     <td className="p-4">Faster turnaround & digital processing (3-7 days)</td>
                   </tr>
                   <tr>
                     <td className="p-4 font-bold text-neutral-900">Documentation Ease</td>
-                    <td className="p-4 bg-red-50/30">Familiar with govt scheme policy paperwork</td>
+                    <td className="p-4 bg-[#B51F3B]/10/30">Familiar with govt scheme policy paperwork</td>
                     <td className="p-4">Stricter developer track record & title checks</td>
                   </tr>
                   <tr>
                     <td className="p-4 font-bold text-neutral-900">Repayment Flexibility</td>
-                    <td className="p-4 bg-red-50/30">Standard EMI structures</td>
+                    <td className="p-4 bg-[#B51F3B]/10/30">Standard EMI structures</td>
                     <td className="p-4">Flexible tenures & custom repayment plans</td>
                   </tr>
                 </tbody>
@@ -310,7 +310,7 @@ export default function DDJAYLoanContent() {
           {/* SECTION 6: LOAN ELIGIBILITY */}
           <div id="loan-eligibility" className="bg-white rounded-3xl p-6 sm:p-10 border border-neutral-200/80 shadow-sm transition-all hover:shadow-md">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center font-black text-sm border border-red-100">
+              <div className="w-10 h-10 rounded-2xl bg-[#B51F3B]/10 text-[#B51F3B] flex items-center justify-center font-black text-sm border border-[#B51F3B]/20">
                 05
               </div>
               <h2 className="text-xl sm:text-2xl font-black uppercase tracking-tight text-neutral-900">
@@ -330,7 +330,7 @@ export default function DDJAYLoanContent() {
                 { title: "RERA Verified Title", detail: "Clean, encumbrance-free title on the plot being purchased" }
               ].map((item, i) => (
                 <div key={i} className="flex items-start gap-3 bg-neutral-50 p-4 rounded-2xl border border-neutral-200">
-                  <UserCheck className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" />
+                  <UserCheck className="w-5 h-5 text-[#B51F3B] flex-shrink-0 mt-0.5" />
                   <div>
                     <h4 className="font-bold text-xs sm:text-sm text-neutral-900 uppercase tracking-wide">
                       {item.title}
@@ -347,7 +347,7 @@ export default function DDJAYLoanContent() {
           {/* SECTION 7 & 8: PAYMENT PLAN & LTV RATIO */}
           <div id="payment-plan" className="bg-white rounded-3xl p-6 sm:p-10 border border-neutral-200/80 shadow-sm transition-all hover:shadow-md">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center font-black text-sm border border-red-100">
+              <div className="w-10 h-10 rounded-2xl bg-[#B51F3B]/10 text-[#B51F3B] flex items-center justify-center font-black text-sm border border-[#B51F3B]/20">
                 06
               </div>
               <h2 className="text-xl sm:text-2xl font-black uppercase tracking-tight text-neutral-900">
@@ -367,7 +367,7 @@ export default function DDJAYLoanContent() {
                 { step: "Stage 4", text: "Final installment due at plot registry and possession" }
               ].map((m, i) => (
                 <div key={i} className="flex items-center gap-3 bg-neutral-50 p-3.5 rounded-xl border border-neutral-200 text-xs sm:text-sm">
-                  <span className="font-black text-red-500 text-xs uppercase tracking-wider">{m.step}:</span>
+                  <span className="font-black text-[#B51F3B] text-xs uppercase tracking-wider">{m.step}:</span>
                   <span className="text-neutral-800 font-medium">{m.text}</span>
                 </div>
               ))}
@@ -387,7 +387,7 @@ export default function DDJAYLoanContent() {
           {/* SECTION 9: INVESTMENT RETURNS & RESALE */}
           <div id="investment-returns" className="bg-white rounded-3xl p-6 sm:p-10 border border-neutral-200/80 shadow-sm transition-all hover:shadow-md">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center font-black text-sm border border-red-100">
+              <div className="w-10 h-10 rounded-2xl bg-[#B51F3B]/10 text-[#B51F3B] flex items-center justify-center font-black text-sm border border-[#B51F3B]/20">
                 07
               </div>
               <h2 className="text-xl sm:text-2xl font-black uppercase tracking-tight text-neutral-900">
@@ -408,7 +408,7 @@ export default function DDJAYLoanContent() {
           {/* SECTION 10: BEST SECTORS */}
           <div id="best-sectors" className="bg-white rounded-3xl p-6 sm:p-10 border border-neutral-200/80 shadow-sm transition-all hover:shadow-md">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center font-black text-sm border border-red-100">
+              <div className="w-10 h-10 rounded-2xl bg-[#B51F3B]/10 text-[#B51F3B] flex items-center justify-center font-black text-sm border border-[#B51F3B]/20">
                 08
               </div>
               <h2 className="text-xl sm:text-2xl font-black uppercase tracking-tight text-neutral-900">
@@ -453,7 +453,7 @@ export default function DDJAYLoanContent() {
                 </div>
                 <Link
                   href="/contact"
-                  className="px-6 py-3 bg-red-600 hover:bg-red-700 text-white font-bold text-xs uppercase tracking-widest rounded-full transition-all duration-300 flex items-center gap-2 shadow-lg active:scale-95 flex-shrink-0"
+                  className="px-6 py-3 bg-[#B51F3B] hover:bg-[#8F1230] text-white font-bold text-xs uppercase tracking-widest rounded-full transition-all duration-300 flex items-center gap-2 shadow-lg active:scale-95 flex-shrink-0"
                 >
                   <span>Talk to Our Experts</span>
                   <ArrowRight className="w-4 h-4" />
