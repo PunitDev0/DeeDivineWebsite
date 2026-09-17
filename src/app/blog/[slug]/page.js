@@ -73,12 +73,44 @@ export default async function BlogDetail({ params }) {
     "inLanguage": "en-IN"
   } : null;
 
+  const breadcrumbJsonLd = slug === 'top-5-best-real-estate-companies-in-gurgaon' ? {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "@id": "https://deedivinepropinfra.com/blog/top-5-best-real-estate-companies-in-gurgaon#breadcrumb",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://deedivinepropinfra.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": "https://deedivinepropinfra.com/blog"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Top 5 Best Real Estate Companies in Gurgaon in 2026",
+        "item": "https://deedivinepropinfra.com/blog/top-5-best-real-estate-companies-in-gurgaon"
+      }
+    ]
+  } : null;
+
   return (
     <>
       {jsonLd && (
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      )}
+      {breadcrumbJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
         />
       )}
       <BlogDetailPage article={article} relatedArticles={relatedArticles} />
