@@ -22,6 +22,7 @@ export default function HomeLeadPopup() {
       {/* Backdrop */}
       <div 
         className="fixed inset-0 bg-[#0c0d12]/40 backdrop-blur-sm"
+        style={{ transform: 'translateZ(0)', willChange: 'backdrop-filter' }}
         onClick={() => setIsVisible(false)}
       />
       
