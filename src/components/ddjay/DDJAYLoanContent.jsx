@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import DDJAYLeadPopup from "./DDJAYLeadPopup";
 import {
   Building2,
   Landmark,
@@ -52,6 +53,7 @@ export default function DDJAYLoanContent() {
 
   return (
     <section className="bg-[#fcfcfc] min-h-screen pt-32 pb-24 px-4 sm:px-6 md:px-12 font-sans text-neutral-800">
+      <DDJAYLeadPopup />
       <div className="max-w-6xl mx-auto">
         
         {/* HERO BANNER */}

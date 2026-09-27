@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import DDJAYLeadPopup from "./DDJAYLeadPopup";
 import {
   Building2,
   FileText,
@@ -214,6 +215,7 @@ export default function DeenDayalPlotsGurgaon2026Content() {
 
   return (
     <section className="bg-[#fcfcfc] min-h-screen pt-32 pb-24 px-4 sm:px-6 md:px-12 font-sans text-neutral-800">
+      <DDJAYLeadPopup />
       
       {/* FAQ Schema */}
       <script

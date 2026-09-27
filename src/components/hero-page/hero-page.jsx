@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from './navbar'
 import HeroSection from './hero-section'
+import HomeLeadPopup from './home-lead-popup'
 import DdjayResidentialProjects from './ddjay-residential-projects'
 import StatsSection from './stats-section'
 import FeatureSections from './featured-section'
@@ -17,6 +18,7 @@ import HomeBlogSection from './home-blog-section'
 function HeroPage() {
   return (
     <div className='overflow-x-hidden'>
+       <HomeLeadPopup />
        <div className='sm:px-5 px-2'>
        <HeroSection/>
        </div>
