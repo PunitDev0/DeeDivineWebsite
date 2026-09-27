@@ -1,26 +1,33 @@
 "use client";
 
 import { useEffect } from "react";
-import Lenis from "lenis";
+
 
 export default function SmoothScroll() {
   useEffect(() => {
-    const lenis = new Lenis({
-      duration: 1.2,
-      smoothWheel: true,
-      wheelMultiplier: 1,
-      touchMultiplier: 2,
+    let lenis;
+    let mounted = true;
+    import("lenis").then((LenisModule) => {
+      if (!mounted) return;
+      const Lenis = LenisModule.default;
+      lenis = new Lenis({
+        duration: 1.2,
+        smoothWheel: true,
+        wheelMultiplier: 1,
+        touchMultiplier: 2,
+      });
+
+      function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      }
+
+      requestAnimationFrame(raf);
     });
 
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
-
     return () => {
-      lenis.destroy();
+      mounted = false;
+      if (lenis) lenis.destroy();
     };
   }, []);
 

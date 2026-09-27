@@ -3,11 +3,8 @@
 import Image from "next/image";
 import { useEffect, useState, useRef } from "react";
 import { MapPin } from "lucide-react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Autoplay } from "swiper/modules";
-import gsap from "gsap";
-import "swiper/css";
-import "swiper/css/navigation";
+import dynamic from "next/dynamic";
+const MobileSwiper = dynamic(() => import("./mobile-swiper"), { ssr: false });
 
 const bgImages = [
   "/assets/uploaded_slide1.jpg",
@@ -30,44 +27,53 @@ export default function HeroSection() {
 
   // Premium text entrance animation on mount
   useEffect(() => {
-    const ctx = gsap.context(() => {
-      // 1. Badge slide-in
-      gsap.fromTo(
-        ".hero-badge",
-        { opacity: 0, x: -35 },
-        { opacity: 1, x: 0, duration: 0.9, ease: "power3.out" }
-      );
+    let ctx;
+    let mounted = true;
+    import("gsap").then((gsapModule) => {
+      if (!mounted) return;
+      const gsap = gsapModule.default;
+      ctx = gsap.context(() => {
+        // 1. Badge slide-in
+        gsap.fromTo(
+          ".hero-badge",
+          { opacity: 0, x: -35 },
+          { opacity: 1, x: 0, duration: 0.9, ease: "power3.out" }
+        );
 
-      // 2. Heading lines reveal
-      gsap.fromTo(
-        ".hero-title-line",
-        { opacity: 0, y: 50 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 1.2,
-          stagger: 0.15,
-          ease: "power4.out",
-          delay: 0.1
-        }
-      );
+        // 2. Heading lines reveal
+        gsap.fromTo(
+          ".hero-title-line",
+          { opacity: 0, y: 50 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 1.2,
+            stagger: 0.15,
+            ease: "power4.out",
+            delay: 0.1
+          }
+        );
 
-      // 3. Subtext and metadata fade-in
-      gsap.fromTo(
-        ".hero-fade-in",
-        { opacity: 0, y: 25 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 1,
-          stagger: 0.12,
-          ease: "power3.out",
-          delay: 0.5
-        }
-      );
-    }, containerRef);
+        // 3. Subtext and metadata fade-in
+        gsap.fromTo(
+          ".hero-fade-in",
+          { opacity: 0, y: 25 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 1,
+            stagger: 0.12,
+            ease: "power3.out",
+            delay: 0.5
+          }
+        );
+      }, containerRef);
+    });
 
-    return () => ctx.revert();
+    return () => {
+      mounted = false;
+      if (ctx) ctx.revert();
+    };
   }, []);
 
   const properties = [
@@ -250,23 +256,7 @@ export default function HeroSection() {
 
           {/* Mobile Swiper */}
           <div className="md:hidden">
-            <Swiper
-              modules={[Navigation, Autoplay]}
-              spaceBetween={24}
-              slidesPerView={1.2}
-              loop={true}
-              autoplay={{
-                delay: 4000,
-                disableOnInteraction: false,
-              }}
-              className="w-full"
-            >
-              {properties.map((property) => (
-                <SwiperSlide key={property.id}>
-                  <PropertyCard property={property} />
-                </SwiperSlide>
-              ))}
-            </Swiper>
+            <MobileSwiper properties={properties} PropertyCard={PropertyCard} />
           </div>
 
           {/* Desktop & Tablet Grid */}
