@@ -16,13 +16,14 @@ const teamMembers = [
   { name: "Manish Sharma", role: "VP – Finance / Accounts", image: "/assets/employes/manish sharma.jpg" },
   { name: "Akshay Chauhan", role: "VP – Marketing", image: "/assets/employes/akshay chauhan.jpg", linkedin: "https://www.linkedin.com/in/akshay-chauhan-dm/" },
   { name: "Rohit", role: "VP – Sales", image: "/assets/employes/rohit.jpg" },
-  { name: "Aditya Singh", role: "VP", image: "/assets/aditya.jpg" },
+  { name: "Aditya Singh", role: "VP – Sales", image: "/assets/employes/aaditya.jpg" },
   { name: "Sukhpreet", role: "VP – Sales", image: "/assets/employes/sukhpreet.jpg" },
   { name: "Sanaya", role: "AVP – Sales", image: "/assets/employes/sanaya.jpg" },
   { name: "Saurav Kumar", role: "AVP – Sales", image: "/assets/employes/saurav.jpg" },
   { name: "Deepak Singh", role: "General Manager", image: "/assets/employes/deepak singh.jpg" },
   { name: "Neeraj Nayar", role: "Team Head", image: "/assets/employes/neeraj nayar.jpg" },
   { name: "Vinay Raj", role: "Team Head", image: "/assets/employes/vinay raj.jpg" },
+  { name: "Sachin Sain", role: "Team Head", image: "/assets/employes/sachin sain.jpg" },
 ];
 
 function TeamCard({ member }) {
