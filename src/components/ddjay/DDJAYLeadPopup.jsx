@@ -9,7 +9,7 @@ export default function DDJAYLeadPopup() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(true);
-    }, 10000); // 10 seconds
+    }, 5000); // 5 seconds
 
     return () => clearTimeout(timer);
   }, []);

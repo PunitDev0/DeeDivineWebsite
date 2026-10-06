@@ -10,7 +10,7 @@ export default function HomeLeadPopup() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(true);
-    }, 10000); // 10 seconds
+    }, 5000); // 5 seconds
 
     return () => clearTimeout(timer);
   }, []);
@@ -20,17 +20,16 @@ export default function HomeLeadPopup() {
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center px-4">
       {/* Backdrop */}
-      <div 
+      <div
         className="fixed inset-0 bg-[#0c0d12]/40 backdrop-blur-sm"
-        style={{ transform: 'translateZ(0)', willChange: 'backdrop-filter' }}
         onClick={() => setIsVisible(false)}
       />
-      
+
       {/* Modal Content */}
       <div className="relative z-10 w-full max-w-md bg-white border border-white/70 rounded-[28px] p-8 md:p-10 shadow-[0_10px_40px_rgba(0,0,0,0.1)] overflow-hidden">
         {/* Glow effect */}
         <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-[#B51F3B]/5 to-transparent rounded-full blur-3xl pointer-events-none" />
-        
+
         <button
           onClick={() => setIsVisible(false)}
           className="absolute top-6 right-6 z-20 text-neutral-400 hover:text-[#0c0d12] transition-colors"
@@ -68,7 +67,7 @@ export default function HomeLeadPopup() {
               </p>
             </div>
 
-            <form 
+            <form
               className="space-y-4 relative z-10"
               onSubmit={(e) => {
                 e.preventDefault();

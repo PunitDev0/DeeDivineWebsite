@@ -1,5 +1,6 @@
 import BlogPageContent from "@/components/blogPage";
 import { getBlogs } from "@/lib/blogApi";
+import HomeLeadPopup from "@/components/hero-page/home-lead-popup";
 
 export const metadata = {
   title: "Blog & Insights | Dee Divine Propinfra",
@@ -20,5 +21,10 @@ export const revalidate = 60;
 export default async function BlogPage() {
   const articles = await getBlogs();
 
-  return <BlogPageContent articles={articles} />;
+  return (
+    <>
+      <BlogPageContent articles={articles} />
+      <HomeLeadPopup />
+    </>
+  );
 }
